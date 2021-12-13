@@ -1,0 +1,47 @@
+<main>
+    <header>
+        <div>
+            <a (click)="loginComponent = true;
+            passwordComponent = false;
+            registerComponent = false" *ngIf="!session.islogged">Log in</a>
+            <section class="header-name" *ngIf="session.islogged">
+                <!-- <a >Alex Taboada</a> -->
+                <a >{{session.sessionData.nameUser}} {{session.sessionData.lastnameUser}}</a>
+                <button 
+                class="btn name-circle">
+                    {{session.sessionData.nameUser[0]}}{{session.sessionData.lastnameUser[0]}}
+                    <!-- AT -->
+                </button>
+                <i class="fas fa-chevron-down" [matMenuTriggerFor]="menu"></i>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item 
+                  (click)="editComponent = true">Edit profile</button>
+                  <button mat-menu-item
+                  (click)="logout()">Log out</button>
+                </mat-menu>
+            </section>
+
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    <div class="img">
+        <img src="/assets/img/landing.jpg" alt="">
+    </div>
+</main>
+
+<app-login *ngIf="loginComponent && !registerComponent && !passwordComponent && !editComponent"
+(openPasswordComponent)="openComponent('forgot')"
+(closeLoginComponent)="closeComponent('login')"
+(openRegisterComponent)="openComponent('register')"></app-login>
+
+<app-register
+*ngIf="!passwordComponent && !loginComponent && !editComponent && registerComponent && !session.islogged"
+(closeRegister)="closeComponent('register')"></app-register>
+
+<app-forgot-password
+*ngIf="passwordComponent && !loginComponent && !editComponent && !registerComponent && !session.islogged"
+(closeLoginComponent)="closeComponent('forgot')"></app-forgot-password>
+
+<app-edit
+*ngIf="!passwordComponent && !loginComponent && !registerComponent && editComponent && session.islogged"
+(closeEdit)="closeComponent('edit')"></app-edit>
