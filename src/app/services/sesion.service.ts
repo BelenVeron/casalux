@@ -22,6 +22,7 @@ export class SesionService {
     this.service.get('isLogged.php').subscribe((data:any)=> {
       this.islogged = data.success
       this.sessionData = data.data[0]
+      console.log(data)
     })
   }
 

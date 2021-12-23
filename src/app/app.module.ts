@@ -16,6 +16,8 @@ import { MaterialModule } from './material.module';
 import { EditComponent } from './components/edit/edit.component';
 import { SetPasswordComponent } from './pages/set-password/set-password.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { FirstComponent } from './pages/appointments/first/first.component';
+import { BackgroundComponent } from './components/background/background.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { RegistroComponent } from './components/registro/registro.component';
     RegisterComponent,
     EditComponent,
     SetPasswordComponent,
-    RegistroComponent
+    RegistroComponent,
+    FirstComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

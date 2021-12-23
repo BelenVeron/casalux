@@ -1,0 +1,38 @@
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--brown);
+}
+header div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding: .5rem 0 .5rem 0;
+}
+header a{
+    width: 50%;
+    font-size: 1.2em;
+    background: none;
+    cursor: pointer;
+}
+header i{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+header .header-name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2.5rem;
+}
+header .header-name a{
+    width: 100%;
+    margin-right: 1rem;
+}
+header button.name-circle{
+    background-color: var(--green-op);
+    border-radius: 100px;
+    color: var(--white);
+    margin: .2rem;
+}
