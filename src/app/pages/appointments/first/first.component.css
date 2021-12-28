@@ -7,6 +7,9 @@ section{
     position: absolute;
     top: 20vh;
 }
+section .img{
+    width: 15%;
+}
 .title{
     color: var(--light);
     font-size: 2.2em;
