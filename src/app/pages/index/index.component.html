@@ -1,29 +1,5 @@
 <main>
-    <header>
-        <div>
-            <a (click)="loginComponent = true;
-            passwordComponent = false;
-            registerComponent = false" *ngIf="!session.islogged">Log in</a>
-            <section class="header-name" *ngIf="session.islogged">
-                <!-- <a >Alex Taboada</a> -->
-                <a >{{session.sessionData.nameUser}} {{session.sessionData.lastnameUser}}</a>
-                <button 
-                class="btn name-circle">
-                    {{session.sessionData.nameUser[0]}}{{session.sessionData.lastnameUser[0]}}
-                    <!-- AT -->
-                </button>
-                <i class="fas fa-chevron-down" [matMenuTriggerFor]="menu"></i>
-                <mat-menu #menu="matMenu">
-                  <button mat-menu-item 
-                  (click)="editComponent = true">Edit profile</button>
-                  <button mat-menu-item
-                  (click)="logout()">Log out</button>
-                </mat-menu>
-            </section>
-
-            <i class="fas fa-shopping-cart"></i>
-        </div>
-    </header>
+    <app-header></app-header>
     <app-background url="/assets/img/landing.jpg"></app-background>
 </main>
 

@@ -1,0 +1,195 @@
+main{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0;
+}
+.mobile{
+    display: none;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 92%;
+}
+section .logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+section .section-title{
+    padding: .4rem 0;
+    color: var(--k-green-op);
+    background: var(--k-white);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.8em;
+    width: 100%;
+}
+section .details{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .details div{
+    width: 50%;
+}
+section .details .title{
+    font-size: 3em;
+}
+section .details .title .icon{
+    display: none;
+}
+section .details .title span{
+    color: var(--k-green-op);
+    font-size: 1.5em;
+    letter-spacing: 1rem;
+    font-weight: 100;
+}
+section .details .selected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .details .selected .options-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+section .details .selected .options-container p{
+    color: var(--k-green-op);
+    font-size: 1.4em;
+}
+section .details .selected .options-container .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+section .details .selected .options-container .options .option{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: .2rem 0;
+}
+section .details .selected .options-container .options .option i{
+    color: var(--danger);
+    margin-right: .4rem;
+}
+section .details .icon{
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--brown);
+    padding: 2rem 0;
+}
+
+section .text-details .title{
+    font-size: 1.4em;
+    color: var(--k-green-op);
+}
+section .text-details p{
+    text-indent: 40px;
+}
+section .text-details .img1{
+    float: left;
+    width: 40%;
+    margin: 1rem;
+}
+
+section .text-details .img2{
+    float: right;
+    width: 25%;
+}
+
+@media (max-width:400px){
+    main{
+        padding: 0;
+    }
+    .br{
+        display: none;
+    }
+    section{
+        width: 100vw;
+        margin-top: 10vh;
+    }
+    section .logo-container{
+        display: none;
+    }
+    section .section-title{
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    section .section-title h2{
+        margin-right: .8rem;
+        font-size: 1em;
+    }
+    section .details {
+        flex-direction: column;
+    }
+    section .details div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section .details .title span{
+        letter-spacing: 0px;
+        font-style: italic;
+    }
+    section .details .title .icon{
+        background: var(--brown);
+        width: 20%;
+        font-size: 1.4em;
+        padding: .6rem .2rem;
+        float: right;
+    }
+    section .details .title{
+        font-size: 1.2em;
+        justify-content: space-around;
+    }
+    section .details .selected{
+        width: 100%;
+        justify-content: center;
+        background: var(--k-white);
+    }
+    section .details .selected .options-container{
+        margin: 1rem 0;
+        width: 95%;
+    }
+    section .details .selected .icon{
+        display: none;
+    }
+    section .text-details .title{
+        padding-left: 1rem;
+    }
+    section .text-details .img1{
+        width: 100%;
+        margin: 0;
+    }
+
+    section .text-details p{
+        padding: .4rem;
+        text-indent: 10px;
+    }
+    section .text-details .img2{
+        display: none;
+        width: 100%;
+    }
+    section .text-details .mobile.img2{
+        display: block;
+        width: 100%;
+    }
+}

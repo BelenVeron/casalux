@@ -1,0 +1,192 @@
+<main>
+    <app-kitchensidebar></app-kitchensidebar>
+
+    <section>
+
+        <div class="header">
+            <div class="logo-container">
+                <div class="img">
+                    <img src="/assets/img/kitchen/logogreen.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <article>
+
+            <div class="experts">
+                <div class="main-title">
+                    Experts <br> & Projects
+                </div>
+
+                <div class="search">
+                    <div class="input">
+                        <input type="text" placeholder="Zip Code, City"
+                        (keyup)="search(value.value)" #value>
+                        <div class="icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="filter">
+                        <div class="header">
+                            <p>Filters</p>
+                            <i class="fas fa-plus" *ngIf="!filters.display"
+                            (click)="filters.display = true"></i>
+                            <i class="fas fa-minus" *ngIf="filters.display"
+                            (click)="filters.display = false"></i>
+                        </div>
+                        <div class="filter-items animate__animated animate__fadeIn" *ngIf="filters.display">
+                            <div class="item" *ngFor="let item of filters.items;let index = index">
+                                <input type="checkbox" [(ngModel)]="item.selected" id="{{index}}">
+                                <label [for]="index">{{item.name}}</label>
+                            </div>
+                            <div class="button" (click)="searchWithFilters()">
+                                SEARCH
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items">
+
+                        <div class="item" *ngFor="let expert of results;let index = index">
+                            <div class="title">
+                                <p class="name">{{index+1}}. {{expert.name}} {{expert.lastname}}</p>
+                            </div>
+                            <div class="desc">
+                                {{expert.specialty}}
+                            </div>
+                            <div class="img">
+                                <img src="/assets/img/kitchen/media/imggetstarted.png" alt="">
+                            </div>
+                            <div class="options">
+                                <div class="option" (click)="viewDetails(expert, false)">
+                                    See this store
+                                </div>
+                                <div class="option" (click)="viewDetails(expert, true);contact = true">
+                                    Work with this expert
+                                </div>
+                            </div>
+                        </div>
+
+                        <p *ngIf="results.length<1"
+                        style="margin:4rem 0 0 0 ">No experts found</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div [ngClass]="{'map':!details,'details-container':details}">
+                <agm-map *ngIf="!details"
+                [latitude]="maps.lat" [zoom]="maps.zoom" [longitude]="maps.lng">
+                    <agm-marker
+                    [iconUrl]="'/assets/img/kitchen/media/mapicon.png'"
+                    [label]="{color: 'var(--black)',fontSize: '2.5em',
+                    fontWeight: 'bold',text: '1'}"
+                    [latitude]="maps.lat"
+                    [longitude]="maps.lng"></agm-marker>
+                </agm-map>  
+                
+                <div class="details" *ngIf="details">
+
+                    <i class="fas fa-times close"
+                    (click)="close()"></i>
+
+                    <div class="header">
+                        <div class="img">
+                            <img src="/assets/img/kitchen/media/imggetstarted.png" alt="">
+                        </div>
+                        <div class="details-info">
+                            <p class="name">{{details.name}} {{details.lastname}}</p>
+                            <div class="sub">
+                                <div class="stars">
+                                    <i class="fa-star"
+                                    *ngFor="let star of details.stars"
+                                    [ngClass]="{'fas':star,'far':!star}"></i>
+                                </div>
+                                <p class="ocupation">{{details.ocupation}}</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p>Phone: {{details.phone}}</p>
+                            <p>www.alanscott.com</p>
+                            <p>140 Mt. Holly Bypass</p>
+                            <p>Lumberton, NJ 08048</p>
+                        </div>
+                    </div>
+
+                    <div class="slider-container" *ngIf="!contact">
+                        <div class="slider">
+                            <swiper
+                            [config]="config">
+                                <ng-template swiperSlide
+                                *ngFor="let img of details.imgs"
+                                class="img">
+                                    <img [src]="img" alt="">
+                                    <div class="info">
+                                        <p class="name">name</p>
+                                        <p class="place">place</p>
+                                    </div>
+                                </ng-template>
+                            </swiper>
+                        </div>
+                    </div>
+
+                    <div class="main" *ngIf="!contact">
+                        <div class="img">
+                            <img [src]="details.img" alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="main-info">
+                                <p class="date">15/4/2002</p>
+                                <p class="name">Name of project</p>
+                                <p class="dots">----</p>
+                                <p class="place">Lumberton</p>
+                                <p class="price">$00.000.0000</p>
+                            </div>
+                            <hr>
+                            <p class="text">{{details.desc}}</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-section" *ngIf="contact">
+                        <div class="contact-header">
+                            <p>Get in touch</p>
+                            <p>Send a message to work with the expert</p>
+                        </div>
+                        <form class="form" autocomplete="off">
+                            <div class="form-control">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name"
+                                [(ngModel)]="contactInfo.name">
+                            </div>
+                            <div class="form-control second">
+                                <label for="Surname">Surname</label>
+                                <input type="text" id="Surname" name="Surname"
+                                [(ngModel)]="contactInfo.surname">
+                            </div>
+                            <div class="form-control second">
+                                <label for="Phone">Phone number</label>
+                                <input type="number" id="Phone" name="Phone"
+                                [(ngModel)]="contactInfo.phone">
+                            </div>
+                            <div class="form-control">
+                                <label for="Message">Message</label>
+                                <textarea id="Message" name="Message"
+                                [(ngModel)]="contactInfo.message"></textarea>
+                            </div>
+                        </form>
+                        <div class="button">
+                            <button (click)="contactExpert()">
+                                SEND
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+</main>

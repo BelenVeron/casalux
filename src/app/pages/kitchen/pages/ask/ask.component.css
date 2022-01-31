@@ -1,0 +1,249 @@
+main{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0 0;
+}
+.mobile{
+    display: none;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 98%;
+}
+section .header{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+section .logo-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+article{
+    width: 98%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.main{
+    background: var(--k-white);
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 25vh;
+}
+.main .img{
+    width: 10%;
+}
+.main p{
+    font-size: 1.2em;
+    letter-spacing: 4px;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin-top: 1rem;
+}
+.filters{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.filters .title{
+    font-size: 1.8em;
+    color: var(--k-green-op);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.filters .filter{
+    margin-bottom: .4rem;
+    color: var(--green-op);
+    transition: all.2s;
+    cursor: pointer;
+}
+.filters .filter:hover{
+    text-decoration: underline;
+}
+
+.questions{
+    width: 75%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.questions .input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.questions .input input{
+    width: 90%;
+    font-size: 1.4rem;
+    padding: .6rem;
+    outline: none;
+}
+.questions .input .icon{
+    background: var(--green-op);
+    color: var(--light);
+    padding: .75rem;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.questions .container{
+    width: 100%;
+    overflow-y: auto;
+    height: 45vh;
+    margin-top: 1rem;
+}
+.questions .container::-webkit-scrollbar{
+    width: .4rem;
+    border-radius: 10px;
+}
+.questions .container::-webkit-scrollbar-thumb{
+    background: var(--brown);
+    border-radius: 10px;
+}
+.questions .container .question{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.questions .container .question .title{
+    font-size: 1.6em;
+    color: var(--k-green-op);
+    width: 96%;
+    border-bottom: 2px solid var(--brown);
+    padding: .6rem 0;
+    padding-left: 1.2rem;
+}
+.questions .container .question .inside{
+    padding: .6rem 0;
+    width: 96%;
+    padding-left: 1.2rem;
+}
+.questions .container .question .inside.selected{
+    background: var(--k-white);
+}
+.questions .container .question .inside-title{
+    font-size: 1em;
+    cursor: pointer;
+}
+.questions .container .question .inside-title.selected{
+    font-weight: bold;
+    color: var(--green-op);
+}
+.questions .container .question .info{
+    padding-left: 1rem;
+    width: 90%;
+}
+
+
+@media (max-width:400px){
+    .web{
+        display: none !important;
+    }
+    .mobile{
+        display: flex !important;
+    }
+    section{
+        width: 100%;
+    }
+    section .header{
+        width: 100%;
+        margin-top: 8vh;
+    }
+    section .header .title{
+        padding-right: 1rem;
+        border-top: 0;
+        width: 100%;
+        font-size: 1.4em;
+    }
+
+    article{
+        width: 100%;
+    }
+    .main .img{
+        width: 35%;
+    }
+
+    .search{
+        flex-direction: column;
+        width: 100%;
+    }
+    .filters{
+        width: 100%;
+    }
+    .filters .title{
+        padding-left: 5vw;
+        margin-bottom: .2rem;
+    }
+
+    .filters .filter{
+        width: 60%;
+        padding-left: 5vw;
+        margin: .6rem 0;
+    }
+
+    .questions{
+        width: 100%;
+    }
+    .questions .input{
+        width: 90%;
+        margin: auto;
+    }
+    .questions .input input{
+        font-size: .8em;
+        height: 4vh;
+        padding: .2rem;
+    }
+    .questions .input .icon{
+        height: 4vh;
+        padding: .35rem;
+    }
+
+    .questions .container{
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        margin-bottom: 10vh;
+    }
+    .questions .container .question{
+        margin: .4rem 0;
+        width: 100%;
+        background: var(--grey);
+    }
+    .questions .container .question .title{
+        border: none;
+        padding: .6rem 0 0 1rem;
+    }
+    .questions .container .question .info{
+        margin: 0;
+        width: 80%;
+        padding-left: 2.5rem;
+    }
+    .questions .container .question .inside{
+        width: 100%;
+        padding: .4rem 0;
+    }
+    .questions .container .question .inside p{
+        padding-left: 2rem;
+    }
+}

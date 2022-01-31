@@ -1,0 +1,206 @@
+section{
+    width: 5vw;
+    height: 100%;
+    color: var(--green);
+    background: var(--k-black);
+    position: fixed;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+}
+section i{
+    cursor: pointer;
+}
+.mobile{
+    display: none;
+}
+nav{
+    background: var(--k-black);
+    position: fixed;
+    left: 5vw;
+    height: 100vh;
+    top: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 999;
+}
+nav article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+nav article.options{
+    margin-top: 20vh;
+    width: 90%;
+}
+nav .options .title{
+    color: var(--k-green-op);
+    font-weight: bold;
+    font-size: 1.25em;
+    text-decoration: none;
+    transition: all.4s ease;
+    border: 1px solid var(--k-black);
+    padding: .2rem;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+nav .options .title a{
+    text-decoration: none;
+    color: var(--k-green-op);
+}
+nav article .title:hover{
+    color: var(--green);
+    border: 1px solid var(--k-green-op);
+}
+nav .options .child-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--white);
+    flex-direction: column;
+    padding-left: 1rem;
+}
+nav .options .children{
+    color: var(--white);   
+    font-size: .8em;
+    margin-top: .4rem;
+    text-decoration: none;
+}
+nav .options .children:nth-child(1){
+    margin-top: -.2rem;
+}
+nav .options .children:last-child{
+    margin-bottom: 1rem;
+}
+nav .actions{
+    margin-top: 5vh;
+    width: 90%;
+}
+nav .actions .action{
+    color: var(--k-green-op);
+    border: 1px solid var(--k-green-op);
+    border-radius: 10px;
+    padding: .4rem .6rem;
+    width: 100%;
+    margin-top: .4rem;
+    text-decoration: none;
+    transition: background.2s;
+}
+nav .actions .action i{
+    color: var(--green);
+}
+nav .actions .action:hover{
+    background: var(--green);
+    color: var(--k-black);
+}
+nav .actions .action:hover i{
+    color: var(--k-black);
+}
+
+nav .social{
+    flex-direction: row;
+    width: 95%;
+    margin-top: 5vh;
+    color: var(--k-green-op);
+    justify-content: space-between;
+    font-size: 1.5em;
+    align-items: center;
+}
+nav .social p{
+    font-size: .75em;
+}
+
+@media (max-width:400px) {
+    .mobile{
+        display: flex;
+    }
+    section.web{
+        display: none;
+    }
+    section.mobile{
+        display: flex;
+        position: fixed;
+        justify-content: flex-start;
+        align-items: center;
+        top: 0;
+        width: 100vw;
+        height: 10vh;
+        background: #fff;
+        padding: .2rem;
+    }
+    section.mobile .img{
+        width: 70%;
+        margin-left: .2rem;
+    }
+    section.mobile i{
+        font-size: .6em;
+        padding: .4rem;
+    }
+    nav{
+        width: 100%;
+        height: -webkit-fill-available;
+        left: 0;
+    }
+    nav .web{
+        display: none;
+    }
+    nav .mobile{
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        color: var(--green);
+        justify-content: flex-start;
+    }
+    .mobile.sms{
+        font-size: 1em;
+        margin-left: 1rem;
+        transform: rotateY(180deg);
+    }
+    nav .mobile .img{
+        margin-left: 10vw;
+        width: 100%;
+    }
+    nav article.options{
+        margin-top: 20vh;
+    }
+    nav .options .title{
+        font-size: 1.8em;
+    }
+    nav .options .child-container{
+        font-size: 1.5em;
+    }
+
+    nav .actions{
+        margin-top: 0;
+        font-size: .8em;
+        position: absolute;
+        bottom: 8vh;
+        left: 5vw;
+        width: 85vw;
+    }
+    nav .actions .action{
+        font-size: 2em;
+    }
+    nav .social{
+        justify-content: space-around;
+        font-size: 2.4em;
+        position: absolute;
+        bottom: 2vh;
+        left: 0;
+    }
+    nav .social p{
+        display: none;
+    }
+
+}

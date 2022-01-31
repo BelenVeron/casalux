@@ -1,13 +1,13 @@
 <header>
-    <div>
-
-        <section class="header-name" *ngIf="!session.islogged">
-            <a >Alex Taboada</a>
-            <!-- <a >{{session.sessionData.nameUser}} {{session.sessionData.lastnameUser}}</a> -->
+    <div class="main-div">
+        <a [routerLink]="'/login'" *ngIf="!session.islogged">Log in</a>
+        <section class="header-name" *ngIf="session.islogged">
+            <!-- <a >Alex Taboada</a> -->
+            <a >{{session.sessionData.nameUser}} {{session.sessionData.lastnameUser}}</a>
             <button 
             class="btn name-circle">
-                <!-- {{session.sessionData.nameUser[0]}}{{session.sessionData.lastnameUser[0]}} -->
-                AT
+                {{session.sessionData.nameUser[0]}}{{session.sessionData.lastnameUser[0]}}
+                <!-- AT -->
             </button>
             <i class="fas fa-chevron-down" [matMenuTriggerFor]="menu"></i>
             <mat-menu #menu="matMenu">
@@ -20,6 +20,27 @@
 
         <i class="fas fa-shopping-cart"></i>
     </div>
+    <nav [ngClass]="{'between':session.islogged}">
+        <div class="logo">
+            <div class="img">
+                <img src="/assets/img/logo_landing.jpg" alt="">
+            </div>
+            <p>CASALUX</p>
+        </div>
+        <div class="options" *ngIf="session.islogged">
+            <div>
+                <p>Information</p>
+            </div>
+            <div class="drop-down closed">
+                <li class="nav-button" (click)="drop(element)" #element>My appointments</li>
+                <li><a routerLink="/appointments">Set up new appointment</a></li>
+                <li><a href="/apmtconsult.php" mat-menu-item >View my appointments</a></li>
+            </div>
+            <div>
+                <p>Ask to experts</p>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <app-edit

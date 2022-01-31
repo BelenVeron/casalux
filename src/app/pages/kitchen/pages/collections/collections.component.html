@@ -1,0 +1,160 @@
+<main>
+    <app-kitchensidebar></app-kitchensidebar>
+
+
+    <section>
+        <div class="logo-container">
+            <div class="img">
+                <img src="/assets/img/kitchen/logogreen.png" alt="">
+            </div>
+        </div>
+
+
+        <article class="container web">
+            <div class="container-title mobile">
+                <h3>COLLECTIONS</h3>
+                <P>Enter the collection you like to see details</P>
+            </div>
+            <article class="img-options">
+                <div class="option" *ngFor="let option of collections"
+                (click)="changeSelectedCollection(option.collectionID, true)">
+                    <div class="img">
+                        <img [src]="url+option.collectionImgPpal" alt="">
+                    </div>
+                    <p class="title">{{option.collectionName}}</p>
+                </div>
+            </article>
+            
+            <article class="option-viewer web">
+                <div class="swiper-container">
+                    <swiper
+                    class="mySwiper"
+                    [config]="config"
+                    >
+                    <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
+                        <img [src]="url+img.collectionImage" alt="">
+                    </ng-template>
+                    </swiper>
+
+                </div>
+                <swiper
+                class="mySwiper2"
+                [config]="config2"
+                >
+                <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
+                    <img [src]="url+img.collectionImage" alt="">
+                </ng-template>
+                </swiper>
+            </article>
+        </article>
+
+        <article class="container mobile" *ngIf="!viewMobile">
+            <div class="container-title mobile">
+                <h3>COLLECTIONS</h3>
+                <P>Enter the collection you like to see details</P>
+            </div>
+            <article class="img-options">
+                <div class="option" *ngFor="let option of collections"
+                (click)="changeSelectedCollection(option.collectionID, true)">
+                    <div class="img">
+                        <img [src]="url+option.collectionImgPpal" alt="">
+                    </div>
+                    <p class="title">{{option.collectionName}}</p>
+                </div>
+            </article>
+            
+            <article class="option-viewer web">
+                <div class="swiper-container">
+                    <swiper
+                    class="mySwiper"
+                    [config]="config"
+                    >
+                    <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
+                        <img [src]="url+img.collectionImage" alt="">
+                    </ng-template>
+                    </swiper>
+
+                </div>
+                <swiper
+                class="mySwiper2"
+                [config]="config2"
+                >
+                <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
+                    <img [src]="url+img.collectionImage" alt="">
+                </ng-template>
+                </swiper>
+            </article>
+        </article>
+
+
+        <article class="option-details web">
+            <i class="fas fa-times close mobile"></i>
+            <p class="collections-title mobile">COLLECTIONS</p>
+            <p class="details-title">{{collectionSelected.collectionName}}</p>
+            <hr style="width:80%;border:1px solid var(--k-green-op)">
+            <div class="scroll">
+                <p class="text" *ngIf="!seemore">
+                    {{collectionSelected.collectionDescription}}
+                </p>
+                <p class="section-text">What you have in this collection</p>
+
+                <div class="three-images web" *ngIf="!seemore">
+                    <img src="/assets/img/kitchen/media/imggetstarted.png" alt="">
+                </div>
+            </div>
+            <div class="collection-img-seemore" *ngIf="seemore">
+                <div class="option" *ngFor="let option of collectionSelected.content">
+                    <div class="img">
+                        <img [src]="url+option.collectionContentImage" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="seemore" (click)="seeMore()">
+                {{seemore?'See less':'See more'}}
+            </div>
+        </article>
+
+        <article class="option-details mobile" *ngIf="viewMobile">
+            <i class="fas fa-times close mobile"
+            (click)="viewMobile = false"></i>
+            <p class="collections-title mobile">COLLECTIONS</p>
+            <p class="details-title">{{collectionSelected.collectionName}}</p>
+            <hr style="width:80%;border:1px solid var(--k-green-op)">
+            <div class="scroll">
+                <p class="text" *ngIf="!seemore">
+                    {{collectionSelected.collectionDescription}}
+                </p>
+                <p class="section-text">What you have in this collection</p>
+
+                <swiper
+                class="mySwiper2 mobile"
+                [config]="configMobile"
+                >
+                <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
+                    <img [src]="url+img.collectionImage" alt="">
+                </ng-template>
+                </swiper>
+
+                <swiper
+                class="mySwiper2 mobile"
+                [config]="configMobile"
+                >
+                <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
+                    <img [src]="url+img.collectionImage" alt="">
+                </ng-template>
+                </swiper>
+
+                <div class="three-images web" *ngIf="!seemore">
+                    <img src="/assets/img/kitchen/media/imggetstarted.png" alt="">
+                </div>
+            </div>
+            <div class="collection-img-seemore" *ngIf="seemore">
+                <div class="option" *ngFor="let option of collectionSelected.content">
+                    <div class="img">
+                        <img [src]="url+option.collectionContentImage" alt="">
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>

@@ -1,0 +1,68 @@
+<main>
+    <app-kitchensidebar></app-kitchensidebar>
+
+    <section>
+        <div class="header">
+            <div class="logo-container web">
+                <div class="img">
+                    <img src="/assets/img/kitchen/logogreen.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <article>
+            <div class="main">
+                <div class="img">
+                    <img src="/assets/img/kitchen/media/logo.png" alt="">
+                </div>
+                <p>SEARCH</p>
+            </div>
+
+            <div class="search">
+                <div class="filters">
+                    <div class="title">
+                        Filters
+                    </div>
+                    <div class="filter"
+                    *ngFor="let cat of categories"
+                    (click)="selectCat(cat)"
+                    >{{cat.name}} ({{cat.cant || 0}})</div>
+                    <div class="filter" (click)="selectCat('')">
+                        All
+                    </div>
+                </div>
+
+                <div class="questions">
+                    <div class="input">
+                        <input type="text" #input (keyup.enter)="search(input.value)"
+                        placeholder="Write your question or keyword">
+                        <div class="icon" (click)="search(input.value)">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="question" *ngFor="let result of results">
+                            <div class="title">
+                                {{result.name}} ({{result.cant || 0}})
+                            </div>
+                            <div class="inside"
+                            [ngClass]="{'selected':inside.selected}"
+                            *ngFor="let inside of result.results">
+                                <p class="inside-title"
+                                (click)="viewInside(inside)"
+                                [ngClass]="{'selected':inside.selected}">{{inside.questionText}}</p>
+                                <div class="info" *ngIf="inside.selected">
+                                    {{inside.answerText}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </article>
+    </section>
+</main>

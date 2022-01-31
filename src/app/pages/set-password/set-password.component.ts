@@ -24,17 +24,9 @@ export class SetPasswordComponent implements OnInit {
     private route:ActivatedRoute
   ) {
     var idUser = this.route.snapshot.params.id
-    var emailUser = this.isParam('email')
-    var companyCode = this.isParam('companyCode')
-    var companyPosition = this.isParam('companyPosition')
-    var specialty = this.isParam('specialty')
 
     this.setPasswordForm = this.fb.group({
       idUser: [idUser],
-      emailUser: [emailUser],
-      companyCode: [companyCode],
-      companyPosition: [companyPosition],
-      specialty: [specialty],
       password:[null, []],
       password1:[null, []],
     })

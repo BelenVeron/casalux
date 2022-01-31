@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api:'http://localhost/casalux/'
+  // api:'http://localhost/casalux/'
+  api:'https://proxising.com/casalux/api/'
 };
 
 /*

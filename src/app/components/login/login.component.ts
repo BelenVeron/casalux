@@ -35,8 +35,11 @@ export class LoginComponent implements OnInit {
       console.log(data)
       if(data.success){
         this.session.islogged = true
-        this.session.sessionData = data.data[0]
+        this.session.sessionData = data.data[0][0]
         this.closeComponent()
+        if(data.data[1].locationRedirect){
+          window.location.href = data.data[1].locationRedirect
+        }
       }else{
         this.error_text = data.msg
       }

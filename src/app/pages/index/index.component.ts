@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { SesionService } from 'src/app/services/sesion.service';
 
 @Component({
@@ -14,8 +15,22 @@ export class IndexComponent implements OnInit {
   editComponent = false;
   
   constructor(
-    public session:SesionService
-  ) { }
+    public session:SesionService,
+    private route:ActivatedRoute
+  ) {
+    var section = this.route.snapshot.params.section
+    switch(section){
+      case 'login':
+        this.loginComponent = true
+        break;
+      case 'password':
+        this.passwordComponent = true
+        break;
+      case 'edit':
+        this.editComponent = true
+        break;
+    }
+   }
 
   ngOnInit(): void {
   }

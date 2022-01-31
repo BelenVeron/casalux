@@ -1,0 +1,306 @@
+main{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0 0;
+}
+.mobile{
+    display: none !important;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 98%;
+}
+section .header{
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+section .logo-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+section .header .title{
+    font-size: 2.4em;
+    color: var(--k-green-op);
+    border-top: 1px solid var(--k-green-op);
+    width: 60%;
+    text-align: right;
+    align-self: flex-end;
+}
+
+article{
+    width: 92%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: var(--k-white);
+}
+.filter {
+    width: 15vw;
+}
+.filter .title{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    background: var(--light);
+    margin: .2rem;
+    padding: .2rem;
+    border-radius: 5px;
+}
+.filter .title i{
+    cursor: pointer;
+    margin-left: .4rem;
+}
+.filter .title.selected{
+    font-weight: bold;
+    color: var(--k-green-op);
+    background: var(--k-white);
+    border:none;
+}
+.filter .options{
+    padding-left: .8rem;
+    color: var(--k-green-op);
+}
+.filter .option{
+    cursor: pointer;
+    padding: .2rem;
+    transition: all.2s;
+}
+.filter .option.selected{
+    background: var(--light);
+    color: var(--green-op);
+    font-weight: bold;
+}
+
+.details{
+    width: 100%;
+}
+.details .sections{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 1rem;
+}
+.details .sections .detail{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+}
+.details .sections .title{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.details .sections .title.middle{
+    background: var(--light);
+}
+.details .sections .detail .palettes{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.details .sections .detail .palettes .palette{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .4rem 0;
+    width: 100%;
+    height: 12vh;
+    overflow: hidden;
+    cursor: pointer;
+}
+.details .sections .detail .palettes .palette .img{
+    width: 100%;
+}
+.details .sections .detail .palettes .palette .name{
+    position: absolute;
+    left: .4rem;
+    top: .4rem;
+    color: var(--light);
+}
+
+.unique-detail{
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    padding: 0 1rem 1rem 1rem; 
+    background: var(--light);
+}
+.unique-detail .close{
+    width: 100%;
+    text-align: right;
+    font-size: 1.5em;
+}
+.unique-detail .close i{
+    cursor: pointer;
+}
+.unique-detail .header{
+    background: #e2ccaa;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: .4rem 0;
+    margin-bottom: .4rem;
+}
+.header .title-section{
+    margin: 0 4rem;
+}
+.header .unique-title{
+    font-size: 2em;
+}
+.header .fav{
+    margin-right: 2rem;
+    padding: 1rem;
+    color: var(--danger);
+    background: var(--light);
+    width: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    height: 2vw;
+}
+.unique-detail .collections{
+    width: 70%;
+}
+::ng-deep .swiper-slide{
+    position: relative !important;
+}
+::ng-deep .swiper-slide .name-collection{
+    position: absolute;
+    bottom: .4rem;
+    left: 0;
+    background: var(--k-white);
+    color: var(--black);
+    padding: 0 .4rem;
+}
+@media (max-width:400px){
+    .web{
+        display: none !important;
+    }
+    .mobile{
+        display: flex !important;
+    }
+    section{
+        width: 100%;
+    }
+    section .header{
+        width: 100%;
+        margin-top: 8vh;
+    }
+    section .header .title{
+        padding-right: 1rem;
+        border-top: 0;
+    }
+    article{
+        width: 100%;
+        flex-direction: column;
+    }
+    .filters{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background: var(--k-white);
+    }
+    .filter{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .filter .title{
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        background: var(--light);
+    }
+    .filter .title.selected{
+        border: none;
+        background: var(--k-white);
+    }
+    .filter .options .option{
+        background: var(--light);
+        margin: .4rem 0;
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    .details .sections{
+        padding: 0;
+    }
+    .details .sections .detail{
+        width: 100%;
+        font-size: 1.8em;
+    }
+    .details .sections .detail .palettes{
+        width: 95%;
+    }
+    .details .sections .detail .palettes .palette{
+        height: 10vh;
+        font-size: .65em;
+    }
+
+    .unique-detail{
+        padding: .4rem 0;
+        width: 100%;
+    }
+    .unique-detail .close{
+        width: 90%;
+    }
+    .unique-detail .header{
+        margin-top: 1rem;
+    }
+    .unique-detail .collections{
+        width: 90%;
+        background: var(--grey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .unique-detail .collections .imgs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .unique-detail .collections .title{
+        font-size: 1em;
+        padding: 1rem 0;
+        width: 80%;
+    }
+    .unique-detail .collections .imgs .img{
+        position: relative;
+        margin: .6rem 0;
+        width: 80%;
+    }
+    .unique-detail .collections .imgs .img .name-collection{
+        background: var(--light);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: .4rem;
+        width: 100%;
+    }
+}

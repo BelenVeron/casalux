@@ -1,0 +1,149 @@
+<main>
+    <app-kitchensidebar></app-kitchensidebar>
+
+    <section>
+        <div class="header">
+            <div class="logo-container web">
+                <div class="img">
+                    <img src="/assets/img/kitchen/logogreen.png" alt="">
+                </div>
+            </div>
+            <div class="title">
+                Additional options
+            </div>
+        </div>
+
+        <article>
+            <div class="filters">
+                <div class="filter" *ngFor="let filter of filters">
+                    <div class="title" [ngClass]="{'selected':filter.selected}">
+                        <p (click)="selectFilter(filter, !filter.selected)"> {{filter.name}} </p> 
+                        <i class="fas fa-minus" *ngIf="filter.selected"
+                        (click)="selectFilter(filter, false)"></i>
+                        <i class="fas fa-plus" *ngIf="!filter.selected"
+                        (click)="selectFilter(filter, true)"></i>
+                    </div>
+                    <div class="options" *ngIf="filter.selected">
+                        <div class="option" [ngClass]="{'selected':activeFilter == option}"
+                        *ngFor="let option of filter.subCategorys"
+                        (click)="applySubcategory(option)">
+                            {{option.name}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="details">
+                <div class="img">
+                    <img src="/assets/img/kitchen/media/imggetstarted.png" alt="">
+                    <div class="favs">
+                        <div class="fav">
+                            <div class="title">
+                                <span>{{additional.name}}</span>
+                                FROM  $000 TO $5000
+                            </div>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <div class="head">
+                        <div class="titles">
+                            <p (click)="info.details = true;info.technical = false"
+                            [ngClass]="{'not-selected':!info.details}">DETAILS</p>
+                            <p (click)="info.technical = true;info.details = false"
+                            [ngClass]="{'not-selected':!info.technical}">TECHNICAL FILES</p>
+                        </div>
+                        <div class="info" *ngIf="info.details">
+                            {{additional.details}}
+                        </div>
+                        <div class="info" *ngIf="info.technical">
+                            {{additional.technicalInfo}}
+                        </div>
+                    </div>
+
+                    <div class="cart">
+                        <div class="selects">
+                            <select name="" [(ngModel)]="selected.type"
+                            (change)="updatePrice()">
+                                <option value="{{type.id}}" *ngFor="let type of additional.additionalTypes">
+                                    {{type.name}}
+                                </option>
+                            </select>
+                            <select name="" [(ngModel)]="selected.size"
+                            (change)="updatePrice()">
+                                <option value="{{size.id}}" *ngFor="let size of additional.additionalSizes">
+                                    {{size.name}}
+                                </option>
+                            </select>
+                            <div class="quantity">
+                                <p>QUANTITY</p>
+                                <div class="calc">
+                                    <i class="fas fa-minus"
+                                    (click)="quantity>1?quantity = quantity -1:''"></i>
+                                    <p>{{quantity}}</p>
+                                    <i class="fas fa-plus"
+                                    (click)="quantity = quantity +1"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <div class="cost">
+                                $ {{(additional.price*quantity) || additional.price}}
+                            </div>
+                            <div class="add-to">
+                                ADD TO CART
+                            </div>
+                        </div>
+
+                        <div class="related">
+                            <div class="colors web">
+                                <div class="img"
+                                [ngClass]="{'selected':selected.color == color.name}"
+                                (click)="updateColor(color)"
+                                *ngFor="let color of additional.additionalColors">
+                                    <img [src]="url+color.image" alt="">
+                                </div>
+                            </div>
+                            <div class="info">
+                                RELATED PRODUCTS
+                                <swiper
+                                [config]="config2">
+                                    <ng-template swiperSlide
+                                    *ngFor="let option of subCategorys">
+                                        <div class="product">
+                                            <div class="img"></div>
+                                            <div class="name">
+                                                <p>Antaro Baskets</p>
+                                                <div class="from-to">FROM $000 TO $500</div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                    
+                                </swiper>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="images web">
+                    <swiper
+                    [config]="config">
+                        <ng-template swiperSlide
+                        *ngFor="let cat of subCategorys"
+                         class="img">
+                            <img (click)="applyAdditional(cat.id)"
+                            [src]="url+cat.image">
+                        </ng-template>
+                        
+                    </swiper>
+                </div>
+
+            </div>
+
+        </article>
+    </section>
+</main>
