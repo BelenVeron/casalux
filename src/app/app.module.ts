@@ -9,25 +9,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './pages/index/index.component';
 import { LoginComponent } from './components/login/login.component';
-import { HeaderComponent } from './components/header/header.component';
+// import { HeaderComponent } from './components/header/header.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MaterialModule } from './material.module';
-import { EditComponent } from './components/edit/edit.component';
 import { SetPasswordComponent } from './pages/set-password/set-password.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { FirstComponent } from './pages/appointments/appointment.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     LoginComponent,
-    HeaderComponent,
     ForgotPasswordComponent,
     RegisterComponent,
-    EditComponent,
     SetPasswordComponent,
     RegistroComponent,
     FirstComponent,
@@ -40,7 +38,8 @@ import { BackgroundComponent } from './components/background/background.componen
     HttpClientModule,
     FormsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

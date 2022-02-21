@@ -228,22 +228,27 @@ article{
     .questions .container .question{
         margin: .4rem 0;
         width: 100%;
-        background: var(--grey);
     }
     .questions .container .question .title{
+        background: var(--grey);
         border: none;
         padding: .6rem 0 0 1rem;
     }
     .questions .container .question .info{
         margin: 0;
         width: 80%;
-        padding-left: 2.5rem;
+        padding-left: 1.5rem;
     }
     .questions .container .question .inside{
-        width: 100%;
+        width: 90%;
         padding: .4rem 0;
+        margin: .4rem auto;
+    }
+    .questions .container .question .inside.selected{
+        background: var(--grey);
+
     }
     .questions .container .question .inside p{
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
 }

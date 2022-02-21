@@ -11,6 +11,7 @@ const routes: Routes = [
   {path:'set-password/:id', component:SetPasswordComponent},
   {path:'appointments', component:FirstComponent},
   {path:'luxurykitchen', loadChildren: () => import('./pages/kitchen/kitchen.module').then(m => m.KitchenModule)},
+  {path:'estimates', loadChildren: () => import('./pages/estimates/estimates.module').then(m => m.EstimatesModule)},
   {path:':section', component:IndexComponent},
 
 ];

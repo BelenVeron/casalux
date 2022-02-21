@@ -4,10 +4,13 @@
     <section>
 
         <div class="header">
-            <div class="logo-container">
+            <div class="logo-container web">
                 <div class="img">
                     <img src="/assets/img/kitchen/logogreen.png" alt="">
                 </div>
+            </div>
+            <div class="title">
+                Experts & Projects
             </div>
         </div>
 
@@ -15,7 +18,7 @@
         <article>
 
             <div class="experts">
-                <div class="main-title">
+                <div class="main-title web">
                     Experts <br> & Projects
                 </div>
 
@@ -51,7 +54,9 @@
 
                         <div class="item" *ngFor="let expert of results;let index = index">
                             <div class="title">
-                                <p class="name">{{index+1}}. {{expert.name}} {{expert.lastname}}</p>
+                                <div>
+                                    <p class="name">{{index+1}}. {{expert.name}} {{expert.lastname}}</p>
+                                </div>
                             </div>
                             <div class="desc">
                                 {{expert.specialty}}
@@ -61,7 +66,7 @@
                             </div>
                             <div class="options">
                                 <div class="option" (click)="viewDetails(expert, false)">
-                                    See this store
+                                    See projects
                                 </div>
                                 <div class="option" (click)="viewDetails(expert, true);contact = true">
                                     Work with this expert
@@ -122,7 +127,7 @@
                                 <ng-template swiperSlide
                                 *ngFor="let img of details.imgs"
                                 class="img">
-                                    <img [src]="img" alt="">
+                                    <img [src]="url+img" alt="">
                                     <div class="info">
                                         <p class="name">name</p>
                                         <p class="place">place</p>
@@ -134,7 +139,7 @@
 
                     <div class="main" *ngIf="!contact">
                         <div class="img">
-                            <img [src]="details.img" alt="">
+                            <img [src]="url+details.img" alt="">
                         </div>
                         <div class="desc">
                             <div class="main-info">

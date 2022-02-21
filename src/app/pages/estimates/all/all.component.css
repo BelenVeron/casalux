@@ -1,0 +1,93 @@
+main{
+    width: 100%;
+    background: var(--white);
+    min-height: 80vh;
+    padding-top: 2rem;
+}
+section{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 6px solid var(--green-op);
+    margin: 0 auto;
+    background: var(--light);
+}
+main header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: .4rem ;
+}
+main header .title{
+    font-size: 1.5em;
+    width: 25%;
+    text-align: center;
+}
+main header a{
+    border: 1px solid var(--k-black);
+    color: var(--k-black);
+    margin: .4rem;
+    padding: .2rem;
+    transition: all.4s;
+    border-radius: 4px;
+    font-size: .9em;
+    text-decoration: none;
+}
+main header a:hover{
+    background: var(--k-black);
+    color: var(--light);
+    cursor: pointer;
+}
+
+main table{
+    margin-top: 1rem;
+    width: 100%;
+    
+}
+main table thead{
+    font-size: .8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .2rem;
+    border-top: 1px solid var(--k-black);
+    border-bottom: 1px solid var(--k-black);
+}
+main table tbody{
+    flex-direction: column;
+}
+main table tbody tr{
+    width: 100%;
+    margin-top: .6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--k-black);
+    padding-bottom: .6rem;
+}
+main table tbody tr td, main table thead th{
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main table tbody tr td{
+    font-size: .8em;
+}
+main table tbody tr td a{
+    text-decoration: none;
+    color: var(--k-black);
+}
+main table tbody tr td i{
+    margin: .2rem;
+    font-size: 1.4em;
+}
+main table tbody tr td .client{
+    background-color: var(--grey);
+    padding: .4rem;
+    border-radius: 50px;
+}

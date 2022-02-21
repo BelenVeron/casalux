@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+//components
 import { FinishesComponent } from './pages/finishes/finishes.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { IndexKitchenComponent } from './pages/index/index.component';

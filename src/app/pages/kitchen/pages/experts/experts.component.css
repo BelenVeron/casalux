@@ -449,3 +449,84 @@ agm-map {
     background: var(--green-op);
     cursor: pointer;
 }
+
+
+
+@media (max-width:400px){
+    .web{
+        display: none !important;
+    }
+    .mobile{
+        display: flex !important;
+    }
+    section{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    section .header{
+        width: 100%;
+        margin-top: 8vh;
+    }
+    section .header .title{
+        padding-right: 1rem;
+        border-top: 0;
+        width: 100%;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    article{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .experts{
+        width: 100%;
+        margin: 0;
+    }
+
+    .experts .search .filter .header{
+        margin: 1rem 0;
+    }
+    .experts .search .items{
+        width: 100%;
+        padding: 0;
+        background: var(--light);
+    }
+    .item{
+        width: 100%;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+        background: var(--k-white);
+    }
+    .item .title{
+        background: var(--grey);
+        justify-content: flex-start;
+        width: 100%;
+        padding: .4rem 0;
+    }
+    .item .title div{
+        padding-left: 3rem;
+    }
+    .item .title .name{
+        font-size: 1.4em;
+    }
+    .item .desc, .item .img, .item .options{
+        width: 70%;
+    }
+    .item .desc{
+        text-transform: uppercase;
+        margin: .4rem 0;
+    }
+    .item .option{
+        background: var(--light);
+        border: none;
+        padding: .6rem;
+    }
+}

@@ -1,0 +1,227 @@
+main{
+    width: 100%;
+    background: var(--white);
+    min-height: 80vh;
+    padding-top: 2rem;
+}
+section.container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 6px solid var(--green-op);
+    margin: 0 auto;
+    background: var(--light);
+}
+main header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
+    padding: .4rem 0;
+}
+main header .img{
+    overflow: hidden;
+    border-radius: 50px;
+    width: 4vw;
+    height: 4vw;
+
+}
+main header .img img{
+    width: 4vw;
+    height: 4vw;
+    object-fit:cover
+}
+main header .buttons{
+    border-left: 1px solid var(--k-black);
+    height: 4vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1rem;
+}
+main header .buttons .info{
+    font-size: .6em;
+    margin: 0 1rem;
+}
+main header .buttons a{
+    border: 1px solid var(--k-black);
+    color: var(--k-black);
+    margin: .4rem;
+    padding: .2rem;
+    transition: all.4s;
+    border-radius: 4px;
+    font-size: .9em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+main header .buttons .back{
+    padding: .2rem .4rem;
+}
+main header .buttons a:hover{
+    background: var(--k-black);
+    color: var(--light);
+    cursor: pointer;
+}
+main header .select{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+main header .select select{
+    width: 50%;
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-top: 1rem;
+}
+article .name{
+    margin: .6rem 0;
+}
+article section .data{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: .8em;
+}
+article section .data div{
+    border-left: 1px solid var(--k-black);
+    height: 15vh;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: var(--k-black);
+}
+article section .data div:nth-child(1){
+    border: none;
+    padding-left: 0;
+}
+
+article section.estimate{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 40%;
+    height: 15vh;
+}
+article section.estimate div{
+    width: 65%;
+    margin: .2rem 0;
+    color: var(--k-black);
+}
+article section.estimate .title{
+    border-bottom: 2px solid var(--black);
+    font-size: 2em;
+}
+article section.estimate .other{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8em;
+    border-bottom: 2px solid var(--black);
+}
+article section.estimate .other div{
+    width: auto;
+}
+article section.estimate .other select{
+    font-size: .8em;
+    outline: none;
+    width: 100%;
+    border: none;
+}
+
+table{
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    font-size: .65em;
+    table-layout: auto;
+}
+table thead{
+    background-color: var(--green-op);
+}
+table thead:nth-child(1){
+    background-color: var(--light);
+}
+table thead:nth-child(2) th{
+    font-weight: 1;
+    color: var(--light);
+    border: 1px solid var(--black);
+    border-left: none;
+    border-bottom: none;
+}
+table thead:nth-child(2) th:nth-child(1){
+    border-left: 1px solid var(--black);
+}
+table thead th.print i{
+    padding: .4rem;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid black;
+    transition: all.2s;
+    margin-bottom: 1rem;
+}
+table thead th.print i:hover{
+    background: var(--k-black);
+    color: var(--light);
+    cursor: pointer;
+}
+table thead th.th-black{
+    color: var(--black);
+}
+.long{
+    width: 30%;
+}
+.small{
+    width: 6%;
+}
+span.additional{
+    margin-left: -.4rem;
+    visibility: hidden;
+}
+td, th{
+    white-space: nowrap;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem 0;
+}
+.invoice-info td{
+    padding: .4rem 0;
+}
+.invoice-info td{
+    border: 1px solid black;
+    border-left: none;
+}
+.invoice-info td:nth-child(1){
+    border-left: 1px solid var(--black);
+}
+thead, tbody, tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+tbody{
+    flex-direction: column;
+}
+table tbody input, table tbody select{
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    font-size: .9em;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

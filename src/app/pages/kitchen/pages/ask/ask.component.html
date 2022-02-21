@@ -48,7 +48,7 @@
                                 {{result.name}} ({{result.cant || 0}})
                             </div>
                             <div class="inside"
-                            [ngClass]="{'selected':inside.selected}"
+                            [ngClass]="{'selected animate__animated animate__fadeIn':inside.selected}"
                             *ngFor="let inside of result.results">
                                 <p class="inside-title"
                                 (click)="viewInside(inside)"
