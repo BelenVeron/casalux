@@ -1,0 +1,75 @@
+<app-header></app-header>
+
+<main>
+    <section>
+
+        <header>
+            <p>My Account > Projects and Leads</p>
+        </header>
+
+
+        <article>
+            <div class="container">
+                <div class="title">
+                    <p [ngClass]="{'selected':selectedFilter=='projects'}"
+                    class="pointer"
+                    (click)="selFilter('projects')">PROJECTS</p>
+                    <p [ngClass]="{'selected':selectedFilter=='leads'}"
+                    class="pointer"
+                    (click)="selFilter('leads')">LEADS</p>
+                </div>
+
+                <div class="options">
+                    <div class="option pointer"
+                    *ngFor="let option of options"
+                    (click)="selOption(option)"
+                    [ngClass]="{'selected':selectedOption == option}">
+                        <div class="circle"
+                        [ngClass]="{'selected-circle animate__animated animate__fadeIn':selectedOption == option}"></div>
+                        <div class="text">
+                            <p>{{option.name}}</p>
+                            <small>{{option.date}}</small>
+                        </div>
+                        <div class="arrow" *ngIf="selectedOption == option">
+                            <i class="fas fa-chevron-right animate__animated animate__fadeInLeft"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="title">
+                    PROJECTS INFORMATION
+                </div>
+                <div class="breadcrumb">
+                    <div class="status">
+                        <p>STATUS</p>
+                    </div>
+                    <div class="other-status completed">
+                        <p>LEAD</p>
+                    </div>
+                    <div class="other-status completed">
+                        <p>DESIGN</p>
+                    </div>
+                    <div class="other-status completed">
+                        <p>ESTIMATE</p>
+                    </div>
+                    <div class="other-status">
+                        <p>INVOICE</p>
+                    </div>
+                    <div class="other-status">
+                        <p>FINISHED</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="title">
+                    3D RENDER
+                </div>
+            </div>
+        </article>
+
+    </section>
+</main>

@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'appointments', component:FirstComponent},
   {path:'luxurykitchen', loadChildren: () => import('./pages/kitchen/kitchen.module').then(m => m.KitchenModule)},
   {path:'estimates', loadChildren: () => import('./pages/estimates/estimates.module').then(m => m.EstimatesModule)},
+  {path:'projects', loadChildren: () => import('./pages/projects/projects.module').then(m => m.ProjectsModule)},
   {path:':section', component:IndexComponent},
 
 ];

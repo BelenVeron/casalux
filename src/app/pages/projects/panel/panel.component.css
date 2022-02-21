@@ -1,0 +1,156 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    background: var(--grey);
+    min-height: 85vh;
+}
+section{
+    border-left: 1rem solid var(--green);
+    width: 90vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light);
+    margin-top: 5vh;
+}
+section header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+section header p{
+    padding: .8rem 0;
+    padding-left: 1rem;
+    width: 100%;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--black);
+}
+section article{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+section article .container{
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+section article .container .title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+}
+section article .container .title p:nth-child(2){
+    margin-left: .4rem;
+    padding-left: .4rem;
+    border-left: 1px solid var(--black);
+}
+section article .container .title p.selected{
+    font-weight: bold;
+}
+
+section article .options{
+    height: 30vh;
+    width: 100%;
+    overflow-y: auto;
+    background-color: var(--light);
+}
+section article .options::-webkit-scrollbar{
+    width: .4rem;
+    border-radius: 10px;
+}
+section article .options::-webkit-scrollbar-thumb{
+    background: var(--green);
+    border-radius: 10px;
+}
+section article .options .option{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--brown);
+    color: var(--light);
+    padding: .4rem;
+    margin: .4rem 0;
+    border-radius: 5px;
+    position: relative;
+    width: 95%;
+    margin: .4rem auto;
+}
+section article .options .option.selected{
+    background-color: var(--black-op);
+}
+section article .options .option:hover{
+    background-color: var(--black-op);
+}
+section article .options .option .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: var(--black);
+}
+section article .options .option .circle.selected-circle{
+    background-color: var(--green);
+}
+section article .options .option .text{
+    line-height: 1rem;
+    padding: .4rem 1rem;
+}
+section article .options .option .arrow{
+    position: absolute;
+    top: 30%;
+    right: 1rem;
+}
+
+section article .container .breadcrumb{
+    font-size: .6em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: .2rem;
+    width: 100%;
+}
+section article .container .breadcrumb div{
+    font-weight: bold;
+    padding: .2rem;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section article .container .breadcrumb .status{
+    background: var(--brown);
+}
+section article .container .breadcrumb .other-status{
+    color: var(--danger);
+    width: 15%;
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+    background-color: var(--danger);
+    margin-right: -.2rem;
+}
+section article .container .breadcrumb .other-status p{
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+    width: 95%;
+    text-align: center;
+    background-color: var(--light);
+    transform: translateX(.05rem);
+}
+section article .container .breadcrumb .other-status.completed{
+    color: var(--light);
+    background: var(--danger);
+}
+section article .container .breadcrumb .other-status.completed p{
+    background-color: var(--danger);
+    color: var(--light);
+} 
+::ng-deep section article .container .breadcrumb .other-status:nth-child(2){
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%) !important;
+}
