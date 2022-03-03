@@ -7,18 +7,18 @@ main{
     min-height: 85vh;
 }
 section{
-    border-left: 1rem solid var(--green);
     width: 90vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: var(--light);
     margin-top: 5vh;
 }
 section header{
     width: 100%;
     display: flex;
+    background-color: var(--light);
+    border-left: 1rem solid var(--green);
     justify-content: flex-start;
 }
 section header p{
@@ -33,7 +33,9 @@ section article{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 1rem;
+    background-color: var(--light);
+    border-left: 1rem solid var(--green);
+    padding-top: 1rem;
 }
 section article .container{
     width: 33%;
@@ -41,6 +43,12 @@ section article .container{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+}
+section article .container:nth-child(1){
+    width: 25%;
+}
+section article .container:nth-child(2){
+    width: 40%;
 }
 section article .container .title{
     width: 100%;
@@ -59,7 +67,7 @@ section article .container .title p.selected{
 }
 
 section article .options{
-    height: 30vh;
+    height: 45vh;
     width: 100%;
     overflow-y: auto;
     background-color: var(--light);
@@ -128,13 +136,22 @@ section article .container .breadcrumb div{
 }
 section article .container .breadcrumb .status{
     background: var(--brown);
+    font-size: 1.2em;
+    width: 15%;
 }
 section article .container .breadcrumb .other-status{
     color: var(--danger);
-    width: 15%;
+    width: 18%;
     clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
     background-color: var(--danger);
     margin-right: -.2rem;
+}
+section article .container .breadcrumb .other-status.completed{
+    background-color: var(--danger);
+}
+section article .container .breadcrumb .other-status.completed p{
+    color: var(--light);
+    background-color: var(--danger);
 }
 section article .container .breadcrumb .other-status p{
     clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
@@ -143,14 +160,94 @@ section article .container .breadcrumb .other-status p{
     background-color: var(--light);
     transform: translateX(.05rem);
 }
-section article .container .breadcrumb .other-status.completed{
-    color: var(--light);
-    background: var(--danger);
+section article .container .breadcrumb .other-status:nth-child(2){
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
 }
-section article .container .breadcrumb .other-status.completed p{
-    background-color: var(--danger);
-    color: var(--light);
-} 
-::ng-deep section article .container .breadcrumb .other-status:nth-child(2){
-    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%) !important;
+section article .container .info{
+    height: 40vh;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+section article .container .info .first{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+section article .container .info .data, .strong{
+    margin-top: .4rem;
+    width: 50%;
+}
+.strong{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.strong div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+section article .container .info .second{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section article .container .info .second p{
+    width: 50%;
+    transition: all.2s;
+}
+section article .container .info .second p:hover{
+    color: var(--green-op);
+    cursor: pointer;
+}
+section article .container .info .second p.selected{
+    color: var(--green-op);
+    font-weight: bold;
+}
+section article .container .info .second p.selected i{
+    margin-left: .4rem;
+}
+
+.container .mySwiper{
+    width: 95%;
+}
+::ng-deep .container .mySwiper .swiper-slide{
+    width: 95% !important;
+    height: 20vw !important;
+    object-fit: cover !important;
+}
+.container .img img{
+    width: 95%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.timeline{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 1rem;
+}
+.timeline-button{
+    float: right;
+    text-decoration: none;
+    background: var(--light);
+    padding: .2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: var(--black);
+    transition: all.2s;
+}
+.timeline-button:hover{
+    box-shadow: 1px 2px 8px black;
 }
