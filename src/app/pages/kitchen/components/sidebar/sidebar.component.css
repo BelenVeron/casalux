@@ -39,8 +39,13 @@ nav article {
     align-items: flex-start;
     flex-direction: column;
 }
+.scroll{
+    overflow-y: auto;
+    height: 90vh;
+    width: 100%;
+}
 nav article.options{
-    margin-top: 20vh;
+    margin-top: 10vh;
     width: 90%;
 }
 nav .options .title{
@@ -72,8 +77,8 @@ nav .options .child-container{
     padding-left: 1rem;
 }
 nav .options .children{
-    color: var(--white);   
-    font-size: .8em;
+    color: var(--grey);   
+    font-size: .9em;
     margin-top: .4rem;
     text-decoration: none;
 }
@@ -82,6 +87,11 @@ nav .options .children:nth-child(1){
 }
 nav .options .children:last-child{
     margin-bottom: 1rem;
+}
+nav .extras{
+    position: absolute;
+    bottom: 8vh;
+    width: 90%;
 }
 nav .actions{
     margin-top: 5vh;

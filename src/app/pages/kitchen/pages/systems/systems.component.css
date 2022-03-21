@@ -31,6 +31,8 @@ section .header .title{
     width: 60%;
     text-align: right;
     align-self: flex-end;
+    transform: translateY(-1rem);
+    transform: translateY(-1rem);
 }
 
 article{
@@ -39,7 +41,6 @@ article{
     justify-content: flex-end;
     align-items: flex-start;
     padding: 1rem;
-    background: var(--k-white);
 }
 .filter {
     width: 15vw;
@@ -51,8 +52,10 @@ article{
     align-items: center;
     margin: .2rem;
     padding: .2rem;
+    margin-right: 0;
+    margin-top: 0;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     transition: all.2s;
 }
 .filter .title.selected{
@@ -65,7 +68,9 @@ article{
     width: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    height: 75vh;
+    background: var(--k-white);
 }
 ::ng-deep .swiper-slide{
     display: flex;
@@ -74,7 +79,8 @@ article{
     flex-direction: column;
 }
 ::ng-deep .mySwiper{
-    width: 100%;
+    width: 98%;
+    margin-top: 2vh;
 }
 ::ng-deep .mySwiper .swiper-slide{
     opacity: 1;
@@ -82,7 +88,7 @@ article{
 
 }
 ::ng-deep .swiper-slide .img{
-    height: 40vh;
+    height: 30vh;
 }
 ::ng-deep .swiper-slide .name{
     position: relative;
@@ -91,14 +97,16 @@ article{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background: var(--light);
     width: 100%;
+    margin-top: .2rem;
 }
 .info .name{
+    background: var(--light);
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     padding: .4rem;
+    width: 75%;
 }
 .info .name span{
     font-weight: bold;
@@ -106,8 +114,13 @@ article{
 .info .name p{
     font-size: .8em;
 }
-.info i{
-    padding: .4rem;
+.info .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    width: 18%;
+    padding: 1.2rem 0;
 }
 
 

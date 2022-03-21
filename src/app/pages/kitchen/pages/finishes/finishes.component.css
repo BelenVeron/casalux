@@ -10,12 +10,13 @@ main{
 section{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
     width: 98%;
 }
 section .header{
     width: 92%;
+    transform: translateX(-1rem);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -32,17 +33,24 @@ section .header .title{
     width: 60%;
     text-align: right;
     align-self: flex-end;
+    transform: translateY(-1rem);
 }
 
 article{
-    width: 92%;
+    width: 95%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background: var(--k-white);
+}
+.filters{
+    padding-bottom: .4rem;
 }
 .filter {
+    transition: all.2s;
     width: 15vw;
+}
+.filter.selected{
+    background: var(--k-white);
 }
 .filter .title{
     font-size: 1.2em;
@@ -52,6 +60,7 @@ article{
     border: 1px solid black;
     background: var(--light);
     margin: .2rem;
+    margin-top: 0;
     padding: .2rem;
     border-radius: 5px;
 }
@@ -75,20 +84,35 @@ article{
     transition: all.2s;
 }
 .filter .option.selected{
-    background: var(--light);
     color: var(--green-op);
     font-weight: bold;
 }
 
 .details{
     width: 100%;
+    background-color: var(--k-white);
+    position: relative;
+}
+.details .arrow-left, .details .arrow-right{
+    position: absolute;
+    top: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--k-black-op);
+}
+.details .arrow-left{
+    left: 2rem;
+}
+.details .arrow-right{
+    right: 2rem;
 }
 .details .sections{
-    width: 100%;
+    width: 85%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding-left: 1rem;
+    align-items: flex-start;
+    height: 80vh;
+    margin: auto;
 }
 .details .sections .detail{
     display: flex;
@@ -103,12 +127,14 @@ article{
     justify-content: center;
     align-items: center;
     width: 100%;
+    color: var(--green-op);
 }
-.details .sections .title.middle{
+.details .sections .detail:nth-child(2) .title{
     background: var(--light);
+    color: var(--black);
 }
 .details .sections .detail .palettes{
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,7 +148,7 @@ article{
     align-items: center;
     margin: .4rem 0;
     width: 100%;
-    height: 12vh;
+    height: 6vh;
     overflow: hidden;
     cursor: pointer;
 }
@@ -137,7 +163,8 @@ article{
 }
 
 .unique-detail{
-    width: 98%;
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -146,16 +173,17 @@ article{
     background: var(--light);
 }
 .unique-detail .close{
-    width: 100%;
+    width: 90%;
     text-align: right;
     font-size: 1.5em;
+    color: var(--green-op);
 }
 .unique-detail .close i{
     cursor: pointer;
 }
 .unique-detail .header{
     background: #e2ccaa;
-    width:100%;
+    width:95%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;

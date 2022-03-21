@@ -4,9 +4,9 @@
     <section>
         <div class="header">
             <div class="logo-container web">
-                <div class="img">
+                <a class="img" routerLink="/luxurykitchen">
                     <img src="/assets/img/kitchen/logogreen.png" alt="">
-                </div>
+                </a>
             </div>
             <div class="title">
                 Finishes
@@ -15,7 +15,7 @@
 
         <article>
             <div class="filters">
-                <div class="filter" *ngFor="let filter of filters">
+                <div class="filter" *ngFor="let filter of filters" [ngClass]="{'selected':filter.selected}">
                     <div class="title" [ngClass]="{'selected':filter.selected}">
                         <p (click)="selectFilter(filter, !filter.selected)">
                             {{filter.title}} </p> 
@@ -29,7 +29,7 @@
                         <div class="option"
                         [ngClass]="{'selected':option.selected}"
                         *ngFor="let option of filter.filters"
-                        (click)="applyFilter(option, option.type)">
+                        (click)="applyFilter(option)">
                             {{option.name}}
                         </div>
                     </div>
@@ -37,9 +37,11 @@
             </div>
 
             <div class="details">
+                <i class="fas fa-chevron-left arrow-left" (click)="slide(-1)"></i>
+                <i class="fas fa-chevron-right arrow-right" (click)="slide(+1)"></i>
                 <div class="sections web">
                     <div class="detail" *ngFor="let active of activeFilters;let index = index">
-                        <div class="title" [ngClass]="{'middle': filterSelected == active.name}">
+                        <div class="title">
                             {{active.name}}
                         </div>
                         <div class="palettes" *ngFor="let palette of active.finishes">

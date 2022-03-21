@@ -12,7 +12,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 92%;
+    width: 95%;
 }
 section .logo-container{
     width: 100%;
@@ -34,8 +34,12 @@ section .logo-container{
     overflow-y: auto;
     direction: rtl;
     padding: 0 .4rem;
-    width: 10vw;
+    width: 14vw;
     background: var(--light);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 .img-options::-webkit-scrollbar{
     width: .5rem;
@@ -49,9 +53,17 @@ section .logo-container{
     cursor: pointer;
     position: relative;
     padding-top: 1rem;
+    width: 95%;
 }
 .img-options .option:nth-child(1){
     padding-top: 0;
+}
+.img-options .option{
+    transition: all.2s;
+}
+.img-options .option.selected{
+    opacity: .4;
+    transform: scale(.95);
 }
 .img-options .option .title{
     position: absolute;
@@ -63,13 +75,29 @@ section .logo-container{
 }
 
 .option-viewer{
-    width: 65%;
+    width: 60%;
     height: 82vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-
+    position: relative;
+}
+.option-viewer.web .img-banner{
+    position: absolute;
+    background: var(--black-op);
+    opacity: .6;
+    bottom: 10vh;
+    z-index: 999;
+    padding: .4rem;
+    width: 40vw;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.option-viewer.web .img-banner img{
+    width: 50%;
 }
 .option-viewer .swiper-container{
     display: flex;
@@ -80,20 +108,35 @@ section .logo-container{
 }
 ::ng-deep .mySwiper{
     padding-top: 1rem;
-    width: 60%;
+    width: 80%;
     margin: 0;
 }
+::ng-deep .mySwiper .swiper-button-prev, ::ng-deep .mySwiper .swiper-button-next{
+    color: var(--brown);
+}
 ::ng-deep .mySwiper .swiper-slide{
-    height: 13vh;
+    height: 12vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all.2s;
+}
+::ng-deep .mySwiper .swiper-slide img{
+    height: 12vh;
+}
+::ng-deep .mySwiper .swiper-slide.swiper-slide-active{
+    transform: scale(1.4);
 }
 ::ng-deep .mySwiper2{
     padding-top: 1rem;
     width: 80%;
     margin: 0;
+    margin-top: 1rem;
+}
+::ng-deep .mySwiper2 .swiper-slide img{
+    height: 60vh;
+    object-fit: cover;
 }
 ::ng-deep .swiper-pagination-bullet{
     background: var(--light) !important;
@@ -116,9 +159,13 @@ section .logo-container{
     padding: 2rem;
 }
 .option-details .details-title{
-    margin-top: 10vh;
-    font-size: 4rem;
+    font-size: 3.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 100%;
+    max-width: 130%;
     color: var(--k-green-op);
+    text-align: center;
 }
 .option-details .text{
     font-size: .8em;
@@ -127,18 +174,34 @@ section .logo-container{
 }
 .option-details .section-text{
     font-weight: bold;
+    text-align: center;
     color: var(--k-green-op);
     margin-top: 1rem;
 }
 .option-details .three-images{
-    margin-top:1rem
+    width: 60%;
+    margin: auto;
+    margin-top:1rem;
 }
 .option-details .collection-img-seemore{
     overflow-y: auto;
-    width: 100%;
+    width: 70%;
     padding: 0 .4rem;
     margin-top: 2rem;
-    max-height: 50vh;
+    max-height: 45vh;
+}
+.option-details .collection-img-seemore .option{
+    position: relative;
+}
+.option-details .collection-img-seemore .option .title{
+    position: absolute;
+    background-color: var(--white);
+    font-size: .8em;
+    bottom: .4rem;
+    left: 0;
+    padding: 0 .4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .option-details .collection-img-seemore::-webkit-scrollbar{
     width: .2rem;
@@ -152,7 +215,7 @@ section .logo-container{
 
 .option-details .seemore{
     position: absolute;
-    bottom: 4rem;
+    bottom: 15vh;
     color: var(--green);
     text-decoration: underline;
     cursor: pointer;

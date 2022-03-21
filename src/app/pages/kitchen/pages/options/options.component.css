@@ -31,6 +31,7 @@ section .header .title{
     width: 60%;
     text-align: right;
     align-self: flex-end;
+    transform: translateY(-1rem);
 }
 
 article{
@@ -123,7 +124,7 @@ article{
 
 
 .details .info{
-    width: 38%;
+    width: 45%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -150,7 +151,7 @@ article{
     width: 50%;
     text-align: center;
     font-weight: bold;
-    padding: .4rem;
+    padding: .2rem;
     font-size: .8em;
 
 }

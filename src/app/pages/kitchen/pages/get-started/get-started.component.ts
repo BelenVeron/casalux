@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetStartedComponent implements OnInit {
 
-  constructor() { }
+  onlyimg = true
+  clickhere = false
+  constructor() {
+    setInterval(()=>{
+      this.onlyimg = !this.onlyimg
+      this.clickhere = !this.clickhere
+    }, 2500)
+  }
 
   ngOnInit(): void {
   }

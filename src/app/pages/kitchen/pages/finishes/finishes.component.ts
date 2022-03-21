@@ -23,7 +23,7 @@ export class FinishesComponent implements OnInit {
   optionsByCat:any = []
 
   filters = [
-    {title:'BY COLOR', selected:false, filters:this.optionsByColor},
+    {title:'BY COLOR', selected:true, filters:this.optionsByColor},
     {title:'BY CATEGORY', selected:false, filters:this.optionsByCat},
   ]
   finishSelected:any;
@@ -39,20 +39,17 @@ export class FinishesComponent implements OnInit {
 
   constructor(private kitchen:KitchenProductsService) {
     this.kitchen.finishesData('').subscribe((data:any)=>{
-      console.log(data.data)
+      console.log(data)
       data.data.finishColors.map((filter:any)=>filter.selected = false)
       data.data.finishCategorys.map((filter:any)=>filter.selected = false)
 
       this.filters[0].filters = data.data.finishColors
       this.filters[1].filters = data.data.finishCategorys
-      
       this.filters[0].filters.map((filter:any)=>filter.type = 'color')
+      this.filters[0].filters[0].selected = true
 
-      console.log(this.filters)
-
-      this.activeFilters = data.data.finishPalettes
+      this.activeFilters = data.data.selected
       this.mobileFilter = this.activeFilters[0]
-      console.log(this.mobileFilter.name)
     })
   }
 
@@ -65,10 +62,8 @@ export class FinishesComponent implements OnInit {
   }
 
   selectPalettes(palette:any){
-    let params = 'finishID='+palette.id 
-
+    let params = 'finishID='+palette.id
     this.kitchen.finishesData(params).subscribe((data:any)=>{
-      console.log(data.data)
       this.finishSelected = {
         collections: data.data.finishCollections,
         name: palette.name,
@@ -78,14 +73,12 @@ export class FinishesComponent implements OnInit {
   }
 
 
-  applyFilter(filter:any, type:string){
-    let params = type == 'color'?'finishColorID='+filter.id:'finishCategoryID='+filter.id
-    
+  applyFilter(filter:any){
+    let params = filter.type == 'color'?'finishColorID='+filter.id:'finishCategoryID='+filter.id
     console.log(params)
     this.kitchen.finishesData(params).subscribe((data:any)=>{
       this.filterSelected = filter.name
-      console.log(data.data)
-      this.activeFilters = data.data.finishPalettes
+      this.activeFilters = data.data.selected
       this.mobileFilter = this.activeFilters.filter((active:any)=>active.name == this.filterSelected)[0]
       this.finishSelected = null
 
@@ -93,5 +86,11 @@ export class FinishesComponent implements OnInit {
       this.filters[1].filters.map((filter:any)=>filter.selected = false)
       filter.selected = true
     })
+  }
+
+  slide(number:number){
+    var filter;
+    filter = this.activeFilters[1+number]
+    this.applyFilter(filter)
   }
 }

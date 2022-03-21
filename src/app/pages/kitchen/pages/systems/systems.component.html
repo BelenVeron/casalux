@@ -4,9 +4,9 @@
     <section>
         <div class="header">
             <div class="logo-container web">
-                <div class="img">
+                <a class="img" routerLink="/luxurykitchen">
                     <img src="/assets/img/kitchen/logogreen.png" alt="">
-                </div>
+                </a>
             </div>
             <div class="title">
                 OPENING SYSTEMS
@@ -48,7 +48,9 @@
                             <span>{{opening.name}}</span>
                             <p> From $200 to $900</p>
                         </div>
-                        <i class="far fa-heart"></i>
+                        <div class="icon">
+                            <i class="far fa-heart"></i>
+                        </div>
                     </div>
                 </ng-template>
                 </swiper>
