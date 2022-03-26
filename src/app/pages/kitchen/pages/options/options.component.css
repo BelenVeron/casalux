@@ -43,7 +43,7 @@ article{
 }
 .filters{
     background: var(--k-white);
-    width: 40%;
+    width: 35%;
 }
 .filter .title{
     font-size: 1.2em;
@@ -95,13 +95,30 @@ article{
     display: flex;
     justify-content: center;
 }
+::ng-deep .details .img .swiper, ::ng-deep .details .img .swiper-slide img{
+    height: 50vh !important;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 1rem !important;
+}
+::ng-deep .details .img .swiper-slide{
+    width: 100% !important;
+    z-index: 1 !important;
+    cursor: grab;
+}
+::ng-deep .details .img .swiper-slide:active{
+    cursor: grabbing;
+}
+::ng-deep .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    background-color: var(--green-op);
+}
 .details .img .favs{
     position: absolute;
     bottom: .4rem;
     padding: .4rem;
     background: var(--k-white);
     width: 95%;
-
+    z-index: 99;
 }
 .details .img .favs .fav{
     display: flex;
@@ -187,12 +204,12 @@ article{
 }
 .details .cart .selects .quantity{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
 .details .cart .selects .quantity .calc{
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,6 +226,12 @@ article{
     background: var(--grey);
     width: 40%;
     text-align: center;
+}
+.details .cart .selects .quantity p.unit{
+    border: 1px solid var(--black);
+    width: 15%;
+    padding: 0 .2rem;
+    line-height: 22px;
 }
 .details .cart .price{
     display: flex;
@@ -312,6 +335,7 @@ article{
 }
 .images{
     width: 92%;
+    margin-top: 1rem;
 }
 ::ng-deep .swiper-slide.img{
     display: flex;

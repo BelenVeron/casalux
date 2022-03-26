@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
 
-import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay }
+import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, EffectFade }
 from 'swiper';
-SwiperCore.use([EffectCoverflow, Autoplay]);
+SwiperCore.use([EffectCoverflow, Autoplay, EffectFade]);
 
 @Component({
   selector: 'app-options',
@@ -21,6 +21,12 @@ export class OptionsComponent implements OnInit {
     slidesPerView: 2,
     spaceBetween:5,
     navigation:true,
+  };
+  config3: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween:5,
+    pagination:true,
+    effect:'fade'
   };
 
   url  =environment.api
@@ -133,4 +139,5 @@ class Additional {
   additionalTypes:any = [];
   additionalSizes:any = [];
   additionalColors:any = []
+  additionalImages:any = []
 }

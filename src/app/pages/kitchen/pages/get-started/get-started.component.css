@@ -81,6 +81,7 @@ section .details .selected{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 62%;
 }
 section .details .selected .options-container{
     display: flex;
@@ -88,7 +89,7 @@ section .details .selected .options-container{
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    padding: .4rem;
+    padding: .8rem;
     background-color: var(--white);
 }
 section .details .selected .options-container p{
@@ -141,11 +142,14 @@ section .text-details .up .up-text{
 }
 section .text-details .title{
     font-size: 1.4em;
+    margin-left: 1rem;
+    margin-bottom: .4rem;
     color: var(--k-green-op);
 }
 section .text-details p{
     font-size: .95em;
     margin: 0 1rem;
+    text-align: justify;
 }
 section .text-details p:nth-child(1){
     text-indent: 40px;
@@ -161,9 +165,9 @@ section .text-details .img1 img{
 
 section .text-details .img2{
     float: right;
-    width: 30%;
+    width: 25%;
     margin-right: 1rem;
-    height: 15vh;
+    height: 12vh;
 }
 section .text-details .img2.clickhere{
     display: flex;

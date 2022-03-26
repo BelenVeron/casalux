@@ -15,12 +15,13 @@ export class CollectionsComponent implements OnInit {
 
   url = environment.api
   config: SwiperOptions = {
+    loopedSlides: 3,
     slidesPerView: 3,
-    spaceBetween:60,
+    spaceBetween:10,
     navigation: true,
     centeredSlides:true,
     allowTouchMove: false,
-    loop:true
+    loop:true,
   };
   config2: SwiperOptions = {
     slidesPerView: 1,
@@ -60,7 +61,6 @@ export class CollectionsComponent implements OnInit {
         // this.collectionSelected.photos = data.collectionSelectedPhotos
         // this.collectionSelected.content = data.collectionSelectedContent
       }
-      console.log(data.data)
     })
 
   }
@@ -73,9 +73,8 @@ export class CollectionsComponent implements OnInit {
   }
 
   slideChange(e:any){
-    const index = e.realIndex-1
-    this.imagesSelected = this.collections[this.id].kitchens[index].photos
-    console.log(this.imagesSelected)
+    const element:any = document.getElementById(this.url+e.realIndex)
+    element.click()
   }
 
   updateCollection(show:boolean){
