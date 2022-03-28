@@ -17,6 +17,7 @@ export class CollectionsComponent implements OnInit {
   config: SwiperOptions = {
     loopedSlides: 3,
     slidesPerView: 3,
+    initialSlide: 0,
     spaceBetween:10,
     navigation: true,
     centeredSlides:true,
@@ -54,8 +55,8 @@ export class CollectionsComponent implements OnInit {
       this.collections = data
       console.log(data)
       if(!this.id|| this.id == 'collections'){
-        this.changeSelectedCollection(0, false)
         this.imagesSelected = this.collections[0].kitchens[0].photos
+        this.changeSelectedCollection(0, false)
       }else{
         // this.collectionSelected = data.collectionSelected
         // this.collectionSelected.photos = data.collectionSelectedPhotos
@@ -73,14 +74,18 @@ export class CollectionsComponent implements OnInit {
   }
 
   slideChange(e:any){
-    const element:any = document.getElementById(this.url+e.realIndex)
-    element.click()
+    const element:any = document.getElementById(this.url+(e.realIndex))
+    if(element) element.click()
   }
 
   updateCollection(show:boolean){
     // let params = 'collectionID='+this.id
     this.collectionSelected = this.collections[this.id]
-    this.imagesSelected = this.collections[this.id].kitchens[0].photos
+    this.selectImages(0)
+    setTimeout(()=>{
+      const element:any = document.getElementById(this.url+0)
+      if(element) element.click()
+    }, 20)
     this.viewMobile = show
 
   }
@@ -91,6 +96,7 @@ export class CollectionsComponent implements OnInit {
   }
 
   selectImages(index:number){
-    this.imagesSelected = this.collections[this.id].kitchens[index].photos
+    const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
+    this.imagesSelected = hasPhotos ? this.collections[this.id].kitchens[index].photos : []
   }
 }

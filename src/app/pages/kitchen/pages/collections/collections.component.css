@@ -56,7 +56,10 @@ section .logo-container .img{
     cursor: pointer;
     position: relative;
     padding-top: 1rem;
-    width: 70%;
+    width: 80%;
+}
+.img-options .option img{
+    height: 15vh;
 }
 .img-options .option:nth-child(1){
     padding-top: 0;
@@ -194,6 +197,9 @@ section .logo-container .img{
     margin: auto;
     margin-top:1rem;
 }
+.option-details .three-images img{
+    height: 10vh;
+}
 .option-details .collection-img-seemore{
     overflow-y: auto;
     width: 70%;
@@ -203,6 +209,10 @@ section .logo-container .img{
 }
 .option-details .collection-img-seemore .option{
     position: relative;
+    margin-top: .4rem;
+}
+.option-details .collection-img-seemore .option img{
+    height: 12vh;
 }
 .option-details .collection-img-seemore .option .title{
     position: absolute;
