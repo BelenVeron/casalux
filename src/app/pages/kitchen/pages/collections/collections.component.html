@@ -18,7 +18,7 @@
             <article class="img-options">
                 <div class="option"
                 *ngFor="let option of collections, let index = index"
-                [ngClass]="{'selected':collectionSelected.name === option.name}"
+                [ngClass]="{'selected':collectionSelected.name === option.name, 'no-selected':collectionSelected.name !== option.name}"
                 (click)="changeSelectedCollection(index, true)">
                     <div class="img">
                         <img [src]="url+option.image" alt="">

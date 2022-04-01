@@ -22,7 +22,7 @@ section .logo-container{
     margin-bottom: 2rem;
 }
 section .logo-container .img{
-    padding-left: 5vw;
+    padding-left: 2vw;
 }
 .container{
     width: 100%;
@@ -57,9 +57,11 @@ section .logo-container .img{
     position: relative;
     padding-top: 1rem;
     width: 80%;
+    text-align: center;
 }
-.img-options .option img{
-    height: 15vh;
+.img-options .option.no-selected img{
+    height: 17.4vh;
+    width: 12.8vw;
 }
 .img-options .option:nth-child(1){
     padding-top: 0;
@@ -67,9 +69,10 @@ section .logo-container .img{
 .img-options .option{
     transition: all.2s;
 }
-.img-options .option.selected{
+.img-options .option.selected img{
     opacity: .4;
-    transform: scale(.95);
+    height: 14vh;
+    width: 9.9vw;
 }
 .img-options .option .title{
     position: absolute;
@@ -111,9 +114,9 @@ section .logo-container .img{
     align-items: center;
     flex-direction: column;
     width: 100%;
+    margin-top: 1rem;
 }
 ::ng-deep .mySwiper{
-    padding-top: 1rem;
     width: 80%;
     margin: 0;
 }
@@ -130,10 +133,6 @@ section .logo-container .img{
     transform: scale(.85);
     border: 2px solid var(--white);
 }
-::ng-deep .mySwiper .swiper-slide img{
-    height: 14vh;
-    width: 14vw;
-}
 ::ng-deep .mySwiper .swiper-slide.swiper-slide-active{
     transform: scale(1);
     border: 2px solid var(--green-op);
@@ -149,7 +148,7 @@ section .logo-container .img{
     margin-top: 1rem;
 }
 ::ng-deep .mySwiper2 .swiper-slide img{
-    height: 60vh;
+    height: 56.2vh;
     object-fit: cover;
 }
 ::ng-deep .swiper-pagination-bullet{
