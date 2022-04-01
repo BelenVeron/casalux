@@ -35,11 +35,16 @@
     
         <div class="extras">
             <article class="actions">
-                <a class="action" *ngFor="let action of actions"
-                routerLink="{{action.route}}">
-                <i class="fas fa-{{action.icon}}"></i>
-                    {{action.title}}
-                </a>
+                <div class="action" *ngFor="let action of actions">
+                    <a  *ngIf="action.route.slice(-3) !== 'php'" routerLink="{{action.route}}">
+                    <i class="fas fa-{{action.icon}}"></i>
+                        {{action.title}}
+                    </a>
+                    <a  *ngIf="action.route.slice(-3) === 'php'" (click)="extRedirect(action.route)">
+                        <i class="fas fa-{{action.icon}}"></i>
+                        {{action.title}}
+                    </a>
+                </div>
             </article>
         
             <article class="social">

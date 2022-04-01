@@ -107,6 +107,11 @@ nav .actions .action{
     text-decoration: none;
     transition: background.2s;
 }
+nav .actions .action a{
+    color: var(--k-green-op);
+    cursor: pointer;
+    text-decoration: none;
+}
 nav .actions .action i{
     color: var(--green);
 }

@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
   ]
   actions = [
     {title:'Download catalog', icon:'download', route:'/luxurykitchen/start'},
-    {title:'Ask the experts', icon:'search', route:'/luxurykitchen/ask'},
+    {title:'Ask the experts', icon:'search', route:'https://proxising.com/casalux/luxurykitchens/ask.php'},
   ]
   constructor() { }
 
@@ -36,5 +36,9 @@ export class SidebarComponent implements OnInit {
 
   viewOptions(item:any){
     item.selected = !item.selected
+  }
+
+  extRedirect(url: string) {
+    window.open(url, "_blank");
   }
 }
