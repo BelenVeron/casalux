@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-kitchensidebar',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  sidenav = false
+  sidenav = false;
+  askURL = environment.askURL;
   items = [
     {title:'GET STARTED', route:'/luxurykitchen/started', selected:false},
     {title:'VISUALIZER', route:'/luxurykitchen/start', selected:false},
@@ -23,7 +25,7 @@ export class SidebarComponent implements OnInit {
   ]
   actions = [
     {title:'Download catalog', icon:'download', route:'/luxurykitchen/start'},
-    {title:'Ask the experts', icon:'search', route:'https://proxising.com/casalux/luxurykitchens/ask.php'},
+    {title:'Ask the experts', icon:'search', route:this.askURL},
   ]
   constructor() { }
 

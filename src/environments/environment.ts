@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   // api:'http://localhost/casalux/'
-  api:'https://proxising.com/casalux/api/'
+  api:'https://proxising.com/casalux/api/',
+  askURL:'https://proxising.com/casalux/luxurykitchens/ask.php'
 };
 
 /*
