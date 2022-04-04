@@ -54,14 +54,15 @@ section .logo-container .img{
 }
 .img-options .option{
     cursor: pointer;
-    position: relative;
     padding-top: 1rem;
-    width: 80%;
     text-align: center;
 }
 .img-options .option.no-selected img{
     height: 17.4vh;
     width: 12.8vw;
+}
+.img{
+    position: relative;
 }
 .img-options .option:nth-child(1){
     padding-top: 0;

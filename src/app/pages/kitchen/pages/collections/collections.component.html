@@ -22,8 +22,8 @@
                 (click)="changeSelectedCollection(index, true)">
                     <div class="img">
                         <img [src]="url+option.image" alt="">
+                        <p class="title">{{option.name}}</p>
                     </div>
-                    <p class="title">{{option.name}}</p>
                 </div>
             </article>
             
@@ -31,7 +31,7 @@
                 <div class="img-banner">
                     <img src="/assets/img/kitchen/media/banner.png" alt="">
                 </div>
-
+                
                 <div class="swiper-container">
                     <swiper
                     class="mySwiper"
@@ -42,8 +42,8 @@
                         <img [src]="url+(img.photos?.length>0 && img.photos[0].image)" [id]="url+index" (click)="selectImages(index)">
                     </ng-template>
                     </swiper>
-
                 </div>
+                
                 <swiper
                 class="mySwiper2"
                 [config]="config2"
