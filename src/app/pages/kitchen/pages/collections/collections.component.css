@@ -123,19 +123,43 @@ section .logo-container .img{
 }
 ::ng-deep .mySwiper .swiper-button-prev, ::ng-deep .mySwiper .swiper-button-next{
     color: var(--brown);
+    transform: scale(0.7);
 }
+::ng-deep .mySwiper .swiper-button-prev{
+    left: 0vw;
+}
+
+::ng-deep .mySwiper .swiper-button-next {
+    right: 0vw;
+}
+
 ::ng-deep .mySwiper .swiper-slide{
+    transform: scale(.8, .7);
     height: 14vh;
-    overflow: hidden;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
-    transition: all.2s;
-    transform: scale(.85);
-    border: 2px solid var(--white);
+}
+::ng-deep .mySwiper .swiper-slide.swiper-slide-next img{
+    margin-right: 28px;
+}
+::ng-deep .mySwiper .swiper-slide.swiper-slide-prev img{
+    margin-left: 28px;
 }
 ::ng-deep .mySwiper .swiper-slide.swiper-slide-active{
     transform: scale(1);
+}
+::ng-deep .mySwiper .swiper-slide.swiper-slide-active img{
     border: 2px solid var(--green-op);
 }
 ::ng-deep .swiper-wrapper{
@@ -202,7 +226,7 @@ section .logo-container .img{
 }
 .option-details .collection-img-seemore{
     overflow-y: auto;
-    width: 70%;
+    width: 85%;
     padding: 0 .4rem;
     margin-top: 2rem;
     max-height: 45vh;
@@ -215,14 +239,17 @@ section .logo-container .img{
     height: 12vh;
 }
 .option-details .collection-img-seemore .option .title{
-    position: absolute;
+    
     background-color: var(--white);
     font-size: .8em;
     bottom: .4rem;
     left: 0;
     padding: 0 .4rem;
+    font-size: xx-small;
+    position: inherit;
     text-overflow: ellipsis;
     white-space: nowrap;
+    white-space: pre-wrap;
 }
 .option-details .collection-img-seemore::-webkit-scrollbar{
     width: .2rem;

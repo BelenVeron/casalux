@@ -27,7 +27,12 @@ export class CollectionsComponent implements OnInit {
   config2: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween:50,
+    mousewheel: true,
     direction:'vertical',
+    autoplay:{
+      delay: 2500,
+      disableOnInteraction: false
+    },
     pagination: { clickable: true },
   };
   configMobile: SwiperOptions = {
