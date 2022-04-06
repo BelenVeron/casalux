@@ -51,10 +51,11 @@
     font-weight: bold;
 }
 
-.kitchen-bg .main img{
+.kitchen-bg .main video{
     width: 95vw;
     height: 100vh;
     object-fit: cover;
+    
 }
 
 .kitchen-bg .copyright{
