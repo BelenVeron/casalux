@@ -197,18 +197,29 @@ section .logo-container .img{
     padding: 2rem;
 }
 .option-details .details-title{
-    font-size: 3.5rem;
+    font-size: 82px;
     text-overflow: ellipsis;
     overflow: hidden;
     min-width: 100%;
     max-width: 130%;
     color: var(--k-green-op);
     text-align: center;
+    padding-bottom: 1rem;
 }
 .option-details .text{
     font-size: .8em;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    height: 42vh;
+    overflow-y: auto;
+}
+.option-details .text::-webkit-scrollbar{
+    width: .2rem;
+    border-radius: 10px;
+}
+.option-details .text::-webkit-scrollbar-thumb{
+    background: var(--brown);
+    border-radius: 10px;
 }
 .option-details .section-text{
     font-weight: bold;
@@ -219,24 +230,24 @@ section .logo-container .img{
 .option-details .three-images{
     width: 60%;
     margin: auto;
-    margin-top:1rem;
+    margin-top: .5rem;
 }
 .option-details .three-images img{
     height: 10vh;
 }
 .option-details .collection-img-seemore{
     overflow-y: auto;
-    width: 85%;
+    width: 100%;
     padding: 0 .4rem;
     margin-top: 2rem;
-    max-height: 45vh;
+    max-height: 54vh;
 }
 .option-details .collection-img-seemore .option{
     position: relative;
     margin-top: .4rem;
 }
 .option-details .collection-img-seemore .option img{
-    height: 12vh;
+    height: 20vh;
 }
 .option-details .collection-img-seemore .option .title{
     
@@ -245,7 +256,7 @@ section .logo-container .img{
     bottom: .4rem;
     left: 0;
     padding: 0 .4rem;
-    font-size: xx-small;
+    font-size: small;
     position: inherit;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -263,7 +274,7 @@ section .logo-container .img{
 
 .option-details .seemore{
     position: absolute;
-    bottom: 15vh;
+    bottom: 13vh;
     color: var(--green);
     text-decoration: underline;
     cursor: pointer;

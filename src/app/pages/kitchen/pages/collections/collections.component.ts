@@ -30,7 +30,7 @@ export class CollectionsComponent implements OnInit {
     mousewheel: true,
     direction:'vertical',
     autoplay:{
-      delay: 2500,
+      delay: 2000,
       disableOnInteraction: false
     },
     pagination: { clickable: true },
