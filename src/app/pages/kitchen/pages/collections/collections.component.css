@@ -210,7 +210,7 @@ section .logo-container .img{
     font-size: .8em;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    height: 42vh;
+    height: 31vh;
     overflow-y: auto;
 }
 .option-details .text::-webkit-scrollbar{
