@@ -1,5 +1,4 @@
 main{
-    display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 0 0;
@@ -216,7 +215,7 @@ section .logo-container .img{
     font-size: .8em;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    height: 31vh;
+    height: 38vh;
     overflow-y: auto;
 }
 .option-details .text::-webkit-scrollbar{

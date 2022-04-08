@@ -1,17 +1,20 @@
 <main>
+    <!-- sidebar gris hamburgesa verde lateral izqioerdo en collections -->
     <app-kitchensidebar></app-kitchensidebar>
 
 
     <section>
+        <!-- logo verde superior casalux en collections -->
         <div class="logo-container">
             <a class="img" routerLink="/luxurykitchen">
                 <img src="/assets/img/kitchen/logogreen.png" alt="">
             </a>
         </div>
 
-
+        <!-- container web contiene carrousel vertical con los collections -->
         <article class="container web">
             <div class="container-title mobile">
+                <!-- h3 y p solo se ven en version mobile -->
                 <h3>COLLECTIONS</h3>
                 <P>Enter the collection you like to see details</P>
             </div>
@@ -21,8 +24,8 @@
                 [ngClass]="{'selected':collectionSelected.name === option.name, 'no-selected':collectionSelected.name !== option.name}"
                 (click)="changeSelectedCollection(index, true)">
                     <div class="img">
-                        <img [src]="url+option.image" alt="">
-                        <p class="title">{{option.name}}</p>
+                        <img [src]="url+option.image" alt=""><!-- img de collections en carrousel vertical -->
+                        <p class="title">{{option.name}}</p><!-- nombres de los collections -->
                     </div>
                 </div>
             </article>
