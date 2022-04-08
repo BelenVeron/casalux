@@ -1,0 +1,4 @@
+<button class="heart" (click)="setLike()">
+    <i *ngIf="like !== 'empty'" [class]="'fas fa-heart '+like"></i>
+    <i *ngIf="like === 'empty'" class="far fa-heart"></i>
+</button>

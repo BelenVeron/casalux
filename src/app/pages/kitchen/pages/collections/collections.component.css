@@ -97,7 +97,7 @@ section .logo-container .img{
     position: absolute;
     background: var(--black-op);
     opacity: .6;
-    bottom: 10vh;
+    bottom: 13vh;
     z-index: 999;
     padding: .4rem;
     width: 40vw;
@@ -105,6 +105,12 @@ section .logo-container .img{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.option-viewer.web .heart{
+    position: absolute;
+    bottom: 7vh;
+    z-index: 999;
+    left: 42vw;
 }
 .option-viewer.web .img-banner img{
     width: 50%;

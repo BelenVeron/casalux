@@ -10,11 +10,8 @@
             <span>vision reality</span>
         </div>
     </div>
-    <div class="main">
-        <video #video (canplay)="video.play()" (loadedmetadata)="video.muted = true" loop id="myVideo">
-            <source src="/assets/videos/main_video.mp4" type="video/mp4">
-          </video>
-    </div>
+
+    <app-video-player></app-video-player>
 
     <div class="copyright">
         <img src="/assets/img/kitchen/copyright.png" alt="">

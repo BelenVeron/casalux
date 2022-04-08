@@ -1,0 +1,18 @@
+.heart {
+    background-color: #d6d6d6;
+    text-decoration: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.like {
+    color: gray;
+}
+
+.love {
+    color: red;
+}

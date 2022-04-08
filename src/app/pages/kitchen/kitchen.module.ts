@@ -21,7 +21,9 @@ import { OptionsComponent } from './pages/options/options.component';
 import { SystemsComponent } from './pages/systems/systems.component';
 import { StudiosComponent } from './pages/studios/studios.component';
 import { AskComponent } from './pages/ask/ask.component';
-import { ExpertsComponent } from './pages/experts/experts.component'
+import { ExpertsComponent } from './pages/experts/experts.component';
+import { FavoriteComponent } from '../../components/favorite/favorite.component';
+import { VideoPlayerComponent } from '../../components/video-player/video-player.component'
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { ExpertsComponent } from './pages/experts/experts.component'
     SystemsComponent,
     StudiosComponent,
     AskComponent,
-    ExpertsComponent],
+    ExpertsComponent,
+    FavoriteComponent,
+    VideoPlayerComponent],
   imports: [
     CommonModule,
     KitchenRoutingModule,
