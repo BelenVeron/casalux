@@ -24,7 +24,8 @@ import { AskComponent } from './pages/ask/ask.component';
 import { ExpertsComponent } from './pages/experts/experts.component';
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
 import { VideoPlayerComponent } from '../../components/video-player/video-player.component';
-import { NavHeaderComponent } from './components/nav-header/nav-header.component'
+import { NavHeaderComponent } from './components/nav-header/nav-header.component';
+import { SocialComponent } from './components/social/social.component'
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { NavHeaderComponent } from './components/nav-header/nav-header.component
     ExpertsComponent,
     FavoriteComponent,
     VideoPlayerComponent,
-    NavHeaderComponent],
+    NavHeaderComponent,
+    SocialComponent],
   imports: [
     CommonModule,
     KitchenRoutingModule,

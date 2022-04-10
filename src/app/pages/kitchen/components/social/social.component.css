@@ -1,0 +1,25 @@
+.social {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-top: 5vh;
+    color: var(--k-green-op);
+    justify-content: space-between;
+    font-size: 1.5em;
+    align-items: center;
+}
+
+.social p {
+    font-size: .75em;
+}
+
+@media (max-width:400px) {
+    .social {
+        justify-content: space-around;
+        font-size: 1.4em;
+        margin-top: 4vh;
+    }
+    .social p {
+        display: none;
+    }
+}
