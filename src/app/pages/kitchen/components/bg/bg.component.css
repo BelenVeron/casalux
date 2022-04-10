@@ -1,60 +1,73 @@
-.kitchen-bg{
+.kitchen-bg {
     width: 95vw;
     height: 100vh;
     position: relative;
 }
-.kitchen-bg .logo{
+
+.kitchen-bg .logo {
     position: absolute;
     left: 5vw;
     width: 25%;
     top: 5vh;
 }
-.kitchen-bg .main{
+
+.kitchen-bg .main {
     width: 95vw;
     height: 100vh;
 }
 
-.kitchen-bg .slogan{
+.kitchen-bg .slogan {
     position: absolute;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:30vw;
+    width: 30vw;
     color: var(--light);
     font-size: 2em;
     transition: all.2s ease;
     z-index: 2;
 }
-.kitchen-bg .slogan .text{
+
+.kitchen-bg .slogan .text {
     width: 70%;
     display: none;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 }
-.kitchen-bg .slogan:hover{
-    background-color: var(--k-black-op);
 
+.kitchen-bg .slogan:hover {
+    background-color: var(--k-black-op);
 }
-.kitchen-bg .slogan:hover .text{
+
+.kitchen-bg .slogan:hover .text {
     display: flex;
 }
-.kitchen-bg .slogan .text span:nth-child(1){
+
+.kitchen-bg .slogan .text span:nth-child(1) {
     font-size: 1.4em;
 }
-.kitchen-bg .slogan .text span:nth-child(2){
+
+.kitchen-bg .slogan .text span:nth-child(2) {
     color: var(--white);
 }
-.kitchen-bg .slogan .text span:nth-child(4){
+
+.kitchen-bg .slogan .text span:nth-child(4) {
     font-size: 1.2em;
     font-weight: bold;
 }
 
-.kitchen-bg .copyright{
+.kitchen-bg .copyright {
     position: absolute;
     bottom: 2rem;
     right: 4rem;
     width: 20%;
+}
+
+@media (max-width:400px) {
+    .kitchen-bg {
+        width: 100vw;
+    }
 }
