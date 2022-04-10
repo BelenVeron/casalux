@@ -1,5 +1,5 @@
 <main>
-    <app-kitchensidebar></app-kitchensidebar>
+    <app-kitchennavbar></app-kitchennavbar>
 
     <section>
         <div class="header">
@@ -18,18 +18,13 @@
                 <div class="filter" *ngFor="let filter of filters" [ngClass]="{'selected':filter.selected}">
                     <div class="title" [ngClass]="{'selected':filter.selected}">
                         <p (click)="selectFilter(filter, !filter.selected)">
-                            {{filter.title}} </p> 
+                            {{filter.title}} </p>
 
-                        <i class="fas fa-minus web" *ngIf="filter.selected"
-                        (click)="selectFilter(filter, false)"></i>
-                        <i class="fas fa-plus web" *ngIf="!filter.selected"
-                        (click)="selectFilter(filter, true)"></i>
+                        <i class="fas fa-minus web" *ngIf="filter.selected" (click)="selectFilter(filter, false)"></i>
+                        <i class="fas fa-plus web" *ngIf="!filter.selected" (click)="selectFilter(filter, true)"></i>
                     </div>
                     <div class="options" *ngIf="filter.selected">
-                        <div class="option"
-                        [ngClass]="{'selected':option.selected}"
-                        *ngFor="let option of filter.filters"
-                        (click)="applyFilter(option)">
+                        <div class="option" [ngClass]="{'selected':option.selected}" *ngFor="let option of filter.filters" (click)="applyFilter(option)">
                             {{option.name}}
                         </div>
                     </div>
@@ -45,8 +40,7 @@
                             {{active.name}}
                         </div>
                         <div class="palettes" *ngFor="let palette of active.finishes">
-                            <div class="palette" *ngIf="!finishSelected"
-                            (click)="selectPalettes(palette)">
+                            <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette)">
                                 <div class="img">
                                     <img [src]="url+palette.image" alt="">
                                 </div>
@@ -62,8 +56,7 @@
                             {{mobileFilter.name}}
                         </div>
                         <div class="palettes" *ngFor="let palette of mobileFilter.finishes">
-                            <div class="palette" *ngIf="!finishSelected"
-                            (click)="selectPalettes(palette)">
+                            <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette)">
                                 <div class="img">
                                     <img [src]="url+palette.image" alt="">
                                 </div>
@@ -75,8 +68,7 @@
 
                 <div class="unique-detail" *ngIf="finishSelected">
                     <div class="close">
-                        <i class="fas fa-times"
-                        (click)="finishSelected = ''"></i>
+                        <i class="fas fa-times" (click)="finishSelected = ''"></i>
                     </div>
                     <div class="header">
                         <div class="title-section">
@@ -93,22 +85,17 @@
                     </div>
 
                     <div class="collections">
-                        <p class="title"
-                        *ngIf="finishSelected.collections.length>0">Collection available in this color</p>
+                        <p class="title" *ngIf="finishSelected.collections.length>0">Collection available in this color</p>
                         <p class="title" *ngIf="finishSelected.collections.length<1">
                             No collections in this color
                         </p>
-                        <swiper
-                        class="mySwiper web"
-                        [config]="config"
-                        >
-                        <ng-template class="img"
-                        swiperSlide *ngFor="let img of finishSelected.collections">
-                            <img [src]="url+img.image" alt="">
-                            <p class="name-collection">
-                                {{img.name}}
-                            </p>
-                        </ng-template>
+                        <swiper class="mySwiper web" [config]="config">
+                            <ng-template class="img" swiperSlide *ngFor="let img of finishSelected.collections">
+                                <img [src]="url+img.image" alt="">
+                                <p class="name-collection">
+                                    {{img.name}}
+                                </p>
+                            </ng-template>
                         </swiper>
 
                         <div class="imgs mobile">

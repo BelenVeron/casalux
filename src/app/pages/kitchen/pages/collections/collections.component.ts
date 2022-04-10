@@ -96,6 +96,7 @@ export class CollectionsComponent implements OnInit {
   }
 
   changeSelectedCollection(index:any, show:boolean){
+    console.log(index)
     this.id = index
     this.updateCollection(show)
   }

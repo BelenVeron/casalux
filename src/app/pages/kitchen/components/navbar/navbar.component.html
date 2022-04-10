@@ -1,0 +1,57 @@
+<!-- sidebar de web -->
+<nav *ngIf="sidenav || mobileNav" [ngClass]="{'animate__animated': true, 'animate__fadeInLeft': sidenav, 'animate__fadeInDown': mobileNav}">
+
+    <a class="web" routerLink="/luxurykitchen">
+        <img src="/assets/img/kitchen/logogreen.png" alt="">
+    </a>
+
+
+    <div class="scroll">
+        <article class="options">
+            <div *ngFor="let item of items">
+                <a *ngIf="item.route" routerLink="{{item.route}}" class="title">
+                    {{item.title}}
+                </a>
+                <p *ngIf="!item.route" class="title" (click)="viewOptions(item)">
+                    {{item.title}}
+                </p>
+                <div class="child-container" *ngIf="item.selected">
+                    <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">
+                        {{children.title}}
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <div class="extras">
+            <article class="actions">
+                <div class="action" *ngFor="let action of actions">
+                    <a *ngIf="action.route.slice(-3) !== 'php'" routerLink="{{action.route}}">
+                        <i class="fas fa-{{action.icon}}"></i> {{action.title}}
+                    </a>
+                    <a *ngIf="action.route.slice(-3) === 'php'" (click)="extRedirect(action.route)">
+                        <i class="fas fa-{{action.icon}}"></i> {{action.title}}
+                    </a>
+                </div>
+            </article>
+
+            <article class="social">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-pinterest"></i>
+                <p>1 (888) 863-2272</p>
+            </article>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Sidebar black in web -->
+<section class="web">
+    <i class="fas fa-bars" (click)="viewNav()"></i>
+</section>
+
+
+<!-- Header in the mobile -->
+<app-nav-header (sendViewNav)="viewMobileNav($event)" [viewNav]="mobileNav"></app-nav-header>

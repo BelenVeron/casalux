@@ -1,4 +1,4 @@
-section{
+section {
     width: 5vw;
     height: 100%;
     color: var(--green);
@@ -13,17 +13,21 @@ section{
     top: 0;
     z-index: 999;
 }
-section i{
+
+section i {
     cursor: pointer;
 }
-.mobile{
+
+.mobile {
     display: none;
 }
-nav{
+
+nav {
     background: var(--k-black);
     position: fixed;
     left: 5vw;
     height: 100vh;
+    width: 20vw;
     top: 0;
     padding: 1rem;
     display: flex;
@@ -32,22 +36,26 @@ nav{
     flex-direction: column;
     z-index: 999;
 }
+
 nav article {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 }
-.scroll{
+
+.scroll {
     overflow-y: auto;
     height: 90vh;
     width: 100%;
 }
-nav article.options{
+
+nav article.options {
     margin-top: 10vh;
     width: 90%;
 }
-nav .options .title{
+
+nav .options .title {
     color: var(--k-green-op);
     font-weight: bold;
     font-size: 1.25em;
@@ -59,15 +67,18 @@ nav .options .title{
     border-radius: 10px;
     cursor: pointer;
 }
-nav .options .title a{
+
+nav .options .title a {
     text-decoration: none;
     color: var(--k-green-op);
 }
-nav article .title:hover{
+
+nav article .title:hover {
     color: var(--green);
     border: 1px solid var(--k-green-op);
 }
-nav .options .child-container{
+
+nav .options .child-container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -75,28 +86,34 @@ nav .options .child-container{
     flex-direction: column;
     padding-left: 1rem;
 }
-nav .options .children{
-    color: var(--grey);   
+
+nav .options .children {
+    color: var(--grey);
     font-size: .9em;
     margin-top: .4rem;
     text-decoration: none;
 }
-nav .options .children:nth-child(1){
+
+nav .options .children:nth-child(1) {
     margin-top: -.2rem;
 }
-nav .options .children:last-child{
+
+nav .options .children:last-child {
     margin-bottom: 1rem;
 }
-nav .extras{
+
+nav .extras {
     position: absolute;
     bottom: 8vh;
     width: 90%;
 }
-nav .actions{
+
+nav .actions {
     margin-top: 5vh;
     width: 90%;
 }
-nav .actions .action{
+
+nav .actions .action {
     color: var(--k-green-op);
     border: 1px solid var(--k-green-op);
     border-radius: 10px;
@@ -106,23 +123,27 @@ nav .actions .action{
     text-decoration: none;
     transition: background.2s;
 }
-nav .actions .action a{
+
+nav .actions .action a {
     color: var(--k-green-op);
     cursor: pointer;
     text-decoration: none;
 }
-nav .actions .action i{
+
+nav .actions .action i {
     color: var(--green);
 }
-nav .actions .action:hover{
+
+nav .actions .action:hover {
     background: var(--green);
     color: var(--k-black);
 }
-nav .actions .action:hover i{
+
+nav .actions .action:hover i {
     color: var(--k-black);
 }
 
-nav .social{
+nav .social {
     flex-direction: row;
     width: 95%;
     margin-top: 5vh;
@@ -131,90 +152,50 @@ nav .social{
     font-size: 1.5em;
     align-items: center;
 }
-nav .social p{
+
+nav .social p {
     font-size: .75em;
 }
 
 @media (max-width:400px) {
-    .mobile{
-        display: flex;
-    }
-    section.web{
+    .web {
         display: none;
     }
-    section.mobile{
-        display: flex;
-        position: fixed;
-        justify-content: flex-start;
-        align-items: center;
-        top: 0;
-        width: 100vw;
-        height: 10vh;
-        background: #fff;
-        padding: .2rem;
-    }
-    section.mobile .img{
-        width: 70%;
-        margin-left: .2rem;
-    }
-    section.mobile i{
-        font-size: .6em;
-        padding: .4rem;
-    }
-    nav{
+    nav {
         width: 100%;
         height: -webkit-fill-available;
         left: 0;
     }
-    nav .web{
+    nav .web {
         display: none;
     }
-    nav .mobile{
-        display: flex;
-        align-items: center;
-        font-size: 2em;
-        color: var(--green);
-        justify-content: flex-start;
-    }
-    .mobile.sms{
-        font-size: 1em;
-        margin-left: 1rem;
-        transform: rotateY(180deg);
-    }
-    nav .mobile .img{
-        margin-left: 10vw;
-        width: 100%;
-    }
-    nav article.options{
+    nav article.options {
         margin-top: 20vh;
     }
-    nav .options .title{
-        font-size: 1.8em;
+    nav .options .child-container {
+        margin-top: .5em;
     }
-    nav .options .child-container{
-        font-size: 1.5em;
-    }
-
-    nav .actions{
-        margin-top: 0;
-        font-size: .8em;
+    nav .extras {
         position: absolute;
         bottom: 8vh;
-        left: 5vw;
+        left: 0;
+        width: 90%;
+    }
+    nav .actions {
+        margin-top: 0;
+        margin-left: .8em;
+        font-size: .8em;
         width: 85vw;
     }
-    nav .actions .action{
-        font-size: 2em;
+    nav .actions .action {
+        font-size: 1em;
     }
-    nav .social{
+    nav .social {
         justify-content: space-around;
-        font-size: 2.4em;
-        position: absolute;
-        bottom: 2vh;
-        left: 0;
+        font-size: 1.4em;
+        margin-top: 4vh;
     }
-    nav .social p{
+    nav .social p {
         display: none;
     }
-
 }

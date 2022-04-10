@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-kitchensidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  selector: 'app-kitchennavbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class NavbarComponent implements OnInit {
 
   sidenav = false;
+  mobileNav: boolean = false;
   askURL = environment.askURL;
   items = [
     {title:'GET STARTED', route:'/luxurykitchen/started', selected:false},
@@ -34,6 +35,11 @@ export class SidebarComponent implements OnInit {
 
   viewNav(){
     this.sidenav = !this.sidenav
+  }
+
+  viewMobileNav(data: boolean){
+    this.mobileNav = data;
+    console.log(data)
   }
 
   viewOptions(item:any){

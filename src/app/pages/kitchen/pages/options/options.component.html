@@ -1,5 +1,5 @@
 <main>
-    <app-kitchensidebar></app-kitchensidebar>
+    <app-kitchennavbar></app-kitchennavbar>
 
     <section>
         <div class="header">
@@ -17,16 +17,12 @@
             <div class="filters">
                 <div class="filter" *ngFor="let filter of filters">
                     <div class="title" [ngClass]="{'selected':filter.selected}">
-                        <p (click)="selectFilter(filter, !filter.selected)"> {{filter.name}} </p> 
-                        <i class="fas fa-minus" *ngIf="filter.selected"
-                        (click)="selectFilter(filter, false)"></i>
-                        <i class="fas fa-plus" *ngIf="!filter.selected"
-                        (click)="selectFilter(filter, true)"></i>
+                        <p (click)="selectFilter(filter, !filter.selected)"> {{filter.name}} </p>
+                        <i class="fas fa-minus" *ngIf="filter.selected" (click)="selectFilter(filter, false)"></i>
+                        <i class="fas fa-plus" *ngIf="!filter.selected" (click)="selectFilter(filter, true)"></i>
                     </div>
                     <div class="options" *ngIf="filter.selected">
-                        <div class="option" [ngClass]="{'selected':activeFilter == option}"
-                        *ngFor="let option of filter.subCategorys"
-                        (click)="applySubcategory(option)">
+                        <div class="option" [ngClass]="{'selected':activeFilter == option}" *ngFor="let option of filter.subCategorys" (click)="applySubcategory(option)">
                             {{option.name}}
                         </div>
                     </div>
@@ -36,20 +32,17 @@
 
             <div class="details">
                 <div class="img">
-                    <swiper
-                    [config]="config3">
-                        <ng-template swiperSlide
-                        *ngFor="let image of additional.additionalImages">
-                        <img [src]="url+image.image" alt="">
+                    <swiper [config]="config3">
+                        <ng-template swiperSlide *ngFor="let image of additional.additionalImages">
+                            <img [src]="url+image.image" alt="">
                         </ng-template>
-                        
+
                     </swiper>
 
                     <div class="favs">
                         <div class="fav">
                             <div class="title">
-                                <span>{{additional.name}}</span>
-                                FROM  $000 TO $5000
+                                <span>{{additional.name}}</span> FROM $000 TO $5000
                             </div>
                             <i class="far fa-heart"></i>
                         </div>
@@ -59,10 +52,8 @@
                 <div class="info">
                     <div class="head">
                         <div class="titles">
-                            <p (click)="info.details = true;info.technical = false"
-                            [ngClass]="{'not-selected':!info.details}">DETAILS</p>
-                            <p (click)="info.technical = true;info.details = false"
-                            [ngClass]="{'not-selected':!info.technical}">TECHNICAL FILES</p>
+                            <p (click)="info.details = true;info.technical = false" [ngClass]="{'not-selected':!info.details}">DETAILS</p>
+                            <p (click)="info.technical = true;info.details = false" [ngClass]="{'not-selected':!info.technical}">TECHNICAL FILES</p>
                         </div>
                         <div class="info" *ngIf="info.details">
                             {{additional.details}}
@@ -74,14 +65,12 @@
 
                     <div class="cart">
                         <div class="selects">
-                            <select name="" [(ngModel)]="selected.type"
-                            (change)="updatePrice()">
+                            <select name="" [(ngModel)]="selected.type" (change)="updatePrice()">
                                 <option value="{{type.id}}" *ngFor="let type of additional.additionalTypes">
                                     {{type.name}}
                                 </option>
                             </select>
-                            <select name="" [(ngModel)]="selected.size"
-                            (change)="updatePrice()">
+                            <select name="" [(ngModel)]="selected.size" (change)="updatePrice()">
                                 <option value="{{size.id}}" *ngFor="let size of additional.additionalSizes">
                                     {{size.name}}
                                 </option>
@@ -89,11 +78,9 @@
                             <div class="quantity">
                                 <p>QUANTITY</p>
                                 <div class="calc">
-                                    <i class="fas fa-minus"
-                                    (click)="quantity>1?quantity = quantity -1:''"></i>
+                                    <i class="fas fa-minus" (click)="quantity>1?quantity = quantity -1:''"></i>
                                     <p>{{quantity}}</p>
-                                    <i class="fas fa-plus"
-                                    (click)="quantity = quantity +1"></i>
+                                    <i class="fas fa-plus" (click)="quantity = quantity +1"></i>
                                 </div>
                                 <p class="unit">Unit</p>
                             </div>
@@ -110,19 +97,14 @@
 
                         <div class="related">
                             <div class="colors web">
-                                <div class="img"
-                                [ngClass]="{'selected':selected.color == color.name}"
-                                (click)="updateColor(color)"
-                                *ngFor="let color of additional.additionalColors">
+                                <div class="img" [ngClass]="{'selected':selected.color == color.name}" (click)="updateColor(color)" *ngFor="let color of additional.additionalColors">
                                     <img [src]="url+color.image" alt="">
                                 </div>
                             </div>
                             <div class="info">
                                 RELATED PRODUCTS
-                                <swiper
-                                [config]="config2">
-                                    <ng-template swiperSlide
-                                    *ngFor="let option of subCategorys">
+                                <swiper [config]="config2">
+                                    <ng-template swiperSlide *ngFor="let option of subCategorys">
                                         <div class="product">
                                             <div class="img"></div>
                                             <div class="name">
@@ -131,7 +113,7 @@
                                             </div>
                                         </div>
                                     </ng-template>
-                                    
+
                                 </swiper>
                             </div>
                         </div>
@@ -139,15 +121,11 @@
                 </div>
 
                 <div class="images web">
-                    <swiper
-                    [config]="config">
-                        <ng-template swiperSlide
-                        *ngFor="let cat of subCategorys"
-                         class="img">
-                            <img (click)="applyAdditional(cat.id)"
-                            [src]="url+cat.image">
+                    <swiper [config]="config">
+                        <ng-template swiperSlide *ngFor="let cat of subCategorys" class="img">
+                            <img (click)="applyAdditional(cat.id)" [src]="url+cat.image">
                         </ng-template>
-                        
+
                     </swiper>
                 </div>
 

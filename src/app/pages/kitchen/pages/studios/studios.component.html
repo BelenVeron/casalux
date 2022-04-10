@@ -1,5 +1,5 @@
 <main>
-    <app-kitchensidebar></app-kitchensidebar>
+    <app-kitchennavbar></app-kitchennavbar>
 
     <section>
 
@@ -24,8 +24,7 @@
 
                 <div class="search">
                     <div class="input">
-                        <input type="text" (keyup)="search(value.value)" #value
-                        placeholder="Zip Code, City">
+                        <input type="text" (keyup)="search(value.value)" #value placeholder="Zip Code, City">
                         <div class="icon">
                             <i class="fas fa-search"></i>
                         </div>
@@ -56,29 +55,21 @@
                             </div>
                         </div>
 
-                        <p *ngIf="results.length<1"
-                        style="margin:4rem 0 0 0 ">No studios found</p>
+                        <p *ngIf="results.length<1" style="margin:4rem 0 0 0 ">No studios found</p>
 
                     </div>
                 </div>
             </div>
 
-            <div [ngClass]="{'map':!details,'details-container':details}"
-            class="animate__animated animate__fadeIn">
-                <agm-map *ngIf="!details"
-                [latitude]="maps.lat" [zoom]="maps.zoom" [longitude]="maps.lng">
-                    <agm-marker
-                    [iconUrl]="'/assets/img/kitchen/media/mapicon.png'"
-                    [label]="{color: 'var(--black)',fontSize: '2.5em',
-                    fontWeight: 'bold',text: '1'}"
-                    [latitude]="maps.lat"
-                    [longitude]="maps.lng"></agm-marker>
-                </agm-map>  
-                
+            <div [ngClass]="{'map':!details,'details-container':details}" class="animate__animated animate__fadeIn">
+                <agm-map *ngIf="!details" [latitude]="maps.lat" [zoom]="maps.zoom" [longitude]="maps.lng">
+                    <agm-marker [iconUrl]="'/assets/img/kitchen/media/mapicon.png'" [label]="{color: 'var(--black)',fontSize: '2.5em',
+                    fontWeight: 'bold',text: '1'}" [latitude]="maps.lat" [longitude]="maps.lng"></agm-marker>
+                </agm-map>
+
                 <div class="details animate__animated animate__fadeIn" *ngIf="details">
 
-                    <i class="fas fa-times close"
-                    (click)="details = null"></i>
+                    <i class="fas fa-times close" (click)="details = null"></i>
 
                     <div class="header">
                         <div class="name">
@@ -101,15 +92,13 @@
 
                     <div class="slider-container">
                         <div class="slider">
-                            <swiper
-                            [config]="config">
-                                <ng-template swiperSlide
-                                *ngFor="let img of details.imgs">
+                            <swiper [config]="config">
+                                <ng-template swiperSlide *ngFor="let img of details.imgs">
                                     <img [src]="url+img" alt="">
                                 </ng-template>
                             </swiper>
                         </div>
-                        
+
                         <div class="collections">
                             <div class="title">
                                 <p>THIS COLLECTIONS ARE IN DISPLAY</p>

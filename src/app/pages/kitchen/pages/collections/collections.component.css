@@ -2,6 +2,7 @@ main{
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 0 0;
+    display: flex;
 }
 .mobile{
     display: none !important;

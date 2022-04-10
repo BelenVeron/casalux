@@ -12,7 +12,7 @@ import { GetStartedComponent } from './pages/get-started/get-started.component';
 
 //components
 import { kitchenGgComponent } from './components/bg/bg.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 
 import {SwiperModule} from 'swiper/angular';
@@ -23,7 +23,8 @@ import { StudiosComponent } from './pages/studios/studios.component';
 import { AskComponent } from './pages/ask/ask.component';
 import { ExpertsComponent } from './pages/experts/experts.component';
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
-import { VideoPlayerComponent } from '../../components/video-player/video-player.component'
+import { VideoPlayerComponent } from '../../components/video-player/video-player.component';
+import { NavHeaderComponent } from './components/nav-header/nav-header.component'
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { VideoPlayerComponent } from '../../components/video-player/video-player
     IndexKitchenComponent,
     GetStartedComponent,
     kitchenGgComponent,
-    SidebarComponent,
+    NavbarComponent,
     CollectionsComponent,
     FinishesComponent,
     OptionsComponent,
@@ -40,7 +41,8 @@ import { VideoPlayerComponent } from '../../components/video-player/video-player
     AskComponent,
     ExpertsComponent,
     FavoriteComponent,
-    VideoPlayerComponent],
+    VideoPlayerComponent,
+    NavHeaderComponent],
   imports: [
     CommonModule,
     KitchenRoutingModule,

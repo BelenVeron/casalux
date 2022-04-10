@@ -1,0 +1,36 @@
+@media (max-width:400px) {
+    .mobile {
+        display: flex;
+        position: fixed;
+        justify-content: space-around;
+        align-items: center;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 10vh;
+        background: #fff;
+        padding: .2rem;
+        z-index: 999;
+        color: var(--green);
+        font-size: 2rem;
+    }
+    .mobile .img {
+        width: 70%;
+        margin-left: .2rem;
+    }
+    .mobile i {
+        font-size: .6em;
+        padding: .4rem;
+    }
+    .sms {
+        transform: rotateY(180deg);
+        margin-bottom: 0.5rem;
+    }
+    /* When the menu is active */
+    .active {
+        background: var(--k-black);
+    }
+    .active .bar i {
+        transform: rotate(270deg);
+    }
+}

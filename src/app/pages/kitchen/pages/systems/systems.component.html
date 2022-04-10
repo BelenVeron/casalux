@@ -1,5 +1,5 @@
 <main>
-    <app-kitchensidebar></app-kitchensidebar>
+    <app-kitchennavbar></app-kitchennavbar>
 
     <section>
         <div class="header">
@@ -16,10 +16,8 @@
         <article>
             <div class="filters">
                 <div class="filter" *ngFor="let filter of filters">
-                    <div class="title"
-                    [ngClass]="{'selected':filter.selected}"
-                    (click)="selectFilter(filter, true)">
-                        <p> {{filter.name}} </p> 
+                    <div class="title" [ngClass]="{'selected':filter.selected}" (click)="selectFilter(filter, true)">
+                        <p> {{filter.name}} </p>
                         <!-- <i class="fas fa-minus" *ngIf="filter.selected"
                         (click)="selectFilter(filter, false)"></i>
                         <i class="fas fa-plus" *ngIf="!filter.selected"
@@ -36,23 +34,19 @@
             </div>
 
             <div class="imgs">
-                <swiper
-                class="mySwiper web"
-                [config]="config"
-                >
-                <ng-template
-                swiperSlide *ngFor="let opening of openings">
-                    <img class="img" src="{{url+opening.image}}" alt="">
-                    <div class="info">
-                        <div class="name">
-                            <span>{{opening.name}}</span>
-                            <p> From $200 to $900</p>
+                <swiper class="mySwiper web" [config]="config">
+                    <ng-template swiperSlide *ngFor="let opening of openings">
+                        <img class="img" src="{{url+opening.image}}" alt="">
+                        <div class="info">
+                            <div class="name">
+                                <span>{{opening.name}}</span>
+                                <p> From $200 to $900</p>
+                            </div>
+                            <div class="icon">
+                                <i class="far fa-heart"></i>
+                            </div>
                         </div>
-                        <div class="icon">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                </ng-template>
+                    </ng-template>
                 </swiper>
 
                 <div class="images mobile">
