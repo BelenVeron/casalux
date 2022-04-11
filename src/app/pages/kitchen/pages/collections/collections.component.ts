@@ -14,6 +14,11 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 export class CollectionsComponent implements OnInit {
 
   url = environment.api
+  itemListTitle = {
+    title: 'COLLECTIONS',
+    text: ''
+  }
+  mobilePage: string = 'gallery';
   config: SwiperOptions = {
     loopedSlides: 3,
     slidesPerView: 3,
@@ -96,9 +101,17 @@ export class CollectionsComponent implements OnInit {
   }
 
   changeSelectedCollection(index:any){
-    console.log(this.innerWidth)
     this.id = index
     this.updateCollection()
+    if (this.innerWidth <= 400) {
+      if (this.mobilePage === 'index'){
+        this.itemListTitle.text = this.collectionSelected.description;
+        this.mobilePage = 'gallery'
+      } else {
+        this.itemListTitle.text = 'Enter the collection you like to see details';
+        this.mobilePage = 'index'
+      }
+    } 
   }
 
   selectImages(index:number){

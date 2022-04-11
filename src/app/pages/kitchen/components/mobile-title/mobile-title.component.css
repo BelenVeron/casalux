@@ -1,0 +1,19 @@
+.container-title {
+    display: none;
+}
+
+@media (max-width:400px) {
+    .container-title {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1rem 0;
+        width: 95vw;
+        margin-left: .5rem;
+        color: var(--k-green-op);
+    }
+    .container-title p {
+        font-size: 14px;
+    }
+}
