@@ -11,18 +11,10 @@
             </a>
         </div>
 
-        <!-- container web contiene carroussel vertical con los collections -->
+        <!-- Container web with the collections galleries without See more -->
         <article class="container web">
-            <article class="img-options">
-                <div class="option" *ngFor="let option of collections, let index = index" [ngClass]="{'selected':collectionSelected.name === option.name, 'no-selected':collectionSelected.name !== option.name}" (click)="changeSelectedCollection(index, true)">
-                    <div class="img">
-                        <img [src]="url+option.image" alt="">
-                        <!-- img de collections en carroussel vertical -->
-                        <p class="title">{{option.name}}</p>
-                        <!-- nombres de los collections -->
-                    </div>
-                </div>
-            </article>
+
+            <app-vertical-gallery [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
 
             <article class="option-viewer web">
                 <div class="img-banner">
@@ -46,26 +38,21 @@
                     </ng-template>
                 </swiper>
 
-                <!--  -->
+
                 <app-favorite class="heart"></app-favorite>
+
             </article>
         </article>
 
-        <article class="container mobile" *ngIf="!viewMobile">
-            <div class="container-title mobile">
+        <article class="container mobile">
+            <!-- <div class="container-title mobile">
                 <h3>COLLECTIONS</h3>
                 <P>Enter the collection you like to see details</P>
-            </div>
-            <article class="img-options">
-                <div class="option" *ngFor="let option of collections" (click)="changeSelectedCollection(option.id, true)">
-                    <div class="img">
-                        <img [src]="url+option.image" alt="">
-                    </div>
-                    <p class="title">{{option.name}}</p>
-                </div>
-            </article>
+            </div> -->
 
-            <article class="option-viewer web">
+            <app-vertical-gallery [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
+
+            <!-- <article class="option-viewer web">
                 <div class="swiper-container">
                     <swiper class="mySwiper" [config]="config">
                         <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
@@ -79,14 +66,18 @@
                         <img [src]="url+img.image" alt="">
                     </ng-template>
                 </swiper>
-            </article>
+            </article> -->
         </article>
 
 
         <article class="option-details web">
             <i class="fas fa-times close mobile"></i>
             <p class="collections-title mobile">COLLECTIONS</p>
-            <p class="details-title">{{collectionSelected.name}}</p>
+
+            <p [ngClass]="{'details-title':true, 'big-details-title':(collectionSelected.name === 'Luxury Custom')}">
+                {{collectionSelected.name}}
+            </p>
+
             <hr style="width:100%;border:1px solid var(--k-green-op)">
             <div class="scroll">
                 <p class="text" *ngIf="!seemore">

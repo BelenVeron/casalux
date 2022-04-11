@@ -1,3 +1,7 @@
+.phone {
+    display: none;
+}
+
 @media (max-width:400px) {
     .phone {
         display: flex;

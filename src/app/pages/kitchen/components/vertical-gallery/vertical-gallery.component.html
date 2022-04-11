@@ -1,0 +1,8 @@
+<article class="img-options">
+    <div class="option" *ngFor="let item of items, let index = index" [ngClass]="{'selected':itemSelected.name === item.name, 'no-selected':itemSelected.name !== item.name}" (click)="changeSelectedItem(index)">
+        <div class="img">
+            <img [src]="url+item.image" alt="">
+            <p class="title">{{item.name}}</p>
+        </div>
+    </div>
+</article>

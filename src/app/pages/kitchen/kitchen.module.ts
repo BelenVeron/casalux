@@ -25,7 +25,9 @@ import { ExpertsComponent } from './pages/experts/experts.component';
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
 import { VideoPlayerComponent } from '../../components/video-player/video-player.component';
 import { NavHeaderComponent } from './components/nav-header/nav-header.component';
-import { SocialComponent } from './components/social/social.component'
+import { SocialComponent } from './components/social/social.component';
+import { VerticalGalleryComponent } from './components/vertical-gallery/vertical-gallery.component';
+import { MobileTitleComponent } from './components/mobile-title/mobile-title.component';
 
 
 @NgModule({
@@ -44,7 +46,10 @@ import { SocialComponent } from './components/social/social.component'
     FavoriteComponent,
     VideoPlayerComponent,
     NavHeaderComponent,
-    SocialComponent],
+    SocialComponent,
+    VerticalGalleryComponent,
+    MobileTitleComponent
+  ],
   imports: [
     CommonModule,
     KitchenRoutingModule,

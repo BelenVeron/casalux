@@ -52,6 +52,7 @@ export class CollectionsComponent implements OnInit {
   ]
   collectionSelected:any = {};
   imagesSelected:any = [];
+  innerWidth: number = 0;
 
   constructor(private collection:KitchenProductsService, private route:ActivatedRoute) {
 
@@ -61,7 +62,7 @@ export class CollectionsComponent implements OnInit {
       console.log(data)
       if(!this.id|| this.id == 'collections'){
         this.imagesSelected = this.collections[0].kitchens[0].photos
-        this.changeSelectedCollection(0, false)
+        this.changeSelectedCollection(0)
       }else{
         // this.collectionSelected = data.collectionSelected
         // this.collectionSelected.photos = data.collectionSelectedPhotos
@@ -72,6 +73,7 @@ export class CollectionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
   }
 
   seeMore(){
@@ -83,7 +85,7 @@ export class CollectionsComponent implements OnInit {
     if(element) element.click()
   }
 
-  updateCollection(show:boolean){
+  updateCollection(){
     // let params = 'collectionID='+this.id
     this.collectionSelected = this.collections[this.id]
     this.selectImages(0)
@@ -91,14 +93,12 @@ export class CollectionsComponent implements OnInit {
       const element:any = document.getElementById(this.url+0)
       if(element) element.click()
     }, 20)
-    this.viewMobile = show
-
   }
 
-  changeSelectedCollection(index:any, show:boolean){
-    console.log(index)
+  changeSelectedCollection(index:any){
+    console.log(this.innerWidth)
     this.id = index
-    this.updateCollection(show)
+    this.updateCollection()
   }
 
   selectImages(index:number){

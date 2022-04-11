@@ -1,0 +1,82 @@
+.img-options {
+    height: 88vh;
+    overflow-y: auto;
+    direction: rtl;
+    padding: 0 .4rem;
+    width: 18vw;
+    background: var(--light);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-options::-webkit-scrollbar {
+    width: .5rem;
+    border-radius: 10px;
+}
+
+.img-options::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 10px;
+}
+
+.img-options .option {
+    cursor: pointer;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.img-options .option.no-selected img {
+    height: 17.4vh;
+    width: 12.8vw;
+}
+
+.img-options .option:nth-child(1) {
+    padding-top: 0;
+}
+
+.img-options .option {
+    transition: all.2s;
+}
+
+.img-options .option.selected img {
+    opacity: .4;
+    height: 14vh;
+    width: 9.9vw;
+}
+
+.img-options .option .title {
+    position: absolute;
+    bottom: 0.4rem;
+    background: var(--grey);
+    font-size: .8em;
+    padding: .2rem;
+    left: 0;
+}
+
+.img-options .img {
+    position: relative;
+}
+
+@media (max-width:400px) {
+    .img-options {
+        height: auto;
+        padding: 0 .4rem;
+        width: 100vw;
+        background: none;
+    }
+    .img-options .option.selected img {
+        opacity: 1;
+        height: 25vh;
+        width: 90vw;
+    }
+    .img-options .option.no-selected img {
+        opacity: 1;
+        height: 25vh;
+        width: 90vw;
+    }
+    .img-options .option .title {
+        position: inherit;
+    }
+}
