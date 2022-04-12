@@ -16,4 +16,18 @@
     .container-title p {
         font-size: 14px;
     }
+    .container-title .details-title {
+        font-size: 80px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        min-width: 100%;
+        max-width: 130%;
+        color: var(--k-green-op);
+        margin-bottom: 1rem;
+        border-bottom: 1px solid black;
+    }
+    .container-title .big-details-title {
+        font-size: 40px;
+        padding-bottom: 1rem;
+    }
 }

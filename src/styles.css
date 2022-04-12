@@ -1,27 +1,36 @@
 @import 'assets/animations.css';
 @import '~swiper/swiper-bundle';
-:root{
-    --black:#101820;
-    --black-op:#2f2f2fdc;
+:root {
+    --black: #101820;
+    --black-op: #2f2f2fdc;
     --dark-grey: #212322;
-    --brown:#5f6252;
-    --green:#9ec400;
-    --green-op:#7A9A01;
-    --white:#eaece9;
-    --light:#ffff;
-    --grey:#c9c9c6;
+    --brown: #5f6252;
+    --green-brown: #bfc3ad;
+    --green: #9ec400;
+    --green-op: #7A9A01;
+    --white: #eaece9;
+    --light: #ffff;
+    --grey: #c9c9c6;
     --danger: #fc5050;
-
     /* kitchen */
-    --k-black:rgba(48,47,47);
-    --k-green-op:rgba(96,96,72);
-    --k-white:rgba(232,234,232);
-    --k-black-op:#2f2f2faf;
-
+    --k-black: rgba(48, 47, 47);
+    --k-green-op: rgba(96, 96, 72);
+    --k-white: rgba(232, 234, 232);
+    --k-black-op: #2f2f2faf;
 }
-*{padding:0;margin:0;font-family: 'Poppins', sans-serif;}
-img{width: 100%;object-fit: cover;}
-.btn{
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn {
     border: none;
     outline: none;
     border-radius: 50px;
@@ -31,8 +40,17 @@ img{width: 100%;object-fit: cover;}
     padding: .4rem;
     cursor: pointer;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
-.pointer{
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.pointer {
     cursor: pointer;
 }

@@ -46,26 +46,21 @@
             </article>
         </article>
 
+        <!-- MOBILE -->
         <article class="container mobile">
 
-            <app-mobile-title [itemList]="itemListTitle"></app-mobile-title>
-            <app-vertical-gallery [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
+            <div *ngIf="mobilePage === 'index'" class="animate__animated animate__fadeInUp">
+                <app-mobile-title [itemList]="itemListTitle"></app-mobile-title>
+                <app-vertical-gallery [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
+            </div>
 
-            <!-- <article class="option-viewer web">
-                <div class="swiper-container">
-                    <swiper class="mySwiper" [config]="config">
-                        <ng-template swiperSlide *ngFor="let img of collectionSelected.photos">
-                            <img [src]="url+img.collectionImage" alt="">
-                        </ng-template>
-                    </swiper>
+            <div *ngIf="mobilePage === 'gallery'" class="animate__animated animate__fadeInDown">
+                <app-button [type]="'mobile-up'" (click)="goBack()"></app-button>
+                <app-mobile-title [itemList]="itemListTitle"></app-mobile-title>
+                <app-horizontal-gallery *ngFor="let kitchen of collectionSelected.kitchens" [items]="kitchen.photos"></app-horizontal-gallery>
+            </div>
 
-                </div>
-                <swiper class="mySwiper2" [config]="config2">
-                    <ng-template swiperSlide *ngFor="let img of imagesSelected">
-                        <img [src]="url+img.image" alt="">
-                    </ng-template>
-                </swiper>
-            </article> -->
+
 
             <!-- <article class="option-details mobile" *ngIf="viewMobile">
                 <i class="fas fa-times close mobile" (click)="viewMobile = false"></i>
@@ -106,8 +101,6 @@
 
 
         <article class="option-details web">
-            <!--  <i class="fas fa-times close mobile"></i>
-            <p class="collections-title mobile">COLLECTIONS</p> -->
 
             <p [ngClass]="{'details-title':true, 'big-details-title':(collectionSelected.name === 'Luxury Custom')}">
                 {{collectionSelected.name}}

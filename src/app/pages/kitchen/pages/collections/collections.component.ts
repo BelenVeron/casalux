@@ -13,10 +13,11 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 })
 export class CollectionsComponent implements OnInit {
 
-  url = environment.api
+  url = environment.api;
   itemListTitle = {
     title: 'COLLECTIONS',
-    text: ''
+    text: '',
+    name: ''
   }
   mobilePage: string = 'gallery';
   config: SwiperOptions = {
@@ -92,7 +93,7 @@ export class CollectionsComponent implements OnInit {
 
   updateCollection(){
     // let params = 'collectionID='+this.id
-    this.collectionSelected = this.collections[this.id]
+    this.collectionSelected = this.collections[this.id];
     this.selectImages(0)
     setTimeout(()=>{
       const element:any = document.getElementById(this.url+0)
@@ -103,11 +104,21 @@ export class CollectionsComponent implements OnInit {
   changeSelectedCollection(index:any){
     this.id = index
     this.updateCollection()
+    this.changePageMobile();
+  }
+
+  /**
+   * Change the page of the mobile and set the
+   * itemListTitle depend of the page
+   */
+  changePageMobile():void {
     if (this.innerWidth <= 400) {
       if (this.mobilePage === 'index'){
+        this.itemListTitle.name = this.collectionSelected.name;
         this.itemListTitle.text = this.collectionSelected.description;
         this.mobilePage = 'gallery'
       } else {
+        this.itemListTitle.name = '';
         this.itemListTitle.text = 'Enter the collection you like to see details';
         this.mobilePage = 'index'
       }
@@ -117,5 +128,9 @@ export class CollectionsComponent implements OnInit {
   selectImages(index:number){
     const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
     this.imagesSelected = hasPhotos ? this.collections[this.id].kitchens[index].photos : []
+  }
+
+  goBack(){
+    this.changePageMobile();
   }
 }

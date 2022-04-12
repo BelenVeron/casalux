@@ -1,0 +1,10 @@
+.mobile-up {
+    width: 100vw;
+    height: 25px;
+    background-color: var(--green-brown);
+    text-align: center;
+}
+
+.mobile-up:active {
+    background-color: var(--white);
+}

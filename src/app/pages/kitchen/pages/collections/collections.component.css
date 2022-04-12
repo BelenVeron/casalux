@@ -350,11 +350,6 @@ section .logo-container .img {
         width: 90%;
         text-align: left;
     }
-    .option-details .details-title {
-        margin-top: 0;
-        width: 90%;
-        text-align: left;
-    }
     .scroll {
         width: 100%;
         display: flex;
@@ -378,5 +373,11 @@ section .logo-container .img {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+    }
+    .container.mobile .horizontal-galleries {
+        display: block;
+    }
+    section .logo-container {
+        margin-bottom: 0;
     }
 }

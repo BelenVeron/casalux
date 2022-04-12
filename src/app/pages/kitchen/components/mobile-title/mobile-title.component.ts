@@ -9,7 +9,8 @@ export class MobileTitleComponent implements OnInit {
 
   @Input() itemList = {
     title: "COLLECTIONS",
-    text: ''
+    text: '',
+    name: ''
   }
 
   constructor() { }
