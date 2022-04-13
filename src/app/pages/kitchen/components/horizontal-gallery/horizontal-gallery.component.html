@@ -1,8 +1,8 @@
-<swiper class="swiper-vertical" [config]="configVertical">
+<swiper class="vertical" [config]="configVertical">
     <ng-template swiperSlide *ngFor="let img of items">
         <div class="image-container">
-            <img [src]="url+img.image" alt="">
-            <!--  <app-favorite class="heart"></app-favorite> -->
+            <img class="small" [src]="url+img.image" alt="">
+            <app-favorite class="heart"></app-favorite>
         </div>
     </ng-template>
 </swiper>

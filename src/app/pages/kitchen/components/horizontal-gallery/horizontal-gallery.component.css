@@ -1,4 +1,21 @@
-.swiper-vertical {
+.vertical {
     height: 200px;
     width: 100vw;
+}
+
+.vertical .image-container {
+    position: relative;
+}
+
+.vertical .image-container .heart {
+    position: absolute;
+    bottom: 3vh;
+    z-index: 999;
+    right: 2vw;
+}
+
+.vertical .image-container .small {
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
 }

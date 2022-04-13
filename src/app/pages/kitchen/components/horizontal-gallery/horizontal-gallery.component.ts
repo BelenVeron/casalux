@@ -14,11 +14,7 @@ export class HorizontalGalleryComponent implements OnInit {
   @Input() items: any = [];
   configVertical: SwiperOptions = {
    spaceBetween:30,
-    direction:'vertical',
-    autoplay:{
-      delay: 2000,
-      disableOnInteraction: true
-    },
+    direction:'horizontal',
     pagination: { clickable: true }, 
   };
   

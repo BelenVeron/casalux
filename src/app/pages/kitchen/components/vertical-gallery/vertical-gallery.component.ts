@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class VerticalGalleryComponent implements OnInit {
 
+  @Input() type: string = '';
   @Input() items: any = [];
   @Input() itemSelected: any = {};
   @Output() sendSelectedItem = new EventEmitter<any>();

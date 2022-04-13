@@ -1,6 +1,16 @@
-<article class="img-options">
+<article *ngIf="type === 'scroll'" [class]="type">
     <div class="option" *ngFor="let item of items, let index = index" [ngClass]="{'selected':itemSelected.name === item.name, 'no-selected':itemSelected.name !== item.name}" (click)="changeSelectedItem(index)">
         <div class="img">
+            <img [src]="url+item.image" alt="">
+            <p class="title">{{item.name}}</p>
+        </div>
+    </div>
+</article>
+
+<article *ngIf="type === 'two-columns' && items.length > 0" [class]="type">
+    <p class="section-text">What you have in this collection</p>
+    <div class="images">
+        <div class="option" *ngFor="let item of items, let index = index">
             <img [src]="url+item.image" alt="">
             <p class="title">{{item.name}}</p>
         </div>

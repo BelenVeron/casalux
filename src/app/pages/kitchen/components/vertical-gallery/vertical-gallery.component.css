@@ -1,4 +1,4 @@
-.img-options {
+.scroll {
     height: 88vh;
     overflow-y: auto;
     direction: rtl;
@@ -11,42 +11,42 @@
     flex-direction: column;
 }
 
-.img-options::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
     width: .5rem;
     border-radius: 10px;
 }
 
-.img-options::-webkit-scrollbar-thumb {
+.scroll::-webkit-scrollbar-thumb {
     background: var(--brown);
     border-radius: 10px;
 }
 
-.img-options .option {
+.scroll .option {
     cursor: pointer;
     padding-top: 1rem;
     text-align: center;
 }
 
-.img-options .option.no-selected img {
+.scroll .option.no-selected img {
     height: 17.4vh;
     width: 12.8vw;
 }
 
-.img-options .option:nth-child(1) {
+.scroll .option:nth-child(1) {
     padding-top: 0;
 }
 
-.img-options .option {
+.scroll .option {
     transition: all.2s;
 }
 
-.img-options .option.selected img {
+.scroll .option.selected img {
     opacity: .4;
     height: 14vh;
     width: 9.9vw;
 }
 
-.img-options .option .title {
+.scroll .option .title {
     position: absolute;
     bottom: 0.4rem;
     background: var(--grey);
@@ -55,28 +55,71 @@
     left: 0;
 }
 
-.img-options .img {
+.scroll .img {
     position: relative;
 }
 
+.two-columns {
+    display: none;
+}
+
 @media (max-width:400px) {
-    .img-options {
+    .scroll {
         height: auto;
         padding: 0 .4rem;
         width: 100vw;
         background: none;
     }
-    .img-options .option.selected img {
+    .scroll .option.selected img {
         opacity: 1;
         height: 25vh;
         width: 90vw;
     }
-    .img-options .option.no-selected img {
+    .scroll .option.no-selected img {
         opacity: 1;
         height: 25vh;
         width: 90vw;
     }
-    .img-options .option .title {
+    .scroll .option .title {
         position: inherit;
+    }
+    /* //////////// TWO COLUMN /////////////// */
+    .two-columns {
+        padding: 0 .4rem;
+        width: 100vw;
+        /* background: var(--light); */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .two-columns .section-text {
+        margin-top: revert;
+    }
+    .two-columns .images {
+        -moz-column-count: 2;
+        column-count: 2;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+        -moz-column-fill: balance;
+        column-fill: balance;
+        margin: 1rem;
+    }
+    .two-columns .option {
+        display: flex;
+        float: left;
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+    .two-columns .option img {
+        height: auto;
+        width: 36vw;
+    }
+    .two-columns .option .title {
+        bottom: 0.4rem;
+        background: var(--grey);
+        font-size: .7em;
+        padding-left: .4rem;
+        width: calc(36vw - .4rem);
     }
 }
