@@ -27,6 +27,7 @@ section .logo-container {
 
 section .logo-container .img {
     padding-left: 2vw;
+    width: 20vw;
 }
 
 .container {

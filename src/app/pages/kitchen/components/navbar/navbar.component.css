@@ -27,7 +27,7 @@ nav {
     position: fixed;
     left: 5vw;
     height: 100vh;
-    width: 20vw;
+    width: 21vw;
     top: 0;
     padding: 1rem;
     display: flex;
@@ -156,7 +156,7 @@ nav .actions .action:hover i {
         display: none;
     }
     nav article.options {
-        margin-top: 20vh;
+        margin-top: 18vh;
     }
     nav .options .child-container {
         margin-top: .5em;
