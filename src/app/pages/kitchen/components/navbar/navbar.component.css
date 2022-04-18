@@ -148,8 +148,8 @@ nav .actions .action:hover i {
         display: none;
     }
     nav {
+        height: 96vh;
         width: 100%;
-        height: -webkit-fill-available;
         left: 0;
     }
     nav .web {

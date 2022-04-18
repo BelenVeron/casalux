@@ -2,13 +2,11 @@
     <app-kitchennavbar></app-kitchennavbar>
 
     <section>
-
         <div class="logo-container">
             <a class="img" routerLink="/luxurykitchen">
                 <img src="/assets/img/kitchen/logogreen.png" alt="">
             </a>
         </div>
-
         <div class="section-title">
             <h2>
                 To Get Started
@@ -16,7 +14,7 @@
         </div>
 
         <article class="details">
-            <div class="first">
+            <div class="palette-image">
                 <div class="img">
                     <img src="/assets/img/kitchen/media/degrade.png" alt="degrade">
                 </div>
@@ -25,8 +23,10 @@
             <div class="second">
                 <div class="main-header">
                     <div class="title">
-                        ADD ALL YOUR <br class="br"> <span>FAVORITES</span>
-                        <div class="icon">
+                        <div>
+                            ADD ALL YOUR <br class="br"> <span>FAVORITES</span>
+                        </div>
+                        <div class="icon-mobile">
                             <i class="far fa-heart"></i>
                         </div>
                     </div>
@@ -53,6 +53,7 @@
                         </div>
                     </div>
                 </div>
+
                 <article class="text-details">
                     <div class="up">
                         <div class="img1">
@@ -69,6 +70,15 @@
 
                     </div>
 
+                    <div class="palette-image-mobile">
+                        <div class="img">
+                            <img src="/assets/img/kitchen/media/degrade.png" alt="">
+                        </div>
+                        <div class="img">
+                            <img src="/assets/img/kitchen/media/degrade.png" alt="">
+                        </div>
+                    </div>
+
                     <div class="main-text">
                         <div class="img2 animate__animated animate__fadeIn" *ngIf="onlyimg">
                             <img src="/assets/img/kitchen/logogetstarted.png" alt="">
@@ -79,17 +89,13 @@
                         <p>After you select these options you will be directed to a section where you will decide if you want to have CasaLux go to your house and get all the dimensions for the space and go over with other selections. This option has a cost
                             of $500 and it is not refundable. Or you can select the option to draw your sketch and provide the appliances that you like. Once you finish with this CasaLux will start the design process, this has a cost of $1000 that will
                             be applied to the kitchen cabinet order.</p>
-                        <div class="mobile img2">
-                            <img src="/assets/img/kitchen/mobilelogo.jpg" alt="">
-                        </div>
                     </div>
-
                 </article>
+                <div class="img2-mobile">
+                    <img src="/assets/img/kitchen/mobilelogo.jpg" alt="">
+                </div>
             </div>
-
         </article>
-
-
-
     </section>
+
 </main>
