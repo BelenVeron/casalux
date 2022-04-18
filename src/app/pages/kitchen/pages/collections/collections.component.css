@@ -287,13 +287,12 @@ section .logo-container .img {
     .web {
         display: none
     }
-    .container.mobile {
-        display: flex;
-    }
     section {
         width: 100%;
     }
     .container.mobile {
+        margin-top: 1rem;
+        display: flex;
         height: auto;
         flex-direction: column;
         width: 100%;

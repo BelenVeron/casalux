@@ -1,32 +1,37 @@
-main{
+main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 0 0;
 }
-.mobile{
+
+.mobile {
     display: none !important;
 }
-section{
+
+section {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
     width: 98%;
 }
-section .header{
+
+section .header {
     width: 92%;
     transform: translateX(-1rem);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
-section .logo-container{
+
+section .logo-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-section .header .title{
+
+section .header .title {
     font-size: 2.4em;
     color: var(--k-green-op);
     border-top: 1px solid var(--k-green-op);
@@ -36,23 +41,27 @@ section .header .title{
     transform: translateY(-1rem);
 }
 
-article{
+article {
     width: 95%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.filters{
+
+.filters {
     padding-bottom: .4rem;
 }
+
 .filter {
     transition: all.2s;
     width: 15vw;
 }
-.filter.selected{
+
+.filter.selected {
     background: var(--k-white);
 }
-.filter .title{
+
+.filter .title {
     font-size: 1.2em;
     display: flex;
     justify-content: space-between;
@@ -64,49 +73,59 @@ article{
     padding: .2rem;
     border-radius: 5px;
 }
-.filter .title i{
+
+.filter .title i {
     cursor: pointer;
     margin-left: .4rem;
 }
-.filter .title.selected{
+
+.filter .title.selected {
     font-weight: bold;
     color: var(--k-green-op);
     background: var(--k-white);
-    border:none;
+    border: none;
 }
-.filter .options{
+
+.filter .options {
     padding-left: .8rem;
     color: var(--k-green-op);
 }
-.filter .option{
+
+.filter .option {
     cursor: pointer;
     padding: .2rem;
     transition: all.2s;
 }
-.filter .option.selected{
+
+.filter .option.selected {
     color: var(--green-op);
     font-weight: bold;
 }
 
-.details{
+.details {
     width: 100%;
     background-color: var(--k-white);
     position: relative;
 }
-.details .arrow-left, .details .arrow-right{
+
+.details .arrow-left,
+.details .arrow-right {
     position: absolute;
     top: 50%;
     font-size: 1.5em;
     cursor: pointer;
     color: var(--k-black-op);
 }
-.details .arrow-left{
+
+.details .arrow-left {
     left: 2rem;
 }
-.details .arrow-right{
+
+.details .arrow-right {
     right: 2rem;
 }
-.details .sections{
+
+.details .sections {
     width: 85%;
     display: flex;
     justify-content: space-around;
@@ -114,14 +133,16 @@ article{
     height: 80vh;
     margin: auto;
 }
-.details .sections .detail{
+
+.details .sections .detail {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     width: 30%;
 }
-.details .sections .title{
+
+.details .sections .title {
     height: 8vh;
     display: flex;
     justify-content: center;
@@ -129,11 +150,13 @@ article{
     width: 100%;
     color: var(--green-op);
 }
-.details .sections .detail:nth-child(2) .title{
+
+.details .sections .detail:nth-child(2) .title {
     background: var(--light);
     color: var(--black);
 }
-.details .sections .detail .palettes{
+
+.details .sections .detail .palettes {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -141,7 +164,8 @@ article{
     flex-direction: column;
     overflow-y: auto;
 }
-.details .sections .detail .palettes .palette{
+
+.details .sections .detail .palettes .palette {
     position: relative;
     display: flex;
     justify-content: center;
@@ -152,38 +176,43 @@ article{
     overflow: hidden;
     cursor: pointer;
 }
-.details .sections .detail .palettes .palette .img{
+
+.details .sections .detail .palettes .palette .img {
     width: 100%;
 }
-.details .sections .detail .palettes .palette .name{
+
+.details .sections .detail .palettes .palette .name {
     position: absolute;
     left: .4rem;
     top: .4rem;
     color: var(--light);
 }
 
-.unique-detail{
+.unique-detail {
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
-    padding: 0 1rem 1rem 1rem; 
+    padding: 0 1rem 1rem 1rem;
     background: var(--light);
 }
-.unique-detail .close{
+
+.unique-detail .close {
     width: 90%;
     text-align: right;
     font-size: 1.5em;
     color: var(--green-op);
 }
-.unique-detail .close i{
+
+.unique-detail .close i {
     cursor: pointer;
 }
-.unique-detail .header{
+
+.unique-detail .header {
     background: #e2ccaa;
-    width:95%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -191,13 +220,16 @@ article{
     padding: .4rem 0;
     margin-bottom: .4rem;
 }
-.header .title-section{
+
+.header .title-section {
     margin: 0 4rem;
 }
-.header .unique-title{
+
+.header .unique-title {
     font-size: 2em;
 }
-.header .fav{
+
+.header .fav {
     margin-right: 2rem;
     padding: 1rem;
     color: var(--danger);
@@ -209,13 +241,16 @@ article{
     font-size: 1.5em;
     height: 2vw;
 }
-.unique-detail .collections{
+
+.unique-detail .collections {
     width: 70%;
 }
-::ng-deep .swiper-slide{
+
+::ng-deep .swiper-slide {
     position: relative !important;
 }
-::ng-deep .swiper-slide .name-collection{
+
+::ng-deep .swiper-slide .name-collection {
     position: absolute;
     bottom: .4rem;
     left: 0;
@@ -223,83 +258,82 @@ article{
     color: var(--black);
     padding: 0 .4rem;
 }
-@media (max-width:400px){
-    .web{
+
+@media (max-width:400px) {
+    .web {
         display: none !important;
     }
-    .mobile{
+    .mobile {
         display: flex !important;
     }
-    section{
+    section {
         width: 100%;
     }
-    section .header{
+    section .header {
         width: 100%;
-        margin-top: 8vh;
+        margin-top: 10vh;
     }
-    section .header .title{
+    section .header .title {
         padding-right: 1rem;
         border-top: 0;
     }
-    article{
+    article {
         width: 100%;
         flex-direction: column;
     }
-    .filters{
+    .filters {
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         background: var(--k-white);
     }
-    .filter{
+    .filter {
         width: 50%;
         justify-content: center;
         align-items: center;
     }
-    .filter .title{
+    .filter .title {
         display: flex;
         justify-content: center;
         border: 1px solid black;
         background: var(--light);
     }
-    .filter .title.selected{
+    .filter .title.selected {
         border: none;
         background: var(--k-white);
     }
-    .filter .options .option{
+    .filter .options .option {
         background: var(--light);
         margin: .4rem 0;
         padding-left: 1rem;
         text-align: center;
     }
-
-    .details .sections{
+    .details .sections {
         padding: 0;
     }
-    .details .sections .detail{
+    .details .sections .detail {
         width: 100%;
         font-size: 1.8em;
     }
-    .details .sections .detail .palettes{
+    .details .sections .detail .palettes {
         width: 95%;
     }
-    .details .sections .detail .palettes .palette{
+    .details .sections .detail .palettes .palette {
         height: 10vh;
         font-size: .65em;
     }
-
-    .unique-detail{
+    .unique-detail {
         padding: .4rem 0;
         width: 100%;
     }
-    .unique-detail .close{
+    .unique-detail .close {
         width: 90%;
     }
-    .unique-detail .header{
+    .unique-detail .header {
         margin-top: 1rem;
     }
-    .unique-detail .collections{
+    .unique-detail .collections {
         width: 90%;
         background: var(--grey);
         display: flex;
@@ -307,23 +341,23 @@ article{
         align-items: center;
         flex-direction: column;
     }
-    .unique-detail .collections .imgs{
+    .unique-detail .collections .imgs {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-    .unique-detail .collections .title{
+    .unique-detail .collections .title {
         font-size: 1em;
         padding: 1rem 0;
         width: 80%;
     }
-    .unique-detail .collections .imgs .img{
+    .unique-detail .collections .imgs .img {
         position: relative;
         margin: .6rem 0;
         width: 80%;
     }
-    .unique-detail .collections .imgs .img .name-collection{
+    .unique-detail .collections .imgs .img .name-collection {
         background: var(--light);
         position: absolute;
         bottom: 0;
