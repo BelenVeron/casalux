@@ -11,8 +11,8 @@ import { IndexKitchenComponent } from './pages/index/index.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 
 //components
+import { SharedModule } from '../../shared.module'
 import { kitchenGgComponent } from './components/bg/bg.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 
 import {SwiperModule} from 'swiper/angular';
@@ -24,8 +24,6 @@ import { AskComponent } from './pages/ask/ask.component';
 import { ExpertsComponent } from './pages/experts/experts.component';
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
 import { VideoPlayerComponent } from '../../components/video-player/video-player.component';
-import { NavHeaderComponent } from './components/nav-header/nav-header.component';
-import { SocialComponent } from './components/social/social.component';
 import { VerticalGalleryComponent } from '../../components/vertical-gallery/vertical-gallery.component';
 import { MobileTitleComponent } from './components/mobile-title/mobile-title.component';
 import { HorizontalGalleryComponent } from '../../components/horizontal-gallery/horizontal-gallery.component';
@@ -37,7 +35,6 @@ import { ButtonComponent } from './components/button/button.component';
     IndexKitchenComponent,
     GetStartedComponent,
     kitchenGgComponent,
-    NavbarComponent,
     CollectionsComponent,
     FinishesComponent,
     OptionsComponent,
@@ -47,14 +44,13 @@ import { ButtonComponent } from './components/button/button.component';
     ExpertsComponent,
     FavoriteComponent,
     VideoPlayerComponent,
-    NavHeaderComponent,
-    SocialComponent,
     VerticalGalleryComponent,
     MobileTitleComponent,
     HorizontalGalleryComponent,
     ButtonComponent
   ],
   imports: [
+    SharedModule,
     CommonModule,
     KitchenRoutingModule,
     ReactiveFormsModule,

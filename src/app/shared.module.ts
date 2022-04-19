@@ -8,10 +8,19 @@ import {RouterModule} from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { EditComponent } from './components/edit/edit.component';
 import { MaterialModule } from './material.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SocialComponent } from './components/social/social.component';
+import { NavHeaderComponent } from './components/nav-header/nav-header.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, EditComponent],
+  declarations: [
+    HeaderComponent, 
+    EditComponent, 
+    NavbarComponent,
+    SocialComponent,
+    NavHeaderComponent,
+  ],
   imports: [
     CommonModule,
     MaterialModule,
@@ -19,6 +28,12 @@ import { MaterialModule } from './material.module';
     ReactiveFormsModule,
     RouterModule
   ],
-  exports:[HeaderComponent, EditComponent]
+  exports:[
+    HeaderComponent, 
+    EditComponent,
+    NavbarComponent,
+    SocialComponent,
+    NavHeaderComponent,
+  ]
 })
 export class SharedModule { }
