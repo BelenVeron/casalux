@@ -12,7 +12,7 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-section .text-details .img2-mobile {
+section .img2-mobile {
     display: none;
 }
 
@@ -316,12 +316,15 @@ section .text-details .img2.clickhere img {
         display: block
     }
     section .details .palette-image-mobile .img {
-        transform: rotateZ(90deg);
+        overflow-x: auto;
+        overflow-y: hidden;
         height: 30vh;
     }
-    section .details .palette-image-mobile .img:nth-child(1) {
+    section .details .palette-image-mobile .img img {
+        transform: rotateZ(90deg);
+    }
+    section .details .palette-image-mobile .img:nth-child(1) img {
         transform: rotateZ(270deg);
-        margin-left: 60px;
     }
     section .details .palette-image-mobile .img img {
         width: 50vw;

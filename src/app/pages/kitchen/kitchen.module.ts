@@ -26,9 +26,9 @@ import { FavoriteComponent } from '../../components/favorite/favorite.component'
 import { VideoPlayerComponent } from '../../components/video-player/video-player.component';
 import { NavHeaderComponent } from './components/nav-header/nav-header.component';
 import { SocialComponent } from './components/social/social.component';
-import { VerticalGalleryComponent } from './components/vertical-gallery/vertical-gallery.component';
+import { VerticalGalleryComponent } from '../../components/vertical-gallery/vertical-gallery.component';
 import { MobileTitleComponent } from './components/mobile-title/mobile-title.component';
-import { HorizontalGalleryComponent } from './components/horizontal-gallery/horizontal-gallery.component';
+import { HorizontalGalleryComponent } from '../../components/horizontal-gallery/horizontal-gallery.component';
 import { ButtonComponent } from './components/button/button.component';
 
 

@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:'luxurykitchen', loadChildren: () => import('./pages/kitchen/kitchen.module').then(m => m.KitchenModule)},
   {path:'estimates', loadChildren: () => import('./pages/estimates/estimates.module').then(m => m.EstimatesModule)},
   {path:'projects', loadChildren: () => import('./pages/projects/projects.module').then(m => m.ProjectsModule)},
+  {path:'closets', loadChildren: () => import('./pages/closets/closets.module').then(m => m.ClosetsModule)},
   {path:':section', component:IndexComponent},
 
 ];
