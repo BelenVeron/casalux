@@ -13,6 +13,7 @@ export class SocialComponent implements OnInit {
     {name: 'linkedin'},
     {name: 'pinterest'}
   ]
+  @Input() type: string = 'social';
 
   constructor() { }
 

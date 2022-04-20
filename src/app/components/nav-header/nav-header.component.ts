@@ -10,6 +10,7 @@ export class NavHeaderComponent implements OnInit {
   @Output() sendViewNav = new EventEmitter<boolean>();
   @Input() viewNav:boolean = false;
   @Input() active:boolean = false;
+  @Input() type:string = 'phone';
 
   constructor() { }
 

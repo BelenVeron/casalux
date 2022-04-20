@@ -1,0 +1,11 @@
+.closets-index {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.closets-index .img-container img {
+    height: calc(100vh - 100px);
+    width: 100vw;
+}

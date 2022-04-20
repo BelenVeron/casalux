@@ -1,1 +1,7 @@
-<app-navbar></app-navbar>
+<div class="closets-index">
+    <app-nav-header type="web" (sendViewNav)="activeMenu()"></app-nav-header>
+    <app-navbar [hideSidebar]="true" [sidenav]="activeSidenav" [navUp]="true" [items]="items" [actions]="actions" [secondItems]="secondItems"></app-navbar>
+    <div class="img-container" (click)="activeMenu()">
+        <img src="/assets/closets/main.jpg" alt="">
+    </div>
+</div>

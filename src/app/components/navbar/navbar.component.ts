@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -8,10 +8,12 @@ import { environment } from 'src/environments/environment';
 })
 export class NavbarComponent implements OnInit {
 
-  sidenav = false;
+  @Input() hideSidebar:boolean = false;
+  @Input() navUp:boolean = false;
+  @Input() sidenav = false;
   mobileNav: boolean = false;
   askURL = environment.askURL;
-  items = [
+  @Input() items = [
     {title:'GET STARTED', route:'/luxurykitchen/started', selected:false},
     {title:'VISUALIZER', route:'/luxurykitchen/start', selected:false},
     {title:'PRODUCT', children:[
@@ -24,10 +26,11 @@ export class NavbarComponent implements OnInit {
     {title:'EXPERTS & PROJECTS', route:'/luxurykitchen/experts', selected:false},
     {title:'CLIENT AREA', route:'/luxurykitchen/start', selected:false},
   ]
-  actions = [
+  @Input() actions = [
     {title:'Download catalog', icon:'download', route:'/luxurykitchen/start'},
     {title:'Ask the experts', icon:'search', route:this.askURL},
   ]
+  @Input() secondItems:any = []
   constructor() { }
 
   ngOnInit(): void {

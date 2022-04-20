@@ -1,14 +1,30 @@
 <!-- sidebar de web -->
-<nav *ngIf="sidenav || mobileNav" [ngClass]="{'animate__animated': true, 'animate__fadeInLeft': sidenav, 'animate__fadeInDown': mobileNav}">
+<nav *ngIf="sidenav || mobileNav" [ngClass]="{'navUp': navUp, 'navLeft': !navUp, 'animate__animated': true, 'animate__fadeInLeft': sidenav, 'animate__fadeInDown': mobileNav}">
 
     <a class="web" routerLink="/luxurykitchen">
-        <img src="/assets/img/kitchen/logogreen.png" alt="">
+        <img src="/assets/img/kitchen/logo.png" alt="">
     </a>
 
 
     <div class="scroll">
         <article class="options">
             <div *ngFor="let item of items">
+                <a *ngIf="item.route" routerLink="{{item.route}}" class="title">
+                    {{item.title}}
+                </a>
+                <p *ngIf="!item.route" class="title" (click)="viewOptions(item)">
+                    {{item.title}}
+                </p>
+                <div class="child-container" *ngIf="item.selected">
+                    <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">
+                        {{children.title}}
+                    </a>
+                </div>
+            </div>
+        </article>
+        <hr *ngIf="secondItems.length > 0" class="solid">
+        <article class="second-options">
+            <div *ngFor="let item of secondItems">
                 <a *ngIf="item.route" routerLink="{{item.route}}" class="title">
                     {{item.title}}
                 </a>
@@ -35,14 +51,14 @@
                 </div>
             </article>
 
-            <app-social></app-social>
+            <app-social [type]="'social-closets'"></app-social>
         </div>
     </div>
 </nav>
 
 
 <!-- Sidebar black in web -->
-<section class="web">
+<section *ngIf="!hideSidebar" class="web">
     <i class="fas fa-bars" (click)="viewNav()"></i>
 </section>
 

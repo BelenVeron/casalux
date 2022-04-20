@@ -23,3 +23,21 @@
         display: none;
     }
 }
+
+
+/* ----------------------NAVUP---------------------- */
+
+.social-closets {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-top: 5vh;
+    color: white;
+    justify-content: space-between;
+    font-size: 1.3em;
+    align-items: center;
+}
+
+.social-closets p {
+    font-size: .75em;
+}

@@ -26,7 +26,7 @@
         font-size: .6em;
         padding: .4rem;
     }
-    .sms {
+    .phone .sms {
         transform: rotateY(180deg);
         margin-bottom: 0.5rem;
     }
@@ -37,4 +37,43 @@
     .phone.active .bar i {
         transform: rotate(270deg);
     }
+}
+
+
+/* ----------WEB--------------- */
+
+.navbar-closets {
+    width: 100vw;
+    height: 100px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.navbar-closets .img-container {
+    margin-left: 2rem;
+    height: 7vh;
+    width: 18vw;
+}
+
+.navbar-closets .sms {
+    display: flex;
+    width: 50vw;
+    justify-content: flex-end;
+}
+
+.navbar-closets .sms i {
+    margin-right: 2rem;
+}
+
+.navbar-closets .left {
+    display: flex;
+    width: 45vw;
+    justify-content: flex-start;
+    font-size: 3rem;
+}
+
+.navbar-closets .bar {
+    cursor: pointer;
 }
