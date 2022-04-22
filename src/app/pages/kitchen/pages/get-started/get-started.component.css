@@ -31,6 +31,10 @@ section .logo-container {
     align-items: center;
 }
 
+section .logo-container img {
+    width: 70%;
+}
+
 section .section-title {
     padding: .4rem 0;
     color: var(--k-green-op);

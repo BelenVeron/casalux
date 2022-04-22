@@ -1,7 +1,7 @@
 <div class="closets-walk-in">
     <app-nav-header type="web" (sendViewNav)="activeMenu()"></app-nav-header>
     <app-navbar [hideSidebar]="true" [sidenav]="activeSidenav" [navUp]="true" [items]="items" [actions]="actions" [secondItems]="secondItems"></app-navbar>
-    <div class="container-grid">
+    <div class="container-grid" (click)="closeMenu()">
         <app-card source="/assets/img/closets/Preview1x.jpg" class="item-grid-1"></app-card>
         <app-card source="/assets/img/closets/Preview2x.jpg" class="item-grid-2"></app-card>
         <app-card source="/assets/img/closets/Preview3x.jpg" class="item-grid-3"></app-card>

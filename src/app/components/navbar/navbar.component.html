@@ -50,7 +50,9 @@
                 </div>
             </article>
 
-            <app-social [type]="'social-closets'"></app-social>
+
+            <app-social *ngIf="navUp" [type]="'social-white'"></app-social>
+            <app-social *ngIf="!navUp" [type]="'social'"></app-social>
         </div>
     </div>
 </nav>

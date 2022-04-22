@@ -1,30 +1,39 @@
-main{
+main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 0 0;
 }
-.mobile{
+
+.mobile {
     display: none !important;
 }
-section{
+
+section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 96%;
 }
-section .header{
+
+section .header {
     width: 85%;
     display: flex;
     flex-direction: column;
 }
-section .logo-container{
+
+section .logo-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-section .header .title{
+
+section .logo-container a {
+    width: 21.2%;
+}
+
+section .header .title {
     font-size: 2.4em;
     color: var(--k-green-op);
     border-top: 1px solid var(--k-green-op);
@@ -34,18 +43,20 @@ section .header .title{
     transform: translateY(-1rem);
 }
 
-article{
+article {
     width: 95%;
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
     align-items: flex-start;
 }
-.filters{
+
+.filters {
     background: var(--k-white);
     width: 35%;
 }
-.filter .title{
+
+.filter .title {
     font-size: 1.2em;
     display: flex;
     justify-content: space-between;
@@ -56,63 +67,76 @@ article{
     padding: .2rem;
     border-radius: 5px;
 }
-.filter .title i{
+
+.filter .title i {
     cursor: pointer;
     margin-left: .4rem;
 }
-.filter .title.selected{
+
+.filter .title.selected {
     font-weight: bold;
     color: var(--k-green-op);
     background: var(--k-white);
-    border:none;
+    border: none;
 }
-.filter .options{
+
+.filter .options {
     padding-left: .8rem;
     color: var(--k-green-op);
 }
-.filter .option{
+
+.filter .option {
     cursor: pointer;
     padding: .2rem;
     transition: all.2s;
 }
-.filter .option.selected{
+
+.filter .option.selected {
     background: var(--light);
     color: var(--green-op);
     font-weight: bold;
 }
 
-.details{
+.details {
     padding-left: 2rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-.details .img{
+
+.details .img {
     width: 45%;
     height: 50vh;
     position: relative;
     display: flex;
     justify-content: center;
 }
-::ng-deep .details .img .swiper, ::ng-deep .details .img .swiper-slide img{
+
+::ng-deep .details .img .swiper,
+ ::ng-deep .details .img .swiper-slide img {
     height: 50vh !important;
     z-index: 1;
     width: 100%;
     margin-bottom: 1rem !important;
 }
-::ng-deep .details .img .swiper-slide{
+
+::ng-deep .details .img .swiper-slide {
     width: 100% !important;
     z-index: 1 !important;
     cursor: grab;
 }
-::ng-deep .details .img .swiper-slide:active{
+
+::ng-deep .details .img .swiper-slide:active {
     cursor: grabbing;
 }
-::ng-deep .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+
+::ng-deep .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     background-color: var(--green-op);
 }
-.details .img .favs{
+
+.details .img .favs {
     position: absolute;
     bottom: .4rem;
     padding: .4rem;
@@ -120,27 +144,30 @@ article{
     width: 95%;
     z-index: 99;
 }
-.details .img .favs .fav{
+
+.details .img .favs .fav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.details .img .favs .fav .title{
+
+.details .img .favs .fav .title {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 }
-.details .img .favs .fav .title span{
+
+.details .img .favs .fav .title span {
     font-weight: bold;
 }
-.details .img .favs i{
+
+.details .img .favs i {
     cursor: pointer;
     font-size: 1.5em;
 }
 
-
-.details .info{
+.details .info {
     width: 45%;
     display: flex;
     justify-content: flex-start;
@@ -148,7 +175,8 @@ article{
     flex-direction: column;
     padding-left: 1rem;
 }
-.details .info .head{
+
+.details .info .head {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -156,34 +184,37 @@ article{
     flex-direction: column;
     background: var(--grey);
     color: var(--k-green-op);
-
 }
-.details .info .head .titles{
+
+.details .info .head .titles {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.details .info .head .titles p{
+
+.details .info .head .titles p {
     width: 50%;
     text-align: center;
     font-weight: bold;
     padding: .2rem;
     font-size: .8em;
-
 }
-.details .info .head .titles p.not-selected{
+
+.details .info .head .titles p.not-selected {
     font-weight: normal;
     cursor: pointer;
     background: var(--light);
 }
-.details .info .head .info{
+
+.details .info .head .info {
     width: 80%;
     padding-bottom: .2rem;
     padding-top: .2rem;
     font-size: .8em;
 }
-.details .cart{
+
+.details .cart {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -191,90 +222,104 @@ article{
     flex-wrap: wrap;
     padding: .4rem 0;
 }
-.details .cart .selects{
+
+.details .cart .selects {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.details .cart .selects select{
+
+.details .cart .selects select {
     width: 100%;
     margin: .4rem 0;
 }
-.details .cart .selects .quantity{
+
+.details .cart .selects .quantity {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
-.details .cart .selects .quantity .calc{
+
+.details .cart .selects .quantity .calc {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.details .cart .selects .quantity .calc i{
+
+.details .cart .selects .quantity .calc i {
     border: 1px solid var(--k-green-op);
     margin: .2rem;
     padding: .2rem .8rem;
     cursor: pointer;
 }
-.details .cart .selects .quantity .calc p{
-    color:var(--k-green-op);
+
+.details .cart .selects .quantity .calc p {
+    color: var(--k-green-op);
     font-weight: bold;
     background: var(--grey);
     width: 40%;
     text-align: center;
 }
-.details .cart .selects .quantity p.unit{
+
+.details .cart .selects .quantity p.unit {
     border: 1px solid var(--black);
     width: 15%;
     padding: 0 .2rem;
     line-height: 22px;
 }
-.details .cart .price{
+
+.details .cart .price {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
     width: 40%;
 }
-.details .cart .price .cost{
+
+.details .cart .price .cost {
     font-weight: bold;
     border: 1px solid black;
     font-size: 2.5em;
     width: 95%;
-    text-align:center;
+    text-align: center;
     white-space: nowrap;
     overflow-x: hidden;
 }
-.details .cart .price .add-to{
+
+.details .cart .price .add-to {
     width: 95%;
-    text-align:center;
+    text-align: center;
     border: 1px solid black;
     margin-top: .4rem;
     transition: all.2s;
     cursor: pointer;
 }
-.details .cart .price .add-to:hover{
+
+.details .cart .price .add-to:hover {
     background: var(--k-green-op);
     color: var(--light);
 }
-.details .cart .related{
+
+.details .cart .related {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.details .cart .related .colors{
+
+.details .cart .related .colors {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap:wrap ;
+    flex-wrap: wrap;
     flex-direction: column;
 }
-.details .cart .related .colors .img{
+
+.details .cart .related .colors .img {
     width: 8vh;
     height: 8vh;
     background: var(--grey);
@@ -282,23 +327,26 @@ article{
     border: 4px solid var(--light);
     margin: .4rem;
 }
-.details .cart .related .colors .img.selected{
+
+.details .cart .related .colors .img.selected {
     border: 4px solid var(--green-op);
 }
-.related .info{
+
+.related .info {
     width: 60%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
 }
-.related .info .product{
+
+.related .info .product {
     height: 18vh;
     background: var(--green-op);
     position: relative;
 }
 
-.related .info .product .name{
+.related .info .product .name {
     position: absolute;
     background: var(--k-white);
     font-size: .6em;
@@ -312,89 +360,95 @@ article{
     bottom: 0;
     transition: all.2s;
 }
-.related .info .product .from-to{
+
+.related .info .product .from-to {
     display: none;
 }
-.related .info .product:hover .name{
+
+.related .info .product:hover .name {
     height: 170%;
     overflow: hidden;
 }
-.related .info .product:hover .from-to{
+
+.related .info .product:hover .from-to {
     display: block;
     font-size: .8em;
 }
-::ng-deep .swiper{
+
+::ng-deep .swiper {
     width: 100%;
 }
-::ng-deep .mySwiper{
+
+::ng-deep .mySwiper {
     width: 100%;
 }
-::ng-deep .mySwiper .swiper-slide{
+
+::ng-deep .mySwiper .swiper-slide {
     opacity: 1;
     transform: scale(1);
 }
-.images{
+
+.images {
     width: 92%;
     margin-top: 1rem;
 }
-::ng-deep .swiper-slide.img{
+
+::ng-deep .swiper-slide.img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:20vh !important;
+    height: 20vh !important;
     cursor: pointer;
     z-index: 999;
 }
 
-
-@media (max-width:400px){
-    .web{
+@media (max-width:400px) {
+    .web {
         display: none !important;
     }
-    .mobile{
+    .mobile {
         display: flex !important;
     }
-    section{
+    section {
         width: 100%;
     }
-    section .header{
+    section .header {
         width: 100%;
         margin-top: 8vh;
     }
-    section .header .title{
+    section .header .title {
         padding-right: 1rem;
         border-top: 0;
         width: 100%;
         font-size: 1.4em;
     }
-    article{
+    article {
         width: 100%;
         align-items: center;
         flex-direction: column;
         margin-top: 0;
     }
-    .filters{
+    .filters {
         width: 100%;
         background: var(--light);
         margin-bottom: 2rem;
     }
-    .filter{
+    .filter {
         background: var(--grey);
-
     }
-    .filter .title{
+    .filter .title {
         padding: .4rem;
         border: none;
         background: var(--light);
-        margin: .4rem 0 0 0 ;
+        margin: .4rem 0 0 0;
     }
-    .filter .title.selected{
+    .filter .title.selected {
         background: var(--grey);
     }
-    .filter .title i{
+    .filter .title i {
         padding-right: 1rem;
     }
-    .filter .options{
+    .filter .options {
         background: var(--grey);
         display: flex;
         justify-content: center;
@@ -402,71 +456,69 @@ article{
         flex-direction: column;
         padding: 0;
     }
-    .filter .option{
+    .filter .option {
         background: var(--light);
         width: 90%;
         margin: .4rem 0;
         padding: .4rem;
     }
-    .details{
+    .details {
         flex-direction: column;
         padding: 0;
         align-items: center;
     }
-    .details .img{
+    .details .img {
         width: 95%;
         margin-bottom: 2rem;
     }
-    .details .img .favs{
+    .details .img .favs {
         bottom: 0;
         width: 98%;
     }
-    .details .info{
+    .details .info {
         width: 95%;
         align-items: center;
         padding: 0;
     }
-    .details .info .head .titles p{
+    .details .info .head .titles p {
         font-size: 1em;
     }
-    .details .info .head .info{
+    .details .info .head .info {
         font-size: .8em;
     }
-
-    .details .cart{
+    .details .cart {
         flex-direction: column;
     }
     .details .cart .selects,
     .details .cart .price,
-    .details .cart .price .add-to{
+    .details .cart .price .add-to {
         width: 100%;
         margin-top: .4rem;
         align-items: center;
     }
-    .details .cart .price .cost{
+    .details .cart .price .cost {
         width: 100%;
     }
-    .details .cart .selects select{
+    .details .cart .selects select {
         font-size: 1.2em;
     }
-    .details .cart .selects .quantity{
+    .details .cart .selects .quantity {
         font-size: 1.2em;
     }
-    .details .cart .selects .quantity .calc{
+    .details .cart .selects .quantity .calc {
         justify-content: flex-end;
     }
-    .details .cart .price .add-to{
+    .details .cart .price .add-to {
         font-size: 1.2em;
         background: var(--grey);
         border: none;
         padding: .4rem;
     }
-    .details .cart .related{
+    .details .cart .related {
         flex-direction: column;
         margin-bottom: 10vh;
     }
-
-    .details .info .info{
+    .details .info .info {
         margin-top: 2rem;
         font-size: 1.2em;
     }

@@ -35,4 +35,12 @@ export class WalkInComponent implements OnInit {
     this.activeSidenav = !this.activeSidenav;
   }
 
+  closeMenu():void {
+    if (this.activeSidenav === true){
+      this.activeSidenav = false;
+    }else{
+      /* activar la tarjeta */
+    }
+  }
+
 }

@@ -27,7 +27,7 @@
 
 /* ----------------------NAVUP---------------------- */
 
-.social-closets {
+.social-white {
     display: flex;
     flex-direction: row;
     width: 95%;
@@ -38,6 +38,6 @@
     align-items: center;
 }
 
-.social-closets p {
+.social-white p {
     font-size: .75em;
 }

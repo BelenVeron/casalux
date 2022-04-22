@@ -33,4 +33,5 @@
     height: 95%;
     color: rgba(240, 239, 239, 0.925);
     text-align: center;
+    cursor: pointer;
 }

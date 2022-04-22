@@ -31,6 +31,10 @@ section .logo-container {
     align-items: center;
 }
 
+section .logo-container a {
+    width: 22.5%;
+}
+
 section .header .title {
     font-size: 2.4em;
     color: var(--k-green-op);
