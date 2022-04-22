@@ -11,6 +11,7 @@ import { MaterialModule } from './material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SocialComponent } from './components/social/social.component';
 import { NavHeaderComponent } from './components/nav-header/nav-header.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { NavHeaderComponent } from './components/nav-header/nav-header.component
     NavbarComponent,
     SocialComponent,
     NavHeaderComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import { NavHeaderComponent } from './components/nav-header/nav-header.component
     NavbarComponent,
     SocialComponent,
     NavHeaderComponent,
+    CardComponent,
   ]
 })
 export class SharedModule { }

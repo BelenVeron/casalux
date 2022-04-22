@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-index-closets',
-  templateUrl: './index-closets.component.html',
-  styleUrls: ['./index-closets.component.css']
+  selector: 'app-walk-in',
+  templateUrl: './walk-in.component.html',
+  styleUrls: ['./walk-in.component.css']
 })
-export class IndexClosetsComponent implements OnInit {
+export class WalkInComponent implements OnInit {
 
   activeSidenav: boolean = false;
   items = [
@@ -31,12 +31,8 @@ export class IndexClosetsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openMenu(): void {
-    this.activeSidenav = true;
-  }
-
-  closeMenu():void {
-    this.activeSidenav = false;
+  activeMenu() {
+    this.activeSidenav = !this.activeSidenav;
   }
 
 }

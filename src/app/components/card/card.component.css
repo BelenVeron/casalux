@@ -1,0 +1,36 @@
+.card-container {
+    height: 100%;
+    margin: .3rem;
+    position: relative;
+}
+
+.card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+}
+
+.card-container .card-desc {
+    display: block;
+    font-size: 1.2rem;
+    position: absolute;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    padding: 18px 8%;
+    background-color: rgba(99, 84, 68, 0.747);
+    /* transition: 0.8s ease; */
+}
+
+.card-container .card-desc h3 {
+    margin-top: 2rem;
+}
+
+.card-container:hover .card-desc {
+    opacity: 1;
+    height: 95%;
+    color: rgba(240, 239, 239, 0.925);
+    text-align: center;
+}
