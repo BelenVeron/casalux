@@ -8,11 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SocialComponent implements OnInit {
 
   @Input() items: any[] = [
-    {name: 'facebook'},
-    {name: 'instagram'},
-    {name: 'linkedin'},
-    {name: 'pinterest'}
-    /* {name: 'home'} */
+    {name: 'fab fa-facebook'},
+    {name: 'fab fa-instagram'},
+    {name: 'fab fa-linkedin'},
+    {name: 'fab fa-pinterest'},
+    {name: 'fas fa-home'} 
   ]
   @Input() type: string = 'social';
 

@@ -12,6 +12,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SocialComponent } from './components/social/social.component';
 import { NavHeaderComponent } from './components/nav-header/nav-header.component';
 import { CardComponent } from './components/card/card.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ButtonComponent } from './components/button/button.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { CardComponent } from './components/card/card.component';
     SocialComponent,
     NavHeaderComponent,
     CardComponent,
+    ModalComponent,
+    ButtonComponent,
+    CheckboxComponent
   ],
   imports: [
     CommonModule,
@@ -37,6 +43,9 @@ import { CardComponent } from './components/card/card.component';
     SocialComponent,
     NavHeaderComponent,
     CardComponent,
+    ModalComponent,
+    ButtonComponent,
+    CheckboxComponent
   ]
 })
 export class SharedModule { }

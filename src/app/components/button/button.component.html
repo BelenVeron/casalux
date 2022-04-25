@@ -1,0 +1,3 @@
+<button *ngIf="type !== 'login'" [class]="type">{{text}}</button>
+
+<button *ngIf="type === 'login'" [class]="type">{{text}} <span>{{link}}</span></button>

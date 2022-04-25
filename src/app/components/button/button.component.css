@@ -1,0 +1,62 @@
+.link {
+    border: none;
+    background-color: transparent;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    width: 250px;
+    height: 60px;
+    font-family: "Titillium Web", sans-serif;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #fff;
+    background-color: rgb(42, 112, 42);
+}
+
+.text {
+    border: none;
+    background-color: inherit;
+    padding: 10px 20px 4px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    display: inline-block;
+    color: rgb(0, 165, 0);
+    border-bottom: 1px solid rgb(0, 165, 0);
+}
+
+.more {
+    border: none;
+    background-color: inherit;
+    padding: 0px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    color: rgb(133, 133, 133);
+}
+
+.border {
+    border: solid 1px rgb(163, 163, 163);
+    color: rgb(79, 128, 0);
+    width: 250px;
+    height: 50px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.login {
+    border: none;
+    background-color: inherit;
+    padding: 0px 20px;
+    font-size: 20px;
+    display: inline-block;
+    color: rgb(133, 133, 133);
+}
+
+.login span {
+    border: none;
+    cursor: pointer;
+    color: rgb(79, 128, 0);
+    border-bottom: 1px solid rgb(79, 128, 0);
+}
