@@ -12,6 +12,7 @@ export class SocialComponent implements OnInit {
     {name: 'instagram'},
     {name: 'linkedin'},
     {name: 'pinterest'}
+    /* {name: 'home'} */
   ]
   @Input() type: string = 'social';
 

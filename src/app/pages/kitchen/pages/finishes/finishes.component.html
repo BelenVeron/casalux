@@ -39,12 +39,14 @@
                         <div class="title">
                             {{active.name}}
                         </div>
-                        <div class="palettes" *ngFor="let palette of active.finishes">
-                            <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette)">
-                                <div class="img">
-                                    <img [src]="url+palette.image" alt="">
+                        <div class="container-palletes">
+                            <div class="palettes" *ngFor="let palette of active.finishes">
+                                <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette)">
+                                    <div class="img">
+                                        <img [src]="url+palette.image" alt="">
+                                    </div>
+                                    <p class="name">{{palette.name}}</p>
                                 </div>
-                                <p class="name">{{palette.name}}</p>
                             </div>
                         </div>
                     </div>

@@ -370,3 +370,8 @@ article {
         width: 100%;
     }
 }
+
+.details .container-palletes {
+    overflow: auto;
+    height: 68vh;
+}
