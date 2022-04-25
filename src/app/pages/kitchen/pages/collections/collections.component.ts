@@ -89,6 +89,7 @@ export class CollectionsComponent implements OnInit {
   slideChange(e:any){
     const element:any = document.getElementById(this.url+(e.realIndex))
     if(element) element.click()
+    
   }
 
   updateCollection(){
@@ -105,6 +106,7 @@ export class CollectionsComponent implements OnInit {
     this.id = index
     this.updateCollection()
     this.changePageMobile();
+    if (this.seemore) this.seemore = false;
   }
 
   /**
