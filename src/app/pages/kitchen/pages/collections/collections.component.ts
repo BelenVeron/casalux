@@ -87,9 +87,10 @@ export class CollectionsComponent implements OnInit {
   }
 
   slideChange(e:any){
-    const element:any = document.getElementById(this.url+(e.realIndex))
-    if(element) element.click()
-    
+    /* const element:any = document.getElementById(this.url+(e.realIndex))
+    if(element) element.click(); */
+    this.selectImages(e.activeIndex-3)
+    console.log("event ", e.activeIndex)
   }
 
   updateCollection(){
@@ -128,9 +129,15 @@ export class CollectionsComponent implements OnInit {
   }
 
   selectImages(index:number){
-    const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
-    this.imagesSelected = hasPhotos ? this.collections[this.id].kitchens[index].photos : []
+  const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
+  this.imagesSelected = hasPhotos ? this.collections[this.id].kitchens[index].photos : []
+ 
+  /* this.imagesSelected = [];
+  this.imagesSelected.push(this.collections[this.id].kitchens[index].photos[0]) */
+  console.log("index ",index, " imageselected ", this.imagesSelected)
   }
+
+
 
   goBack(){
     this.changePageMobile();

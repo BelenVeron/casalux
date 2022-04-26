@@ -375,3 +375,13 @@ article {
     overflow: auto;
     height: 68vh;
 }
+
+.details .container-palletes::-webkit-scrollbar {
+    width: .5rem;
+    border-radius: 10px;
+}
+
+.details .container-palletes::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 10px;
+}

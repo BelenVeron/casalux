@@ -24,9 +24,9 @@
 
                 <!-- swiper carroussel horizontal de kitchens en collections-->
                 <div class="swiper-container">
-                    <swiper class="mySwiper" [config]="config" (slideChange)="slideChange($event)">
+                    <swiper s class="mySwiper" [config]="config" (slideChange)="slideChange($event)">
                         <ng-template swiperSlide *ngFor="let img of collectionSelected.kitchens, let index = index">
-                            <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image" [id]="url+index" (click)="selectImages(index)">
+                            <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image" [id]="url+index">
                         </ng-template>
                     </swiper>
                 </div>
