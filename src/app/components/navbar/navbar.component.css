@@ -64,7 +64,7 @@ nav article.second-options {
     font-weight: bold;
     font-size: 1.25em;
     text-decoration: none;
-    transition: all.4s ease;
+    transition: all .4s ease;
     border: 1px solid var(--k-black);
     padding: .2rem;
     width: 100%;
@@ -106,10 +106,6 @@ nav .options .children:last-child {
     margin-bottom: 1rem;
 }
 
-.text {
-    margin-top: 5rem;
-}
-
 nav .extras {
     position: absolute;
     bottom: 8vh;
@@ -129,7 +125,7 @@ nav .actions .action {
     width: 100%;
     margin-top: .4rem;
     text-decoration: none;
-    transition: background.2s;
+    transition: background .2s;
 }
 
 .navLeft .actions .action a {
@@ -173,7 +169,7 @@ nav .actions .action:hover i {
     color: #eaece9;
     font-size: 1.25em;
     text-decoration: none;
-    transition: all.4s ease;
+    transition: all .4s ease;
     padding: .2rem;
     width: 100%;
     border-radius: 10px;
@@ -184,7 +180,7 @@ nav .actions .action:hover i {
     color: #eaece9;
     font-size: 1.25em;
     text-decoration: none;
-    transition: all.4s ease;
+    transition: all .4s ease;
     padding: .2rem;
     width: 100%;
     border-radius: 10px;
@@ -223,7 +219,7 @@ hr.solid {
 }
 
 
-/* ----------------------END nAVUP---------------------- */
+/* ----------------------END NAVUP---------------------- */
 
 @media (max-width:400px) {
     .web {
@@ -233,6 +229,12 @@ hr.solid {
         height: 96vh;
         width: 100%;
         left: 0;
+    }
+    .navLeft img {
+        display: none;
+    }
+    .navUp img {
+        display: none;
     }
     .navUp {
         height: 96vh;

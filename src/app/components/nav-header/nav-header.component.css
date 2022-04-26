@@ -44,36 +44,40 @@
 
 .navbar-closets {
     width: 100vw;
-    height: 100px;
+    height: 80px;
     font-size: 2rem;
     display: flex;
-    align-items: center;
-    margin: 0 20px;
+    align-items: flex-end;
+    margin-bottom: 10px;
 }
 
-.navbar-closets .img-container {
+.navbar-closets .left {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    font-size: 30px;
+    align-items: flex-end;
+}
+
+.navbar-closets .left i {
     margin-left: 2rem;
-    height: 7vh;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.navbar-closets .left img {
+    margin-left: 2rem;
     width: 23vw;
 }
 
 .navbar-closets .sms {
     display: flex;
-    width: 50vw;
+    width: 50%;
     justify-content: flex-end;
 }
 
 .navbar-closets .sms i {
     margin-right: 2rem;
-}
-
-.navbar-closets .left {
-    display: flex;
-    width: 45vw;
-    justify-content: flex-start;
-    font-size: 3rem;
-}
-
-.navbar-closets .bar {
+    margin-bottom: 5px;
     cursor: pointer;
 }

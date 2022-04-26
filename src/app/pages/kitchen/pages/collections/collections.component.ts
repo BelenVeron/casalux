@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
@@ -60,7 +60,10 @@ export class CollectionsComponent implements OnInit {
   imagesSelected:any = [];
   innerWidth: number = 0;
 
-  constructor(private collection:KitchenProductsService, private route:ActivatedRoute) {
+  constructor(
+    private collection:KitchenProductsService, 
+    private route:ActivatedRoute,
+    private changeDetection: ChangeDetectorRef) {
 
     this.id = route.snapshot.params.collectionId || ''
     this.collection.collectionInfo(this.id).subscribe((data:any)=>{
@@ -87,20 +90,13 @@ export class CollectionsComponent implements OnInit {
   }
 
   slideChange(e:any){
-    /* const element:any = document.getElementById(this.url+(e.realIndex))
-    if(element) element.click(); */
     this.selectImages(e.activeIndex-3)
-    console.log("event ", e.activeIndex)
   }
 
   updateCollection(){
     // let params = 'collectionID='+this.id
     this.collectionSelected = this.collections[this.id];
-    this.selectImages(0)
-    setTimeout(()=>{
-      const element:any = document.getElementById(this.url+0)
-      if(element) element.click()
-    }, 20)
+    this.selectImages(0);
   }
 
   changeSelectedCollection(index:any){
@@ -129,15 +125,15 @@ export class CollectionsComponent implements OnInit {
   }
 
   selectImages(index:number){
-  const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
-  this.imagesSelected = hasPhotos ? this.collections[this.id].kitchens[index].photos : []
- 
-  /* this.imagesSelected = [];
-  this.imagesSelected.push(this.collections[this.id].kitchens[index].photos[0]) */
-  console.log("index ",index, " imageselected ", this.imagesSelected)
+    const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
+    if(hasPhotos){
+      this.imagesSelected = [];
+      this.collections[this.id].kitchens[index].photos.forEach((element: any) => {
+        this.imagesSelected.push(element);
+      });
+      this.changeDetection.detectChanges();
+    }
   }
-
-
 
   goBack(){
     this.changePageMobile();
