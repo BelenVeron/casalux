@@ -21,6 +21,7 @@
     opacity: 0;
     padding: 18px 8%;
     background-color: rgba(99, 84, 68, 0.747);
+    animation: all .2s;
     /* transition: 0.8s ease; */
 }
 
