@@ -9,6 +9,7 @@ import { ITEMS_NAV } from '../closets.data';
 export class IndexClosetsComponent implements OnInit {
 
   activeSidenav: boolean = false;
+  navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
 
   constructor() { }
@@ -18,10 +19,6 @@ export class IndexClosetsComponent implements OnInit {
 
   openMenu(): void {
     this.activeSidenav = true;
-  }
-
-  closeMenu():void {
-    this.activeSidenav = false;
   }
 
   setSideNav(event: boolean): void {

@@ -1,45 +1,49 @@
 <!-- sidebar de web -->
-<nav *ngIf="showNavbar" [ngClass]="{'navUp': true, 'animate__animated': true, 'animate__fadeInLeft': left, 'animate__fadeInDown': down}">
+<nav *ngIf="showNavbar" [ngClass]="{'container-nav': true, 'animate__animated': true, 'animate__fadeInLeft': left, 'animate__fadeInDown': down}">
 
+    <!-- Image header - close the navbar -->
     <div class="image-navbar">
-        <img [src]="src" alt="">
+        <img [src]="src" alt="" (click)="closeNav()">
     </div>
 
-    <div class="scroll">
-        <div class="options">
-            <div *ngFor="let item of primaryItems">
-                <a (click)="actionOrRedirect(item.route)" class="title">{{item.title}}</a>
-                <div class="child-container" *ngIf="item.selected">
-                    <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">{{children.title}}</a>
-                </div>
+    <!-- First Items -->
+    <div class="options">
+        <div *ngFor="let item of items.primaryItems">
+            <a (click)="actionOrRedirect(item.route)" class="title">{{item.title}}</a>
+            <div class="child-container" *ngIf="item.selected">
+                <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">{{children.title}}</a>
             </div>
         </div>
+    </div>
 
-        <hr *ngIf="secondaryItems.length > 0" class="solid">
+    <!-- Divider -->
+    <hr *ngIf="items.secondaryItems.length > 0" class="solid">
 
-        <div class="options">
-            <div *ngFor="let item of secondaryItems">
-                <a (click)="actionOrRedirect(item.route)" class="title">{{item.title}}</a>
-                <div class="child-container" *ngIf="item.selected">
-                    <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">{{children.title}}</a>
-                </div>
-            </div>
+    <!-- Second Items -->
+    <div class="options">
+        <a *ngFor="let item of items.secondaryItems" (click)="actionOrRedirect(item.route)" class="title">{{item.title}}</a>
+    </div>
+
+    <!-- Text description -->
+    <div *ngIf="items.description" class="text">
+        <p [innerHtml]="items.description"></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="extras">
+        <!-- Buttons -->
+        <div class="action" *ngFor="let item of items.buttons">
+            <a (click)="actionOrRedirect(item.route)" class="title">
+                <i class="fas fa-{{item.icon}}"></i>{{item.title}}
+            </a>
         </div>
-
-        <div *ngIf="description" class="text">
-            <p>{{description}}</p>
-        </div>
-
-        <div class="extras">
-            <div class="action" *ngFor="let item of buttons">
-                <a *ngIf="item.route.slice(-3) === 'php'" (click)="extRedirect(item.route)">
-                    <i class="fas fa-{{item.icon}}"></i> {{item.title}}
-                </a>
-            </div>
+        <!-- Icons and phone -->
+        <div class="social">
             <app-social [type]="'social-white'"></app-social>
         </div>
     </div>
+
 </nav>
 
 <!-- Header in the mobile -->
-<app-nav-header (sendViewNav)="viewMobileNav($event)" [viewNav]="mobileNav"></app-nav-header>
+<app-nav-header (sendViewNav)="viewMobileNav($event)" [viewNav]="showNavbar"></app-nav-header>

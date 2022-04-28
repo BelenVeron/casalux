@@ -2,7 +2,7 @@
 <nav *ngIf="sidenav || mobileNav" [ngClass]="{'navUp': navUp, 'navLeft': !navUp, 'animate__animated': true, 'animate__fadeInLeft': sidenav, 'animate__fadeInDown': mobileNav}">
 
     <a *ngIf="navUp; then logoWhite else logoGreen" class="web" routerLink="/luxurykitchen"></a>
-    <ng-template #logoWhite><img src="/assets/img/kitchen/logo.png" alt=""></ng-template>
+    <ng-template #logoWhite><img class="white" src="/assets/img/closets/logo-closets.png" alt=""></ng-template>
     <ng-template #logoGreen><img src="/assets/img/kitchen/logogreen.png" alt=""></ng-template>
 
     <div class="scroll">

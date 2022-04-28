@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar2',
@@ -9,29 +11,37 @@ export class Navbar2Component implements OnInit {
 
   @Input() src: string = '/assets/img/kitchen/logo.png';
   @Input() showNavbar: boolean = false;
+  /* open from the left */
   @Input() left: boolean = false;
+  /* open from up to down */
   @Input() down: boolean = false;
-  mobileNav: boolean = false;
-  @Input() primaryItems: any = [];
-  @Input() secondaryItems: any = [];
-  @Input() buttons: any = [];
-  @Input() description: string = '';
+  @Input() items: any = {}
+  /* send the value of showNavbar to set the boolean active
+     property in the parent component */
+  @Output() sendShowNavbar = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
   actionOrRedirect(route: string): void {
-    
+    if (route.slice(-3) !== 'php') {
+      this.router.navigate([route])
+    } else {
+      window.open(route, "_blank");
+    }
   }
 
-  extRedirect(route: string): void {
-    window.open(route, "_blank");
+  closeNav(): void {
+    this.showNavbar = !this.showNavbar;
+    this.sendShowNavbar.emit(this.showNavbar)
   }
-
-  viewMobileNav(data: boolean){
-    this.mobileNav = data;
+  
+  viewMobileNav(data: boolean): void {
+    this.showNavbar = data;
+    this.down = data;
+    this.left = !data;
   }
 
 }

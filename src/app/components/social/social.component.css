@@ -30,14 +30,26 @@
 .social-white {
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 100%;
     margin-top: 5vh;
     color: white;
-    justify-content: space-between;
-    font-size: 1.3em;
     align-items: center;
+    font-size: 1rem;
+    padding: .5rem 0rem;
+    justify-content: center;
+}
+
+.icons i{
+    margin-right: 5px;
 }
 
 .social-white p {
-    font-size: .75em;
+    font-size: 1rem;
+}
+
+
+@media (max-width:1000px) {
+    .social-white {
+        flex-direction: column;
+    }
 }

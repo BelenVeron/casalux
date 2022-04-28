@@ -45,7 +45,7 @@ nav article {
 }
 
 .scroll {
-    overflow-y: auto;
+    overflow-y: hidden;
     height: 90vh;
     width: 100%;
 }
@@ -169,9 +169,13 @@ nav .actions .action:hover i {
     color: #eaece9;
 }
 
+.navUp .white {
+    filter: brightness(5.5);
+}
+
 .navUp .options .title {
     color: #eaece9;
-    font-size: 1.25em;
+    font-size: .85em;
     text-decoration: none;
     transition: all .4s ease;
     padding: .2rem;
@@ -182,7 +186,7 @@ nav .actions .action:hover i {
 
 .navUp .second-options .title {
     color: #eaece9;
-    font-size: 1.25em;
+    font-size: .85em;
     text-decoration: none;
     transition: all .4s ease;
     padding: .2rem;
@@ -205,6 +209,7 @@ nav .actions .action:hover i {
     color: #eaece9;
     cursor: pointer;
     text-decoration: none;
+    font-size: 0.75em;
 }
 
 .navUp .actions .action i {

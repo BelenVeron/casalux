@@ -1,0 +1,112 @@
+/* ----------------------NAVUP---------------------- */
+
+.container-nav {
+    background: var(--k-green-op);
+    position: fixed;
+    height: 100vh;
+    width: 24vw;
+    top: 0;
+    padding: 1rem 1rem 1rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 999;
+    color: #eaece9;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.title {
+    color: #eaece9;
+    font-size: .9em;
+    text-decoration: none;
+    transition: all .4s ease;
+    padding: .2rem;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: #ffff;
+    font-weight: bold;
+}
+
+.title a {
+    text-decoration: none;
+    color: white;
+}
+
+.text {
+    margin-top: 1.5rem;
+    font-size: .8rem;
+}
+
+.extras {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.action {
+    color: #eaece9;
+    border: 1px solid #eaece9;
+    border-radius: 10px;
+    padding: .4rem .6rem;
+    width: 80%;
+    margin-top: 5vh;
+    text-decoration: none;
+    transition: background .2s;
+    text-align: center;
+}
+
+.action:hover {
+    background: var(--grey);
+    color: var(--k-black);
+}
+
+.action a {
+    color: #eaece9;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.action i {
+    margin-right: 5px;
+}
+
+.action:hover a {
+    color: black;
+    font-weight: normal;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    border-radius: 5px;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+@media (max-width:850px) {
+    .action {
+        width: 60%;
+        font-size: .7rem;
+    }
+}
+
+@media (max-width:450px) {
+    .container-nav {
+        width: calc(100vw - 2rem);
+        padding: 1rem;
+    }
+}
+
+
+/* ----------------------END NAVUP---------------------- */
