@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { WALK_IN_IMAGES, ITEMS_NAV } from '../closets.data';
+import { ITEMS_NAV } from '../closets.data';
 
 @Component({
-  selector: 'app-walk-in',
-  templateUrl: './walk-in.component.html',
-  styleUrls: ['./walk-in.component.css']
+  selector: 'app-collection',
+  templateUrl: './collection.component.html',
+  styleUrls: ['./collection.component.css']
 })
-export class WalkInComponent implements OnInit {
+export class CollectionComponent implements OnInit {
 
   activeSidenav: boolean = false;
-  walkInImages = WALK_IN_IMAGES;
   itemsNav = ITEMS_NAV;
   
 

@@ -6,12 +6,14 @@ import { SharedModule } from '../../shared.module'
 import { ClosetsRoutingModule } from './closets-routing.module';
 import { IndexClosetsComponent } from './index-closets/index-closets.component';
 import { WalkInComponent } from './walk-in/walk-in.component';
+import { CollectionComponent } from './collection/collection.component';
 
 
 @NgModule({
   declarations: [
     IndexClosetsComponent,
-    WalkInComponent
+    WalkInComponent,
+    CollectionComponent
   ],
   imports: [
     CommonModule,

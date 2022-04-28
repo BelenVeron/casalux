@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { KitchenRoutingModule } from './kitchen-routing.module';
 import { AgmCoreModule } from '@agm/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //pages
 import { IndexKitchenComponent } from './pages/index/index.component';
@@ -57,6 +58,7 @@ import { ButtonComponent } from './components/button/button.component';
     HttpClientModule,
     FormsModule,
     SwiperModule,
+    FlexLayoutModule,
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyBp8mUithh4jHhxoFniyG0x2KTUKl2xzR8'
     })

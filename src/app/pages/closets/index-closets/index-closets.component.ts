@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITEMS_NAV } from '../closets.data';
 
 @Component({
   selector: 'app-index-closets',
@@ -8,23 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class IndexClosetsComponent implements OnInit {
 
   activeSidenav: boolean = false;
-  items = [
-    {title:'WARDROVE CLOSETS', route:'/closets', selected:false},
-    {title:'WALK-IN-CLOSETS', route:'/closets/walk-in', selected:false},
-    {title:'CENTER ISLAND', route:'/closets', selected:false},
-    {title:'ACCESORIES', route:'/closets', selected:false},
-    {title:'FINISHES', route:'/closets', selected:false},
-  ]
-  secondItems = [
-    {title:'QUALITY', route:'/closets', selected:false},
-    {title:'STUDIOS', route:'/closets', selected:false},
-    {title:'VISUALIZER', route:'/closets', selected:false},
-    {title:'ASK QUESTIONS', route:'/closets', selected:false},
-    {title:'EXPERTS & PROJECTS', route:'/closets', selected:false},
-  ]
-  actions = [
-    {title:'Download catalog', icon:'download', route:'/closets/start'},
-  ]
+  itemsNav = ITEMS_NAV;
 
   constructor() { }
 
@@ -37,6 +22,10 @@ export class IndexClosetsComponent implements OnInit {
 
   closeMenu():void {
     this.activeSidenav = false;
+  }
+
+  setSideNav(event: boolean): void {
+    this.activeSidenav = event;
   }
 
 }

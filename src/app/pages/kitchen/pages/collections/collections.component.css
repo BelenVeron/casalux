@@ -54,7 +54,7 @@ section .logo-container .img {
     background: var(--black-op);
     opacity: .6;
     bottom: 13vh;
-    z-index: 999;
+    z-index: 2;
     padding: .4rem;
     width: 40vw;
     left: 0;
@@ -181,9 +181,9 @@ section .logo-container .img {
 }
 
 .option-details .details-title {
-    font-size: 82px;
+    font-size: 78px;
     text-overflow: ellipsis;
-    overflow: hidden;
+    /* overflow: hidden; */
     min-width: 100%;
     max-width: 130%;
     color: var(--k-green-op);
@@ -198,9 +198,7 @@ section .logo-container .img {
 .option-details .text {
     font-size: .8em;
     margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    height: 38vh;
-    overflow-y: auto;
+    height: fit-content;
 }
 
 .option-details .text::-webkit-scrollbar {
@@ -272,11 +270,18 @@ section .logo-container .img {
 }
 
 .option-details .seemore {
+    height: auto;
     position: absolute;
     bottom: 13vh;
     color: var(--green);
     text-decoration: underline;
     cursor: pointer;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    bottom: 7vh;
+    background: var(--grey);
 }
 
 @media (max-width:400px) {

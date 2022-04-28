@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -31,6 +31,7 @@ export class NavbarComponent implements OnInit {
     {title:'Ask the experts', icon:'search', route:this.askURL},
   ]
   @Input() secondItems:any = []
+  @Output() sendSideNav = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit(): void {
@@ -38,11 +39,11 @@ export class NavbarComponent implements OnInit {
 
   viewNav(){
     this.sidenav = !this.sidenav
+    this.sendSideNav.emit(this.sidenav)
   }
 
   viewMobileNav(data: boolean){
     this.mobileNav = data;
-    console.log(data)
   }
 
   viewOptions(item:any){

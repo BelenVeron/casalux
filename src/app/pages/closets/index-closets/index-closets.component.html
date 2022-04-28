@@ -1,6 +1,6 @@
 <div class="closets-index">
     <app-nav-header type="web" (sendViewNav)="openMenu()"></app-nav-header>
-    <app-navbar [hideSidebar]="true" [sidenav]="activeSidenav" [navUp]="true" [items]="items" [actions]="actions" [secondItems]="secondItems"></app-navbar>
+    <app-navbar (sendSideNav)="setSideNav($event)" [hideSidebar]="true" [sidenav]="activeSidenav" [navUp]="true" [items]="itemsNav.items" [actions]="itemsNav.actions" [secondItems]="itemsNav.secondItems"></app-navbar>
     <div class="img-container" (click)="closeMenu()">
         <img src="/assets/img/closets/main.jpg" alt="">
     </div>
