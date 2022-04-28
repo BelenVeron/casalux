@@ -9,17 +9,21 @@ import { WALK_IN_IMAGES, ITEMS_NAV } from '../closets.data';
 export class WalkInComponent implements OnInit {
 
   activeSidenav: boolean = false;
-  walkInImages = WALK_IN_IMAGES;
+  navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
+  walkInImages = WALK_IN_IMAGES;
   
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  activeMenu(): void {
-    this.activeSidenav = !this.activeSidenav;
+  openMenu(): void {
+    this.activeSidenav = true;
+  }
+
+  setSideNav(event: boolean): void {
+    this.activeSidenav = event;
   }
 
 }

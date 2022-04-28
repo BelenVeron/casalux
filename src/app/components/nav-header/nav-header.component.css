@@ -44,7 +44,7 @@
 
 .navbar-closets {
     width: 100vw;
-    margin-top: 0.4rem;
+    margin-top: 1.4rem;
     height: 43px;
     font-size: 2rem;
     display: flex;
@@ -68,7 +68,7 @@
 
 .navbar-closets .left img {
     margin-left: 2rem;
-    width: 23vw;
+    width: 18vw;
 }
 
 .navbar-closets .sms {
@@ -82,3 +82,30 @@
     margin-bottom: 5px;
     cursor: pointer;
 }
+
+@media (max-width:1300px),
+(max-height:800px) {
+    .navbar-closets {
+        margin-top: 0.4rem;
+    }
+    .navbar-closets .left img {
+        width: 23vw;
+    }
+}
+
+@media (max-width:1000px) {
+    .navbar-closets .left img {
+        width: 30vw;
+    }
+}
+
+@media (max-width:750px) {
+    .navbar-closets .left img {
+        width: 45vw;
+    }
+}
+
+@media (max-width:450px) {}
+
+
+/* ----------END WEB--------------- */

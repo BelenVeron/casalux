@@ -16,18 +16,14 @@ import { SharedModule } from '../../shared.module'
 import { kitchenGgComponent } from './components/bg/bg.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 
-import {SwiperModule} from 'swiper/angular';
 import { FinishesComponent } from './pages/finishes/finishes.component';
 import { OptionsComponent } from './pages/options/options.component';
 import { SystemsComponent } from './pages/systems/systems.component';
 import { StudiosComponent } from './pages/studios/studios.component';
 import { AskComponent } from './pages/ask/ask.component';
 import { ExpertsComponent } from './pages/experts/experts.component';
-import { FavoriteComponent } from '../../components/favorite/favorite.component';
 import { VideoPlayerComponent } from '../../components/video-player/video-player.component';
-import { VerticalGalleryComponent } from '../../components/vertical-gallery/vertical-gallery.component';
 import { MobileTitleComponent } from './components/mobile-title/mobile-title.component';
-import { HorizontalGalleryComponent } from '../../components/horizontal-gallery/horizontal-gallery.component';
 import { ButtonComponent } from './components/button/button.component';
 
 
@@ -43,11 +39,8 @@ import { ButtonComponent } from './components/button/button.component';
     StudiosComponent,
     AskComponent,
     ExpertsComponent,
-    FavoriteComponent,
     VideoPlayerComponent,
-    VerticalGalleryComponent,
     MobileTitleComponent,
-    HorizontalGalleryComponent,
     ButtonComponent
   ],
   imports: [
@@ -57,7 +50,6 @@ import { ButtonComponent } from './components/button/button.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    SwiperModule,
     FlexLayoutModule,
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyBp8mUithh4jHhxoFniyG0x2KTUKl2xzR8'

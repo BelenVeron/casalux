@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -9,16 +11,36 @@ import { ITEMS_NAV } from '../closets.data';
 export class CollectionComponent implements OnInit {
 
   activeSidenav: boolean = false;
+  navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
-  
+  src: string = '/assets/img/closets/collection-title-closets.png'
+  id: string = '';
 
-  constructor() { }
+  constructor(
+    private collectionService:KitchenProductsService, 
+    private route:ActivatedRoute,
+    private changeDetection: ChangeDetectorRef) {
+
+    this.id = route.snapshot.params.collectionId || ''
+    /* this.collectionService.collectionInfo(this.id).subscribe((data:any)=>{
+      this.collections = data
+      console.log(data)
+      if(!this.id|| this.id == 'collections'){
+        this.imagesSelected = this.collections[0].kitchens[0].photos
+        this.changeSelectedCollection(0)
+      }
+    }); */
+  } 
 
   ngOnInit(): void {
   }
 
-  activeMenu(): void {
-    this.activeSidenav = !this.activeSidenav;
+  openMenu(): void {
+    this.activeSidenav = true;
   }
 
+  setSideNav(event: boolean): void {
+    this.activeSidenav = event;
+  }
+  
 }

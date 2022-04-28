@@ -198,7 +198,8 @@ section .logo-container .img {
 .option-details .text {
     font-size: .8em;
     margin-top: 1.5rem;
-    height: fit-content;
+    height: 30vh;
+    overflow-y: auto;
 }
 
 .option-details .text::-webkit-scrollbar {
@@ -222,6 +223,7 @@ section .logo-container .img {
     width: 60%;
     margin: auto;
     margin-top: .5rem;
+    height: 30vh;
 }
 
 .option-details .three-images img {

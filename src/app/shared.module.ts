@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import {SwiperModule} from 'swiper/angular';
+
 
 //components
 import { HeaderComponent } from './components/header/header.component';
@@ -16,6 +18,10 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
+import { VerticalGalleryComponent } from './components/vertical-gallery/vertical-gallery.component';
+import { HorizontalGalleryComponent } from './components/horizontal-gallery/horizontal-gallery.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
+import { VerticalDescriptionComponent } from './components/vertical-description/vertical-description.component';
 
 
 @NgModule({
@@ -29,14 +35,19 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
     ModalComponent,
     ButtonComponent,
     CheckboxComponent,
-    Navbar2Component
+    Navbar2Component,
+    VerticalGalleryComponent,
+    HorizontalGalleryComponent,
+    FavoriteComponent,
+    VerticalDescriptionComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    SwiperModule
   ],
   exports:[
     HeaderComponent, 
@@ -48,7 +59,12 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
     ModalComponent,
     ButtonComponent,
     CheckboxComponent,
-    Navbar2Component
+    Navbar2Component,
+    VerticalGalleryComponent,
+    HorizontalGalleryComponent,
+    FavoriteComponent,
+    SwiperModule,
+    VerticalDescriptionComponent,
   ]
 })
 export class SharedModule { }

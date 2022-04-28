@@ -1,7 +1,13 @@
 <div class="closets-walk-in">
-    <app-nav-header type="web" (sendViewNav)="activeMenu()"></app-nav-header>
-    <!-- <app-navbar [hideSidebar]="true" [sidenav]="activeSidenav" [navUp]="true" [items]="itemsNav.items" [actions]="itemsNav.actions" [secondItems]="itemsNav.secondItems"></app-navbar> -->
+    <app-nav-header type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
     <div class="container-collection">
-
+        <div class="collection-hero">
+            <img [src]="src" alt="">
+        </div>
+        <app-vertical-gallery type='scroll'></app-vertical-gallery>
+        <app-horizontal-gallery></app-horizontal-gallery>
+        <app-horizontal-gallery></app-horizontal-gallery>
+        <app-vertical-description></app-vertical-description>
     </div>
 </div>

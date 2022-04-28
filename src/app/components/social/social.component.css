@@ -34,19 +34,28 @@
     margin-top: 5vh;
     color: white;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.8rem;
     padding: .5rem 0rem;
     justify-content: center;
 }
 
-.icons i{
+.icons i {
     margin-right: 5px;
 }
 
 .social-white p {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
+@media (max-width:1300px),
+(max-height:800px) {
+    .social-white {
+        font-size: 1rem;
+    }
+    .social-white p {
+        font-size: 1rem;
+    }
+}
 
 @media (max-width:1000px) {
     .social-white {

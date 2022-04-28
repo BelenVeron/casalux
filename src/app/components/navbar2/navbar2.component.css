@@ -22,7 +22,7 @@
 
 .title {
     color: #eaece9;
-    font-size: .9em;
+    font-size: 2rem;
     text-decoration: none;
     transition: all .4s ease;
     padding: .2rem;
@@ -42,8 +42,8 @@
 }
 
 .text {
-    margin-top: 1.5rem;
-    font-size: .8rem;
+    margin-top: 2rem;
+    font-size: 1.7rem;
 }
 
 .extras {
@@ -92,6 +92,17 @@ hr.solid {
     border-radius: 5px;
     margin-top: 2rem;
     width: 80%;
+}
+
+@media (max-width:1300px),
+(max-height:800px) {
+    .title {
+        font-size: .9em;
+    }
+    .text {
+        margin-top: 1.5rem;
+        font-size: .8rem;
+    }
 }
 
 @media (max-width:850px) {

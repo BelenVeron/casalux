@@ -1,6 +1,6 @@
 <div class="closets-walk-in">
-    <app-nav-header type="web" (sendViewNav)="activeMenu()"></app-nav-header>
-    <!-- <app-navbar [hideSidebar]="true" [sidenav]="activeSidenav" [navUp]="true" [items]="itemsNav.items" [actions]="itemsNav.actions" [secondItems]="itemsNav.secondItems"></app-navbar> -->
+    <app-nav-header type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
     <div class="container-grid">
         <app-card *ngFor="let item of walkInImages" [routerLink]="['/closets/collection',item.id]" [source]="item.src" [class]="item.class"></app-card>
     </div>
