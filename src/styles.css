@@ -41,6 +41,16 @@ img {
     cursor: pointer;
 }
 
+html {
+    overflow: hidden;
+}
+
+@media (max-width: 500px) {
+    html {
+        overflow: auto;
+    }
+}
+
 html,
 body {
     height: 100%;

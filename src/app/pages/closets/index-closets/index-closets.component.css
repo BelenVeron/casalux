@@ -6,6 +6,6 @@
 }
 
 .closets-index .img-container img {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 54px);
     width: 100vw;
 }

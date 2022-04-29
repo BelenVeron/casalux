@@ -1,8 +1,16 @@
-<swiper class="vertical" [config]="configVertical">
+<swiper *ngIf="vertical" class="vertical" [config]="configVertical">
     <ng-template swiperSlide *ngFor="let img of items">
         <div class="image-container">
             <img class="small" [src]="url+img.image" alt="">
             <app-favorite class="heart"></app-favorite>
+        </div>
+    </ng-template>
+</swiper>
+
+<swiper *ngIf="horizontal" class="horizontal" [config]="configHorizontal">
+    <ng-template swiperSlide *ngFor="let img of items">
+        <div class="image-container">
+            <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image">
         </div>
     </ng-template>
 </swiper>

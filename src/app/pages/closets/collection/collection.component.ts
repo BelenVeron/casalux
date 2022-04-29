@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Collection } from 'src/app/models/collections/collection';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { ITEMS_NAV } from '../closets.data';
 
@@ -15,6 +16,7 @@ export class CollectionComponent implements OnInit {
   itemsNav = ITEMS_NAV;
   src: string = '/assets/img/closets/collection-title-closets.png'
   id: string = '';
+  collections: Collection[] = [];
 
   constructor(
     private collectionService:KitchenProductsService, 
@@ -22,14 +24,13 @@ export class CollectionComponent implements OnInit {
     private changeDetection: ChangeDetectorRef) {
 
     this.id = route.snapshot.params.collectionId || ''
-    /* this.collectionService.collectionInfo(this.id).subscribe((data:any)=>{
-      this.collections = data
-      console.log(data)
-      if(!this.id|| this.id == 'collections'){
+    this.collectionService.collectionInfo(this.id).subscribe((data:any)=>{
+      this.collections = data;
+      /* if(!this.id || this.id == 'collections'){
         this.imagesSelected = this.collections[0].kitchens[0].photos
         this.changeSelectedCollection(0)
-      }
-    }); */
+      } */
+    });
   } 
 
   ngOnInit(): void {

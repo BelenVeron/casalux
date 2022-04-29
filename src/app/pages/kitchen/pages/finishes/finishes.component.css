@@ -369,11 +369,14 @@ article {
         padding-left: .4rem;
         width: 100%;
     }
+    .back-palettes {
+        display: none;
+    }
 }
 
 .details .container-palletes {
     overflow: auto;
-    height: 68vh;
+    max-height: 68vh;
 }
 
 .details .container-palletes::-webkit-scrollbar {
@@ -384,4 +387,9 @@ article {
 .details .container-palletes::-webkit-scrollbar-thumb {
     background: var(--brown);
     border-radius: 10px;
+}
+
+.back-palettes {
+    height: 75vh;
+    background-color: var(--k-white);
 }

@@ -2,12 +2,12 @@
     <app-nav-header type="web" (sendViewNav)="openMenu()"></app-nav-header>
     <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
     <div class="container-collection">
-        <div class="collection-hero">
+        <div class="collection-hero item-1">
             <img [src]="src" alt="">
         </div>
-        <app-vertical-gallery type='scroll'></app-vertical-gallery>
-        <app-horizontal-gallery></app-horizontal-gallery>
-        <app-horizontal-gallery></app-horizontal-gallery>
-        <app-vertical-description></app-vertical-description>
+        <app-vertical-gallery class="item-2" type='scroll' [items]="collections"></app-vertical-gallery>
+        <app-horizontal-gallery *ngIf="collections.length" class="item-3" [items]="collections[1].kitchens" [horizontal]="true"></app-horizontal-gallery>
+        <app-horizontal-gallery *ngIf="collections.length" class="item-4" [items]="collections[0].kitchens[1].photos" [vertical]="true"></app-horizontal-gallery>
+        <app-vertical-description class="item-5"></app-vertical-description>
     </div>
 </div>
