@@ -1,6 +1,8 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Closet } from 'src/app/models/closets/closet';
 import { Collection } from 'src/app/models/collections/collection';
+import { ClosetsService } from 'src/app/services/closets.service';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { ITEMS_NAV } from '../closets.data';
 
@@ -16,18 +18,19 @@ export class CollectionComponent implements OnInit {
   itemsNav = ITEMS_NAV;
   src: string = '/assets/img/closets/collection-title-closets.png'
   id: string = '';
-  collections: Collection[] = [];
+  closets: Closet[] = [];
 
   constructor(
-    private collectionService:KitchenProductsService, 
+    private closetsService:ClosetsService, 
     private route:ActivatedRoute,
     private changeDetection: ChangeDetectorRef) {
 
     this.id = route.snapshot.params.collectionId || ''
-    this.collectionService.collectionInfo(this.id).subscribe((data:any)=>{
-      this.collections = data;
-      /* if(!this.id || this.id == 'collections'){
-        this.imagesSelected = this.collections[0].kitchens[0].photos
+    this.closetsService.getClosets(this.id).subscribe((data:any)=>{
+      this.closets = data;
+      
+      /* if(!this.id || this.id == 'closets'){
+        this.imagesSelected = this.closets[0].kitchens[0].photos
         this.changeSelectedCollection(0)
       } */
     });

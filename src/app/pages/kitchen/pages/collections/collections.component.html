@@ -15,7 +15,7 @@
 
         <!-- Container web with the collections galleries without See more -->
         <article class="container web">
-            <app-vertical-gallery type="scroll" [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
+            <app-vertical-gallery [collections]="true" type="scroll" [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
 
             <article class="option-viewer web">
                 <div class="img-banner">
@@ -81,7 +81,7 @@
         <article class="container mobile">
             <div *ngIf="mobilePage === 'index'" class="animate__animated animate__fadeInUp">
                 <app-mobile-title [itemList]="itemListTitle"></app-mobile-title>
-                <app-vertical-gallery type="scroll" [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
+                <app-vertical-gallery [collections]="true" type="scroll" [items]="collections" [itemSelected]="collectionSelected" (sendSelectedItem)="changeSelectedCollection($event)"></app-vertical-gallery>
             </div>
 
             <div *ngIf="mobilePage === 'gallery'" class="animate__animated animate__fadeInDown">

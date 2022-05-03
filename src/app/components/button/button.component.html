@@ -1,3 +1,9 @@
-<button *ngIf="type !== 'login'" [class]="type">{{text}}</button>
+<button *ngIf="type === 'border'" [class]="type">{{text}}</button>
 
 <button *ngIf="type === 'login'" [class]="type">{{text}} <span>{{link}}</span></button>
+
+<button *ngIf="type === 'download'" class="download">
+    <i class="fas fa-{{icon}}"></i>{{text}}
+</button>
+
+<button *ngIf="type === 'start'" [class]="type">{{text}}</button>

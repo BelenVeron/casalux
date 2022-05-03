@@ -7,7 +7,7 @@ import { SesionService } from 'src/app/services/sesion.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+  export class HeaderComponent implements OnInit {
 
   editComponent = false;
 

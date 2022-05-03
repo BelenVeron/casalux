@@ -52,6 +52,14 @@ article {
     align-items: flex-start;
 }
 
+.body-palettes {
+    width: 90%;
+}
+
+.body-palettes .details {
+    height: 5vh;
+}
+
 .filters {
     padding-bottom: .4rem;
 }

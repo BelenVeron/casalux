@@ -5,7 +5,7 @@ export const CONFIG_VERTICAL = {
 
 export const CONFIG_HORIZONTAL = {
     loopedSlides: 1,
-    slidesPerView: 5,
+    slidesPerView: 3,
     initialSlide: 0,
     spaceBetween: 10,
     navigation: true,

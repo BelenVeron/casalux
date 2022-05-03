@@ -1,4 +1,4 @@
-section {
+.bars-web {
     width: 5vw;
     height: 100%;
     color: var(--green);
@@ -14,12 +14,8 @@ section {
     z-index: 999;
 }
 
-section i {
+.bars-web i {
     cursor: pointer;
-}
-
-.mobile {
-    display: none;
 }
 
 .navLeft {
@@ -37,7 +33,7 @@ section i {
     z-index: 999;
 }
 
-nav article {
+.navLeft article {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -50,12 +46,12 @@ nav article {
     width: 100%;
 }
 
-nav article.options {
+.navLeft article.options {
     margin-top: 10vh;
     width: 90%;
 }
 
-nav article.second-options {
+.navLeft article.second-options {
     width: 90%;
 }
 
@@ -82,7 +78,7 @@ nav article.second-options {
     border: 1px solid var(--k-green-op);
 }
 
-nav .options .child-container {
+.navLeft .options .child-container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -91,37 +87,37 @@ nav .options .child-container {
     padding-left: 1rem;
 }
 
-nav .options .children {
+.navLeft .options .children {
     color: var(--grey);
     font-size: .9em;
     margin-top: .4rem;
     text-decoration: none;
 }
 
-nav .options .children:nth-child(1) {
+.navLeft .options .children:nth-child(1) {
     margin-top: -.2rem;
 }
 
-nav .options .children:last-child {
+.navLeft .options .children:last-child {
     margin-bottom: 1rem;
 }
 
-.text {
+.navLeft .text {
     margin-top: 5rem;
 }
 
-nav .extras {
+.navLeft .extras {
     position: absolute;
     bottom: 8vh;
     width: 90%;
 }
 
-nav .actions {
+.navLeft .actions {
     margin-top: 5vh;
     width: 90%;
 }
 
-nav .actions .action {
+.navLeft .actions .action {
     color: var(--k-green-op);
     border: 1px solid var(--k-green-op);
     border-radius: 10px;
@@ -147,88 +143,21 @@ nav .actions .action {
     color: var(--k-black);
 }
 
-nav .actions .action:hover i {
+.navLeft .actions .action:hover i {
     color: var(--k-black);
 }
 
+@media (max-width:1300px),
+(max-height:800px) {}
 
-/* ----------------------NAVUP---------------------- */
-
-.navUp {
-    background: var(--k-green-op);
-    position: fixed;
-    height: 100vh;
-    width: 21vw;
-    top: 0;
-    padding: 1rem 1rem 1rem 2rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    z-index: 999;
-    color: #eaece9;
+@media (max-width:1100px) {
+    .navLeft .options .title {
+        font-size: 1em;
+    }
+    .navLeft .actions .action {
+        width: 90%;
+    }
 }
-
-.navUp .white {
-    filter: brightness(5.5);
-}
-
-.navUp .options .title {
-    color: #eaece9;
-    font-size: .85em;
-    text-decoration: none;
-    transition: all .4s ease;
-    padding: .2rem;
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.navUp .second-options .title {
-    color: #eaece9;
-    font-size: .85em;
-    text-decoration: none;
-    transition: all .4s ease;
-    padding: .2rem;
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.navUp article .title:hover {
-    color: #ffff;
-    font-weight: bold;
-}
-
-.navUp .options .title a {
-    text-decoration: none;
-    color: white;
-}
-
-.navUp .actions .action a {
-    color: #eaece9;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 0.75em;
-}
-
-.navUp .actions .action i {
-    color: white;
-}
-
-.navUp .actions .action:hover {
-    background: var(--grey);
-    color: var(--k-black);
-}
-
-hr.solid {
-    border-top: 3px solid #bbb;
-    border-radius: 5px;
-    margin: 3rem 0;
-}
-
-
-/* ----------------------END NAVUP---------------------- */
 
 @media (max-width:400px) {
     .web {
@@ -242,36 +171,28 @@ hr.solid {
     .navLeft img {
         display: none;
     }
-    .navUp img {
+    .navLeft .web {
         display: none;
     }
-    .navUp {
-        height: 96vh;
-        width: 100%;
-        left: 0;
-    }
-    nav .web {
-        display: none;
-    }
-    nav article.options {
+    .navLeft article.options {
         margin-top: 18vh;
     }
-    nav .options .child-container {
+    .navLeft .options .child-container {
         margin-top: .5em;
     }
-    nav .extras {
+    .navLeft .extras {
         position: absolute;
         bottom: 4vh;
         left: 0;
         width: 90%;
     }
-    nav .actions {
+    .navLeft .actions {
         margin-top: 0;
         margin-left: .8em;
         font-size: .8em;
         width: 85vw;
     }
-    nav .actions .action {
+    .navLeft .actions .action {
         font-size: 1em;
     }
 }

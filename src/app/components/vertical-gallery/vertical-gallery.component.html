@@ -1,4 +1,4 @@
-<article *ngIf="type === 'scroll'" [class]="type">
+<article *ngIf="type === 'scroll'" [ngClass]="{'scroll': true, 'closets-height': closets, 'collection-height': collections}">
     <div class="option" *ngFor="let item of items, let index = index" [ngClass]="{'selected':itemSelected.name === item.name, 'no-selected':itemSelected.name !== item.name}" (click)="changeSelectedItem(index)">
         <div class="img">
             <img [src]="url+item.image" alt="">

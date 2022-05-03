@@ -14,15 +14,15 @@
     color: #eaece9;
 }
 
-.options {
+.container-nav .options {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
 }
 
-.title {
+.container-nav .title {
     color: #eaece9;
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-decoration: none;
     transition: all .4s ease;
     padding: .2rem;
@@ -31,22 +31,22 @@
     cursor: pointer;
 }
 
-.title:hover {
+.container-nav .title:hover {
     color: #ffff;
     font-weight: bold;
 }
 
-.title a {
+.container-nav .title a {
     text-decoration: none;
     color: white;
 }
 
-.text {
-    margin-top: 2rem;
-    font-size: 1.7rem;
+.container-nav .text {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
 }
 
-.extras {
+.container-nav .extras {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,59 +55,31 @@
     height: inherit;
 }
 
-.action {
-    color: #eaece9;
-    border: 1px solid #eaece9;
-    border-radius: 10px;
-    padding: .4rem .6rem;
-    width: 80%;
-    margin-top: 5vh;
-    text-decoration: none;
-    transition: background .2s;
-    text-align: center;
-}
-
-.action:hover {
-    background: var(--grey);
-    color: var(--k-black);
-}
-
-.action a {
-    color: #eaece9;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.action i {
-    margin-right: 5px;
-}
-
-.action:hover a {
-    color: black;
-    font-weight: normal;
-}
-
-hr.solid {
+.container-nav hr.solid {
     border-top: 3px solid #bbb;
     border-radius: 5px;
     margin-top: 2rem;
     width: 80%;
 }
 
+.container-nav .action {
+    width: 100%;
+    text-align: center;
+}
+
 @media (max-width:1300px),
 (max-height:800px) {
-    .title {
+    .container-nav .title {
         font-size: .9em;
     }
-    .text {
+    .container-nav .text {
         margin-top: 1.5rem;
         font-size: .8rem;
     }
 }
 
 @media (max-width:850px) {
-    .action {
-        width: 60%;
+    .container-nav .action {
         font-size: .7rem;
     }
 }

@@ -13,6 +13,7 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 })
 export class CollectionsComponent implements OnInit {
 
+
   url = environment.api;
   itemListTitle = {
     title: 'COLLECTIONS',

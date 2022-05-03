@@ -32,10 +32,8 @@
     <!-- Footer -->
     <div class="extras">
         <!-- Buttons -->
-        <div class="action" *ngFor="let item of items.buttons">
-            <a (click)="actionOrRedirect(item.route)" class="title">
-                <i class="fas fa-{{item.icon}}"></i>{{item.title}}
-            </a>
+        <div class="action">
+            <app-button *ngFor="let item of items.buttons" type="download" (click)="actionOrRedirect(item.route)" [icon]="item.icon" [text]="item.title"></app-button>
         </div>
         <!-- Icons and phone -->
         <div class="social">

@@ -1,62 +1,162 @@
-.link {
-    border: none;
-    background-color: transparent;
-    color: white;
-    display: table-cell;
-    vertical-align: middle;
-    width: 250px;
-    height: 60px;
-    font-family: "Titillium Web", sans-serif;
-    cursor: pointer;
-}
-
-.link:hover {
-    color: #fff;
-    background-color: rgb(42, 112, 42);
-}
-
-.text {
-    border: none;
-    background-color: inherit;
-    padding: 10px 20px 4px 20px;
-    font-size: 10px;
-    cursor: pointer;
-    display: inline-block;
-    color: rgb(0, 165, 0);
-    border-bottom: 1px solid rgb(0, 165, 0);
-}
-
-.more {
-    border: none;
-    background-color: inherit;
-    padding: 0px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    display: inline-block;
-    color: rgb(133, 133, 133);
-}
-
-.border {
-    border: solid 1px rgb(163, 163, 163);
-    color: rgb(79, 128, 0);
-    width: 250px;
-    height: 50px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.login {
-    border: none;
-    background-color: inherit;
-    padding: 0px 20px;
-    font-size: 20px;
-    display: inline-block;
-    color: rgb(133, 133, 133);
-}
-
-.login span {
-    border: none;
-    cursor: pointer;
-    color: rgb(79, 128, 0);
-    border-bottom: 1px solid rgb(79, 128, 0);
-}
+    .link {
+        border: none;
+        background-color: transparent;
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+        width: 250px;
+        height: 60px;
+        font-family: "Titillium Web", sans-serif;
+        cursor: pointer;
+    }
+    
+    .link:hover {
+        color: #fff;
+        background-color: rgb(42, 112, 42);
+    }
+    
+    .text {
+        border: none;
+        background-color: inherit;
+        padding: 10px 20px 4px 20px;
+        font-size: 10px;
+        cursor: pointer;
+        display: inline-block;
+        color: rgb(0, 165, 0);
+        border-bottom: 1px solid rgb(0, 165, 0);
+    }
+    
+    .more {
+        border: none;
+        background-color: inherit;
+        padding: 0px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        display: inline-block;
+        color: rgb(133, 133, 133);
+    }
+    
+    .border {
+        border: solid 1px rgb(163, 163, 163);
+        color: rgb(79, 128, 0);
+        width: 250px;
+        height: 50px;
+        background-color: white;
+        cursor: pointer;
+    }
+    
+    .login {
+        border: none;
+        background-color: inherit;
+        padding: 0px 20px;
+        font-size: 20px;
+        display: inline-block;
+        color: rgb(133, 133, 133);
+    }
+    
+    .login span {
+        border: none;
+        cursor: pointer;
+        color: rgb(79, 128, 0);
+        border-bottom: 1px solid rgb(79, 128, 0);
+    }
+    /* ////////////// DOWNLOAD ////////////// */
+    
+    .download {
+        color: var(--light);
+        border: 1px solid var(--light);
+        background: none;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background .2s;
+        cursor: pointer;
+        height: 35px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    
+    .download:hover {
+        background: var(--light);
+        color: var(--k-black);
+    }
+    
+    .download i {
+        margin-right: 5px;
+    }
+    
+    .download:hover a {
+        color: black;
+        font-weight: normal;
+    }
+    
+    @media (max-width:1300px),
+    (max-height:800px) {
+        .download {}
+    }
+    
+    @media (max-width:1000px) {
+        .download {
+            font-size: .7rem;
+        }
+    }
+    
+    @media (max-width:450px) {
+        .container-nav {
+            width: calc(100vw - 2rem);
+            padding: 1rem;
+        }
+    }
+    /* ////////////// END DOWNLOAD ////////////// */
+    /* ////////////// START ////////////// */
+    
+    .start {
+        color: #eaece9;
+        background-color: var(--dark-brown);
+        border: none;
+        border-radius: 10px;
+        height: 70px;
+        padding: .4rem 2.6rem;
+        text-decoration: none;
+        transition: background .2s;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .start:hover {
+        background: var(--grey);
+        border: 1px solid var(--light);
+        color: var(--k-black);
+    }
+    
+    .start i {
+        margin-right: 5px;
+    }
+    
+    .start:hover a {
+        color: black;
+        font-weight: normal;
+    }
+    
+    @media (max-width:1300px),
+    (max-height:800px) {
+        .start {
+            padding: .4rem 1.6rem;
+        }
+    }
+    
+    @media (max-width:1000px) {
+        .start {
+            font-size: .7rem;
+        }
+    }
+    
+    @media (max-width:450px) {
+        .container-nav {
+            width: calc(100vw - 2rem);
+            padding: 1rem;
+        }
+    }
+    /* ////////////// END START ////////////// */

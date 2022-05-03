@@ -86,7 +86,7 @@
 @media (max-width:1300px),
 (max-height:800px) {
     .navbar-closets {
-        margin-top: 0.4rem;
+        margin-top: 1rem;
     }
     .navbar-closets .left img {
         width: 23vw;

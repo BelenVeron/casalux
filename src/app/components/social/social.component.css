@@ -10,7 +10,23 @@
 }
 
 .social p {
-    font-size: .75em;
+    font-size: 1rem;
+}
+
+@media (max-width:1300px),
+(max-height:800px) {
+    .social {
+        font-size: .9rem;
+    }
+    .social p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:1100px) {
+    .social {
+        flex-direction: column;
+    }
 }
 
 @media (max-width:400px) {
