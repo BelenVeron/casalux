@@ -15,7 +15,7 @@
 
 .vertical .image-container .small {
     width: 100%;
-    height: 100%;
+    height: 60vh;
     object-fit: cover;
 }
 

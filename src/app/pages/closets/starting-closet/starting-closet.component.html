@@ -1,0 +1,31 @@
+<div class="starting-closet">
+    <app-nav-header type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+
+    <div class="container-starting">
+        <div class="left">
+            <img [src]="src" alt="">
+            <p>If you need help with your room, you must<br>upload an image or sketch file to visualize it</p>
+            <div class="image">
+                <img [src]="srcNoImage" alt="">
+            </div>
+            <app-button></app-button>
+        </div>
+
+        <div class="right">
+            <div class="steps">
+                <img [src]="srcSteps" alt="">
+            </div>
+            <div class="step1">
+
+            </div>
+            <div class="step2">
+
+            </div>
+            <div class="step3">
+
+            </div>
+            <app-button></app-button>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@
         flex-direction: column;
         padding: 1rem 0;
         width: 95vw;
-        margin-left: .5rem;
+        margin-left: 1rem;
         color: var(--k-green-op);
     }
     .container-title p {

@@ -1,13 +1,13 @@
 <article class="closets-details">
     <p class="title">Collection</p>
-    <p class="title-secondary">W01</p>
+    <p class="title-secondary">{{items.name}}</p>
 
-    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius unde, et nobis distinctio, quisquam minima reprehenderit laborio</p>
+    <p class="text">{{items.description}}</p>
 
     <hr>
 
     <div class="buttons">
-        <app-button type="start" text="DESIGN YOUR CLOSET"></app-button>
+        <app-button type="start" text="DESIGN YOUR CLOSET" (click)="clickDesign()"></app-button>
         <app-button type="download" color="brown" text="Download Catalog" icon="download"></app-button>
     </div>
 </article>

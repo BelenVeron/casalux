@@ -57,17 +57,18 @@ export class OptionsComponent implements OnInit {
       console.log(data)
       var selected = data.data.additionalSelected[0]
       this.additional = selected
-
+      console.log(this.additional)
       this.selected.type = this.additional.additionalTypes[0].id
-      this.selected.size = this.additional.additionalSizes[0].id
-      this.selected.color = this.additional.additionalSizes[0].id
+      this.selected.size = this.additional.additionalTypes[0].additionalSizes[0].id
+      this.selected.color = this.additional.additionalTypes[0].additionalSizes[0].additionalColors[0].id
 
-      console.log(this.selected)
+      this.additional.additionalImages = this.additional.additionalTypes[0].additionalSizes[0].additionalColors
+      console.log(this.additional.additionalTypes[0].additionalSizes[0].additionalColors[0].additionalImages)
       this.filters = data.data.categorys
       this.subCategorys = data.data.subcategoryAdditionals
 
-      this.additional.additionalColors.map((color:any)=>color.selected = false)
-      this.additional.additionalColors[0].selected  =true
+      this.additional.additionalTypes[0].additionalSizes[0].additionalColors.map((color:any)=>color.selected = false)
+      //this.additional.additionalColors[0].selected  = true
       console.log(this.additional.additionalColors)
       this.additional.price = data.data.additionalPrice
       this.filters.map((filter:any)=>filter.selected = false)

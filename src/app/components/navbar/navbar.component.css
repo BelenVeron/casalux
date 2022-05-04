@@ -159,7 +159,10 @@
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:600px) {
+    .bars-web {
+        display: none;
+    }
     .web {
         display: none;
     }
