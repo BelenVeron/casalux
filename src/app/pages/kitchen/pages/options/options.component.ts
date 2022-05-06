@@ -160,7 +160,8 @@ export class OptionsComponent implements OnInit {
     this.filters.map((filter:any)=>filter.selected = false)
     filter.selected = show
   }
-
+  
+  
   applySubcategory(filter:any){
     this.activeFilter = filter
     var params = 'additionalSubcategoryID='+filter.id
@@ -198,6 +199,7 @@ export class OptionsComponent implements OnInit {
   updatePrice(){
     const { type, size, color } = this.selected
     let params = `additionalTypeID=${type}&additionalSizeID=${size}&addiitonalColorID=${color}`
+    console.log(params)
 
     this.kitchen.additionals(params).subscribe((data:any)=>{
       this.additionalPrice = data.data.additionalPrice
