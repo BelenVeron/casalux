@@ -16,18 +16,20 @@
         <article>
             <div class="filters">
                 <div class="filter" *ngFor="let filter of filters">
+                    <!-- Title of the filters -->
                     <div class="title" [ngClass]="{'selected':filter.selected}">
-                        <p (click)="selectFilter(filter, !filter.selected)"> {{filter.name}} </p>
+                        <p (click)="selectFilter(filter, !filter.selected)"> {{filter.name}}</p>
                         <i class="fas fa-minus" *ngIf="filter.selected" (click)="selectFilter(filter, false)"></i>
                         <i class="fas fa-plus" *ngIf="!filter.selected" (click)="selectFilter(filter, true)"></i>
                     </div>
+
+                    <!-- Subcategories of the filters -->
                     <div class="options" *ngIf="filter.selected">
-                        <div class="option" [ngClass]="{'selected':activeFilter == option}" *ngFor="let option of filter.subCategorys" (click)="applySubcategory(option)">
+                        <div class="option" [ngClass]="{'selected':activeFilter == option}" *ngFor="let option of filter.subcategorys" (click)="applySubcategory(option)">
                             {{option.name}}
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="details">
@@ -63,9 +65,12 @@
                             {{info.technicalInfo.text}}
                         </div>
                     </div>
+                    <!-- End Head Info -->
+
 
                     <div class="cart">
                         <div class="selects">
+                            <!-- Size and Type -->
                             <select name="" [(ngModel)]="selected.type" (change)="updatePrice()">
                                 <option value="{{type.id}}" *ngFor="let type of additionalTypes">
                                     {{type.name}}
@@ -76,6 +81,8 @@
                                     {{size.name}}
                                 </option>
                             </select>
+                            <!-- End Size and Type -->
+
                             <div class="quantity">
                                 <p>QUANTITY</p>
                                 <div class="calc">
