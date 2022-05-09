@@ -81,6 +81,7 @@ export class OptionsComponent implements OnInit {
   additionalPrice: number = 0;
 
   additionalColors: any[] = [];
+  colorImage: string ="";
   /* array additionalImages inside of additionalColors 
      big images
   */

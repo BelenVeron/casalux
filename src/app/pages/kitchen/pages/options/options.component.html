@@ -34,6 +34,7 @@
 
             <div class="details">
                 <div class="img">
+                    <!-- principal swiper show big-img  -->
                     <swiper [config]="config3">
                         <ng-template swiperSlide *ngFor="let item of additionalImages">
                             <img [src]="url+item.name" alt="">
@@ -106,12 +107,13 @@
                         <div class="related">
                             <div class="colors web">
                                 <div class="img" [ngClass]="{'selected':selected.color == color.name}" (click)="updateColor(color)" *ngFor="let color of additionalColors">
-                                    <img [src]="url+color" alt="">
+                                    <img [src]="url+color.colorImage" alt="">
                                 </div>
                             </div>
                             <div class="info">
                                 RELATED PRODUCTS
                                 <swiper [config]="config2">
+                                    <!-- rigth small swiper show two colums-->
                                     <ng-template swiperSlide *ngFor="let option of subCategorys">
                                         <div class="product">
                                             <div class="img"></div>
@@ -129,6 +131,7 @@
                 </div>
 
                 <div class="images web">
+                    <!-- Inferior big swiper show five img -->
                     <swiper [config]="config">
                         <ng-template swiperSlide *ngFor="let cat of subcategoryAdditional" class="img">
                             <img (click)="applyAdditional(cat.id)" [src]="(cat.image)?url+cat.image:urlNoImage">

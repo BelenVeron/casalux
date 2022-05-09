@@ -258,6 +258,7 @@ agm-map {
 }
 
 .details {
+    height: 85vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -305,6 +306,7 @@ agm-map {
 }
 
 .details .header .details-info {
+    font-size: 1.2rem;
     width: 50%;
     border-top: 2px solid var(--k-green-op);
     padding-left: 2rem;
@@ -449,6 +451,10 @@ agm-map {
     align-items: flex-end;
     flex-direction: column;
     margin: 1rem 0 0 0;
+}
+
+.contact-section .contact-header p {
+    font-size: 1.5rem;
 }
 
 .contact-section .form {
