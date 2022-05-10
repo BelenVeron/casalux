@@ -35,6 +35,10 @@ section .logo-container a {
     width: 22.5%;
 }
 
+.palettes .palette .name {
+    background-color: #b1a8a263;
+}
+
 section .header .title {
     font-size: 2.4em;
     color: var(--k-green-op);
@@ -231,6 +235,10 @@ article {
     align-items: center;
     padding: .4rem 0;
     margin-bottom: .4rem;
+}
+
+.palettes .palette .name p {
+    background-color: #b1a8a263;
 }
 
 .header .title-section {

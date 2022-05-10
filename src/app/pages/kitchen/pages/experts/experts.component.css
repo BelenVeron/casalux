@@ -19,13 +19,13 @@ section {
 }
 
 section .header {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
 
 section .logo-container a {
-    width: 24.5%;
+    width: 22%;
 }
 
 section .logo-container {

@@ -18,7 +18,7 @@ section {
 }
 
 section .header {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -30,7 +30,7 @@ section .logo-container {
 }
 
 section .logo-container a {
-    width: 21.2%;
+    width: 22%;
 }
 
 section .header .title {
@@ -54,6 +54,7 @@ article {
 .filters {
     background: var(--k-white);
     width: 35%;
+    margin-right: 8px;
 }
 
 .filter .title {
@@ -168,6 +169,7 @@ article {
 }
 
 .details .info {
+    margin-left: 50px;
     width: 45%;
     display: flex;
     justify-content: flex-start;

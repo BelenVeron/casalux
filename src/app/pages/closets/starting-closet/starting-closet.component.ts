@@ -15,7 +15,7 @@ export class StartingClosetComponent implements OnInit {
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
   id: string = '';
-
+  formas: string[] = ["single wall", " Gallery ", " L shaped ", " U shaped ", " Custom ", "  Island "];
 
   constructor() { }
 

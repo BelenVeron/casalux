@@ -36,6 +36,7 @@
 /* -----------------START SHAPE-OPTIONS----------------------- */
 
 .single {
+    margin-left: 40px;
     margin-right: 5px;
     width: 20px;
     height: 50px;
@@ -43,7 +44,7 @@
 }
 
 .doble {
-    margin-right: 5px;
+    margin-left: 25px;
     width: 20px;
     height: 50px;
     border-left: 10px solid var(--k-green-op);
@@ -51,7 +52,7 @@
 }
 
 .lshaped {
-    margin-left: 15px;
+    margin-left: 20px;
     margin-right: 0px;
     height: 50px;
     border-left: 10px solid var(--k-green-op);
@@ -64,7 +65,7 @@
 }
 
 .ushaped {
-    margin-left: 15px;
+    margin-left: 30px;
     margin-right: 0px;
     height: 50px;
     border-left: 10px solid var(--k-green-op);
@@ -83,27 +84,41 @@
 }
 
 .custom {
-    margin-left: 15px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     width: 20px;
     height: 50px;
-    border-left: 10px solid var(--k-green-op);
+    border-right: 10px solid var(--k-green-op);
 }
 
 .custom-2 {
-    margin-left: 15px;
-    margin-right: 5px;
-    width: 20px;
+    width: 15px;
+    height: 20px;
+    border-top: 10px solid var(--k-green-op);
+}
+
+.custom-3 {
+    margin-right: 0px;
     height: 50px;
     border-left: 10px solid var(--k-green-op);
 }
 
-.custom-3 {
-    margin-left: 15px;
-    margin-right: 5px;
-    width: 20px;
-    height: 50px;
-    border-left: 10px solid var(--k-green-op);
+.island {
+    margin-left: 1px;
+    width: 45px;
+    height: 35px;
+    border-bottom: 15px solid var(--k-green-op);
+}
+
+.plast {
+    align-items: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: var(--k-green-op);
+}
+
+.formas {
+    display: contents;
 }
 
 
