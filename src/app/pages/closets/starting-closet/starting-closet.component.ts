@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ITEMS_NAV } from '../closets.data';
+
 
 @Component({
   selector: 'app-starting-closet',
@@ -16,10 +18,18 @@ export class StartingClosetComponent implements OnInit {
   itemsNav = ITEMS_NAV;
   id: string = '';
   formas: string[] = ["single wall", " Gallery ", " L shaped ", " U shaped ", " Custom ", "  Island "];
-
+  closetTypes: any[] = [
+    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
+    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
+    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
+    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'}
+  ]
+  
+  
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.closetTypes)
   }
 
   openMenu(): void {

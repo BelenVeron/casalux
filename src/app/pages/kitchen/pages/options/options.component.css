@@ -209,11 +209,20 @@ article {
     background: var(--light);
 }
 
+.details .info .head .down h6 {
+    border: 1px solid var(--k-green-op);
+    padding: 2px;
+    margin-bottom: .3rem;
+}
+
 .details .info .head .info {
+    margin-left: 0.1rem;
+    height: 8vh;
     width: 80%;
     padding-bottom: .2rem;
     padding-top: .2rem;
     font-size: .8em;
+    overflow: hidden;
 }
 
 .details .cart {

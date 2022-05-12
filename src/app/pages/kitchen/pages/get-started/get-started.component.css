@@ -90,7 +90,7 @@ section .details {
 }
 
 section .details .title {
-    font-size: 2.2em;
+    font-size: 2rem;
 }
 
 section .details .title .icon {
@@ -108,10 +108,11 @@ section .details .selected {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 62%;
+    width: 63%;
 }
 
 section .details .selected .options-container {
+    height: 11vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,12 +149,18 @@ section .details .selected .options-container .options .option i {
 }
 
 section .details .icon {
-    font-size: 4em;
+    height: 8vh;
+    margin-left: 0.3rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--grey);
     padding: 1.4rem 1.4rem;
+}
+
+section .details .icon i {
+    color: gray;
 }
 
 section .text-details {
@@ -171,6 +178,7 @@ section .text-details .up {
 }
 
 section .text-details .up .up-text {
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -185,9 +193,11 @@ section .text-details .title {
 }
 
 section .text-details p {
+    background-color: var(--white);
     font-size: .95em;
     margin: 0 1rem;
     text-align: justify;
+    padding: 1rem;
 }
 
 section .text-details p:nth-child(1) {

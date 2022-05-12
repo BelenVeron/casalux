@@ -11,6 +11,7 @@
     <ng-template swiperSlide *ngFor="let img of items">
         <div class="image-container">
             <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image">
+            <img *ngIf="img" [src]="url+img.image" alt="">
         </div>
     </ng-template>
 </swiper>

@@ -78,6 +78,7 @@ section .logo-container .img {
 
 ::ng-deep .mySwiper {
     width: 80%;
+    height: 17vh;
     margin: 0;
 }
 
@@ -97,7 +98,8 @@ section .logo-container .img {
 
 ::ng-deep .mySwiper .swiper-slide {
     transform: scale(.8, .7);
-    height: 14vh;
+    height: 50%;
+    width: 50%;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -115,17 +117,23 @@ section .logo-container .img {
 
 ::ng-deep .mySwiper .swiper-slide.swiper-slide-next img {
     margin-right: 28px;
+    max-width: 18vw;
+    max-height: 14vh;
 }
 
 ::ng-deep .mySwiper .swiper-slide.swiper-slide-prev img {
     margin-left: 28px;
+    max-width: 18vw;
+    max-height: 14vh;
 }
 
 ::ng-deep .mySwiper .swiper-slide.swiper-slide-active {
+    height: 16vh;
     transform: scale(1);
 }
 
 ::ng-deep .mySwiper .swiper-slide.swiper-slide-active img {
+    height: 16vh;
     border: 2px solid var(--green-op);
 }
 

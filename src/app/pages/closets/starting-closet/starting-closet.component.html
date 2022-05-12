@@ -38,15 +38,21 @@
                     {{ forma }}
                 </p>
                 <!-- -----------------END SHAPE-OPTIONS-----------------------  -->
-
             </div>
+
             <div class="step-form-2">
                 <h2 class="title">Step 2 Closets Type</h2>
                 <p class="description">Select closets type</p>
+
+
                 <div class="options">
 
                 </div>
+
             </div>
+            <app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true"></app-horizontal-gallery>
+
+
             <div class="step-form-3">
                 <h2 class="title">Step 3 Measures</h2>
                 <p class="description">Enter measuresments and select the modules</p>
