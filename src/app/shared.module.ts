@@ -22,6 +22,7 @@ import { VerticalGalleryComponent } from './components/vertical-gallery/vertical
 import { HorizontalGalleryComponent } from './components/horizontal-gallery/horizontal-gallery.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
 import { VerticalDescriptionComponent } from './components/vertical-description/vertical-description.component';
+import { ShapeComponent } from './components/shape/shape.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { VerticalDescriptionComponent } from './components/vertical-description/
     HorizontalGalleryComponent,
     FavoriteComponent,
     VerticalDescriptionComponent,
+    ShapeComponent,
   ],
   imports: [
     CommonModule,
@@ -65,6 +67,7 @@ import { VerticalDescriptionComponent } from './components/vertical-description/
     FavoriteComponent,
     SwiperModule,
     VerticalDescriptionComponent,
+    ShapeComponent
   ]
 })
 export class SharedModule { }

@@ -17,7 +17,13 @@ export class StartingClosetComponent implements OnInit {
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
   id: string = '';
-  formas: string[] = ["single wall", " Gallery ", " L shaped ", " U shaped ", " Custom ", "  Island "];
+  shapes: any[] = [
+    {value: "Single wall", color: 'rgba(96, 96, 72)'},
+    {value: "Gallery", color: 'rgba(96, 96, 72)'},
+    {value: "L shaped", color: 'rgba(96, 96, 72)'},
+    {value: "U shaped", color: 'rgba(96, 96, 72)'},
+    {value: "Custom", color: 'rgba(96, 96, 72)'},
+    {value: "Island", color: 'rgba(96, 96, 72)'}];
   closetTypes: any[] = [
     {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
     {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
