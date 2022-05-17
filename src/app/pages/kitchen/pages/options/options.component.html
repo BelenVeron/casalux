@@ -136,9 +136,9 @@
 
                 <div class="images web">
                     <!-- Inferior big swiper show five img -->
-                    <swiper [config]="config">
+                    <swiper class="subcategory" [config]="config">
                         <ng-template swiperSlide *ngFor="let cat of subcategoryAdditional" class="img">
-                            <img (click)="applyAdditional(cat.id)" [src]="(cat.image)?url+cat.image:urlNoImage">
+                            <img style="height: 100%; margin-left: 1rem;" (click)="applyAdditional(cat.id)" [src]="(cat.image)?url+cat.image:urlNoImage">
                         </ng-template>
 
                     </swiper>

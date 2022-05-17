@@ -83,7 +83,7 @@ section .details {
 }
 
 .details .second .main-header {
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,6 +91,7 @@ section .details {
 
 section .details .title {
     font-size: 2rem;
+    margin-left: 2rem;
 }
 
 section .details .title .icon {
@@ -106,9 +107,10 @@ section .details .title span {
 
 section .details .selected {
     display: flex;
+    height: 15vh;
     justify-content: center;
     align-items: center;
-    width: 63%;
+    width: 62.2%;
 }
 
 section .details .selected .options-container {
@@ -149,7 +151,7 @@ section .details .selected .options-container .options .option i {
 }
 
 section .details .icon {
-    height: 8vh;
+    height: 9vh;
     margin-left: 0.3rem;
     font-size: 3rem;
     display: flex;
@@ -193,9 +195,10 @@ section .text-details .title {
 }
 
 section .text-details p {
+    height: 31vh;
     background-color: var(--white);
     font-size: .95em;
-    margin: 0 1rem;
+    margin: 0 0rem;
     text-align: justify;
     padding: 1rem;
 }

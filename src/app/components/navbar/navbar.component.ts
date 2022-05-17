@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   askURL = environment.askURL;
   @Input() items = [
     {title:'GET STARTED', route:'/luxurykitchen/started', selected:false},
-    {title:'VISUALIZER', route:'/luxurykitchen/start', selected:false},
+    /* {title:'VISUALIZER', route:'/luxurykitchen/start', selected:false}, */
     {title:'PRODUCT', children:[
       {title:'Collections', route:'/luxurykitchen/products/collections'},
       {title:'Finishes', route:'/luxurykitchen/products/finishes'},

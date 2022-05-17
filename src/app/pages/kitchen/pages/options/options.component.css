@@ -53,7 +53,7 @@ article {
 
 .filters {
     background: var(--k-white);
-    width: 35%;
+    width: 25%;
     margin-right: 8px;
 }
 
@@ -213,6 +213,7 @@ article {
     border: 1px solid var(--k-green-op);
     padding: 2px;
     margin-bottom: .3rem;
+    cursor: pointer;
 }
 
 .details .info .head .info {

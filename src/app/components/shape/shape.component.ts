@@ -17,7 +17,9 @@ export class ShapeComponent implements OnInit {
   getColor(shape: any) {
     this.shapes.map(item => {
       if (item.value === shape.value){
-        (item.color === 'rgba(96, 96, 72)')? item.color='#7A9A01' : item.color='rgba(96, 96, 72)'
+        (item.color === 'rgba(96, 96, 72)')? item.color='#7A9A01' : item.color='rgba(96, 96, 72)';
+      }else{
+        item.color='rgba(96, 96, 72)'
       }
     })
   }

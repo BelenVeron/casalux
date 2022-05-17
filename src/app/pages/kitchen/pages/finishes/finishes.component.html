@@ -43,7 +43,7 @@
                             </div>
                             <div class="container-palletes">
                                 <div class="palettes" *ngFor="let palette of active.finishes">
-                                    <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette)">
+                                    <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette, index)">
                                         <div class="img">
                                             <img [src]="url+palette.image" alt="">
                                         </div>
@@ -60,7 +60,7 @@
                                 {{mobileFilter.name}}
                             </div>
                             <div class="palettes" *ngFor="let palette of mobileFilter.finishes">
-                                <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette)">
+                                <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette, mobileFilter.index)">
                                     <div class="img">
                                         <img [src]="url+palette.image" alt="">
                                     </div>
@@ -89,34 +89,29 @@
                         </div>
 
                         <div class="collections">
-                            <p class="title" *ngIf="finishSelected.collections.length>0">Collection available in this color</p>
-                            <p class="title" *ngIf="finishSelected.collections.length<1">
-                                No collections in this color
-                            </p>
-                            <swiper class="mySwiper web" [config]="config">
-                                <ng-template class="img" swiperSlide *ngFor="let img of finishSelected.collections">
-                                    <img [src]="url+img.image" alt="">
-                                    <p class="name-collection">
-                                        {{img.name}}
-                                    </p>
+                            <!-- Conditional if there is any image -->
+                            <p class="title" *ngIf="finishSelected.selected">Collection available in this color</p>
+                            <p class="title" *ngIf="!finishSelected.selected">Ask us about the collections available for this color</p>
+                            <!-- <p class="title" *ngIf="!finishSelected.selected">No collections in this color</p> -->
+
+
+                            <!-- <swiper class="mySwiper web" [config]="config">
+                                <ng-template class="img" swiperSlide *ngFor="let img of finishSelected.selected>
+                                    <img [src]=" url+img.image " alt=" ">
+                                    <p class="name-collection "> {{img.name}} </p>
                                 </ng-template>
                             </swiper>
 
-                            <div class="imgs mobile">
-                                <div class="img" *ngFor="let img of finishSelected.collections">
-                                    <img [src]="url+img.image" alt="">
-                                    <p class="name-collection">
-                                        {{img.name}}
-                                    </p>
+                            <div class="imgs mobile ">
+                                <div class="img " *ngFor="let img of finishSelected.collections ">
+                                    <img [src]="url+img.image " alt=" ">
+                                    <p class="name-collection "> {{img.name}} </p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
-
-                <div class="back-palettes">
-
-                </div>
+                <div class="back-palettes "></div>
             </div>
         </article>
     </section>

@@ -8,6 +8,7 @@
             <p>If you need help with your room, you must<br>upload an image or sketch file to visualize it</p>
             <div class="image">
                 <img [src]="srcNoImage" alt="">
+                <p class="title">{{title}}</p>
             </div>
             <app-button></app-button>
         </div>
@@ -34,13 +35,49 @@
                 </div>
 
             </div>
-            <app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true"></app-horizontal-gallery>
+            <app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
 
 
             <div class="step-form-3">
                 <h2 class="title">Step 3 Measures</h2>
                 <p class="description">Enter measuresments and select the modules</p>
                 <div class="options">
+                    <div class="select">
+                        <div>
+                            <p>WALL A</p>
+                            <p>WALL B</p>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <th>Width</th>
+                                <th>Height</th>
+                            </tr>
+                            <tr>
+                                <td>118°</td>
+                                <td>98°</td>
+                            </tr>
+                            <tr>
+                                <td>92°</td>
+                                <td>98°</td>
+                            </tr>
+                            <tr>
+                                <select name="" id="">
+                                <option value="australia">Walk in Closet</option>
+                                <option value="canada">Wardrobe Closet</option>
+                                <option value="usa">Walk in + Wardrobe</option>
+                            </select>
+                            </tr>
+                        </table>
+
+
+
+
+
+
+
+                    </div>
+
 
                 </div>
             </div>

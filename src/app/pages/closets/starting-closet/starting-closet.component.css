@@ -7,6 +7,7 @@
 
 .container-starting .left {
     width: 45%;
+    height: 70vh;
 }
 
 .container-starting .left img {
@@ -14,9 +15,15 @@
     margin-left: 2rem;
 }
 
+.container-starting .left .image p {
+    margin-left: 5rem;
+    margin-top: .5rem;
+}
+
 .container-starting .left p {
     margin-top: 2rem;
     margin-left: 2rem;
+    margin-bottom: .5rem;
 }
 
 .container-starting .right {
@@ -30,4 +37,12 @@
 
 .options {
     display: flex;
+}
+
+.right .options .size {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

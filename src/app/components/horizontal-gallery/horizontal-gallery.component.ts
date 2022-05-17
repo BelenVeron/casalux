@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { CONFIG_HORIZONTAL, CONFIG_VERTICAL } from './horizontal-gallery-data';
 import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, Pagination, Navigation } from 'swiper';
@@ -17,6 +17,7 @@ export class HorizontalGalleryComponent implements OnInit {
   @Input() vertical: boolean = false;
   configVertical: SwiperOptions = CONFIG_VERTICAL;
   configHorizontal: SwiperOptions = CONFIG_HORIZONTAL;
+  @Output() sendImageUrl: EventEmitter<string> = new EventEmitter();
   
 
   constructor() { }
@@ -24,5 +25,9 @@ export class HorizontalGalleryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sendImage(url: string): void{
+    console.log(url)
+    this.sendImageUrl.emit(url);
+  }
 
 }

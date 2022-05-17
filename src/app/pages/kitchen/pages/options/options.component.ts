@@ -92,7 +92,7 @@ export class OptionsComponent implements OnInit {
   constructor(private kitchen:KitchenProductsService) {
     this.kitchen.additionals().subscribe((data:any)=>{
       this.additional = data;
-      console.log('aditional map: ', this.additional);
+      console.log('aditional map:', this.additional);
 
       this.setSelected();
       this.setInfo();
@@ -102,7 +102,8 @@ export class OptionsComponent implements OnInit {
       /* is gonna be changing depend of the additionalTypes selected but
          now is the only one with images
       */
-      this.additionalImages = this.additional.data.additionalSelected[0].additionalTypes[0].additionalSizes[0].additionalColors[0].additionalImages;
+      this.additionalImages = this.additional.data.additionalSelected[0].additionalTypes[0].additionalSizes[0].additionalColors[1].additionalImages;
+      console.log('additional images',this.additionalImages)
       this.subcategoryAdditional = this.additional.data.subcategoryAdditionals;
       this.additionalColors = this.additional.data.additionalSelected[0].additionalTypes[0].additionalSizes[0].additionalColors
 

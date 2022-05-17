@@ -16,6 +16,12 @@ export class StartingClosetComponent implements OnInit {
   activeSidenav: boolean = false;
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
+  title: string ="2 Walls: Closets gallery"
+  closets: any[] = [
+    {closet: "walk in closet"},
+    {closet: "wardrobe closet"},
+    {closet: "walk in + wardrobe"}
+    ]
   id: string = '';
   shapes: any[] = [
     {value: "Single wall", color: 'rgba(96, 96, 72)'},
@@ -44,6 +50,9 @@ export class StartingClosetComponent implements OnInit {
 
   setSideNav(event: boolean): void {
     this.activeSidenav = event;
+  }
+  typeSelected(data: any){
+    this.srcNoImage = data
   }
 
 }

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FinishCategory } from 'src/app/models/finishes/finish-category';
+import { FinishColor } from 'src/app/models/finishes/finish-color';
+import { FinishData } from 'src/app/models/finishes/finish-data';
+import { Selected } from 'src/app/models/finishes/selected';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
 import SwiperCore, { SwiperOptions,  Autoplay, Pagination, Grid, Navigation }
@@ -30,6 +34,9 @@ export class FinishesComponent implements OnInit {
   filterSelected = ''
   activeFilters:any = []
 
+  /* All the api*/
+ dataFinish!: FinishData;
+
   url = environment.api
   info = {
     type:'',
@@ -42,14 +49,16 @@ export class FinishesComponent implements OnInit {
       console.log(data)
       data.data.finishColors.map((filter:any)=>filter.selected = false)
       data.data.finishCategorys.map((filter:any)=>filter.selected = false)
-
+      
       this.filters[0].filters = data.data.finishColors
       this.filters[1].filters = data.data.finishCategorys
       this.filters[0].filters.map((filter:any)=>filter.type = 'color')
       this.filters[0].filters[0].selected = true
-
+      
       this.activeFilters = data.data.selected
-      this.mobileFilter = this.activeFilters[0]
+      this.mobileFilter = this.activeFilters[0];
+      this.dataFinish = data.data;
+      console.log(this.dataFinish);
     })
   }
 
@@ -61,15 +70,31 @@ export class FinishesComponent implements OnInit {
     filter.selected = show
   }
 
-  selectPalettes(palette:any){
-    let params = 'finishID='+palette.id
-    this.kitchen.finishesData(params).subscribe((data:any)=>{
-      this.finishSelected = {
-        collections: data.data.finishCollections,
-        name: palette.name,
-        code: palette.code,
-      }
-    })
+  /* The palette selected and the index of the activeFilters
+     using the index to get the id, and then the array of 
+     selected with mapSelected()
+  */
+  selectPalettes(palette:any, index:number){
+    this.finishSelected = {
+      selected: this.mapSelected(this.activeFilters[index].id),
+      name: palette.name,
+      code: palette.code,
+    }
+  }
+
+  /* Return the array of selected to show in swiper
+     if there is any selected return null
+  */
+  mapSelected(id: string): any {
+    let selected = null;
+    if (this.dataFinish !== undefined) {
+      this.dataFinish.selected.forEach(element => {
+        if (element.id === id) {
+          selected = element;
+        }
+      });
+    }
+    return selected;
   }
 
 
