@@ -34,9 +34,13 @@
         justify-content: space-around;
         font-size: 1.4em;
         margin-top: 4vh;
+        margin-left: 1rem;
     }
     .social p {
-        /* display: none; */
+        display: none;
+    }
+    .social .icons i {
+        margin-right: 38px;
     }
 }
 

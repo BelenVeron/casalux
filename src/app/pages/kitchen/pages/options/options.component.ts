@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Additional } from 'src/app/models/options/additional';
+import { DataOptions } from 'src/app/models/options/data-options';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
 
@@ -66,6 +67,9 @@ export class OptionsComponent implements OnInit {
       text: '',
     }
   }
+
+  dataOptions!: DataOptions;
+
   /* Object of additionalTypes inside of additionalSelected
      with id, name and additionalSizes
   */
@@ -78,10 +82,10 @@ export class OptionsComponent implements OnInit {
   additionalSizes: any[] = []
   /* count the number of items */
   quantity = 1
-  additionalPrice: number = 0;
+  additionalPrice: string = "";
 
   additionalColors: any[] = [];
-  colorImage: string ="";
+  /* colorImage: string =""; */
   /* array additionalImages inside of additionalColors 
      big images
   */
@@ -90,28 +94,28 @@ export class OptionsComponent implements OnInit {
   subcategoryAdditional: any[] = [];
 
   constructor(private kitchen:KitchenProductsService) {
+    // this.kitchen.additionals().subscribe((data:any)=>{
     this.kitchen.additionals().subscribe((data:any)=>{
-      this.additional = data;
-      console.log('aditional map:', this.additional);
+      this.dataOptions = data.data;
+      console.log('data option:', this.dataOptions);
 
       this.setSelected();
-      this.setInfo();
+      //this.setInfo();
       this.setAdditionalTypes();
-      this.setAdditionalSizes(this.additionalTypes[0].id);
-      this.additionalPrice = parseInt(this.additional.data.additionalPrice);
+      this.setAdditionalSizes(this.additionalTypes[0].name); 
+      this.additionalPrice = this.dataOptions.additionalPrice; 
+
       /* is gonna be changing depend of the additionalTypes selected but
          now is the only one with images
       */
-      this.additionalImages = this.additional.data.additionalSelected[0].additionalTypes[0].additionalSizes[0].additionalColors[1].additionalImages;
+      this.additionalImages = this.dataOptions.additionalImages;
       console.log('additional images',this.additionalImages)
-      this.subcategoryAdditional = this.additional.data.subcategoryAdditionals;
-      this.additionalColors = this.additional.data.additionalSelected[0].additionalTypes[0].additionalSizes[0].additionalColors
+      this.subcategoryAdditional = this.dataOptions.subcategoryAdditionals;
+      this.additionalColors = this.dataOptions.additionalColors
 
-      
-      this.filters = data.data.categorys
-      this.subCategorys = data.data.subcategoryAdditionals
+      this.filters = this.dataOptions.categorys;
 
-      this.additional.data.additionalSelected[0].additionalTypes[0].additionalSizes[0].additionalColors.map((color:any)=>color.selected = false)
+      //this.additional.data.additionalColors.map((color:any)=>color.selected = false)
       /* this.additional.additionalColors[0].selected  = true */
       this.filters.map((filter:any)=>filter.selected = false)
     })
@@ -122,9 +126,9 @@ export class OptionsComponent implements OnInit {
 
   /* Set the selected property */
   setSelected(): void {
-    this.selected.type = this.additional.data.additionalTypeID.toString();
-    this.selected.size = this.additional.data.additionalSizeID.toString();
-    this.selected.color = this.additional.data.additionalColorID.toString();
+    this.selected.type = this.dataOptions.additionalTypeID.toString();
+    this.selected.size = this.dataOptions.additionalSizeID.toString();
+    this.selected.color = this.dataOptions.additionalColorID.toString();
   }
 
   /* Set info details and technical */
@@ -138,7 +142,7 @@ export class OptionsComponent implements OnInit {
   */
   setAdditionalTypes(): void {
     this.additionalTypes = [];
-    this.additional.data.additionalSelected[0].additionalTypes.map(item =>{
+    this.dataOptions.additionalTypes.map(item =>{
       this.additionalTypes.push(item);
     })
   }
@@ -148,12 +152,13 @@ export class OptionsComponent implements OnInit {
   */
   setAdditionalSizes(id: string): void {
     this.additionalSizes = [];
-    this.additional.data.additionalSelected[0].additionalTypes.map(item =>{
-      if (id === item.id) {
-        item.additionalSizes.map(size => {
+    this.dataOptions.additionalSizes.map(item =>{
+      this.additionalSizes.push(item);
+    /*   if (id === item.id) {
+        item.additionalSizes.map((size: any) => {
           this.additionalSizes.push(size);
         })
-      }
+      } */
     })
     
   }
@@ -184,7 +189,7 @@ export class OptionsComponent implements OnInit {
 
       var selected = data.data.additionalSelected[0]
       this.additional = selected
-      //this.additional.price = data.data.additionalPrice
+      this.additionalPrice = this.dataOptions.additionalPrice
 
     })
   }
@@ -200,12 +205,18 @@ export class OptionsComponent implements OnInit {
   }
   updatePrice(){
     const { type, size, color } = this.selected
-    let params = `additionalTypeID=${type}&additionalSizeID=${size}&addiitonalColorID=${color}`
-    console.log(params)
+    let params = `additionalType=${type}&additionalSize=${size}&addiitonalColor=${color}`
+    
 
     this.kitchen.additionals(params).subscribe((data:any)=>{
-      this.additionalPrice = data.data.additionalPrice
+      this.additionalPrice = this.dataOptions.additionalPrice
     })
   }
 
+ 
+  sumAdditionalPrice(): string{
+    let price = parseInt(this.additionalPrice)*this.quantity;
+    return price.toString()+'.00';
+
+  }
 }

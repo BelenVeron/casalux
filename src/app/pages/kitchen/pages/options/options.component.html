@@ -37,14 +37,14 @@
                     <!-- principal swiper show big-img  -->
                     <swiper [config]="config3">
                         <ng-template swiperSlide *ngFor="let item of additionalImages">
-                            <img [src]="url+item.name" alt="">
+                            <img [src]="url+item.image" alt="">
                         </ng-template>
                     </swiper>
 
-                    <div class="favs" *ngIf="additionalTypes[1],name">
+                    <div class="favs" *ngIf="additionalTypes[0],name">
                         <div class="fav">
                             <div class="title">
-                                <span>{{additionalTypes[1].name}}</span> FROM $000 TO $5000
+                                <span>{{additionalTypes[0].name}}</span> FROM $000 TO $5000
                             </div>
                             <i class="far fa-heart"></i>
                         </div>
@@ -101,7 +101,7 @@
 
                         <div class="price">
                             <div class="cost">
-                                $ {{additionalPrice*quantity}}
+                                $ {{sumAdditionalPrice()}}
                             </div>
                             <div class="add-to">
                                 ADD TO CART
@@ -111,14 +111,15 @@
                         <div class="related">
                             <div class="colors web">
                                 <div class="img" [ngClass]="{'selected':selected.color == color.name}" (click)="updateColor(color)" *ngFor="let color of additionalColors">
-                                    <img [src]="url+color.colorImage" alt="">
+                                    <!-- <img [src]="url+color.colorImage" alt=""> -->
+                                    {{color.name}}
                                 </div>
                             </div>
                             <div class="info">
                                 RELATED PRODUCTS
                                 <swiper [config]="config2">
                                     <!-- rigth small swiper show two colums-->
-                                    <ng-template swiperSlide *ngFor="let option of subCategorys">
+                                    <ng-template swiperSlide *ngFor="let option of additionalImages">
                                         <div class="product">
                                             <div class="img"></div>
                                             <div class="name">

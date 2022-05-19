@@ -1,15 +1,15 @@
-import { Data } from "./data";
+import { DataOptions } from "./data-options";
 
 export class Additional {
 
     msg: string;
     success: boolean;
-    data: Data;
+    data: DataOptions;
     token: string;
 
     public constructor( msg: string,
         success: boolean,
-        data: Data,
+        data: DataOptions,
         token: string) {
             this.msg = msg;
             this.success = success;
