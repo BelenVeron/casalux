@@ -8,6 +8,10 @@ export class KitchenProductsService {
 
   constructor(private api:ApiService) { }
 
+  getFinishCollections(params:any){
+    return this.api.getString('luxurykitchens/finishcollections.php?finishID='+params)
+  }
+
   collectionInfo(params:any){
     return this.api.get('luxurykitchens/collections.php?'+params)
   }

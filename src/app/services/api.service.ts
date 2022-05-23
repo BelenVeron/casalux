@@ -17,6 +17,10 @@ export class ApiService {
     return this.http.get(`${environment.api}${route}`)
   }
 
+  getString(route:string){
+    return this.http.get(`${environment.api}${route}`, { responseType: 'text' })
+  }
+
   post(route:string, object:any){
     return this.http.post(`${environment.api}${route}`, object)
   }

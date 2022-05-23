@@ -43,7 +43,7 @@
                             </div>
                             <div class="container-palletes">
                                 <div class="palettes" *ngFor="let palette of active.finishes">
-                                    <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette, index)">
+                                    <div class="palette" *ngIf="!finishCollection" (click)="selectPalettes(palette, index)">
                                         <div class="img">
                                             <img [src]="url+palette.image" alt="">
                                         </div>
@@ -60,7 +60,7 @@
                                 {{mobileFilter.name}}
                             </div>
                             <div class="palettes" *ngFor="let palette of mobileFilter.finishes">
-                                <div class="palette" *ngIf="!finishSelected" (click)="selectPalettes(palette, mobileFilter.index)">
+                                <div class="palette" *ngIf="!finishCollection" (click)="selectPalettes(palette, mobileFilter.index)">
                                     <div class="img">
                                         <img [src]="url+palette.image" alt="">
                                     </div>
@@ -70,17 +70,17 @@
                         </div>
                     </div>
 
-                    <div class="unique-detail" *ngIf="finishSelected">
+                    <div class="unique-detail" *ngIf="finishCollection">
                         <div class="close">
-                            <i class="fas fa-times" (click)="finishSelected = ''"></i>
+                            <i class="fas fa-times" (click)="finishCollection = null"></i>
                         </div>
                         <div class="header">
                             <div class="title-section">
                                 <div class="unique-title">
-                                    {{finishSelected.name}}
+                                    {{finishCollection.name}}
                                 </div>
                                 <div class="code">
-                                    Code # {{finishSelected.code}}
+                                    Code # {{finishCollection.code}}
                                 </div>
                             </div>
                             <div class="fav">
@@ -90,20 +90,19 @@
 
                         <div class="collections">
                             <!-- Conditional if there is any image -->
-                            <p class="title" *ngIf="finishSelected.selected">Collection available in this color</p>
-                            <p class="title" *ngIf="!finishSelected.selected">Ask us about the collections available for this color</p>
-                            <!-- <p class="title" *ngIf="!finishSelected.selected">No collections in this color</p> -->
+                            <p class="title" *ngIf="finishCollection.collections.length > 0">Collection available in this color</p>
+                            <p class="title" *ngIf="finishCollection.collections.length <= 0">Ask us about the collections available for this color</p>
 
 
-                            <!-- <swiper class="mySwiper web" [config]="config">
-                                <ng-template class="img" swiperSlide *ngFor="let img of finishSelected.selected>
-                                    <img [src]=" url+img.image " alt=" ">
+                            <swiper *ngIf="finishCollection" class="mySwiper web" [config]="config">
+                                <ng-template class="img" swiperSlide *ngFor="let img of finishCollection.collections">
+                                    <img [src]="url+img.image" alt=" ">
                                     <p class="name-collection "> {{img.name}} </p>
                                 </ng-template>
                             </swiper>
 
-                            <div class="imgs mobile ">
-                                <div class="img " *ngFor="let img of finishSelected.collections ">
+                            <!-- <div class="imgs mobile ">
+                                <div class="img " *ngFor="let img of finishCollection.collections ">
                                     <img [src]="url+img.image " alt=" ">
                                     <p class="name-collection "> {{img.name}} </p>
                                 </div>

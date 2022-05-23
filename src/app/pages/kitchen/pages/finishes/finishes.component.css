@@ -205,10 +205,10 @@ article {
 }
 
 .unique-detail {
-    width: 90%;
+    height: 65vh;
+    width: 73vw;
     margin: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 0 1rem 1rem 1rem;
@@ -264,6 +264,10 @@ article {
 
 .unique-detail .collections {
     width: 70%;
+}
+
+.unique-detail .collections p {
+    margin-bottom: 1rem;
 }
 
 ::ng-deep .swiper-slide {

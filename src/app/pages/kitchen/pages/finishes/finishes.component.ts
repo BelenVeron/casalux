@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FinishCategory } from 'src/app/models/finishes/finish-category';
-import { FinishColor } from 'src/app/models/finishes/finish-color';
+import { FinishCollection } from 'src/app/models/finishes/finish-collection';
 import { FinishData } from 'src/app/models/finishes/finish-data';
-import { Selected } from 'src/app/models/finishes/selected';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
-import SwiperCore, { SwiperOptions,  Autoplay, Pagination, Grid, Navigation }
-from 'swiper';
+import SwiperCore, { SwiperOptions,  Autoplay, Pagination, Grid, Navigation } from 'swiper';
 SwiperCore.use([ Autoplay, Pagination, Grid, Navigation]);
 
 
@@ -36,6 +33,7 @@ export class FinishesComponent implements OnInit {
 
   /* All the api*/
  dataFinish!: FinishData;
+ finishCollection: FinishCollection | null = null;
 
   url = environment.api
   info = {
@@ -44,8 +42,8 @@ export class FinishesComponent implements OnInit {
   }
   mobileFilter:any = {}
 
-  constructor(private kitchen:KitchenProductsService) {
-    this.kitchen.finishesData('').subscribe((data:any)=>{
+  constructor(private kitchenService:KitchenProductsService) {
+    this.kitchenService.finishesData('').subscribe((data:any)=>{
       console.log(data)
       data.data.finishColors.map((filter:any)=>filter.selected = false)
       data.data.finishCategorys.map((filter:any)=>filter.selected = false)
@@ -54,6 +52,7 @@ export class FinishesComponent implements OnInit {
       this.filters[1].filters = data.data.finishCategorys
       this.filters[0].filters.map((filter:any)=>filter.type = 'color')
       this.filters[0].filters[0].selected = true
+      
       
       this.activeFilters = data.data.selected
       this.mobileFilter = this.activeFilters[0];
@@ -75,11 +74,15 @@ export class FinishesComponent implements OnInit {
      selected with mapSelected()
   */
   selectPalettes(palette:any, index:number){
-    this.finishSelected = {
-      selected: this.mapSelected(this.activeFilters[index].id),
-      name: palette.name,
-      code: palette.code,
-    }
+    this.kitchenService.getFinishCollections(palette.id).subscribe((data:any)=>{
+      this.finishCollection = this.getFinishCollectionFromPhp(data)
+    })
+  }
+
+  getFinishCollectionFromPhp(data: any): FinishCollection {
+    let after = data.slice(data.indexOf('{'));
+    let obj = JSON.parse(after);
+    return obj.data.finish[0];
   }
 
   /* Return the array of selected to show in swiper
@@ -101,7 +104,7 @@ export class FinishesComponent implements OnInit {
   applyFilter(filter:any){
     let params = filter.type == 'color'?'finishColorID='+filter.id:'finishCategoryID='+filter.id
     console.log(params)
-    this.kitchen.finishesData(params).subscribe((data:any)=>{
+    this.kitchenService.finishesData(params).subscribe((data:any)=>{
       this.filterSelected = filter.name
       this.activeFilters = data.data.selected
       this.mobileFilter = this.activeFilters.filter((active:any)=>active.name == this.filterSelected)[0]
