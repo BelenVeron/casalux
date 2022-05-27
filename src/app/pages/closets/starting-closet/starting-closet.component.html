@@ -4,13 +4,13 @@
 
     <div class="container-starting">
         <div class="left">
-            <img [src]="src" alt="">
+            <img class="starting" [src]="src" alt="">
             <p>If you need help with your room, you must<br>upload an image or sketch file to visualize it</p>
             <div class="image">
                 <img [src]="srcNoImage" alt="">
                 <p class="title">{{title}}</p>
             </div>
-            <app-button></app-button>
+            <app-button [type]="'next'" >Next</app-button>
         </div>
 
         <div class="right">
@@ -41,47 +41,43 @@
             <div class="step-form-3">
                 <h2 class="title">Step 3 Measures</h2>
                 <p class="description">Enter measuresments and select the modules</p>
-                <div class="options">
-                    <div class="select">
-                        <div>
-                            <p>WALL A</p>
-                            <p>WALL B</p>
-                        </div>
-
-                        <table>
-                            <tr>
-                                <th>Width</th>
-                                <th>Height</th>
-                            </tr>
-                            <tr>
-                                <td>118°</td>
-                                <td>98°</td>
-                            </tr>
-                            <tr>
-                                <td>92°</td>
-                                <td>98°</td>
-                            </tr>
-                            <tr>
-                                <select name="" id="">
-                                <option value="australia">Walk in Closet</option>
-                                <option value="canada">Wardrobe Closet</option>
-                                <option value="usa">Walk in + Wardrobe</option>
-                            </select>
-                            </tr>
-                        </table>
-
-
-
-
-
-
-
+            <div class="size">
+                <p>Width</p>
+                <p>Height</p>
+            </div>
+                <div class="select">
+                    <div>
+                        <p>WALL A</p>
+                        <p>WALL B</p>
                     </div>
 
-
+                    <table>
+                        <tr>
+                            <td>118°</td>
+                            <td>98°</td>
+                            <td class="opt">
+                                <select name="" id="">
+                                    <option value="australia">Walk in Closet</option>
+                                    <option value="canada">Wardrobe Closet</option>
+                                    <option value="usa">Walk in + Wardrobe</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>92°</td>
+                            <td>98°</td>
+                            <td class="opt"> 
+                                <select name="" id="">
+                                    <option value="australia">Walk in Closet</option>
+                                    <option value="canada">Wardrobe Closet</option>
+                                    <option value="usa">Walk in + Wardrobe</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <app-button></app-button>
+            <app-button [type]="'next-step'" ></app-button>
         </div>
 
     </div>

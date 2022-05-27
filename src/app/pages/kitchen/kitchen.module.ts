@@ -24,7 +24,6 @@ import { AskComponent } from './pages/ask/ask.component';
 import { ExpertsComponent } from './pages/experts/experts.component';
 import { VideoPlayerComponent } from '../../components/video-player/video-player.component';
 import { MobileTitleComponent } from './components/mobile-title/mobile-title.component';
-import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
@@ -41,7 +40,6 @@ import { ButtonComponent } from './components/button/button.component';
     ExpertsComponent,
     VideoPlayerComponent,
     MobileTitleComponent,
-    ButtonComponent
   ],
   imports: [
     SharedModule,

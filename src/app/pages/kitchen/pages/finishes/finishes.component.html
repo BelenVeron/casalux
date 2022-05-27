@@ -2,7 +2,7 @@
     <app-navbar></app-navbar>
 
     <section>
-        <div class="header">
+        <div class="header web">
             <div class="logo-container web">
                 <a class="img" routerLink="/luxurykitchen">
                     <img src="/assets/img/kitchen/logogreen.png" alt="">
@@ -13,7 +13,8 @@
             </div>
         </div>
 
-        <article>
+        <article class="web">
+            <!-- Buttons and options, by color and by category -->
             <div class="filters">
                 <div class="filter" *ngFor="let filter of filters" [ngClass]="{'selected':filter.selected}">
                     <div class="title" [ngClass]="{'selected':filter.selected}">
@@ -31,8 +32,8 @@
                 </div>
             </div>
 
+            <!-- Buttons and options, by palletes by category -->
             <div class="body-palettes">
-
                 <div class="details">
                     <i class="fas fa-chevron-left arrow-left" (click)="slide(-1)"></i>
                     <i class="fas fa-chevron-right arrow-right" (click)="slide(+1)"></i>
@@ -54,11 +55,15 @@
                         </div>
                     </div>
 
-                    <div class="sections mobile">
+
+
+                    <!-- MOBILE -->
+                    <!-- <div class="sections mobile">
                         <div class="detail">
                             <div class="title">
                                 {{mobileFilter.name}}
                             </div>
+
                             <div class="palettes" *ngFor="let palette of mobileFilter.finishes">
                                 <div class="palette" *ngIf="!finishCollection" (click)="selectPalettes(palette, mobileFilter.index)">
                                     <div class="img">
@@ -68,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="unique-detail" *ngIf="finishCollection">
                         <div class="close">
@@ -93,7 +98,6 @@
                             <p class="title" *ngIf="finishCollection.collections.length > 0">Collection available in this color</p>
                             <p class="title" *ngIf="finishCollection.collections.length <= 0">Ask us about the collections available for this color</p>
 
-
                             <swiper *ngIf="finishCollection" class="mySwiper web" [config]="config">
                                 <ng-template class="img" swiperSlide *ngFor="let img of finishCollection.collections">
                                     <img [src]="url+img.image" alt=" ">
@@ -101,7 +105,7 @@
                                 </ng-template>
                             </swiper>
 
-                            <!-- <div class="imgs mobile ">
+                            <!-- <div class="imgsmobile ">
                                 <div class="img " *ngFor="let img of finishCollection.collections ">
                                     <img [src]="url+img.image " alt=" ">
                                     <p class="name-collection "> {{img.name}} </p>
@@ -110,8 +114,50 @@
                         </div>
                     </div>
                 </div>
-                <div class="back-palettes "></div>
             </div>
         </article>
+
+        <!-- Mobile -->
+        <article class="mobile">
+            <!-- Index page, set changePageMobile() -->
+            <div *ngIf="mobilePage === 'index'" class="animate__animated animate__fadeInUp">
+                <h1 class="title">Finishes</h1>
+                <img class="finishes-image" src="/assets/img/kitchen/finishes-imagen.png" alt="">
+                <!-- Click button -->
+                <div class="filters-buttons">
+                    <div 
+                        [ngClass]="{'on': filter.selected, 'off': !filter.selected}" 
+                        (click)="selectFilterMobile(index)" 
+                        *ngFor="let filter of filters; let index = index"
+                    >{{filter.title}}</div>
+                </div>
+                <!-- Show colors  -->
+                <div class="options" *ngIf="filters[0].selected">
+                    <div class="option" [ngClass]="{'selected':option.selected}" *ngFor="let option of filters[0].filters" (click)="applyFilter(option)">
+                        <p>{{option.name}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Palletes page -->
+            <div *ngIf="mobilePage === 'palettes'" class="animate__animated animate__fadeInDown">
+                <!-- Buttons and options, by palletes by category -->
+                <div class="sections">
+                    <!-- <div class="detail" *ngFor="let active of activeFilters;let index = index"> -->
+                    <h2 class="title">{{activeFilters[1].name}}</h2>
+                    <div class="container-palletes-mobile" *ngFor="let palette of activeFilters[1].finishes" (click)="selectPalettes(palette, 0)" [ngStyle]="{'background-image': 'url(' + url+palette.image + ')'}">
+                       <p class="name">{{palette.name}}</p> 
+                    </div>
+                </div>
+                <app-button [type]="'mobile-up'" (click)="goBack()"></app-button>
+            </div>
+            <!-- Gallery page -->
+            <div *ngIf="mobilePage === 'gallery'" class="animate__animated animate__fadeInDown">
+                <!-- Buttons and options, by palletes by category -->
+                <app-vertical-gallery *ngIf="finishCollection" type="scroll" [items]="finishCollection.collections"></app-vertical-gallery>
+                <app-button [type]="'mobile-up'" (click)="goBack()"></app-button>
+            </div>
+        </article>
+
+
     </section>
 </main>

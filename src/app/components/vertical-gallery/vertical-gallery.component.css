@@ -73,9 +73,9 @@
 @media (max-width:400px) {
     .scroll {
         height: auto;
-        padding: 0 .4rem;
         width: 100vw;
         background: none;
+        padding: 0;
     }
     .scroll .option.selected img {
         opacity: 1;

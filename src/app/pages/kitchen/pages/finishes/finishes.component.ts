@@ -19,9 +19,23 @@ export class FinishesComponent implements OnInit {
     slidesPerView:3,
     grid:{rows:2, fill:'row'}
   };
+  configMobile: SwiperOptions = {
+    spaceBetween:1,
+    navigation:true,
+    slidesPerView:1,
+    grid:{fill:'column'}
+  };
 
   optionsByColor:any = []
   optionsByCat:any = []
+  mobilePage: string = 'index';
+  itemListTitle = {
+    title: 'COLLECTIONS',
+    text: '',
+    name: ''
+  }
+  collections:any = []
+  collectionSelected:any = {};
 
   filters = [
     {title:'BY COLOR', selected:true, filters:this.optionsByColor},
@@ -40,7 +54,8 @@ export class FinishesComponent implements OnInit {
     type:'',
     size:''
   }
-  mobileFilter:any = {}
+  mobileFilter:any = {};
+  innerWidth: number = 0;
 
   constructor(private kitchenService:KitchenProductsService) {
     this.kitchenService.finishesData('').subscribe((data:any)=>{
@@ -62,11 +77,46 @@ export class FinishesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+  }
+
+  /**
+   * Change the page of the mobile and set the
+   * itemListTitle depend of the page
+   */
+   changePageMobile():void {
+    if (this.innerWidth <= 400) {
+      if (this.mobilePage === 'index'){
+        this.mobilePage = 'palettes'
+      } else if (this.mobilePage === 'palettes'){
+        this.mobilePage = 'gallery'
+      }
+    } 
+  }
+  
+  goBack(){
+        this.mobilePage = 'index'
+    
   }
 
   selectFilter(filter:any, show:boolean){
     this.filters.map((filter:any)=>filter.selected = false)
     filter.selected = show
+  }
+
+  /* Reset all the filter.selected only if the button
+     clicked is not selected, and then asign true the
+     filter button selected
+  */
+  selectFilterMobile(index: number): void {
+    if (!this.filters[index].selected) {
+      this.filters.forEach(filter => {
+        if (filter.selected) {
+          filter.selected = false;
+        }
+      });
+    }
+    this.filters[index].selected = true;
   }
 
   /* The palette selected and the index of the activeFilters
@@ -77,6 +127,7 @@ export class FinishesComponent implements OnInit {
     this.kitchenService.getFinishCollections(palette.id).subscribe((data:any)=>{
       this.finishCollection = this.getFinishCollectionFromPhp(data)
     })
+    this.changePageMobile();
   }
 
   getFinishCollectionFromPhp(data: any): FinishCollection {
@@ -114,6 +165,8 @@ export class FinishesComponent implements OnInit {
       this.filters[1].filters.map((filter:any)=>filter.selected = false)
       filter.selected = true
     })
+
+    this.changePageMobile();
   }
 
   slide(number:number){
