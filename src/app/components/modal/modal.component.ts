@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ModalComponent implements OnInit {
 
   @Input() active: string = 'active';
+  @Input() type: string = '';
+  
+
 
   constructor() { }
 

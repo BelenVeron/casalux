@@ -274,3 +274,65 @@
         }
     } */
     /* ////////////// END NEXT-STEP ////////////// */
+
+/* ////////////// START NEW PROJECT ////////////// */
+.new-project {
+    border: none;
+    border-radius: 15px;
+    background-color: var(--green);
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    width: 250px;
+    height: 40px;
+    font-family: "Titillium Web", sans-serif;
+    cursor: pointer;
+}
+
+.new-project:hover {
+    color: #fff;
+    background-color: var(--green-op);
+}
+/* ////////////// END NEW PROJECT ////////////// */
+
+/* ////////////// START EXISTING PROJECT ////////////// */
+.existing-project {
+    border: none;
+    border-radius: 15px;
+    background-color: var(--green);
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    width: 250px;
+    height: 40px;
+    font-family: "Titillium Web", sans-serif;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.existing-project:hover {
+    color: #fff;
+    background-color: var(--green-op);
+}
+/* ////////////// END EXISTING PROJECT ////////////// */
+
+/* ////////////// START VIDEO ////////////// */
+.start-video {
+    border: none;
+    border-radius: 15px;
+    background-color: var(--green-op);
+    color: white;
+    margin-left: 34rem;
+    width: 100px;
+    height: 30px;
+    font-family: "Titillium Web", sans-serif;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.start-video:hover {
+    color: #fff;
+    background-color: var(--green);
+}
+/* ////////////// END START VIDEO ////////////// */
+

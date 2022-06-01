@@ -19,6 +19,7 @@ export class CollectionComponent implements OnInit {
   id: string = '';
   closets: Closet[] = [];
   itemsDescription:any = {name: '', description: ''};
+  
 
   constructor(
     private closetsService:ClosetsService, 

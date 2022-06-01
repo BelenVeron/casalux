@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { environment } from 'src/environments/environment';
-
 @Component({
   selector: 'app-vertical-gallery',
   templateUrl: './vertical-gallery.component.html',
@@ -13,6 +12,7 @@ export class VerticalGalleryComponent implements OnInit {
   @Input() itemSelected: any = {};
   @Output() sendSelectedItem = new EventEmitter<any>();
   url = environment.api
+  
   @Input() collections: boolean = false;
   @Input() closets: boolean = false;
 

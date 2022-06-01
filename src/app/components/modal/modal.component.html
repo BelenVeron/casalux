@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="type === 'luxury-kitchen'">
     <div [ngClass]="'modal_box ' + active">
         <div class="modal_bg_shadow"></div>
         <div class="modal_box_wrap">
@@ -17,5 +17,45 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+
+
+<div class="wrapper-closets" *ngIf="type === 'closets'">
+    <div [ngClass]="'modal_box_closets ' + active">
+        <div class="modal_bg"></div>
+        <div class="modal_wrap">
+                <div class="header">
+                    <h1>Start Ordering</h1>
+                </div>
+                <div class="footer">
+                    <app-button type="new-project" text="NEW PROJECT" (click)="close()"></app-button>
+                    <app-button type="existing-project" text="EXISTING PROJECT" (click)="close()"></app-button>
+                    <app-button type="login" text="or"></app-button>
+                    <app-button type="login" text="FILL LATER" (click)="close()"></app-button>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+
+<div class="video" *ngIf="type === 'closets-video'">
+    <div [ngClass]="'modal_box_video ' + active">
+        <div class="modal_bg_video"></div>
+        <div class="modal_video">
+                <div class="header_video">
+                    <h1>Complete the Steps</h1>
+                </div>
+                <div class="footer_video">
+                    <div class="container_video">
+                        <p>video con <br> instrucciones </p>
+                    </div>
+                   <app-button type="start-video" text="START" (click)="close()"></app-button>
+                </div>
+                
+            </div>
+        
     </div>
 </div>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+/* START LUXURY KITCKEN */
 .wrapper {
     width: 100%;
 }
@@ -69,7 +70,7 @@
     height: 100%;
 }
 
-h1 {
+.wrapper .modal_box .modal_box_wrap .container .modal_header h1 {
     font-size: 25px;
     color: rgb(97, 97, 97);
 }
@@ -81,3 +82,175 @@ p {
     padding: 0px 20px;
     text-align: justify;
 }
+/* END LUXURY KITCKEN */
+
+/* START CLOSETS */
+ .wrapper-closets {
+    width: 100%;
+}
+
+.wrapper-closets .modal_box_closets {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+
+.wrapper-closets .modal_box_closets .modal_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.wrapper-closets .modal_box_closets .modal_wrap {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    border-radius: 5px;
+    width: 350px;
+    height: 400px;
+    padding: 30px;
+    z-index: 3;
+}
+
+.wrapper-closets .modal_box_closets .modal_wrap .header {
+    padding: 20px 20px 0px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    height: 70px;
+    width: 40vw;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.wrapper-closets .modal_box_closets .modal_wrap .modal_body {
+    padding: 15px 20px;
+    line-height: 21px;
+    height: 140px;
+}
+
+.wrapper-closets .modal_box_closets .modal_wrap .footer {
+    padding: 20px;
+    display: flex;
+    height: 200px;
+    width: 40vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 245, 245); 
+}
+
+.wrapper-closets .modal_box_closets.active {
+    display: block;
+}
+
+.container {
+    background-color: white;
+    height: 100%;
+}
+
+h1 {
+    font-size: 25px;
+    color: white;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(78, 78, 78);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px 20px;
+    text-align: justify;
+} 
+/* END CLOSETS */
+
+/* START VIDEO */
+ .video {
+    width: 100%;
+}
+.video .modal_box_video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+.video .modal_box_video .modal_bg_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.video .modal_box_video .modal_video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-85%, 36%);
+    border-radius: 5px;
+    width: 350px;
+    height: 400px;
+    padding: 30px;
+    z-index: 3;
+}
+.video .modal_box_video  .header_video {
+    padding: 20px 20px 0px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    height: 30px;
+    width: 50vw;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--k-green-op);
+}
+.video .modal_box_video .modal_video .footer_video {
+    padding: 20px;
+    display: flex;
+    height: 300px;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 245, 245); 
+}
+.video .modal_box_video.active {
+    display: block;
+}
+.container_video {
+    background-color: var(--k-white);
+    height: 100%;
+    color: var(--green);
+    width: 50vw;
+    height: 40vh;
+    text-align: center;
+}
+.container_video p {
+    color: var(--green);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px 20px;
+    text-align:start;
+    font-size: 35px;
+    margin-top: 6rem; 
+    margin-left: 12rem;
+}
+.video .modal_box_video .header_video h1 {
+    font-size: 25px;
+    color: white;
+    margin-left: 3rem;
+    margin-inline-end: auto;
+    margin-bottom: 1rem;
+}
+
+/* END CLOSETS */

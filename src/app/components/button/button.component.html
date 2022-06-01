@@ -15,3 +15,9 @@
 <div *ngIf="type === 'mobile-up'" [class]="type">
     <i class="fas fa-angle-up"></i>
 </div>
+
+<button *ngIf="type === 'new-project'" [class]="type">{{text}}</button>
+
+<button *ngIf="type === 'existing-project'" [class]="type">{{text}}</button>
+
+<button *ngIf="type === 'start-video'" [class]="type">{{text}}</button>

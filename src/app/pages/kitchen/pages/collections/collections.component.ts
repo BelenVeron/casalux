@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef  } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, Input  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
@@ -12,7 +12,7 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
   styleUrls: ['./collections.component.css']
 })
 export class CollectionsComponent implements OnInit {
-
+  
 
   url = environment.api;
   itemListTitle = {
