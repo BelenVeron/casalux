@@ -7,7 +7,7 @@
         </div>
         <app-vertical-gallery [closets]="true" class="item-2" type='scroll' [items]="closets"></app-vertical-gallery>
         <app-horizontal-gallery *ngIf="closets.length" class="item-3" [items]="closets[0].models" [horizontal]="true"></app-horizontal-gallery>
-        <app-horizontal-gallery *ngIf="closets.length" class="item-4" [items]="closets[0].contents" [vertical]="true"></app-horizontal-gallery>
+        <app-horizontal-gallery typeFavorite="heart-icon-closet" *ngIf="closets.length" class="item-4" [items]="closets[0].contents" [vertical]="true"></app-horizontal-gallery>
         <app-vertical-description class="item-5" (sendClickDesign)="redirect()" [items]="itemsDescription"></app-vertical-description>
     </div>
 </div>

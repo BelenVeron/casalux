@@ -1,4 +1,11 @@
-<button class="heart" (click)="setLike()">
+<button *ngIf="type ==='heart-icon'" class="heart-select" (click)="setLike()">
     <i *ngIf="like !== 'empty'" [class]="'fas fa-heart '+like"></i>
     <i *ngIf="like === 'empty'" class="far fa-heart"></i>
+</button>
+
+<button *ngIf="type ==='heart-icon-closet'" class="heart-select-closets" (click)="setLike()">
+    <i *ngIf="like !== 'empty'" [class]="'fas fa-heart '+like"></i>
+    <i *ngIf="like === 'empty'" class="far fa-heart"></i>
+    <i class="fa-solid fa-square-share-nodes"></i>
+    <i class="fa-solid fa-expand"></i>
 </button>

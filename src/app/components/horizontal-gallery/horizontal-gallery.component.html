@@ -2,9 +2,9 @@
     <ng-template swiperSlide *ngFor="let img of items">
         <div class="image-container">
             <img class="small" [src]="url+img.image" alt="">
-            <app-favorite class="heart"></app-favorite>
+            <app-favorite [type]="typeFavorite" class="heart"></app-favorite>
         </div>
-        <h3>Shop for modules in this coleccion</h3>
+        <h3>Shop for modules in this coleccion ></h3>
     </ng-template>
 </swiper>
 

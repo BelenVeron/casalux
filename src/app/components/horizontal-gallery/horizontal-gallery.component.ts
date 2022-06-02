@@ -15,6 +15,7 @@ export class HorizontalGalleryComponent implements OnInit {
   @Input() items: any = [];
   @Input() horizontal: boolean = false;
   @Input() vertical: boolean = false;
+  @Input() typeFavorite: string = "";
   configVertical: SwiperOptions = CONFIG_VERTICAL;
   configHorizontal: SwiperOptions = CONFIG_HORIZONTAL;
   @Output() sendImageUrl: EventEmitter<string> = new EventEmitter();

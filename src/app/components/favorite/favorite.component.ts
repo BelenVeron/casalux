@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class FavoriteComponent implements OnInit {
 
   @Input() like: string = 'empty';
+  @Input() type: string = 'empty';
   likes: string[] = ['empty', 'like', 'love'];
   @Output() sendLike: EventEmitter<string> = new EventEmitter();
 

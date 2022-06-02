@@ -37,7 +37,7 @@
                     <ng-template swiperSlide *ngFor="let img of imagesSelected">
                         <div class="image-container">
                             <img [src]="url+img.image" alt="">
-                            <app-favorite class="heart"></app-favorite>
+                            <app-favorite class="heart" type="heart-icon"></app-favorite>
                         </div>
                     </ng-template>
                 </swiper>

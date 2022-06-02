@@ -64,7 +64,8 @@
 }
 
 .social-white p {
-    font-size: 2rem;
+    display: none;
+   /*  font-size: 1rem; */
 }
 
 @media (max-width:1300px),
@@ -73,12 +74,17 @@
         font-size: 1rem;
     }
     .social-white p {
-        font-size: 1rem;
+        display: none;
+       /*  font-size: 1rem; */
     }
 }
 
 @media (max-width:1000px) {
     .social-white {
         flex-direction: column;
+    }
+    .social-white p {
+        display: none;
+       /*  font-size: 1rem; */
     }
 }
