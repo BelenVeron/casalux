@@ -17,25 +17,12 @@ export class StartingClosetComponent implements OnInit {
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
   title: string ="2 Walls: Closets gallery"
-  closets: any[] = [
-    {closet: "walk in closet"},
-    {closet: "wardrobe closet"},
-    {closet: "walk in + wardrobe"}
-    ]
+  closets: any[] = [];
   id: string = '';
-  shapes: any[] = [
-    {value: "Single wall", color: 'rgba(96, 96, 72)'},
-    {value: "Gallery", color: 'rgba(96, 96, 72)'},
-    {value: "L shaped", color: 'rgba(96, 96, 72)'},
-    {value: "U shaped", color: 'rgba(96, 96, 72)'},
-    {value: "Custom", color: 'rgba(96, 96, 72)'},
-    {value: "Island", color: 'rgba(96, 96, 72)'}];
-  closetTypes: any[] = [
-    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
-    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
-    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
-    {image: '../luxurykitchens/img/lk-collectionImg70.jpg'}
-  ]
+  shapes: any[] = [];
+  closetTypes: any[] = [];
+  router: any;
+  isModuleSelected: boolean = false;
   
   
   constructor() { }
@@ -55,4 +42,7 @@ export class StartingClosetComponent implements OnInit {
     this.srcNoImage = data
   }
 
+  selectModuleAndContinue(): void {
+    this.isModuleSelected = true;
+  }
 }

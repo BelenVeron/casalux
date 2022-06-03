@@ -197,7 +197,7 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-85%, 36%);
+    transform: translate(calc(-50% - 15vw), 50%);
     border-radius: 5px;
     width: 350px;
     height: 400px;

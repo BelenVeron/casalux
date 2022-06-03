@@ -1,3 +1,24 @@
+export const CLOSET_tYPES = [
+  {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
+  {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
+  {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
+  {image: '../luxurykitchens/img/lk-collectionImg70.jpg'}
+];
+
+export const SHAPES = [
+  {value: "Single wall", color: 'rgba(96, 96, 72)'},
+  {value: "Gallery", color: 'rgba(96, 96, 72)'},
+  {value: "L shaped", color: 'rgba(96, 96, 72)'},
+  {value: "U shaped", color: 'rgba(96, 96, 72)'},
+  {value: "Custom", color: 'rgba(96, 96, 72)'},
+  {value: "Island", color: 'rgba(96, 96, 72)'}
+];
+
+export const CLOSETS = [
+  {closet: "walk in closet"},
+  {closet: "wardrobe closet"},
+  {closet: "walk in + wardrobe"}
+];
 
 export const ITEMS_NAV = {
   primaryItems: [

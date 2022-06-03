@@ -8,6 +8,8 @@ import { IndexClosetsComponent } from './index-closets/index-closets.component';
 import { WalkInComponent } from './walk-in/walk-in.component';
 import { CollectionComponent } from './collection/collection.component';
 import { StartingClosetComponent } from './starting-closet/starting-closet.component';
+import { StepsStartingClosetComponent } from './starting-closet/steps-starting-closet/steps-starting-closet.component';
+import { SelectModuleComponent } from './starting-closet/select-module/select-module.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { StartingClosetComponent } from './starting-closet/starting-closet.compo
     IndexClosetsComponent,
     WalkInComponent,
     CollectionComponent,
-    StartingClosetComponent
+    StartingClosetComponent,
+    StepsStartingClosetComponent,
+    SelectModuleComponent
   ],
   imports: [
     CommonModule,

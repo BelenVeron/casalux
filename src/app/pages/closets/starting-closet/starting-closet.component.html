@@ -1,10 +1,10 @@
 <div class="starting-closet">
     
-    <app-modal type="closets"></app-modal>
-    <app-modal type="closets-video"></app-modal>
+    <!-- <app-modal type="closets"></app-modal>
+    <app-modal type="closets-video"></app-modal> -->
     <app-nav-header type="web" (sendViewNav)="openMenu()"></app-nav-header>
     <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
-
+    <!-- left column whith text image and button -->
     <div class="container-starting">
         <div class="left">
             <img class="starting" [src]="src" alt="">
@@ -13,75 +13,21 @@
                 <img [src]="srcNoImage" alt="">
                 <p class="title">{{title}}</p>
             </div>
-            <app-button [type]="'next'" >Next</app-button>
+            <!-- button generate floor plan -->
+            <app-button [type]="'next'"></app-button>
         </div>
 
         <div class="right">
             <div class="steps">
                 <img [src]="srcSteps" alt="">
             </div>
-            <div class="step-form-1">
-                <h2 class="title">Step 1 Form</h2>
-                <p class="description">Select the form that you prefer</p>
-                <div class="options">
-                    <app-shape [shapes]="shapes"></app-shape>
-                </div>
-            </div>
 
-            <div class="step-form-2">
-                <h2 class="title">Step 2 Closets Type</h2>
-                <p class="description">Select closets type</p>
+            <!-- Steps: Form, ClosetsType, Measures -->
+            <app-steps-starting-closet *ngIf="!isModuleSelected" (srcNoImage)="typeSelected($event)"></app-steps-starting-closet>
+            <!-- Select module -->
+            <app-select-module *ngIf="isModuleSelected"></app-select-module>
 
-
-                <div class="options">
-
-                </div>
-
-            </div>
-            <app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
-
-
-            <div class="step-form-3">
-                <h2 class="title">Step 3 Measures</h2>
-                <p class="description">Enter measuresments and select the modules</p>
-            <div class="size">
-                <p>Width</p>
-                <p>Height</p>
-            </div>
-                <div class="select">
-                    <div>
-                        <p>WALL A</p>
-                        <p>WALL B</p>
-                    </div>
-
-                    <table>
-                        <tr>
-                            <td>118°</td>
-                            <td>98°</td>
-                            <td class="opt">
-                                <select name="" id="">
-                                    <option value="australia">Walk in Closet</option>
-                                    <option value="canada">Wardrobe Closet</option>
-                                    <option value="usa">Walk in + Wardrobe</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>92°</td>
-                            <td>98°</td>
-                            <td class="opt"> 
-                                <select name="" id="">
-                                    <option value="australia">Walk in Closet</option>
-                                    <option value="canada">Wardrobe Closet</option>
-                                    <option value="usa">Walk in + Wardrobe</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <app-button [type]="'next-step'" ></app-button>
+            <app-button [type]="'next-step'" (click)="selectModuleAndContinue()" ></app-button>
         </div>
-
     </div>
 </div>
