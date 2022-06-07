@@ -1,4 +1,4 @@
-<swiper *ngIf="vertical" class="vertical" [config]="configVertical">
+<swiper *ngIf="type === 'vertical'" class="vertical" [config]="configVertical">
     <ng-template swiperSlide *ngFor="let img of items">
         <div class="image-container">
             <img class="small" [src]="url+img.image" alt="">
@@ -8,11 +8,21 @@
     </ng-template>
 </swiper>
 
-<swiper *ngIf="horizontal" class="horizontal" [config]="configHorizontal">
+<swiper *ngIf="type === 'horizontal'" class="horizontal" [config]="configHorizontal">
     <ng-template swiperSlide *ngFor="let img of items">
         <div class="image-container">
             <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image">
             <img *ngIf="img" [src]="url+img.image" alt="" (click)="sendImage(url+img.image)">
+        </div>
+    </ng-template>
+</swiper>
+
+<swiper *ngIf="type === 'horizontal-mini'" class="horizontal-mini" [config]="configHorizontal">
+    <ng-template swiperSlide *ngFor="let img of items">
+        <div class="image-container">
+            <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image">
+            <img *ngIf="img" [src]="url+img.image" alt="" (click)="sendImage(url+img.image)">
+            <img *ngIf="assets" [src]="img.image" alt="" (click)="sendImage(img.image)">
         </div>
     </ng-template>
 </swiper>

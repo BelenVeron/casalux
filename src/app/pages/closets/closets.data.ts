@@ -1,8 +1,14 @@
-export const CLOSET_tYPES = [
+export const CLOSET_TYPES = [
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'}
+];
+export const CLOSET_CORNERS = [
+  {image: '/assets/img/closets/esquina1.png'},
+  {image: '/assets/img/closets/esquina2.png'},
+  {image: '/assets/img/closets/esquina3.png'},
+  
 ];
 
 export const SHAPES = [

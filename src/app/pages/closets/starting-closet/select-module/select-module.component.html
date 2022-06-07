@@ -1,1 +1,78 @@
-<p>select-module works!</p>
+<div class="container-your-closets">
+    <h2>YOUR CLOSETS </h2>
+  
+
+    <div>
+        <div class="container">
+            <h2>> WALL A:<P> Walk-in + Sliding Wardrobe 150"</P></h2>
+            <div [ngStyle]="{'display': mostrar ? 'block' : 'none'}">
+                <img src="assets/img/closets/Preview1x.jpg" alt="">
+            </div>
+            <div [ngStyle]="{'display': mostrar2 ? 'block' : 'none'}">
+                <img src="assets/img/closets/Preview2x.jpg" alt="">
+            </div>
+            <div [ngStyle]="{'display': mostrar3 ? 'block' : 'none'}">
+                <img src="assets/img/closets/Preview3x.jpg" alt="">
+            </div>
+            <div [ngStyle]="{'display': mostrar4 ? 'block' : 'none'}">
+                <img src="assets/img/closets/Preview4x.jpg" alt="">
+            </div>
+            <div [ngStyle]="{'display': mostrar5 ? 'block' : 'none'}">
+                <img src="assets/img/closets/Preview5x.jpg" alt="">
+            </div>
+            <div [ngStyle]="{'display': mostrar6 ? 'block' : 'none'}">
+                <img src="assets/img/closets/Preview6x.jpg" alt="">
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">+</button>
+                <div  class="dropdown-content">
+                    <a (mouseover)="mostrar=true" (mouseout)="mostrar=false" href="#">COLL W01</a>
+                    <a (mouseover)="mostrar2=true" (mouseout)="mostrar2=false" href="#">COLL W01A</a>
+                    <a (mouseover)="mostrar3=true" (mouseout)="mostrar3=false" href="#">COLL W02</a>
+                    <a (mouseover)="mostrar4=true" (mouseout)="mostrar4=false" href="#">COLL W02A</a>
+                    <a (mouseover)="mostrar5=true" (mouseout)="mostrar5=false" href="#">COLL W03</a>
+                    <a (mouseover)="mostrar6=true" (mouseout)="mostrar6=false" href="#">COLL W04</a>
+                    <a href="#">WARDROBE</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <P>Total width of closets modules 0"</P>
+    </div>
+   
+    <div>
+        <div class="container">
+            <h2>> WALL B:<P> Walk-in + Hinged Wardrobe 92"</P></h2>
+            <i class="fa fa-plus"></i>
+        </div>
+        <hr>
+        <P>Total width of closets modules 0"</P>
+    </div>
+
+    <div>
+        <div class="container">
+            <h2>> WALL C:<P> Walk-in Closets 92"</P></h2>
+            <i class="fa fa-plus"></i>
+        </div>
+        <hr>
+        <P>Total width of closets modules 0"</P>
+    </div>
+
+    <div>
+        <div class="container">
+            <h2>> Island side 1</h2>
+            <i class="fa fa-plus"></i>
+        </div>
+        <hr>
+        <P>Total width of side 46"</P>
+    </div>
+
+    <div>
+        <div class="container">
+            <h2>> Island side 2</h2>
+            <i class="fa fa-plus"></i>
+        </div>
+        <hr>
+        <P>Total width of side 46"</P>
+    </div>
+</div>

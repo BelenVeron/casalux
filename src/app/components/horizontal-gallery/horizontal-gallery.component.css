@@ -57,3 +57,14 @@
     height: auto;
     margin-top: 1rem;
 }
+
+/* ---------------HORIZONTAL-MINI----------------- */
+.horizontal-mini {
+    width: 25vw;
+    height: 11vh;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    /* border-left: solid 1px green; */
+}
+

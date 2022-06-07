@@ -1,57 +1,127 @@
 <div class="cont">
-<div class="step-form-1">
-    <h2 class="title">Step 1 Form</h2>
-    <p class="description">Select the form that you prefer</p>
-    <div class="options">
-        <app-shape [shapes]="shapes"></app-shape>
-    </div>
-</div>
-
-<div class="step-form-2">
-    <h2 class="title">Step 2 Closets Type</h2>
-    <p class="description">Select closets type</p>
-    <div class="options"></div>
-</div>
-
-<app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
-
-<div class="step-form-3">
-    <h2 class="title">Step 3 Measures</h2>
-    <p class="description">Enter measuresments and select the modules</p>
-    <div class="size">
-        <p>Width</p>
-        <p>Height</p>
-    </div>
-    <div class="select">
-        <div>
-            <p>WALL A</p>
-            <p>WALL B</p>
+    <div class="step-form-1" (click)="showMeasures('form')">
+        <h2 class="title">Form</h2>
+        <p class="description">Selected form: Gallery</p>
+        <div *ngIf="isFormVisible" class="options">
+            <app-shape [shapes]="shapes"></app-shape>
         </div>
+    </div>
 
-        <table>
-            <tr>
-                <td>118°</td>
-                <td>98°</td>
-                <td class="opt">
-                    <select name="" id="">
-                        <option value="australia">Walk in Closet</option>
-                        <option value="canada">Wardrobe Closet</option>
-                        <option value="usa">Walk in + Wardrobe</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>92°</td>
-                <td>98°</td>
-                <td class="opt"> 
-                    <select name="" id="">
-                        <option value="australia">Walk in Closet</option>
-                        <option value="canada">Wardrobe Closet</option>
-                        <option value="usa">Walk in + Wardrobe</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
+    <!-- <div class="step-form-2">
+        <h2 class="title">Step 2 Closets Type</h2>
+        <p class="description">Select closets type</p>
+        <div class="options"></div>
+    </div> -->
+    <!-- <app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery> -->
+
+    <div class="step-form-3" (click)="showMeasures('measures')">
+        <h2 class="title">Measures</h2>
+        <p class="description">Enter measuresments and select the modules</p>
+        <div *ngIf="isMeasuresVisible">
+            <div class="size">
+                <p>Width</p>
+                <p>Height</p>
+            </div>
+            <div class="select">
+                <div>
+                    <p>WALL A</p>
+                    <p>WALL B</p>
+                    <p>WALL C</p>
+                    <p>ISLAND</p>
+                </div>
+    
+                <table>
+                    <tr>
+                        <td>150"</td>
+                        <td>98"</td>
+                        <td class="opt">
+                            <select name="" id="">
+                                <option value="australia">Walk in Closet</option>
+                                <option value="canada">Wardrobe Closet</option>
+                                <option value="usa">Walk in + Wardrobe</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>92"</td>
+                        <td>98"</td>
+                        <td class="opt"> 
+                            <select name="" id="">
+                                <option value="australia">Walk in Closet</option>
+                                <option value="canada">Wardrobe Closet</option>
+                                <option value="usa">Walk in + Wardrobe</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>92"</td>
+                        <td>98"</td>
+                        <td class="opt"> 
+                            <select name="" id="">
+                                <option value="australia">Walk in Closet</option>
+                                <option value="canada">Wardrobe Closet</option>
+                                <option value="usa">Walk in + Wardrobe</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                    <!--  <td>34-1/4"</td>
+                        <td>33"</td> -->
+                        <td class="opt-hor"> 
+                            <select name="" id="">
+                                <option value="australia">34-1/4"</option>
+                                <option value="canada">46"</option>
+                                <option value="usa">67-3/8"</option>
+                                <option value="usa">79-1/4"</option>
+                            </select>
+                        </td>
+                        <td class="opt-hor"> 
+                            <select name="" id="">
+                                <option value="australia">33"</option>
+                                <option value="canada"></option>
+                            </select>
+                        </td>
+                        <td class="opt"> 
+                            <select name="" id="">
+                                <option value="australia">2 sides</option>
+                                <option value="canada"></option>
+                                <option value="usa"></option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="step-form-4" (click)="showMeasures('users')">
+        <h2 class="title">Users</h2>
+        <div class="content">
+            <p class="description">Select Closet Type</p>
+            <div *ngIf="isUsersVisible">
+                <label for="fname">User 1:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">User 2:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <input type="submit" value="New User" class="but"><br><br>
+            </div>
+        </div>
+    </div>   
+   
+    <div class="step-form-5" (click)="showMeasures('corners')">
+        <h2 class="title">Corners</h2>
+        <p class="description">Select model for Corners that you want</p>
+        <div class="gallery" *ngIf="isCornersVisible">
+            <div>
+                <app-horizontal-gallery *ngIf="closetTypes.length" [assets]="true" class="item-3" [items]="closetCorners" type="horizontal-mini" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
+                <p>Wall A - Wall B Corner</p>
+            </div>
+            <hr>
+            <div>
+                <app-horizontal-gallery *ngIf="closetTypes.length" [assets]="true" class="item-3" [items]="closetCorners" type="horizontal-mini" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
+                <p>Wall C - Wall A Corner</p>
+            </div>
+        </div>
     </div>
 </div>
-</div>
+
