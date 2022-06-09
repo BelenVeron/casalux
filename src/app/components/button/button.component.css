@@ -336,3 +336,11 @@
 }
 /* ////////////// END START VIDEO ////////////// */
 
+/* //////////////collection/////////////////// */
+.collection {
+    width: 8vw;
+    height: 5vh;
+    margin: 1rem;
+    background-color: white;
+    
+}

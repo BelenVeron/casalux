@@ -10,6 +10,7 @@ import { CollectionComponent } from './collection/collection.component';
 import { StartingClosetComponent } from './starting-closet/starting-closet.component';
 import { StepsStartingClosetComponent } from './starting-closet/steps-starting-closet/steps-starting-closet.component';
 import { SelectModuleComponent } from './starting-closet/select-module/select-module.component';
+import { MasterClosetComponent } from './master-closet/master-closet.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SelectModuleComponent } from './starting-closet/select-module/select-mo
     CollectionComponent,
     StartingClosetComponent,
     StepsStartingClosetComponent,
-    SelectModuleComponent
+    SelectModuleComponent,
+    MasterClosetComponent
   ],
   imports: [
     CommonModule,

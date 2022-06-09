@@ -16,8 +16,10 @@
     <i class="fas fa-angle-up"></i>
 </div>
 
-<button *ngIf="type === 'new-project'" [class]="type">{{text}}</button>
+<button *ngIf="type === 'new-project'" class="new-project">{{text}}</button>
 
-<button *ngIf="type === 'existing-project'" [class]="type">{{text}}</button>
+<button *ngIf="type === 'existing-project'" class="existing-project">{{text}}</button>
 
-<button *ngIf="type === 'start-video'" [class]="type">{{text}}</button>
+<button *ngIf="type === 'start-video'" class="start-video">{{text}}</button>
+
+<button *ngIf="type === 'collection'" class="collection">{{text}}</button>

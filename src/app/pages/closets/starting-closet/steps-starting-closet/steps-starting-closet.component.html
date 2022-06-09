@@ -1,8 +1,8 @@
 <div class="cont">
-    <div class="step-form-1" (click)="showMeasures('form')">
+    <div class="step-form-1" (click)="showStep(0)">
         <h2 class="title">Form</h2>
         <p class="description">Selected form: Gallery</p>
-        <div *ngIf="isFormVisible" class="options">
+        <div *ngIf="steps[0]" class="options">
             <app-shape [shapes]="shapes"></app-shape>
         </div>
     </div>
@@ -14,10 +14,10 @@
     </div> -->
     <!-- <app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery> -->
 
-    <div class="step-form-3" (click)="showMeasures('measures')">
+    <div class="step-form-3" (click)="showStep(1)">
         <h2 class="title">Measures</h2>
         <p class="description">Enter measuresments and select the modules</p>
-        <div *ngIf="isMeasuresVisible">
+        <div *ngIf="steps[1]">
             <div class="size">
                 <p>Width</p>
                 <p>Height</p>
@@ -94,11 +94,11 @@
         </div>
     </div>
 
-    <div class="step-form-4" (click)="showMeasures('users')">
+    <div class="step-form-4" (click)="showStep(2)">
         <h2 class="title">Users</h2>
         <div class="content">
             <p class="description">Select Closet Type</p>
-            <div *ngIf="isUsersVisible">
+            <div *ngIf="steps[2]">
                 <label for="fname">User 1:</label>
                 <input type="text" id="fname" name="fname"><br><br>
                 <label for="lname">User 2:</label>
@@ -108,10 +108,10 @@
         </div>
     </div>   
    
-    <div class="step-form-5" (click)="showMeasures('corners')">
+    <div class="step-form-5" (click)="showStep(3)">
         <h2 class="title">Corners</h2>
         <p class="description">Select model for Corners that you want</p>
-        <div class="gallery" *ngIf="isCornersVisible">
+        <div class="gallery" *ngIf="steps[3]">
             <div>
                 <app-horizontal-gallery *ngIf="closetTypes.length" [assets]="true" class="item-3" [items]="closetCorners" type="horizontal-mini" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
                 <p>Wall A - Wall B Corner</p>

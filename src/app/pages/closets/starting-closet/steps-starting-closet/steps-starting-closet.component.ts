@@ -17,6 +17,7 @@ export class StepsStartingClosetComponent implements OnInit {
   isFormVisible : boolean = true;
   isUsersVisible : boolean = false;
   isCornersVisible : boolean = false;
+  steps: boolean[] = [true, false, false, false];
 
   constructor() { }
 
@@ -27,41 +28,10 @@ export class StepsStartingClosetComponent implements OnInit {
     this.srcNoImage.emit(data);
   }
 
-  showMeasures(step: string): void{
-    switch (step) {
-      case 'measures':
-        if(this.isMeasuresVisible===false){
-          this.isMeasuresVisible = true;
-          this.isFormVisible = false;
-        }
-        break;
-
-        case 'form':
-          if(this.isFormVisible===false){
-            this.isFormVisible = true;
-            this.isMeasuresVisible = false;
-          }
-          break;
-
-          case 'users':
-            if(this.isUsersVisible===false){
-              this.isUsersVisible = true;
-              this.isMeasuresVisible = false;
-              this.isFormVisible = false;
-            }
-            break;
-
-            case 'corners':
-              if(this.isCornersVisible===false){
-                this.isCornersVisible = true;
-                this.isMeasuresVisible = false;
-                this.isFormVisible = false;
-                this.isUsersVisible = false;
-              }
-              break;
-    
-      default:
-        break;
-    }
+  showStep(step: number): void{
+    for (let index = 0; index < this.steps.length; index++) {
+      this.steps[index] = false;
+    };
+    this.steps[step] = true;
   }
 }

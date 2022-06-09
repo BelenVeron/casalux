@@ -5,33 +5,14 @@
     <div>
         <div class="container">
             <h2>> WALL A:<P> Walk-in + Sliding Wardrobe 150"</P></h2>
-            <div [ngStyle]="{'display': mostrar ? 'block' : 'none'}">
-                <img src="assets/img/closets/Preview1x.jpg" alt="">
-            </div>
-            <div [ngStyle]="{'display': mostrar2 ? 'block' : 'none'}">
-                <img src="assets/img/closets/Preview2x.jpg" alt="">
-            </div>
-            <div [ngStyle]="{'display': mostrar3 ? 'block' : 'none'}">
-                <img src="assets/img/closets/Preview3x.jpg" alt="">
-            </div>
-            <div [ngStyle]="{'display': mostrar4 ? 'block' : 'none'}">
-                <img src="assets/img/closets/Preview4x.jpg" alt="">
-            </div>
-            <div [ngStyle]="{'display': mostrar5 ? 'block' : 'none'}">
-                <img src="assets/img/closets/Preview5x.jpg" alt="">
-            </div>
-            <div [ngStyle]="{'display': mostrar6 ? 'block' : 'none'}">
-                <img src="assets/img/closets/Preview6x.jpg" alt="">
+            
+            <div *ngFor="let image of images" [ngStyle]="{'display': image.show ? 'block' : 'none'}">
+                <img [src]="image.src" alt="">
             </div>
             <div class="dropdown">
                 <button class="dropbtn">+</button>
                 <div  class="dropdown-content">
-                    <a (mouseover)="mostrar=true" (mouseout)="mostrar=false" href="#">COLL W01</a>
-                    <a (mouseover)="mostrar2=true" (mouseout)="mostrar2=false" href="#">COLL W01A</a>
-                    <a (mouseover)="mostrar3=true" (mouseout)="mostrar3=false" href="#">COLL W02</a>
-                    <a (mouseover)="mostrar4=true" (mouseout)="mostrar4=false" href="#">COLL W02A</a>
-                    <a (mouseover)="mostrar5=true" (mouseout)="mostrar5=false" href="#">COLL W03</a>
-                    <a (mouseover)="mostrar6=true" (mouseout)="mostrar6=false" href="#">COLL W04</a>
+                    <a *ngFor="let image of images" (mouseover)="image.show=true" (mouseout)="image.show=false" href="#">{{image.buttonText}}</a>
                     <a href="#">WARDROBE</a>
                 </div>
             </div>

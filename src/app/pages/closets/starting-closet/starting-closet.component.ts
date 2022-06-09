@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ITEMS_NAV } from '../closets.data';
 
@@ -21,11 +22,10 @@ export class StartingClosetComponent implements OnInit {
   id: string = '';
   shapes: any[] = [];
   closetTypes: any[] = [];
-  router: any;
   isModuleSelected: boolean = false;
   
   
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
     console.log(this.closetTypes)
@@ -43,6 +43,10 @@ export class StartingClosetComponent implements OnInit {
   }
 
   selectModuleAndContinue(): void {
-    this.isModuleSelected = true;
+    if (this.isModuleSelected) {
+      this.router.navigate(['closets/master-closet/1']);
+    } else {
+      this.isModuleSelected = true;
+    }
   }
 }

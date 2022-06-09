@@ -80,4 +80,41 @@ export const WALK_IN_IMAGES = [
   },
 ]
 
-
+export const SHOW_HIDE_IMAGE_CLOSETS = [
+  {
+    id: '1',
+    src: '/assets/img/closets/Preview1x.jpg',
+    show: false,
+    buttonText: 'COLL W01'
+  },
+  {
+    id: '2',
+    src: '/assets/img/closets/Preview2x.jpg',
+    show: false,
+    buttonText: 'COLL W01A'
+  },
+  {
+    id: '3',
+    src: '/assets/img/closets/Preview3x.jpg',
+    show: false,
+    buttonText: 'COLL W02'
+  },
+  {
+    id: '4',
+    src: '/assets/img/closets/Preview4x.jpg',
+    show: false,
+    buttonText: 'COLL W02A'
+  },
+  {
+    id: '5',
+    src: '/assets/img/closets/Preview5x.jpg',
+    show: false,
+    buttonText: 'COLL W03'
+  },
+  {
+    id: '6',
+    src: '/assets/img/closets/Preview6x.jpg',
+    show: false,
+    buttonText: 'COLL W04'
+  },
+]
