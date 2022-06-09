@@ -118,3 +118,36 @@ export const SHOW_HIDE_IMAGE_CLOSETS = [
     buttonText: 'COLL W04'
   },
 ]
+
+export const BUTTONS_MASTER_CLOSET = [
+  {
+    id: '1',
+    src: '/assets/img/closets/master-closet1.png',
+    text: 'COLLECTION W01'
+  },
+  {
+    id: '2',
+    src: '/assets/img/closets/master-closet2.png',
+    text: 'COLLECTION W01A'
+  },
+  {
+    id: '3',
+    src: '/assets/img/closets/master-closet3.png',
+    text: 'COLLECTION W02'
+  },
+  {
+    id: '4',
+    src: '/assets/img/closets/master-closet4.png',
+    text: 'COLLECTION W03'
+  },
+  {
+    id: '5',
+    src: '/assets/img/closets/master-closet5.png',
+    text: 'COLLECTION W04'
+  },
+  {
+    id: '6',
+    src: 'no-image',
+    text: 'COLLECTION WARDROBE'
+  },
+]

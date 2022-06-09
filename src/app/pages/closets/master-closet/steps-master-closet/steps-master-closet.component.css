@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    height: 55vh;
+    padding: 1rem;
+    overflow: auto;
+    font-size: small;
+}
+.container h2 {
+    margin-bottom: 1rem;
+}
+.container h4 {
+    margin-bottom: 1rem;
+}
+.container .text {
+   color: var(--green-op);
+}
+
+.container .secundary-text, h4{
+   color: var(--dark-grey);
+   font-size: 14px;
+}
+.container .text-img {
+    margin-top: 3rem;
+   color: var(--dark-grey);
+}
+.container .text .panels .text-img .panels{
+    width: 85%;
+}
+.container .handle .handle{
+    width: 50%;
+}
+.container .uprights .uprights{
+    width: 50%;
+}
+.container .shelves .shelves{
+    width: 85%;
+}
+.container .open-units .open-units{
+    width: 85%;
+}
+.container .drawers .drawers{
+    width: 85%;
+}

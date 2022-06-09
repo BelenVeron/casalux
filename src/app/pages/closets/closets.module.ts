@@ -11,6 +11,8 @@ import { StartingClosetComponent } from './starting-closet/starting-closet.compo
 import { StepsStartingClosetComponent } from './starting-closet/steps-starting-closet/steps-starting-closet.component';
 import { SelectModuleComponent } from './starting-closet/select-module/select-module.component';
 import { MasterClosetComponent } from './master-closet/master-closet.component';
+import { SelectMasterClosetComponent } from './master-closet/select-master-closet/select-master-closet.component';
+import { StepsMasterClosetComponent } from './master-closet/steps-master-closet/steps-master-closet.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { MasterClosetComponent } from './master-closet/master-closet.component';
     StartingClosetComponent,
     StepsStartingClosetComponent,
     SelectModuleComponent,
-    MasterClosetComponent
+    MasterClosetComponent,
+    SelectMasterClosetComponent,
+    StepsMasterClosetComponent
   ],
   imports: [
     CommonModule,

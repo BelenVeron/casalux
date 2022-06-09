@@ -1,6 +1,7 @@
 .container {
     display: flex;
     height: 80%;
+    padding: 1rem;
 }
 .left .image {
     display: flex;
@@ -10,7 +11,7 @@
     margin-left: 1rem;
     margin-top: 3rem;
 }
-.left h3 {
+.left h2 {
     display: flex;
     color: var(--k-green-op);
     margin-left: 1rem;
@@ -32,25 +33,30 @@
     margin-left: 1rem;
 }
 
-.right {
+/* .right {
     width: 60vw;
     height: 100vh;
-}
-.right .steps{
+} */
+.steps{
    width: 50vw;
    margin-left: 4rem;
-   margin-top: 5rem;
-   margin-bottom: 2rem;
 }
-.right .tittle{
+/* .tittle{
    margin: 2rem;
-}
-.right .tittle h2{
+} */
+.tittle h2{
    color:var(--green-op)
 }
-.right .buttons{
+.buttons{
     display: flex;
     margin: 1rem;
     width: 5;
 
+}.tittle{
+    margin-left: 1rem;
+    padding: 1rem;
+}
+.buttons{
+    margin-left: 1rem;
+    padding: 1rem;
 }

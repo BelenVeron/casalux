@@ -2,10 +2,12 @@
 <div class="container">
     <div class="left">
         <h1>MASTER CLOSET</h1>
-        <h2>COLOR SELECTION: <p>Cream side panels.</p></h2>
+        <h3> <strong>COLOR SELECTION:</strong> Cream side panels.</h3>
         <div class="image">
+            <!-- left large img white and black (shelves/open units....) -->
             <img class="one" src="assets/img/closets/master-closet-left.png" alt="">
-            <img class="two" src="assets/img/closets/Preview1x.jpg" alt="">
+            <!-- Left Big img the collection select with de botton  -->
+            <img class="two" [src]="src" alt="">
         </div>
         <p class="title">FINISHES STEPS:1 - Panels 1.1 - Handles & Roils 2 - Shelves 3 - Open Units 4 - Drawer</p>
 
@@ -15,24 +17,12 @@
         <div class="steps">
             <img class="" src="assets/img/closets/master-closet-right.png" alt="">
         </div>
-        <div class="tittle">
-            <h2>Collection</h2>
-            <p>Selected form> Gallery</p>
-        </div>
-        <div class="buttons">
-            <app-button type="collection" text="COLLECTION W01"></app-button>
-            <app-button type="collection">COLLECTION W01A</app-button>
-            <app-button type="collection">COLLECTION W02</app-button>
-            <app-button type="collection">COLLECTION W03</app-button>
-            <app-button type="collection">COLLECTION W04</app-button>
-            <app-button type="collection">COLLECTION WARDROBE</app-button>
-        </div>
-        <!-- Steps: Form, ClosetsType, Measures -->
-    <!--  <app-steps-starting-closet *ngIf="!isModuleSelected" (srcNoImage)="typeSelected($event)"></app-steps-starting-closet> -->
-        <!-- Select module -->
-    <!--  <app-select-module *ngIf="isModuleSelected"></app-select-module>
 
-        <app-button [type]="'next-step'" (click)="selectModuleAndContinue()" ></app-button> -->
+        <!-- Steps: Form, ClosetsType, Measures -->
+        <app-select-master-closet *ngIf="!isMasterSelected" (sendSetImage)="setImage($event)"></app-select-master-closet>
+        <!-- Select module -->
+        <app-steps-master-closet *ngIf="isMasterSelected"></app-steps-master-closet>      
+
+        <app-button [type]="'next-step'" (click)="selectClosetAndContinue()" ></app-button>
     </div>
 </div>
- <app-button [type]="'next-step'" [routerLink]="['/closets/collection',1]" ></app-button>

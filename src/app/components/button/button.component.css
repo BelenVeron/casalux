@@ -339,8 +339,13 @@
 /* //////////////collection/////////////////// */
 .collection {
     width: 8vw;
-    height: 5vh;
-    margin: 1rem;
-    background-color: white;
+    height: 8vh;
+    margin: .2rem;
+    background-color: white; 
+    border-radius: 5px;
+}
+.collection:hover {
+    color: white;
+    background-color: var(--green-op);
     
 }

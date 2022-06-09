@@ -17,7 +17,7 @@ export class StepsStartingClosetComponent implements OnInit {
   isFormVisible : boolean = true;
   isUsersVisible : boolean = false;
   isCornersVisible : boolean = false;
-  steps: boolean[] = [true, false, false, false];
+  steps: boolean[] = [true, false, false, false, false, false];
 
   constructor() { }
 
