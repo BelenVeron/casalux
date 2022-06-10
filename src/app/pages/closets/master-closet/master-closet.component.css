@@ -4,42 +4,48 @@
 }
 .left .image {
     display: flex;
+    height: 70vh;
 }
+
 .left h1 {
     color: var(--k-green-op);
     margin-left: 1rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    font-size: x-large;
 }
 .left h3 {
     display: flex;
     color: var(--k-green-op);
     margin-left: 1rem;
-    margin-bottom: 4rem;
-}
-.left .image .one {
-    width: 10vw;
-    height: 63vh;
-    margin: 1rem;
+    font-size: smaller;
+    margin-bottom: 1.5rem;
     
 }
+.left .image .one {
+    width: 9vw;
+    height: 71vh;
+    margin: 0.5rem;
+}
 .left .image .two {
-    width: 30vw;
-    height: 63vh;
-    margin-top: 1rem;
+    width: 25vw;
+    height: 71vh;
+    margin-top: .5rem;
 }
 .left p {
-    font-size: small;
+    font-size: x-small;
     margin-left: 1rem;
+    margin-top: 2rem;
 }
 
 .right {
     width: 60vw;
     height: 100vh;
+    margin-left: 2rem;
 }
 .right .steps{
    width: 50vw;
    margin-left: 4rem;
-   margin-top: 5rem;
+   margin-top: 1rem;
    margin-bottom: 2rem;
 }
 .right .tittle{
@@ -48,9 +54,24 @@
 .right .tittle h2{
    color:var(--green-op)
 }
-.right .buttons{
+/* .right .buttons{
     display: flex;
     margin: 1rem;
     width: 5;
+} */
+.right .line-color {
+    background-color: var(--k-green-op);
+    width: 95%;
+    height: 6vh;
+    margin-top: 22rem;
+    margin-left: 4rem;
+}
 
+
+@media (max-width:1920px) and (min-width: 1600px) {
+    .right .line-color {
+        height: 6vh;
+        margin-top: 31rem;
+        margin-left: 8rem;
+    }
 }

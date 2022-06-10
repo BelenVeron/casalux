@@ -11,5 +11,15 @@ export const CONFIG_HORIZONTAL = {
     navigation: true,
     centeredSlides:true,
     allowTouchMove: false,
-    loop:true
+    loop:true,
+};
+export const CONFIG_HORIZONTAL_MINI = {
+    loopedSlides: 1,
+    slidesPerView: 3,
+    initialSlide: 0,
+    spaceBetween: 10,
+    navigation: false,
+    centeredSlides:true,
+    allowTouchMove: false,
+    loop:true,
 };

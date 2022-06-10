@@ -17,7 +17,7 @@
     </ng-template>
 </swiper>
 
-<swiper *ngIf="type === 'horizontal-mini'" class="horizontal-mini" [config]="configHorizontal">
+<swiper *ngIf="type === 'horizontal-mini'" class="horizontal-mini" [config]="configHorizontalMini">
     <ng-template swiperSlide *ngFor="let img of items">
         <div class="image-container">
             <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image">

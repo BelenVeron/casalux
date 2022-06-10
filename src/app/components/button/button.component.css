@@ -339,10 +339,12 @@
 /* //////////////collection/////////////////// */
 .collection {
     width: 8vw;
-    height: 8vh;
+    height: 6vh;
     margin: .2rem;
+    margin-left: 1rem;
     background-color: white; 
-    border-radius: 5px;
+    
+    border: solid 1px var(--dark-brown);
 }
 .collection:hover {
     color: white;

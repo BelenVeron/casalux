@@ -66,3 +66,25 @@
   
 .container-your-closets .container .dropdown:hover .dropbtn {background-color: #ffffff;padding: 0px;}
 
+.container-your-closets .container .image {
+    width: 50%;
+    height: 100%;
+    margin-left: 12rem;
+    margin-right: 3rem;
+   
+}
+.container-your-closets .container .container-image {
+    position: absolute;
+    width: 40vw;
+    height: 50vh;
+   background-color: var(--k-green-op);
+   align-content: center;
+   z-index: 11;
+   margin-right: 5rem;
+   color: white;
+}
+.container-your-closets .container .container-image .info {
+    position: absolute;
+    margin: 1rem;
+}
+

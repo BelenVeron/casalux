@@ -1,62 +1,18 @@
-.container {
-    display: flex;
-    height: 80%;
-    padding: 1rem;
-}
-.left .image {
-    display: flex;
-}
-.left h1 {
-    color: var(--k-green-op);
-    margin-left: 1rem;
-    margin-top: 3rem;
-}
-.left h2 {
-    display: flex;
-    color: var(--k-green-op);
-    margin-left: 1rem;
-    margin-bottom: 4rem;
-}
-.left .image .one {
-    width: 10vw;
-    height: 63vh;
-    margin: 1rem;
-    
-}
-.left .image .two {
-    width: 30vw;
-    height: 63vh;
-    margin-top: 1rem;
-}
-.left p {
-    font-size: small;
-    margin-left: 1rem;
-}
-
-/* .right {
-    width: 60vw;
-    height: 100vh;
-} */
-.steps{
-   width: 50vw;
-   margin-left: 4rem;
-}
-/* .tittle{
-   margin: 2rem;
-} */
 .tittle h2{
    color:var(--green-op)
 }
 .buttons{
     display: flex;
-    margin: 1rem;
     width: 5;
-
-}.tittle{
     margin-left: 1rem;
     padding: 1rem;
+    margin-bottom: 13rem;
+   
 }
-.buttons{
+.tittle{
     margin-left: 1rem;
-    padding: 1rem;
+    
+}
+.tittle p{
+    margin-left: 14px;
 }

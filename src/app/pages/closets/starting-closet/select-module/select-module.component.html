@@ -1,14 +1,17 @@
 <div class="container-your-closets">
     <h2>YOUR CLOSETS </h2>
   
-
     <div>
         <div class="container">
             <h2>> WALL A:<P> Walk-in + Sliding Wardrobe 150"</P></h2>
-            
-            <div *ngFor="let image of images" [ngStyle]="{'display': image.show ? 'block' : 'none'}">
-                <img [src]="image.src" alt="">
+            <div *ngFor="let image of images" [ngStyle]="{'display': image.show ? 'block' : 'none'}" class="container-image" >
+                <div class="info">
+                    <h2>COLLECTION</h2>
+                    <p>{{image.buttonText}}</p>
+                </div>
+                <img [src]="image.src" class="image" alt=""  >
             </div>
+            
             <div class="dropdown">
                 <button class="dropbtn">+</button>
                 <div  class="dropdown-content">
