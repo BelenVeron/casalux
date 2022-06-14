@@ -1,4 +1,5 @@
 
+
 .cont {
     height: 70vh;
 }
@@ -47,7 +48,11 @@ table {
     border-collapse: collapse;
     width: 50%;
 }
+/* -------FORM----------- */
+
 /* -------MEASURES----------- */
+
+
 .step-form-3 {
     margin-bottom: 1rem;
 }
@@ -63,6 +68,7 @@ table {
     margin-right: 10px;
 }
 /* ---------USERS----------- */
+
 .step-form-4 .users label{
     margin-right: 1rem;
 }
@@ -72,10 +78,23 @@ table {
     width: 7vw;
     border-radius: 9px;
 }
+.step-form-4 .content .cont button{
+    background-color: white;
+    color: var(--green);
+    width: 7vw;
+    border-radius: 9px;
+    border: solid 1px var(--green);
+    cursor: pointer;
+}
+.step-form-4 .content .cont button:hover{
+    background-color: var(--k-green-op);
+    color: white;
+}
 .step-form-4 .content label{
     margin-right: 1rem;
 }
 /* -------------CORNERS------------- */
+
 .step-form-5 .gallery{
     display: flex;
 }
@@ -86,4 +105,14 @@ table {
 }
 .step-form-5 .gallery p {
     text-align: center;
+}
+
+.inactive-H2{
+    color: var(--k-green-op);
+    cursor: pointer;
+}
+
+.active-H2 {
+    color: var(--green);
+    cursor: pointer;
 }

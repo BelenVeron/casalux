@@ -16,6 +16,7 @@ export class StartingClosetComponent implements OnInit {
   srcNoImage: string = '/assets/img/closets/no-image.png'
   activeSidenav: boolean = false;
   navLeft: boolean = true;
+  projectModal: boolean = false;
   itemsNav = ITEMS_NAV;
   title: string ="2 Walls: Closets gallery"
   closets: any[] = [];
@@ -48,5 +49,9 @@ export class StartingClosetComponent implements OnInit {
     } else {
       this.isModuleSelected = true;
     }
+  }
+
+  openProjectModal(): void {
+    this.projectModal = true;
   }
 }

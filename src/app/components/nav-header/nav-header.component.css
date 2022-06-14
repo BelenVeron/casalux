@@ -64,6 +64,7 @@
     margin-left: 2rem;
     cursor: pointer;
     margin-bottom: 5px;
+    color: var(--k-green-op);
 }
 
 .navbar-closets .left img {
@@ -81,7 +82,29 @@
     margin-right: 2rem;
     margin-bottom: 5px;
     cursor: pointer;
+    color: var(--k-green-op);
 }
+.navbar-closets .username {
+    align-self: center;
+    margin-left: 216px;
+    display: flex;
+}
+.navbar-closets .username p {
+    font-size: 1rem;
+    color: var(--k-green-op);
+}
+.navbar-closets .space-green {
+    text-align: center;
+}
+.navbar-closets .space-green p{
+    width: 33vw;
+    height: 7vh;
+    background-color: var(--k-green-op);
+    color: var(--light);
+    text-align: center;
+    margin-left: 8rem;
+}
+
 
 @media (max-width:1300px),
 (max-height:800px) {
@@ -91,6 +114,19 @@
     .navbar-closets .left img {
         width: 23vw;
     }
+    
+}
+@media (max-height:800px)
+ {
+    .navbar-closets .space-green p{
+        height: 8vh;
+    }
+    .navbar-closets .username {
+        
+        margin-left: 119px;
+        
+    }
+    
 }
 
 @media (max-width:1000px) {

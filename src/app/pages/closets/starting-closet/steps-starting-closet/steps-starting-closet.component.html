@@ -1,6 +1,6 @@
 <div class="cont">
     <div class="step-form-1" (click)="showStep(0)">
-        <h2 class="title">Form</h2>
+        <h2 [ngClass]="{'active-H2': steps[0], 'inactive-H2': !steps[0]}" class="title">Form</h2>
         <p class="description">Selected form: Gallery</p>
         <div *ngIf="steps[0]" class="options">
             <app-shape [shapes]="shapes"></app-shape>
@@ -15,7 +15,7 @@
     <!-- <app-horizontal-gallery *ngIf="closetTypes.length" class="item-3" [items]="closetTypes" [horizontal]="true" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery> -->
 
     <div class="step-form-3" (click)="showStep(1)">
-        <h2 class="title">Measures</h2>
+        <h2 [ngClass]="{'active-H2': steps[1], 'inactive-H2': !steps[1]}" class="title">Measures</h2>
         <p class="description">Enter measuresments and select the modules</p>
         <div *ngIf="steps[1]">
             <div class="size">
@@ -95,21 +95,22 @@
     </div>
 
     <div class="step-form-4" (click)="showStep(2)">
-        <h2 class="title">Users</h2>
+        <h2 [ngClass]="{'active-H2': steps[2], 'inactive-H2': !steps[2]}" class="title">Users</h2>
         <div class="content">
             <p class="description">Select Closet Type</p>
-            <div *ngIf="steps[2]">
+            <div class="cont" *ngIf="steps[2]">
                 <label for="fname">User 1:</label>
                 <input type="text" id="fname" name="fname"><br><br>
                 <label for="lname">User 2:</label>
                 <input type="text" id="lname" name="lname"><br><br>
-                <input type="submit" value="New User" class="but"><br><br>
+                <button type="button">NEW USER</button><br><br>
+                
             </div>
         </div>
     </div>   
    
     <div class="step-form-5" (click)="showStep(3)">
-        <h2 class="title">Corners</h2>
+        <h2 [ngClass]="{'active-H2': steps[3], 'inactive-H2': !steps[3]}" class="title">Corners</h2>
         <p class="description">Select model for Corners that you want</p>
         <div class="gallery" *ngIf="steps[3]">
             <div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITEMS_NAV } from '../closets.data';
 
 @Component({
   selector: 'app-master-closet',
@@ -11,7 +12,8 @@ export class MasterClosetComponent implements OnInit {
   isMasterSelected: boolean = false;
   type = '';
   src = '/assets/img/closets/master-closet1.png';
-  
+  navLeft: boolean = true;
+  itemsNav = ITEMS_NAV;
 
   constructor() { }
 
@@ -27,5 +29,9 @@ export class MasterClosetComponent implements OnInit {
 
   selectClosetAndContinue() : void {
     this.isMasterSelected = true;
+  }
+
+  setSideNav(event: boolean): void {
+    this.activeSidenav = event;
   }
 }
