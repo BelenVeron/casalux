@@ -14,6 +14,13 @@ export class MasterClosetComponent implements OnInit {
   src = '/assets/img/closets/master-closet1.png';
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
+  configNav = {
+    center: true,
+    username: true,
+    search: false,
+    title: 'SELECT FINISH',
+    title2: true,
+  }
 
   constructor() { }
 

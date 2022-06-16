@@ -24,6 +24,12 @@ export class StartingClosetComponent implements OnInit {
   shapes: any[] = [];
   closetTypes: any[] = [];
   isModuleSelected: boolean = false;
+  configNav = {
+    center: true,
+    username: true,
+    search: false,
+    title: 'SELECT CLOSET TYPE'
+  }
   
   
   constructor(public router: Router) { }

@@ -11,6 +11,10 @@ export class IndexClosetsComponent implements OnInit {
   activeSidenav: boolean = false;
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
+  configNav = {
+    center: false,
+    search: true
+  }
 
   constructor() { }
 

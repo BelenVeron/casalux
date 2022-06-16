@@ -9,20 +9,35 @@
         <i class="fas fa-phone-alt"></i>
     </div>
 </div>
+<!-- 
+<div *ngIf="type === 'web'" class="navbar-closets">
+    <div class="left">
+        <i class="fas fa-bars" (click)="setViewNav()"></i>
+        <img src="/assets/img/closets/logo-closets.png" alt="">
+    </div>
+    <div class="sms">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+</div>
+ -->
+
 
 <div *ngIf="type === 'web'" class="navbar-closets">
     <div class="left">
         <i class="fas fa-bars" (click)="setViewNav()"></i>
         <img src="/assets/img/closets/logo-closets.png" alt="">
     </div>
-    <div class="space-green">
-        <p>SELECT CLOSET TYPE</p>
+
+    <div [ngClass]="{'center': true, 'no-center': !config.center}">
+        <h2 *ngIf="config.title">{{config.title}}</h2>
+       <!--  <p *ngIf="config.title2">Col.W01 Panels - <strong>WALL A</strong></p> -->
     </div>
-<div class="username">
-    <P>USERNAME</P>
-</div>
-    <div class="sms">
-        <!-- <i class="fas fa-search"></i> -->
+
+    <div class="right">
+        <h3 *ngIf="config.username" class="username">USERNAME</h3>
+        <i *ngIf="config.search" class="fas fa-search"></i>
         <i class="fas fa-user"></i>
         <i class="fas fa-shopping-cart"></i>
     </div>
