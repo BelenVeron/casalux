@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-shape',
@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ShapeComponent implements OnInit {
 
   @Input() shapes: any[] = [];
+  @Output() sendShape: EventEmitter<string> = new EventEmitter();
+  
 
   constructor() { }
 
@@ -17,11 +19,12 @@ export class ShapeComponent implements OnInit {
   getColor(shape: any) {
     this.shapes.map(item => {
       if (item.value === shape.value){
-        (item.color === 'rgba(96, 96, 72)')? item.color='#7A9A01' : item.color='rgba(96, 96, 72)';
+        (item.color === 'fff')? item.color='#7A9A01' : item.color='fff';
       }else{
-        item.color='rgba(96, 96, 72)'
+        item.color='fff'
       }
-    })
+    });
+    this.sendShape.emit(shape.value);
   }
 
 }

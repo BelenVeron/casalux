@@ -12,6 +12,7 @@ export class ButtonComponent implements OnInit {
   @Input() link: string = '';
   @Input() icon: string = '';
   @Input() like: boolean = false;
+  @Input() disabled: boolean = false;
 
 
   constructor() { }

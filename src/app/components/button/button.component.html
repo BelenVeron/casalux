@@ -10,7 +10,7 @@
 
 <button *ngIf="type === 'next'" [class]="type">{{"Generate Floor Plan"}}</button>
 
-<button *ngIf="type === 'next-step'" [class]="type">{{"NEXT"}}</button>
+<button *ngIf="type === 'next-step'" [class]="type" [disabled]="disabled">{{"NEXT"}}</button>
 
 <div *ngIf="type === 'mobile-up'" [class]="type">
     <i class="fas fa-angle-up"></i>

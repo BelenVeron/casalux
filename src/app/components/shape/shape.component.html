@@ -1,17 +1,21 @@
 <div class="shapes">
-    <div class="shape-description" *ngFor="let shape of shapes" (click)="getColor(shape)">
-        <div *ngIf="shape.value === 'Single wall'" class="single" [style.--activeColor]="shape.color"></div>
-        <div *ngIf="shape.value === 'Gallery'" class="doble" [style.--activeColor]="shape.color"></div>
-        <div *ngIf="shape.value === 'L shaped'" class="lshaped" [style.--activeColor]="shape.color"></div>
-        <div *ngIf="shape.value === 'U shaped'" class="ushaped" [style.--activeColor]="shape.color"></div>
+    <div class="shape-description" *ngFor="let shape of shapes" (click)="getColor(shape)" [style.--activeColor]="shape.color">
+        <div *ngIf="shape.value === 'Single wall'" class="single" ></div>
+        <div *ngIf="shape.value === 'Gallery'" class="doble" ></div>
+        <div *ngIf="shape.value === 'L shaped'" class="lshaped" ></div>
+        <div *ngIf="shape.value === 'U shaped'" class="ushaped" ></div>
         <div *ngIf="shape.value === 'Custom'" class="custom">
-            <div class="single" [style.--activeColor]="shape.color"></div>
-            <div class="custom-1" [style.--activeColor]="shape.color"></div>
+            <div class="single" ></div>
+            <div class="custom-1" ></div>
         </div>
         <div *ngIf="shape.value === 'Island'" class="island">
             <strong class="plus"> + </strong>
-            <div class="island-shape" [style.--activeColor]="shape.color"></div>
+            <div class="island-shape" ></div>
         </div>
-        <p>{{shape.value}}</p>
+        <div class="checkbox">
+            <input *ngIf="shape.value === 'Island'" type="checkbox" class="checkbox">
+            <p>{{shape.value}}</p>
+        </div>
     </div>
+   
 </div>

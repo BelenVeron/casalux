@@ -205,6 +205,7 @@
        height: 4vh;
        width: 10vw;
        background-color: var(--light);
+       cursor: pointer;
     }
     
     .next-step:hover {
@@ -212,6 +213,10 @@
         /* border: 1px solid var(--green); */
         color: var(--light);
         background-color: var(--green);
+    }
+
+    .next-step:disabled {
+        background-color: rgb(221, 221, 221);
     }
     /* ////////////// END NEXT-STEP ////////////// */
 

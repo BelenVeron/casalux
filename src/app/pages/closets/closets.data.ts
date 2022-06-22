@@ -12,12 +12,12 @@ export const CLOSET_CORNERS = [
 ];
 
 export const SHAPES = [
-  {value: "Single wall", color: 'rgba(96, 96, 72)'},
-  {value: "Gallery", color: 'rgba(96, 96, 72)'},
-  {value: "L shaped", color: 'rgba(96, 96, 72)'},
-  {value: "U shaped", color: 'rgba(96, 96, 72)'},
-  {value: "Custom", color: 'rgba(96, 96, 72)'},
-  {value: "Island", color: 'rgba(96, 96, 72)'}
+  {value: "Single wall", color: 'fff'},
+  {value: "Gallery", color: 'fff'},
+  {value: "L shaped", color: 'fff'},
+  {value: "U shaped", color: 'fff'},
+  {value: "Custom", color: 'fff'},
+  {value: "Island", color: 'fff'}
 ];
 
 export const CLOSETS = [

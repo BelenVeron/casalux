@@ -13,12 +13,12 @@ export class StartingClosetComponent implements OnInit {
 
   src: string = '/assets/img/closets/hero-starting.png'
   srcSteps: string = '/assets/img/closets/step1.png'
-  srcNoImage: string = '/assets/img/closets/no-image.png'
+  srcForm: string = '/assets/img/closets/form.png'
   activeSidenav: boolean = false;
   navLeft: boolean = true;
   projectModal: boolean = false;
   itemsNav = ITEMS_NAV;
-  title: string ="2 Walls: Closets gallery"
+  title: string ="3 Walls: U shaped with island"
   closets: any[] = [];
   id: string = '';
   shapes: any[] = [];
@@ -46,7 +46,7 @@ export class StartingClosetComponent implements OnInit {
     this.activeSidenav = event;
   }
   typeSelected(data: any){
-    this.srcNoImage = data
+    this.srcForm = data
   }
 
   selectModuleAndContinue(): void {
