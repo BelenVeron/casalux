@@ -8,18 +8,16 @@ import { Router } from '@angular/router';
 })
 export class StepsStartingClosetComponent implements OnInit {
 
+  // menu option
   closets: any[] = CLOSETS;
+  // form's shapes
   shapes: any[] = SHAPES;
   closetTypes: any[] = CLOSET_TYPES;
   closetCorners: any[] = CLOSET_CORNERS;
+  // event to send the image selected to the left container
   @Output() srcNoImage: EventEmitter<string> = new EventEmitter();
-  isMeasuresVisible : boolean = false;
-  isFormVisible : boolean = true;
-  isUsersVisible : boolean = false;
-  isCornersVisible : boolean = false;
-  steps: boolean[] = [true, false, false, false, false, false];
-  isModuleSelected: boolean = false;
-  buttonsDisabled: boolean[] = [true, true, true, true, true, true];
+  steps: boolean[] = [true, false, false, false, false];
+  buttonsDisabled: boolean[] = [true, false, false, false, true];
   shapeSelected: string = '';
 
   constructor(
@@ -29,19 +27,29 @@ export class StepsStartingClosetComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // click to send the image to left container
   typeSelected(data: any){
     this.srcNoImage.emit(data);
   }
 
-  /* showStep(step: number): void{
-    for (let index = 0; index < this.steps.length; index++) {
-      this.steps[index] = false;
-    };
-    this.steps[step] = true;
-  } */
+  /* 
+    Back to the step if the button is not disabled
+    Reset all the step and active the title clicked
+  */
+  showStep(step: number): void{
+    if (!this.buttonsDisabled[step]) {
+      for (let index = 0; index < this.steps.length; index++) {
+        this.steps[index] = false;
+      };
+      this.steps[step] = true;
+    }
+  }
 
+  /* 
+    Active the next step
+    If is the last step then redirect to the next page
+  */
   selectStepAndContinue(step: number): void {
-    console.log(step)
     if (step < 3) {
       this.steps[step] = false;
       this.steps[step + 1] = true;
@@ -50,6 +58,7 @@ export class StepsStartingClosetComponent implements OnInit {
     }
   }
 
+  // Activate the disabled button
   activeButton(shape: string, button: number): void{
     this.shapeSelected = shape;
     this.buttonsDisabled[button] = false;

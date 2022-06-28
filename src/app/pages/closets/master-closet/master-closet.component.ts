@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -21,8 +22,9 @@ export class MasterClosetComponent implements OnInit {
     title: 'SELECT FINISH',
     title2: true,
   }
+  
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -35,7 +37,12 @@ export class MasterClosetComponent implements OnInit {
   }
 
   selectClosetAndContinue() : void {
-    this.isMasterSelected = true;
+    /* this.isMasterSelected = true; */
+    if (this.isMasterSelected) {
+      this.router.navigate(['closets/dimensions/1']);
+    } else {
+      this.isMasterSelected = true;
+    }
   }
 
   setSideNav(event: boolean): void {

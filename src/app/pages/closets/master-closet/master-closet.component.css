@@ -74,4 +74,9 @@
         margin-top: 31rem;
         margin-left: 8rem;
     }
+    .left .image .one {
+        width: 7.5vw;
+        margin: 0.3rem;
+        margin-left: 1rem;
+    }
 }

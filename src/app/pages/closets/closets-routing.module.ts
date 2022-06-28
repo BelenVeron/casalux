@@ -5,6 +5,7 @@ import { WalkInComponent } from './walk-in/walk-in.component';
 import { CollectionComponent } from './collection/collection.component';
 import { StartingClosetComponent } from './starting-closet/starting-closet.component';
 import { MasterClosetComponent } from './master-closet/master-closet.component';
+import { DimensionsComponent } from './dimensions/dimensions.component';
 
 const routes: Routes = [
   {path:'', component:IndexClosetsComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'collection/:id', component:CollectionComponent},
   {path:'starting-closet/:id', component:StartingClosetComponent},
   {path:'master-closet/:id', component:MasterClosetComponent},
+  {path:'dimensions/:id', component:DimensionsComponent},
   /* {path:'preview', children:[
     {path:'estimate', component:PreviewEstimateComponent},
   ]},*/

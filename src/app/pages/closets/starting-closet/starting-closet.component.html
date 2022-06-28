@@ -14,8 +14,6 @@
                 <img [src]="srcForm" alt="">
                 <p class="title">{{title}}</p>
             </div>
-            <!-- button generate floor plan -->
-           <!--  <app-button [type]="'next'"></app-button> -->
         </div>
 
         <div class="right">
@@ -27,8 +25,6 @@
             <app-steps-starting-closet *ngIf="!isModuleSelected" (srcNoImage)="typeSelected($event)"></app-steps-starting-closet>
             <!-- Select module -->
             <app-select-module *ngIf="isModuleSelected"></app-select-module>
-
-            <!-- <app-button [type]="'next-step'" (click)="selectModuleAndContinue()" ></app-button> -->
         </div>
     </div>
 </div>

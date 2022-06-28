@@ -1,0 +1,51 @@
+<div class="starting-closet">
+    <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    
+    <!-- left column whith text image and button -->
+    <div class="container-starting">
+        <div class="left">
+            <h2>MASTER BED ROOM CLOSETS</h2>
+            <p>Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak</p>
+            <p>flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers.</p>
+            <p>Champagne color Rails. Standard dimensions 35° width.</p>
+            <div class="image">
+                <img [src]="srcForm" alt="">
+                <p class="title">{{title}}</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="steps">
+                <img [src]="srcSteps" alt="">
+            </div>
+            <h2>Dimensions</h2>
+            <h4>Select module dimensions</h4>
+            <p>Select the module measurements. The standard</p>
+            <p>option covers the present measurements, and the</p>
+            <p>custom mode allows you to place a</p>
+            <p>different meaasurement.</p>
+            <div class="slider-conteiner">
+                <input type="radio" name="" value="standard">
+                <label for="stand"> Standard</label>
+                <input class="custom" type="radio" name="" value="custom">
+                <label for="cust"> Custom (+S) </label>
+            </div>
+            <div class="conteiner">
+                <div class="slidecontainer">
+                    <label for="fname">Width</label>
+                    <input type="range" min="35" max="54.5" [value]="dimValue" class="slider" #ranger (input)="setRange(ranger.value)">
+                </div>
+                <p>Value: {{dimValue}}<span id="demo"></span></p>
+            </div>
+            <div class="container-two">
+                <label for="fname">Depth</label>
+                <input type="text" id="fname" name="fname" value="19-1/2°"><br><br>
+                <label for="lname">Height</label>
+                <input type="text" id="lname" name="lname" value="101-3/16°">
+                
+            </div>
+            <p>change the height</p>
+        </div>  
+    </div>
+</div>

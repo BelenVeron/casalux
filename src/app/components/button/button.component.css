@@ -196,7 +196,6 @@
     
      .next-step {
        margin-right: 1rem;
-       border: 1px solid var(--green);
        float: right;
        border-radius: 18px;
        color: var(--green);
@@ -216,6 +215,8 @@
     }
 
     .next-step:disabled {
+        color: var(--black-op);
+        border: solid 1px var(--black-op);
         background-color: rgb(221, 221, 221);
     }
     /* ////////////// END NEXT-STEP ////////////// */
