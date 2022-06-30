@@ -5,14 +5,17 @@
     <!-- left column whith text image and button -->
     <div class="container-starting">
         <div class="left">
-            <h2>MASTER BED ROOM CLOSETS</h2>
-            <p>Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak</p>
-            <p>flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers.</p>
-            <p>Champagne color Rails. Standard dimensions 35° width.</p>
+            <h1>MASTER BED ROOM CLOSETS</h1>
+            <h3>Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak</h3>
+            <h3>flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers.</h3>
+            <h3>Champagne color Rails. Standard dimensions 35° width.</h3>
             <div class="image">
-                <img [src]="srcForm" alt="">
-                <p class="title">{{title}}</p>
+                <!-- left large img white and black (shelves/open units....) -->
+                <img class="one" [src]="srcForm" alt="">
+                <!-- Left Big img the collection select with de botton  -->
+                <img class="two" [src]="src" alt="">
             </div>
+            <p class="title">FINISHES STEPS:1 - Panels 1.1 - Handles & Roils 2 - Shelves 3 - Open Units 4 - Drawer</p>
         </div>
 
         <div class="right">
@@ -46,6 +49,12 @@
                 
             </div>
             <p>change the height</p>
+            <div class="footer">
+                <h3>See all your selected modules ></h3>
+                <app-button [type]="'next-step'" (click)="selectClosetAndContinue()" ></app-button>
+                <div class="line-color"></div>
+            </div>
+            
         </div>  
     </div>
 </div>

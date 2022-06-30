@@ -18,9 +18,9 @@
     color: var(--k-green-op);
 }
 .container-starting .left .image {
-    background-color: var(--k-white);
     width: 37vw;
     margin-left: 2rem;
+    height: 62vh;
 }
 
 
@@ -68,6 +68,10 @@
     border-radius: 50px;
     cursor:pointer;
 }
+.starting-closet{
+    height: 100%;
+    width: 100%;
+}
 .starting-closet .right .conteiner .slidecontainer {
     display: flex;
     align-items: center;
@@ -87,10 +91,7 @@
     margin-left: 6rem;
 }
 
-.starting-closet{
-    height: 100%;
-    width: 100%;
-}
+
 
 .container-starting .slidecontainer {
     width: 100%;
@@ -125,4 +126,47 @@
     height: 25px;
     background: #04AA6D;
     cursor: pointer;
+}
+.container-starting .right .footer{
+    color: var(--k-green-op);
+    margin-top: 7rem;
+}
+/* --------------left------------------ */
+.container-starting {
+    display: flex;
+    height: 80%;
+}
+.left .image {
+    display: flex;
+    height: 70vh;
+}
+
+.left h1 {
+    color: var(--k-green-op);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: x-large;
+}
+.left h3 {
+    display: flex;
+    color: var(--dark-brown);
+    margin-left: 1rem;
+    font-size: smaller;
+    margin-bottom: 1.5rem;
+    
+}
+.left .image .one {
+    width: 9vw;
+    height: 60vh;
+    margin: 0.5rem;
+}
+.left .image .two {
+    width: 31vw;
+    height: 60vh;
+    margin-top: .5rem;
+}
+.left p {
+    font-size: x-small;
+    margin-left: 1rem;
+    
 }

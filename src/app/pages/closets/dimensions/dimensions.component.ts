@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -7,9 +8,9 @@ import { ITEMS_NAV } from '../closets.data';
   styleUrls: ['./dimensions.component.css']
 })
 export class DimensionsComponent implements OnInit {
-  src: string = '/assets/img/closets/hero-starting.png'
+  src: string = '/assets/img/closets/dimensions-left-big.png'
   srcSteps: string = '/assets/img/closets/dimensions-steps.png'
-  srcForm: string = '/assets/img/closets/form.png'
+  srcForm: string = '/assets/img/closets/dimensions-left-small.png'
   activeSidenav: boolean = false;
   navLeft: boolean = true;
   projectModal: boolean = false;
@@ -22,9 +23,10 @@ export class DimensionsComponent implements OnInit {
     title: 'SELECT CLOSET TYPE'
   }
   dimValue: string = '50';
+  isMasterSelected: any;
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -41,6 +43,10 @@ export class DimensionsComponent implements OnInit {
 
   setRange(value: string): void {
     this.dimValue = value;
+  }
+
+  selectClosetAndContinue() : void {
+    this.router.navigate(['closets/module/1']);
   }
   
 }
