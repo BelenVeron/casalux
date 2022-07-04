@@ -46,15 +46,14 @@
                 <input type="text" id="fname" name="fname" value="19-1/2°"><br><br>
                 <label for="lname">Height</label>
                 <input type="text" id="lname" name="lname" value="101-3/16°">
-                
             </div>
             <p>change the height</p>
             <div class="footer">
                 <h3>See all your selected modules ></h3>
                 <app-button [type]="'next-step'" (click)="selectClosetAndContinue()" ></app-button>
-                <div class="line-color"></div>
+                <!-- <app-button [config]="configButton" (click)="selectClosetAndContinue()" ></app-button> -->
             </div>
-            
+            <div class="line-color"></div>
         </div>  
     </div>
 </div>

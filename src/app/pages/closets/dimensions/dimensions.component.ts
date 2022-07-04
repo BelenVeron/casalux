@@ -13,7 +13,11 @@ export class DimensionsComponent implements OnInit {
   srcForm: string = '/assets/img/closets/dimensions-left-small.png'
   activeSidenav: boolean = false;
   navLeft: boolean = true;
-  projectModal: boolean = false;
+  configButton = {
+    type: "next-step",
+    text: "NEXT"
+  }
+  
   itemsNav = ITEMS_NAV;
   title: string ="3";
   configNav = {

@@ -1,1 +1,70 @@
-<p>module works!</p>
+<div class="starting-closet">
+    <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    
+    <!-- left column whith text image and button -->
+    <div class="container-starting">
+        <div class="left">
+            <h1>MASTER BED ROOM CLOSETS</h1>
+            <h3>Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak</h3>
+            <h3>flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers.</h3>
+            <h3>Champagne color Rails. Standard dimensions 35°.</h3>
+        </div>
+        
+        <div class="right">
+            <div class="steps">
+                <img [src]="srcSteps" alt="">
+            </div>
+        </div>  
+    </div>
+    <div class="container">
+        <h2>Select type of module</h2>
+        <div class="users">
+            <h3>User</h3>
+            <app-button type="users" text="USER 1"></app-button>
+            <app-button type="users" text="USER 2"></app-button>
+        </div>
+        <div class="check">
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Ties 00</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Belts 05</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Shoes 10</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Lingerie 20</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Sweaters 05</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Dress Shirts 00</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Long Dresses 07</label>
+        </div>
+        <div class="check-two">
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Suits 00</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Ponts 12</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> T-Shirts 18</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Jackets 09</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Underware 00</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Short Dresses 04</label>
+            <input type="checkbox" name="" value="standard">
+            <label for="stand"> Miscellaneous 10</label>
+        </div>
+        <div class="image">
+            <img [src]="srcImage" alt="">
+        </div>
+        <div class="footer">
+            <app-button [type]="'next-step'" (click)="selectClosetAndContinue()" ></app-button>
+        </div>
+
+        <h4>See all your selected modules ></h4>
+        <div class="line-color"></div>
+    </div>
+    
+</div>

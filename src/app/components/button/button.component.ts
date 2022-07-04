@@ -13,6 +13,10 @@ export class ButtonComponent implements OnInit {
   @Input() icon: string = '';
   @Input() like: boolean = false;
   @Input() disabled: boolean = false;
+  
+  @Input()config: any;
+
+
 
 
   constructor() { }
@@ -20,4 +24,12 @@ export class ButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
+}
+
+export interface ConfigButton {
+  text: string;
+  type: string;
+  link: string;
+  icon: string;
+  disabled: boolean;
 }

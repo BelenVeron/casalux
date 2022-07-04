@@ -18,6 +18,8 @@
 
 <button *ngIf="type === 'new-project'" class="new-project">{{text}}</button>
 
+<button *ngIf="type === 'users'" class="users">{{text}}</button>
+
 <button *ngIf="type === 'continue'" class="continue">{{text}}</button>
 
 <button *ngIf="type === 'existing-project'" class="existing-project">{{text}}</button>
@@ -25,3 +27,9 @@
 <button *ngIf="type === 'start-video'" class="start-video">{{text}}</button>
 
 <button *ngIf="type === 'collection'" class="collection">{{text}}</button>
+
+<!-- <button [class]="config.type" [disabled]="config.disabled">
+    <i class="fas fa-{{config.icon}}"></i>
+    {{config.text}}
+    <span>{{config.link}}</span>
+</button> -->

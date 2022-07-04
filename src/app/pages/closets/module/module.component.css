@@ -1,0 +1,112 @@
+.container-starting {
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.container-starting .left {
+    width: 45%;
+    height: 70vh;
+}
+
+.container-starting .left .starting {
+    margin-left: 0rem;
+    width: 20vw;
+}
+
+.container-starting .right {
+    width: 65%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+.right .steps{
+   width: 70%;
+   margin-left: 30px;
+}
+
+.slider-conteiner label {
+   margin-left: .3rem; 
+}
+.slider-conteiner input {
+    border-radius: 50px;
+    cursor:pointer;
+}
+.starting-closet{
+    height: 100%;
+    width: 100%;
+}
+.starting-closet .right .conteiner .slidecontainer {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.starting-closet .right .conteiner .slidecontainer input {
+    width: 35%;
+    margin-left: 5rem;
+}
+.starting-closet .container-starting .right .container-two {
+    margin-top: 2rem;
+}
+.starting-closet .container-starting .right .container-two label {
+    margin-right: 2rem;
+}
+
+.container-starting .slidecontainer {
+    width: 100%;
+}
+.starting-closet .container .image{
+    width: 50%;
+    height: 20%;
+}   
+/* --------------left------------------ */
+.container-starting {
+    display: flex;
+    height: 27%;
+}
+
+.left h1 {
+    color: var(--k-green-op);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: x-large;
+}
+.left h3 {
+    display: flex;
+    color: var(--dark-brown);
+    margin-left: 1rem;
+    font-size: smaller;
+    margin-bottom: 1.5rem;
+}
+
+.starting-closet .container .users {
+    display: flex;
+    align-items: baseline;
+}
+
+.container-starting .left .check, .check-two {
+    display: flex;
+    align-items: baseline;
+    width: 100vw;
+   
+}
+
+.starting-closet .container{
+    margin-left: 20px; 
+}
+
+.starting-closet .container .line-color{
+    height: 7vh;
+    float: right;
+    width: 60%;
+    background-color:var(--k-green-op);
+}
+.starting-closet .container h4{
+    margin-right: 28%;
+    color: var(--k-green-op);
+    margin-top: 8px;
+    float: right;
+}

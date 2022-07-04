@@ -15,6 +15,7 @@ import { SelectMasterClosetComponent } from './master-closet/select-master-close
 import { StepsMasterClosetComponent } from './master-closet/steps-master-closet/steps-master-closet.component';
 import { DimensionsComponent } from './dimensions/dimensions.component';
 import { ModuleComponent } from './module/module.component';
+import { AccesoriesComponent } from './accesories/accesories.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ModuleComponent } from './module/module.component';
     SelectMasterClosetComponent,
     StepsMasterClosetComponent,
     DimensionsComponent,
-    ModuleComponent
+    ModuleComponent,
+    AccesoriesComponent
   ],
   imports: [
     CommonModule,
