@@ -11,7 +11,6 @@ export class AccesoriesComponent implements OnInit {
   srcForm: string = '/assets/img/closets/dimensions-left-small.png'
   srcSteps: string = '/assets/img/closets/accesories.png'
   activeSidenav: boolean = false;
-  galleryAccesories: any[] = GALLERY_ACCESORIES;
   closetTypes: any[] = CLOSET_TYPES;
   configNav = {
     center: true,
@@ -21,6 +20,21 @@ export class AccesoriesComponent implements OnInit {
   }
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
+  configAccesoriesGallery = {
+    class: 'horizontal-accesories',
+    swiper: {
+      loopedSlides: 1,
+      slidesPerView: 6,
+      initialSlide: 0,
+      spaceBetween: 10,
+      navigation: true,
+      centeredSlides:true,
+      allowTouchMove: false,
+      loop:true,
+    },
+    items: GALLERY_ACCESORIES,
+    description: 'Lorem ipsum dolor.'
+  }
 
 
 

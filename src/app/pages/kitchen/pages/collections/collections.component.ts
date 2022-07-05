@@ -60,6 +60,16 @@ export class CollectionsComponent implements OnInit {
   collectionSelected:any = {};
   imagesSelected:any = [];
   innerWidth: number = 0;
+  // configuration of horizontal-gallery in the center
+  configCollection: any = {
+    items: [],
+    class: 'vertical',
+    imageClass: 'small',
+    swiper: {
+      spaceBetween: 30,
+      pagination: { clickable: true }, 
+    }
+  };
 
   constructor(
     private collection:KitchenProductsService, 
@@ -69,7 +79,6 @@ export class CollectionsComponent implements OnInit {
     this.id = route.snapshot.params.collectionId || ''
     this.collection.collectionInfo(this.id).subscribe((data:any)=>{
       this.collections = data
-      console.log(data)
       if(!this.id|| this.id == 'collections'){
         this.imagesSelected = this.collections[0].kitchens[0].photos
         this.changeSelectedCollection(0)
@@ -126,17 +135,24 @@ export class CollectionsComponent implements OnInit {
   }
 
   selectImages(index:number){
-    const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
-    if(hasPhotos){
-      this.imagesSelected = [];
-      this.collections[this.id].kitchens[index].photos.forEach((element: any) => {
-        this.imagesSelected.push(element);
-      });
-      this.changeDetection.detectChanges();
+    if (this.collections[this.id]) {
+      const hasPhotos = this.collections[this.id].kitchens[index].photos.length > 0
+      if(hasPhotos){
+        this.imagesSelected = [];
+        this.collections[this.id].kitchens[index].photos.forEach((element: any) => {
+          this.imagesSelected.push(element);
+        });
+        this.changeDetection.detectChanges();
+      }
     }
   }
 
   goBack(){
     this.changePageMobile();
+  }
+
+  getConfig(photos: any): any {
+    this.configCollection.items = photos;
+    return this.configCollection
   }
 }

@@ -17,8 +17,8 @@
     </div>
     <div class="gallery">
         <h2>Accesorios</h2>
-        <p>Select accesories for your closet</p>
-        <app-horizontal-gallery *ngIf="closetTypes.length" [assets]="true" class="item-3" [items]="galleryAccesories" type="horizontal-accesories" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
+        <p>Select accesories for your closet</p> 
+        <app-horizontal-gallery class="item-3" [config]="configAccesoriesGallery"></app-horizontal-gallery>
     </div>
     <div class="buttons">
         <app-button [type]="'next-module'" (click)="selectClosetAndContinue()" ></app-button>

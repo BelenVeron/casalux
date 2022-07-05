@@ -10,7 +10,7 @@
     </div>
 </article>
 
-<article *ngIf="type === 'two-columns' && items.length > 0" [class]="type">
+<article *ngIf="type === 'two-columns' && items && items.length > 0" [class]="type">
     <p class="section-text">What you have in this collection</p>
     <div class="images">
         <div class="option" *ngFor="let item of items, let index = index">

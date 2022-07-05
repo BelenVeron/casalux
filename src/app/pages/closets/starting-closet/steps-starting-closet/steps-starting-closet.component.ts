@@ -53,6 +53,10 @@ export class StepsStartingClosetComponent implements OnInit {
     if (step < 3) {
       this.steps[step] = false;
       this.steps[step + 1] = true;
+      // select a default image in the third step
+      if (step === 2) {
+        this.typeSelected(this.closetCorners[0].image)
+      }
     } else {
       this.router.navigate(['closets/master-closet/1']);
     }

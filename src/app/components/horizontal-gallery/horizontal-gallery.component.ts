@@ -13,10 +13,11 @@ export class HorizontalGalleryComponent implements OnInit {
 
   url = environment.api;
   @Input() items: any = [];
+  @Input() config: any = [];
   @Input() type: string = '';
+  @Input() imageClass: string = '';
   @Input() assets: boolean = false;
   @Input() typeFavorite: string = "";
-  configVertical: SwiperOptions = CONFIG_VERTICAL;
   configHorizontal: SwiperOptions = CONFIG_HORIZONTAL;
   configAccesories: SwiperOptions = CONFIG_ACCESSORIES;
   configHorizontalMini: SwiperOptions = CONFIG_HORIZONTAL_MINI;

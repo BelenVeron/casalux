@@ -17,181 +17,31 @@
 
     <!-- Parte central de la pantalla con galerias -->
     <div  class="accesories">
-        <app-vertical-gallery [assets]="true" [closets]="true" class="item-2" type='scroll' [items]="closets"></app-vertical-gallery>
-        <!-- principal swiper show big-img  -->
-        <div class="details">
-            <div class="img">
-                <!-- principal swiper show big-img  -->
-                <swiper [config]="config3">
-                    <ng-template swiperSlide *ngFor="let item of closets">
-                        <img [src]="item.src" alt="">
-                    </ng-template>
-                </swiper> 
-
-               <!--  <div class="favs" *ngIf="additionalTypes[0],name">
-                    <div class="fav">
-                        <div class="title">
-                            <span>{{additionalTypes[0].name}}</span> FROM $000 TO $5000
-                        </div>
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div> -->
+        <div class="small-gallery">
+            <app-vertical-gallery [assets]="true" [closets]="true" class="item-2" type='scroll' [items]="closets"></app-vertical-gallery>
+        </div>
+        
+        <div class="big-gallery">
+            <app-horizontal-gallery  [config]="configGalleryAccesories" ></app-horizontal-gallery>
+        </div>
+        
+        <div class="description">
+            <h3>Inside drawer partition</h3>
+            <div class="titles">
+                <p (click)="info.details.show = true;info.technicalInfo.show = false" [ngClass]="{'not-selected':!info.details.show}">DETAILS</p>
+                <p (click)="info.technicalInfo.show = true;info.details.show = false" [ngClass]="{'not-selected':!info.technicalInfo.show}">TECHNICAL FILES</p>
             </div>
-
-            <div class="info">
-
-                <!-- Head Info -->
-                <div class="head">
-                    <div class="titles">
-                        <p (click)="info.details.show = true;info.technicalInfo.show = false" [ngClass]="{'not-selected':!info.details.show}">DETAILS</p>
-                        <p (click)="info.technicalInfo.show = true;info.details.show = false" [ngClass]="{'not-selected':!info.technicalInfo.show}">TECHNICAL FILES</p>
-                    </div>
-                    <div class="info" *ngIf="info.details.show">
-                        {{info.details.text}}
-                    </div>
-                    <div class="info" *ngIf="info.technicalInfo.show">
-                        {{info.technicalInfo.text}}
-                    </div>
-                    <div class="down" *ngIf="info.technicalInfo.show">
-                        <h6>Download Documentation</h6>
-                    </div>
-                </div>
-
-                <!-- End Head Info -->
-
-
-                <div class="cart">
-                    <div class="selects">
-                        <!-- Size and Type -->
-                        <!-- <select name="" [(ngModel)]="selected.type" (change)="updatePrice()">
-                            <option value="{{type.id}}" *ngFor="let type of additionalTypes">
-                                {{type.name}}
-                            </option>
-                        </select>
-                        <select name="" [(ngModel)]="selected.size" (change)="updatePrice()">
-                            <option value="{{size.id}}" *ngFor="let size of additionalSizes">
-                                {{size.name}}
-                            </option>
-                        </select> -->
-                        <!-- End Size and Type -->
-
-                        <div class="quantity">
-                            <p>QUANTITY</p>
-                            <div class="calc">
-                                <i class="fas fa-minus" (click)="quantity>1?quantity = quantity -1:''"></i>
-                                <p>{{quantity}}</p>
-                                <i class="fas fa-plus" (click)="quantity = quantity +1"></i>
-                            </div>
-                            <p class="unit">Unit</p>
-                        </div>
-                    </div>
-
-                    <div class="price">
-                        <div class="cost">
-                            $ {{sumAdditionalPrice()}}
-                        </div>
-                        <div class="add-to">
-                            ADD TO CART
-                        </div>
-                    </div>
-
-                    <div class="related">
-                        <!-- <div class="colors web">
-                            <div class="img" [ngClass]="{'selected':selected.color == color.name}" (click)="updateColor(color)" *ngFor="let color of additionalColors">
-                                <!-- <img [src]="url+color.colorImage" alt=""> 
-                                {{color.name}}
-                            </div>
-                        </div>
-                        <div class="info">
-                            RELATED PRODUCTS
-                            <swiper [config]="config2">
-                                <!-- rigth small swiper show two colums
-                                <ng-template swiperSlide *ngFor="let option of additionalImages">
-                                    <div class="product">
-                                        <div class="img"></div>
-                                        <div class="name">
-                                            <p>Antaro Baskets</p>
-                                            <div class="from-to">FROM $000 TO $500</div>
-                                        </div>
-                                    </div>
-                                </ng-template>
-
-                            </swiper>
-                        </div> -->
-                    </div>
-                </div>
+            <div class="info" *ngIf="info.details.show">algo
+                {{info.details.text}}
             </div>
-
-            <!-- <div class="images web">
-                <!-- Inferior big swiper show five img 
-                <swiper class="subcategory" [config]="config">
-                    <ng-template swiperSlide *ngFor="let cat of subcategoryAdditional" class="img">
-                        <img style="height: 100%; margin-left: 1rem;" (click)="applyAdditional(cat.id)" [src]="(cat.image)?url+cat.image:urlNoImage">
-                    </ng-template>
-
-                </swiper>
-            </div> -->
-
+            <div class="info" *ngIf="info.technicalInfo.show">
+                {{info.technicalInfo.text}}
+            </div>
+            <div class="down" *ngIf="info.technicalInfo.show">
+                <h6>Download Documentation</h6>
+            </div>
         </div>
 
-        <div class="info">
-
-            <!-- Head Info -->
-            <div class="head">
-                <div class="titles">
-                    <p (click)="info.details.show = true;info.technicalInfo.show = false" [ngClass]="{'not-selected':!info.details.show}">DETAILS</p>
-                    <p (click)="info.technicalInfo.show = true;info.details.show = false" [ngClass]="{'not-selected':!info.technicalInfo.show}">TECHNICAL FILES</p>
-                </div>
-                <div class="info" *ngIf="info.details.show">
-                    {{info.details.text}}
-                </div>
-                <div class="info" *ngIf="info.technicalInfo.show">
-                    {{info.technicalInfo.text}}
-                </div>
-                <div class="down" *ngIf="info.technicalInfo.show">
-                    <h6>Download Documentation</h6>
-                </div>
-            </div>
-
-            <!-- End Head Info -->
-
-
-            <div class="cart">
-                <div class="selects">
-                    <!-- Size and Type -->
-                    <!-- <select name="" [(ngModel)]="selected.type" (change)="updatePrice()">
-                        <option value="{{type.id}}" *ngFor="let type of additionalTypes">
-                            {{type.name}}
-                        </option>
-                    </select>
-                    <select name="" [(ngModel)]="selected.size" (change)="updatePrice()">
-                        <option value="{{size.id}}" *ngFor="let size of additionalSizes">
-                            {{size.name}}
-                        </option>
-                    </select> -->
-                    <!-- End Size and Type -->
-
-                    <div class="quantity">
-                        <p>QUANTITY</p>
-                        <div class="calc">
-                            <i class="fas fa-minus" (click)="quantity>1?quantity = quantity -1:''"></i>
-                            <p>{{quantity}}</p>
-                            <i class="fas fa-plus" (click)="quantity = quantity +1"></i>
-                        </div>
-                        <p class="unit">Unit</p>
-                    </div>
-                </div>
-
-                <div class="price">
-                    <div class="cost">
-                       <!--  $ {{sumAdditionalPrice()}} -->
-                    </div>
-                    <div class="add-to">
-                        ADD TO CART
-                    </div>
-                </div>
-            </div>
-        </div>  
     </div>
     
     <div>

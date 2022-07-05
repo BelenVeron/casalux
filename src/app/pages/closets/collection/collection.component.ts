@@ -19,6 +19,17 @@ export class CollectionComponent implements OnInit {
   id: string = '';
   closets: Closet[] = [];
   itemsDescription:any = {name: '', description: ''};
+  // configuration of horizontal-gallery in the center
+  configCollectionClosets: any = {
+    items: [],
+    class: 'vertical',
+    imageClass: 'small',
+    typeFavorite: 'heart-icon-closet',
+    swiper: {
+      spaceBetween: 30,
+      pagination: { clickable: true }, 
+    }
+  };
   
 
   constructor(
@@ -30,6 +41,7 @@ export class CollectionComponent implements OnInit {
     this.id = route.snapshot.params.collectionId || ''
     this.closetsService.getClosets(this.id).subscribe((data:any)=>{
       this.closets = data;
+      this.configCollectionClosets.items = this.closets[0].contents;
       this.setDescription(0);
       /* if(!this.id || this.id == 'closets'){
         this.imagesSelected = this.closets[0].kitchens[0].photos

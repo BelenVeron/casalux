@@ -44,6 +44,13 @@ export class AccesoriesCartComponent implements OnInit {
   }
 
   closets = GALLERY_ACCESORIES
+  configGalleryAccesories: any = {
+    items: GALLERY_ACCESORIES,
+    class: 'vertical',
+    imageClass: 'small',
+    typeFavorite: 'heart-icon-closet',
+    swiper: ''
+  };
 
 
   constructor(private router: Router) { }

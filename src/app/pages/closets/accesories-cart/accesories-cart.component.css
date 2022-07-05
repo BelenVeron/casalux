@@ -5,7 +5,44 @@
     margin-top: 1rem;
     margin-left: 20px;
 }
-
+.container .container-starting 
 .accesories {
     display: flex;
+}
+.accesories {
+    display: flex;
+}
+.accesories .small-gallery{
+    width: 20%;
+}
+.accesories .big-gallery{
+    width: 40%;
+    margin-left: 25px;
+}
+.accesories .description{
+    width: 25%;
+   /*  height: 10vh; */
+    margin-left: 147px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    /* background: var(--grey); */
+    
+}
+.accesories .description .titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--grey);
+}
+.accesories .description .titles p{
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    padding: .2rem;
+    font-size: .8em;
+    background: var(--grey);
+    cursor: pointer;
 }
