@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ITEMS_NAV } from '../closets.data';
+import { Router } from '@angular/router';
+import { CLOSET_TYPES, GALLERY_ACCESORIES, ITEMS_NAV } from '../closets.data';
 
 @Component({
   selector: 'app-accesories',
@@ -8,7 +9,10 @@ import { ITEMS_NAV } from '../closets.data';
 })
 export class AccesoriesComponent implements OnInit {
   srcForm: string = '/assets/img/closets/dimensions-left-small.png'
+  srcSteps: string = '/assets/img/closets/accesories.png'
   activeSidenav: boolean = false;
+  galleryAccesories: any[] = GALLERY_ACCESORIES;
+  closetTypes: any[] = CLOSET_TYPES;
   configNav = {
     center: true,
     username: true,
@@ -20,7 +24,7 @@ export class AccesoriesComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +37,9 @@ export class AccesoriesComponent implements OnInit {
   }
   typeSelected(data: any){
     this.srcForm = data
+  }
+  selectClosetAndContinue() : void {
+    this.router.navigate(['closets/accesories-cart/1']);
   }
 
 }

@@ -1,4 +1,28 @@
-<div>
+<div class="container">
     <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
     <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    <div class="container-starting">
+        <div class="left">
+            <h1>MASTER BED ROOM CLOSETS</h1>
+            <h5>Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak</h5>
+            <h5>flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers.</h5>
+            <h5>Champagne color Rails.</h5>
+        </div>
+
+        <div class="right">
+            <div class="steps">
+                <img [src]="srcSteps" alt="">
+            </div>
+        </div>  
+    </div>
+    <div class="gallery">
+        <h2>Accesorios</h2>
+        <p>Select accesories for your closet</p>
+        <app-horizontal-gallery *ngIf="closetTypes.length" [assets]="true" class="item-3" [items]="galleryAccesories" type="horizontal-accesories" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
+    </div>
+    <div class="buttons">
+        <app-button [type]="'next-module'" (click)="selectClosetAndContinue()" ></app-button>
+        <app-button [type]="'finish'" (click)="selectClosetAndContinue()" ></app-button>
+    </div>
+  
 </div>

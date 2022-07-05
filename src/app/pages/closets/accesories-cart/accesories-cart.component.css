@@ -1,0 +1,11 @@
+.container-starting {
+    height: 18vh;
+    width: 100vw;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 20px;
+}
+
+.accesories {
+    display: flex;
+}

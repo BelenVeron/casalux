@@ -334,3 +334,37 @@
 }
 /* //////////////END USSERS/////////////////// */
 
+/* //////////////START NEXT MODULE/////////////////// */
+.next-module{
+    width: 100px;
+    height: 30px;
+    margin: .2rem;
+    margin-left: 1rem;
+    background-color: white; 
+    color: black;
+    border: solid 1px var(--green-op);
+    border-radius: 30px;
+}
+.next-module:hover{
+    color: white;
+    background-color: var(--green-op);
+}
+/* //////////////END NEXT MODULE/////////////////// */
+
+/* //////////////START FINISH/////////////////// */
+.finish{
+    width: 100px;
+    height: 30px;
+    margin: .2rem;
+    margin-left: 1rem;
+    background-color: white; 
+    color: black;
+    border: solid 1px var(--green-op);
+    border-radius: 30px;
+}
+.finish:hover{
+    color: white;
+    background-color: var(--green-op);
+}
+/* //////////////END FINISH/////////////////// */
+

@@ -67,6 +67,24 @@
     margin-left: 1rem;
     /* border-left: solid 1px green; */
 }
+/* ---------------HORIZONTAL-ACCESORIES----------------- */
+.horizontal-accesories {
+    width: 90vw;
+    height: 50vh;
+    margin: 1rem;
+}
+.horizontal-accesories .swiperSlide .image-container p{
+    margin-left: 7px;
+}
+.image-container p{
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-size: small;
+}
+.image-container{
+    border: solid 1px gray;
+    box-shadow: 3px 6px var(--grey);
+}
 
 
 

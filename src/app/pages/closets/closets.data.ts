@@ -151,3 +151,35 @@ export const BUTTONS_MASTER_CLOSET = [
     text: 'COLLECTION WARDROBE'
   },
 ]
+export const GALLERY_ACCESORIES = [
+  {
+    name: '1',
+    src: '/assets/img/closets/master-closet1.png',
+    text: 'COLLECTION W01'
+  },
+  {
+    name: '2',
+    src: '/assets/img/closets/master-closet2.png',
+    text: 'COLLECTION W01A'
+  },
+  {
+    name: '3',
+    src: '/assets/img/closets/master-closet3.png',
+    text: 'COLLECTION W02'
+  },
+  {
+    name: '1',
+    src: '/assets/img/closets/master-closet4.png',
+    text: 'COLLECTION W01'
+  },
+  {
+    name: '2',
+    src: '/assets/img/closets/master-closet2.png',
+    text: 'COLLECTION W01A'
+  },
+  {
+    name: '3',
+    src: '/assets/img/closets/master-closet3.png',
+    text: 'COLLECTION W02'
+  }
+]

@@ -10,6 +10,7 @@ export class VerticalGalleryComponent implements OnInit {
   @Input() type: string = '';
   @Input() items: any = [];
   @Input() itemSelected: any = {};
+  @Input() assets: boolean = false;
   @Output() sendSelectedItem = new EventEmitter<any>();
   url = environment.api
   

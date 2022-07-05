@@ -26,3 +26,12 @@
         </div>
     </ng-template>
 </swiper>
+
+<swiper *ngIf="type === 'horizontal-accesories'" class="horizontal-accesories" [config]="configAccesories">
+    <ng-template swiperSlide *ngFor="let img of items">
+        <div class="image-container">
+            <img [src]="img.src">
+            <p>Lorem ipsum dolor.</p> 
+        </div>
+    </ng-template>
+</swiper>

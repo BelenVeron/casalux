@@ -13,6 +13,16 @@ export const CONFIG_HORIZONTAL = {
     allowTouchMove: false,
     loop:true,
 };
+export const CONFIG_ACCESSORIES = {
+    loopedSlides: 1,
+    slidesPerView: 6,
+    initialSlide: 0,
+    spaceBetween: 10,
+    navigation: true,
+    centeredSlides:true,
+    allowTouchMove: false,
+    loop:true,
+};
 export const CONFIG_HORIZONTAL_MINI = {
     loopedSlides: 1,
     slidesPerView: 3,

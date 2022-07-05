@@ -8,6 +8,7 @@ import { MasterClosetComponent } from './master-closet/master-closet.component';
 import { DimensionsComponent } from './dimensions/dimensions.component';
 import { ModuleComponent } from './module/module.component';
 import { AccesoriesComponent } from './accesories/accesories.component';
+import { AccesoriesCartComponent } from './accesories-cart/accesories-cart.component';
 
 const routes: Routes = [
   {path:'', component:IndexClosetsComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'dimensions/:id', component:DimensionsComponent},
   {path:'module/:id', component:ModuleComponent},
   {path:'accesories/:id', component:AccesoriesComponent},
+  {path:'accesories-cart/:id', component:AccesoriesCartComponent},
   /* {path:'preview', children:[
     {path:'estimate', component:PreviewEstimateComponent},
   ]},*/
