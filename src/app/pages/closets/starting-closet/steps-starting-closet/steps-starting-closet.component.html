@@ -105,7 +105,7 @@
                 <input type="text" id="fname" name="fname"><br><br>
                 <label for="lname">User 2:</label>
                 <input type="text" id="lname" name="lname"><br><br>
-                <button type="button">NEW USER</button><br><br>
+                <app-button [type]="'new-user'"></app-button>
                 <app-button [type]="'next-step'" (click)="selectStepAndContinue(2)" ></app-button>
             </div>
         </div>
@@ -116,12 +116,12 @@
         <p class="description">Select model for Corners that you want</p>
         <div class="gallery" *ngIf="steps[3]">
             <div>
-                <app-horizontal-gallery *ngIf="closetTypes.length" [assets]="true" class="item-3" [items]="closetCorners" type="horizontal-mini" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
+                <app-horizontal-gallery [config]="configFirstCorners" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
                 <p>Wall A - Wall B Corner</p>
             </div>
             <hr>
             <div>
-                <app-horizontal-gallery *ngIf="closetTypes.length" [assets]="true" class="item-3" [items]="closetCorners" type="horizontal-mini" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
+                <app-horizontal-gallery [config]="configFirstCorners" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
                 <p>Wall C - Wall A Corner</p>
                 <app-button [type]="'next-step'" (click)="selectStepAndContinue(3)"></app-button>
             </div>

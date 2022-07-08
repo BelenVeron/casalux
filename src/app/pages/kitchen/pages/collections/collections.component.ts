@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef, Input  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
 import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, Pagination }
@@ -61,7 +62,7 @@ export class CollectionsComponent implements OnInit {
   imagesSelected:any = [];
   innerWidth: number = 0;
   // configuration of horizontal-gallery in the center
-  configCollection: any = {
+  configCollection: ConfigSwiperHorizontal = {
     items: [],
     class: 'vertical',
     imageClass: 'small',
@@ -151,7 +152,7 @@ export class CollectionsComponent implements OnInit {
     this.changePageMobile();
   }
 
-  getConfig(photos: any): any {
+  getConfig(photos: any): ConfigSwiperHorizontal {
     this.configCollection.items = photos;
     return this.configCollection
   }

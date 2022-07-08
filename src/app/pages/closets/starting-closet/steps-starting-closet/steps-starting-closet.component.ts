@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CLOSETS, SHAPES, CLOSET_TYPES, CLOSET_CORNERS} from '../../closets.data';
 import { Router } from '@angular/router';
+import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 @Component({
   selector: 'app-steps-starting-closet',
   templateUrl: './steps-starting-closet.component.html',
@@ -19,6 +20,20 @@ export class StepsStartingClosetComponent implements OnInit {
   steps: boolean[] = [true, false, false, false, false];
   buttonsDisabled: boolean[] = [true, false, false, false, true];
   shapeSelected: string = '';
+  configFirstCorners: ConfigSwiperHorizontal = {
+    class: 'horizontal-mini',
+    swiper: {
+      loopedSlides: 1,
+      slidesPerView: 3,
+      initialSlide: 0,
+      spaceBetween: 10,
+      navigation: false,
+      centeredSlides:true,
+      allowTouchMove: false,
+      loop:true,
+    },
+    items: CLOSET_CORNERS
+  }
 
   constructor(
     public router: Router
@@ -55,7 +70,7 @@ export class StepsStartingClosetComponent implements OnInit {
       this.steps[step + 1] = true;
       // select a default image in the third step
       if (step === 2) {
-        this.typeSelected(this.closetCorners[0].image)
+        this.typeSelected(this.closetCorners[0].src)
       }
     } else {
       this.router.navigate(['closets/master-closet/1']);

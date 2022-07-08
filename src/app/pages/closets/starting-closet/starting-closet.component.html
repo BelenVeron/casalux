@@ -1,20 +1,24 @@
 <div class="starting-closet">
-    
     <app-modal type="closets" *ngIf="projectModal"></app-modal>
     <app-modal type="closets-video" (sendClose)="openProjectModal()"></app-modal>
     <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
     <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
     
-    <!-- left column whith text image and button -->
+    <!-- left column whith text and image  -->
     <div class="container-starting">
-        <div class="left">
+       <!--  <div class="left">
             <img class="starting" [src]="src" alt="">
             <p>If you need help with your room, you must<br>upload an image or sketch file to visualize it</p>
             <div class="image">
                 <img [src]="srcForm" alt="">
                 <p class="title">{{title}}</p>
             </div>
+        </div> -->
+        <!-- left column whith checklist in USERS  -->
+        <div class="left">
+           <app-checklist [form]="form"></app-checklist>
         </div>
+
 
         <div class="right">
             <div class="steps">

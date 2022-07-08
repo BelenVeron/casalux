@@ -1,34 +1,11 @@
-<swiper *ngIf="config" [ngClass]="config.class" [config]="config.swiper || ''">
+<swiper *ngIf="config" [ngClass]="config.class!" [config]="config.swiper! || ''">
     <ng-template swiperSlide *ngFor="let item of config.items">
         <div class="image-container">
             <!-- Difference between image in the database or in assets -->
-            <img [ngClass]="config.imageClass" [src]="(item.src)? item.src : url+item.image" alt="" (click)="sendImage(url+item.image)">
-            <app-favorite [type]="config.typeFavorite" class="heart"></app-favorite>
+            <img [ngClass]="config.imageClass!" [src]="(item.src)? item.src : url+item.image" alt="" (click)="sendImage(item.src || url+item.image)">
+            <app-favorite [type]="config.typeFavorite!" class="heart"></app-favorite>
         </div>
         <h3>{{config.text}}</h3>
         <p>{{config.description}}</p>
     </ng-template>
 </swiper>
-
-
-
-
-<swiper *ngIf="type === 'horizontal'" class="horizontal" [config]="configHorizontal">
-    <ng-template swiperSlide *ngFor="let img of items">
-        <div class="image-container">
-            <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image">
-            <img *ngIf="img" [src]="url+img.image" alt="" (click)="sendImage(url+img.image)">
-        </div>
-    </ng-template>
-</swiper>
-
-<swiper *ngIf="type === 'horizontal-mini'" class="horizontal-mini" [config]="configHorizontalMini">
-    <ng-template swiperSlide *ngFor="let img of items">
-        <div class="image-container">
-            <img *ngIf="img.photos?.length>0" [src]="url+img.photos[0].image">
-            <img *ngIf="img" [src]="url+img.image" alt="" (click)="sendImage(url+img.image)">
-            <img *ngIf="assets" [src]="img.image" alt="" (click)="sendImage(img.image)">
-        </div>
-    </ng-template>
-</swiper>
-

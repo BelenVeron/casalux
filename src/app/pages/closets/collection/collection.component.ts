@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Closet } from 'src/app/models/closets/closet';
 import { Collection } from 'src/app/models/collections/collection';
+import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 import { ClosetsService } from 'src/app/services/closets.service';
 import { ITEMS_NAV } from '../closets.data';
 
@@ -20,7 +21,7 @@ export class CollectionComponent implements OnInit {
   closets: Closet[] = [];
   itemsDescription:any = {name: '', description: ''};
   // configuration of horizontal-gallery in the center
-  configCollectionClosets: any = {
+  configCollectionClosets: ConfigSwiperHorizontal = {
     items: [],
     class: 'vertical',
     imageClass: 'small',
@@ -28,6 +29,20 @@ export class CollectionComponent implements OnInit {
     swiper: {
       spaceBetween: 30,
       pagination: { clickable: true }, 
+    }
+  };
+  configCollectionClosetsUp: ConfigSwiperHorizontal = {
+    items: [],
+    class: 'horizontal',
+    swiper: {
+      loopedSlides: 1,
+      slidesPerView: 3,
+      initialSlide: 0,
+      spaceBetween: 10,
+      navigation: true,
+      centeredSlides:true,
+      allowTouchMove: false,
+      loop:true, 
     }
   };
   
@@ -41,7 +56,9 @@ export class CollectionComponent implements OnInit {
     this.id = route.snapshot.params.collectionId || ''
     this.closetsService.getClosets(this.id).subscribe((data:any)=>{
       this.closets = data;
+      console.log(data)
       this.configCollectionClosets.items = this.closets[0].contents;
+      this.configCollectionClosetsUp.items = this.getPhotos();
       this.setDescription(0);
       /* if(!this.id || this.id == 'closets'){
         this.imagesSelected = this.closets[0].kitchens[0].photos
@@ -51,6 +68,17 @@ export class CollectionComponent implements OnInit {
   } 
 
   ngOnInit(): void {
+  }
+
+  /* 
+    For now, set only the first photo of the first model
+  */
+  getPhotos(): any[] {
+    let photos: any[] = [];
+    this.closets[0].models.forEach(model => {
+      photos.push(model.photos[0])
+    });
+    return photos;
   }
 
   setDescription(index: number): void {

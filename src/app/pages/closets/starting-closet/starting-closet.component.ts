@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ITEMS_NAV } from '../closets.data';
+import { FORM_CHECKLIST, ITEMS_NAV } from '../closets.data';
 
 
 @Component({
@@ -18,6 +18,7 @@ export class StartingClosetComponent implements OnInit {
   navLeft: boolean = true;
   projectModal: boolean = false;
   itemsNav = ITEMS_NAV;
+  form = FORM_CHECKLIST;
   title: string ="3 Walls: U shaped with island"
   closets: any[] = [];
   id: string = '';

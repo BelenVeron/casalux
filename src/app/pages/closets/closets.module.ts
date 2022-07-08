@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { SharedModule } from '../../shared.module'
 
@@ -17,6 +18,7 @@ import { DimensionsComponent } from './dimensions/dimensions.component';
 import { ModuleComponent } from './module/module.component';
 import { AccesoriesComponent } from './accesories/accesories.component';
 import { AccesoriesCartComponent } from './accesories-cart/accesories-cart.component';
+import { ChecklistComponent } from './starting-closet/checklist/checklist.component';
 
 
 @NgModule({
@@ -33,12 +35,13 @@ import { AccesoriesCartComponent } from './accesories-cart/accesories-cart.compo
     DimensionsComponent,
     ModuleComponent,
     AccesoriesComponent,
-    AccesoriesCartComponent
+    AccesoriesCartComponent,
+    ChecklistComponent
   ],
   imports: [
     CommonModule,
     ClosetsRoutingModule,
-    SharedModule
+    SharedModule,FormsModule, ReactiveFormsModule
   ]
 })
 export class ClosetsModule { }

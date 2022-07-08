@@ -1,0 +1,18 @@
+
+.container-checklist {
+    -webkit-columns: 2; /* Chrome, Safari, Opera */
+    -moz-columns: 2; /* Firefox */
+    columns: 2;
+}
+
+.checklists .item{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+}
+
+.container-checklist input {
+    width: 50px;
+    height: 25px;
+}
+

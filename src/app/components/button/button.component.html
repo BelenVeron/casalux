@@ -11,6 +11,7 @@
 <button *ngIf="type === 'next'" [class]="type">{{"Generate Floor Plan"}}</button>
 
 <button *ngIf="type === 'next-step'" [class]="type" [disabled]="disabled">{{"NEXT"}}</button>
+<button *ngIf="type === 'new-user'" [class]="type">{{"NEW USER"}}</button>
 <!-- next module and finish -->
 <button *ngIf="type === 'next-module'" [class]="type" >{{"NEXT MODULE"}}</button>
 <button *ngIf="type === 'finish'" [class]="type" >{{"FINISH"}}</button>

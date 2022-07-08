@@ -1,0 +1,16 @@
+<form [formGroup]="checklistForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="header">
+        <h3 class="title">{{form.title}} {{form.user}}</h3>
+        <h4>{{form.description}}</h4>
+    </div>
+    
+    <div class="container-checklist">
+        <div class="checklists">
+            <div class="item" *ngFor="let item of form.items">
+                <label for="Belts">{{item.label}}</label>
+                <input type="text" [formControlName]="item.name!">
+            </div>
+        </div>
+    </div>
+</form>
+

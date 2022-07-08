@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 import { CLOSET_TYPES, GALLERY_ACCESORIES, ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -20,7 +21,7 @@ export class AccesoriesComponent implements OnInit {
   }
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
-  configAccesoriesGallery = {
+  configAccesoriesGallery: ConfigSwiperHorizontal = {
     class: 'horizontal-accesories',
     swiper: {
       loopedSlides: 1,

@@ -367,4 +367,20 @@
     background-color: var(--green-op);
 }
 /* //////////////END FINISH/////////////////// */
+/* //////////////START NEW USER/////////////////// */
+.new-user{
+    width: 100px;
+    height: 30px;
+    margin: .2rem;
+    margin-left: 1rem;
+    background-color: white; 
+    color: var(--green);
+    border: solid 1px var(--green-op);
+    border-radius: 10px;
+}
+.new-user:hover{
+    color: white;
+    background-color: var(--green-op);
+}
+/* //////////////END NEW USER/////////////////// */
 

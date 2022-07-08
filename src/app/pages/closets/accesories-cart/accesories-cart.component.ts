@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 import { SwiperOptions } from 'swiper';
 import { GALLERY_ACCESORIES, ITEMS_NAV } from '../closets.data';
 
@@ -44,12 +45,11 @@ export class AccesoriesCartComponent implements OnInit {
   }
 
   closets = GALLERY_ACCESORIES
-  configGalleryAccesories: any = {
+  configGalleryAccesories: ConfigSwiperHorizontal = {
     items: GALLERY_ACCESORIES,
     class: 'vertical',
     imageClass: 'small',
-    typeFavorite: 'heart-icon-closet',
-    swiper: ''
+    typeFavorite: 'heart-icon-closet'
   };
 
 

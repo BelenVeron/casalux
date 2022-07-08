@@ -1,3 +1,4 @@
+/* ---------------VERTICAL----------------- */
 .vertical {
     width: 50vw;
 }
@@ -27,9 +28,52 @@
     color: var(--k-green-op);
     margin-top: .5rem;
 }
+/* ---------------END-VERTICAL----------------- */
+
+/* ---------------HORIZONTAL----------------- */
+.horizontal {
+    width: 50vw;
+    height: 20vh;
+    height: auto;
+    margin-top: 1rem;
+}
+/* ---------------END-HORIZONTAL----------------- */
+
+/* ---------------HORIZONTAL-MINI----------------- */
+.horizontal-mini {
+    width: 25vw;
+    height: 11vh;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    /* border-left: solid 1px green; */
+}
+/* ---------------END-HORIZONTAL-MINI----------------- */
+
+
+/* ---------------HORIZONTAL-ACCESORIES----------------- */
+.horizontal-accesories {
+    width: 90vw;
+    height: 50vh;
+    margin: 1rem;
+}
+.horizontal-accesories .swiperSlide .image-container p{
+    margin-left: 7px;
+}
+.image-container p{
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-size: small;
+}
+.image-container{
+    border: solid 1px gray;
+    box-shadow: 3px 6px var(--grey);
+}
+/* ---------------END-HORIZONTAL-ACCESORIES----------------- */
 
 
 @media (max-width:600px) {
+    /* ---------------VERTICAL----------------- */
     .vertical {
         height: 200px;
         width: 100vw;
@@ -49,43 +93,7 @@
         height: 192px;
         object-fit: cover;
     }
+    /* ---------------END-VERTICAL----------------- */
 }
-
-.horizontal {
-    width: 50vw;
-    height: 20vh;
-    height: auto;
-    margin-top: 1rem;
-}
-
-/* ---------------HORIZONTAL-MINI----------------- */
-.horizontal-mini {
-    width: 25vw;
-    height: 11vh;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    /* border-left: solid 1px green; */
-}
-/* ---------------HORIZONTAL-ACCESORIES----------------- */
-.horizontal-accesories {
-    width: 90vw;
-    height: 50vh;
-    margin: 1rem;
-}
-.horizontal-accesories .swiperSlide .image-container p{
-    margin-left: 7px;
-}
-.image-container p{
-    margin-left: 5px;
-    margin-bottom: 15px;
-    font-size: small;
-}
-.image-container{
-    border: solid 1px gray;
-    box-shadow: 3px 6px var(--grey);
-}
-
-
 
 

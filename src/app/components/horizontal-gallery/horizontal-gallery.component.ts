@@ -1,8 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 import { environment } from 'src/environments/environment';
-import { CONFIG_ACCESSORIES, CONFIG_HORIZONTAL, CONFIG_HORIZONTAL_MINI, CONFIG_VERTICAL } from './horizontal-gallery-data';
 import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, Pagination, Navigation } from 'swiper';
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination, Navigation]);
+
+
+
+
 
 @Component({
   selector: 'app-horizontal-gallery',
@@ -12,15 +16,34 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination, Navigation]);
 export class HorizontalGalleryComponent implements OnInit {
 
   url = environment.api;
-  @Input() items: any = [];
-  @Input() config: any = [];
-  @Input() type: string = '';
-  @Input() imageClass: string = '';
-  @Input() assets: boolean = false;
-  @Input() typeFavorite: string = "";
-  configHorizontal: SwiperOptions = CONFIG_HORIZONTAL;
-  configAccesories: SwiperOptions = CONFIG_ACCESSORIES;
-  configHorizontalMini: SwiperOptions = CONFIG_HORIZONTAL_MINI;
+  /* 
+    config = {
+
+      // class of the swiper
+      class: string;
+
+      // config of the swiper
+      swiper: SwiperOptions
+
+      // class of the image
+      imageClass: string
+
+      // items to repeat in the ngFor in the image
+      // can be .src (in the assets) or .image (external with url)
+      items: []
+
+      // type of favorite in app-favorite
+      typeFavorite: string
+
+      // title in h3
+      text: string
+      
+      // description in p
+      description: string
+    }
+  */
+  @Input() config!: ConfigSwiperHorizontal;
+  // event that send the url of the image selected
   @Output() sendImageUrl: EventEmitter<string> = new EventEmitter();
   
 
@@ -30,7 +53,6 @@ export class HorizontalGalleryComponent implements OnInit {
   }
 
   sendImage(url: string): void{
-    console.log(url)
     this.sendImageUrl.emit(url);
   }
 

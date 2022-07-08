@@ -5,9 +5,9 @@ export const CLOSET_TYPES = [
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'}
 ];
 export const CLOSET_CORNERS = [
-  {image: '/assets/img/closets/esquina1.png'},
-  {image: '/assets/img/closets/esquina2.png'},
-  {image: '/assets/img/closets/esquina3.png'},
+  {src: '/assets/img/closets/esquina1.png'},
+  {src: '/assets/img/closets/esquina2.png'},
+  {src: '/assets/img/closets/esquina3.png'},
   
 ];
 
@@ -183,3 +183,30 @@ export const GALLERY_ACCESORIES = [
     text: 'COLLECTION W02'
   }
 ]
+
+export const FORM_CHECKLIST = {
+  user: '',
+  title: 'Checklist for',
+  description: 'Write the amount of items you need',
+  items: [
+    {label: 'Belts', name: 'belts'},
+    {label: 'Dress Shirts', name: 'dressShirts'},
+    {label: 'Dresses-long', name: 'dressesLong'},
+    {label: 'Dresses-short', name: 'dressesShort'},
+    {label: 'Jackets', name: 'jackets'},
+    {label: 'Jeans', name: 'jeans'},
+    {label: 'Lingerie', name: 'lingerie'},
+    {label: 'Miscellaneous', name: 'miscellaneous'},
+    {label: 'Pants-dress', name: 'pantsDress'},
+    {label: 'Pants-jeans', name: 'pantsJeans'},
+    {label: 'Purses', name: 'purses'},
+    {label: 'Shoes-Dress', name: 'shoesDress'},
+    {label: 'Shoes-sport', name: 'shoesSport'},
+    {label: 'Shorts', name: 'shorts'},
+    {label: 'Suits', name: 'suits'},
+    {label: 'Sweaters', name: 'sweaters'},
+    {label: 'Ties', name: 'ties'},
+    {label: 'T-shirts', name: 'TShirts'},
+    {label: 'Underwear', name: 'underwear'},
+  ]
+}
