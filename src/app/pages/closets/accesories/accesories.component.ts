@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConfigButton } from 'src/app/models/config-button';
 import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 import { CLOSET_TYPES, GALLERY_ACCESORIES, ITEMS_NAV } from '../closets.data';
 
@@ -36,6 +37,8 @@ export class AccesoriesComponent implements OnInit {
     items: GALLERY_ACCESORIES,
     description: 'Lorem ipsum dolor.'
   }
+  configNext: ConfigButton = {type:'next-module', text:'NEXT MODULE'};
+  configFinish: ConfigButton = {type:'finish', text:'FINISH'};
 
 
 

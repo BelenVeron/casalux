@@ -85,7 +85,7 @@
             </div>
 
             <div *ngIf="mobilePage === 'gallery'" class="animate__animated animate__fadeInDown">
-                <app-button [type]="'mobile-up'" (click)="goBack()"></app-button>
+                <app-button [config]="configUpButton" (click)="goBack()"></app-button>
                 <app-mobile-title [itemList]="itemListTitle"></app-mobile-title>
                 <app-horizontal-gallery *ngFor="let kitchen of collectionSelected.kitchens" [config]="getConfig(kitchen.photos)"></app-horizontal-gallery>
                 <app-vertical-gallery type="two-columns" [items]="collectionSelected.contents"></app-vertical-gallery>

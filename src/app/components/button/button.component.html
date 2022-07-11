@@ -1,40 +1,5 @@
-<button *ngIf="type === 'border'" [class]="type">{{text}}</button>
-
-<button *ngIf="type === 'login'" [class]="type">{{text}} <span>{{link}}</span></button>
-
-<button *ngIf="type === 'download'" class="download">
-    <i class="fas fa-{{icon}}"></i>{{text}}
-</button>
-
-<button *ngIf="type === 'start'" [class]="type">{{text}}</button>
-
-<button *ngIf="type === 'next'" [class]="type">{{"Generate Floor Plan"}}</button>
-
-<button *ngIf="type === 'next-step'" [class]="type" [disabled]="disabled">{{"NEXT"}}</button>
-<button *ngIf="type === 'new-user'" [class]="type">{{"NEW USER"}}</button>
-<!-- next module and finish -->
-<button *ngIf="type === 'next-module'" [class]="type" >{{"NEXT MODULE"}}</button>
-<button *ngIf="type === 'finish'" [class]="type" >{{"FINISH"}}</button>
-<!-- next module and finish -->
-
-<div *ngIf="type === 'mobile-up'" [class]="type">
-    <i class="fas fa-angle-up"></i>
-</div>
-
-<button *ngIf="type === 'new-project'" class="new-project">{{text}}</button>
-
-<button *ngIf="type === 'users'" class="users">{{text}}</button>
-
-<button *ngIf="type === 'continue'" class="continue">{{text}}</button>
-
-<button *ngIf="type === 'existing-project'" class="existing-project">{{text}}</button>
-
-<button *ngIf="type === 'start-video'" class="start-video">{{text}}</button>
-
-<button *ngIf="type === 'collection'" class="collection">{{text}}</button>
-
-<!-- <button [class]="config.type" [disabled]="config.disabled">
-    <i class="fas fa-{{config.icon}}"></i>
+<button [class]="config.type" [disabled]="config.disabled">
+    <i [class]="config.icon"></i>
     {{config.text}}
     <span>{{config.link}}</span>
-</button> -->
+</button>

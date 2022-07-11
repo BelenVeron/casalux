@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef, Input  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ConfigButton } from 'src/app/models/config-button';
 import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
@@ -71,6 +72,7 @@ export class CollectionsComponent implements OnInit {
       pagination: { clickable: true }, 
     }
   };
+  configUpButton: ConfigButton = {type:'mobile-up', icon:'fas fa-angle-up'}
 
   constructor(
     private collection:KitchenProductsService, 

@@ -7,7 +7,7 @@
     <hr>
 
     <div class="buttons">
-        <app-button type="start" text="DESIGN YOUR CLOSET" (click)="clickDesign()"></app-button>
-        <app-button type="download" color="brown" text="Download Catalog" icon="download"></app-button>
+        <app-button [config]="configStart" (click)="clickDesign()"></app-button>
+        <app-button [config]="configDownload" color="brown"></app-button>
     </div>
 </article>

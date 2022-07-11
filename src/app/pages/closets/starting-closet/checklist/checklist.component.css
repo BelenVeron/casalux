@@ -1,14 +1,36 @@
 
+.form-container {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px black solid;
+}
+
+.form-container .header{
+    background-color: var(--green-op);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
 .container-checklist {
     -webkit-columns: 2; /* Chrome, Safari, Opera */
     -moz-columns: 2; /* Firefox */
     columns: 2;
+    margin-top: 20px;
 }
 
-.checklists .item{
+.container-checklist .item{ 
     display: flex;
     justify-content: space-between;
-    padding: 5px 25px;
+    padding: 5px 20px;
+}
+
+.container-checklist label {
+    font-size: 15px;
+    margin-right: 5px;
 }
 
 .container-checklist input {

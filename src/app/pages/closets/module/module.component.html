@@ -21,8 +21,8 @@
         <h2>Select type of module</h2>
         <div class="users">
             <h3>User</h3>
-            <app-button type="users" text="USER 1"></app-button>
-            <app-button type="users" text="USER 2"></app-button>
+            <app-button [config]="configUser1Button"></app-button>
+            <app-button [config]="configUser2Button"></app-button>
         </div>
         <div class="check">
             <input type="checkbox" name="" value="standard">
@@ -60,7 +60,7 @@
             <img [src]="srcImage" alt="">
         </div>
         <div class="footer">
-            <app-button [type]="'next-step'" (click)="selectClosetAndContinue()" ></app-button>
+            <app-button [config]="configNextButton" (click)="selectClosetAndContinue()" ></app-button>
         </div>
 
         <h4>See all your selected modules ></h4>

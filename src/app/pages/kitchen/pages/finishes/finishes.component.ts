@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigButton } from 'src/app/models/config-button';
 import { FinishCollection } from 'src/app/models/finishes/finish-collection';
 import { FinishData } from 'src/app/models/finishes/finish-data';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
@@ -48,6 +49,7 @@ export class FinishesComponent implements OnInit {
   /* All the api*/
  dataFinish!: FinishData;
  finishCollection: FinishCollection | null = null;
+ configUpButton: ConfigButton = {type:'mobile-up', icon:'fas fa-angle-up'}
 
   url = environment.api
   info = {

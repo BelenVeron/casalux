@@ -39,6 +39,10 @@ export class StartingClosetComponent implements OnInit {
     console.log(this.closetTypes)
   }
 
+  setUser(user: string): void {
+    this.form.user = user;
+  }
+
   openMenu(): void {
     this.activeSidenav = true;
   }

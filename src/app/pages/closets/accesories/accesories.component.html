@@ -21,8 +21,8 @@
         <app-horizontal-gallery class="item-3" [config]="configAccesoriesGallery"></app-horizontal-gallery>
     </div>
     <div class="buttons">
-        <app-button [type]="'next-module'" (click)="selectClosetAndContinue()" ></app-button>
-        <app-button [type]="'finish'" (click)="selectClosetAndContinue()" ></app-button>
+        <app-button [config]="configNext" (click)="selectClosetAndContinue()" ></app-button>
+        <app-button [config]="configFinish" (click)="selectClosetAndContinue()" ></app-button>
     </div>
   
 </div>

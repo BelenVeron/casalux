@@ -4,7 +4,7 @@
         <p class="description">Selected form: Gallery</p>
         <div *ngIf="steps[0]" class="options">
             <app-shape [shapes]="shapes" (sendShape)="activeButton($event, 0)"></app-shape>
-            <app-button [type]="'next-step'" (click)="selectStepAndContinue(0)"  [disabled]="buttonsDisabled[0]"></app-button>
+            <app-button [config]="configNextButton[0]" (click)="selectStepAndContinue(0)" ></app-button>
         </div>
     </div>
 
@@ -19,80 +19,75 @@
         <h2 [ngClass]="{'active-H2': steps[1], 'inactive-H2': !steps[1]}" class="title" (click)="showStep(1)">Measures</h2>
         <p class="description">Enter measuresments and select the modules</p>
         <div *ngIf="steps[1]">
-            <div class="size">
-                <p>Width</p>
-                <p>Height</p>
-            </div>
-            <div class="select">
-                <div>
-                    <p>WALL A</p>
-                    <p>WALL B</p>
-                    <p>WALL C</p>
-                    <p>ISLAND</p>
-                </div>
-    
-                <table>
-                    <tr>
-                        <td>150"</td>
-                        <td>98"</td>
-                        <td class="opt">
-                            <select name="" id="">
-                                <option value="australia">Walk in Closet</option>
-                                <option value="canada">Wardrobe Closet</option>
-                                <option value="usa">Walk in + Wardrobe</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>92"</td>
-                        <td>98"</td>
-                        <td class="opt"> 
-                            <select name="" id="">
-                                <option value="australia">Walk in Closet</option>
-                                <option value="canada">Wardrobe Closet</option>
-                                <option value="usa">Walk in + Wardrobe</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>92"</td>
-                        <td>98"</td>
-                        <td class="opt"> 
-                            <select name="" id="">
-                                <option value="australia">Walk in Closet</option>
-                                <option value="canada">Wardrobe Closet</option>
-                                <option value="usa">Walk in + Wardrobe</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                    <!--  <td>34-1/4"</td>
-                        <td>33"</td> -->
-                        <td class="opt-hor"> 
-                            <select name="" id="">
-                                <option value="australia">34-1/4"</option>
-                                <option value="canada">46"</option>
-                                <option value="usa">67-3/8"</option>
-                                <option value="usa">79-1/4"</option>
-                            </select>
-                        </td>
-                        <td class="opt-hor"> 
-                            <select name="" id="">
-                                <option value="australia">33"</option>
-                                <option value="canada"></option>
-                            </select>
-                        </td>
-                        <td class="opt"> 
-                            <select name="" id="">
-                                <option value="australia">2 sides</option>
-                                <option value="canada"></option>
-                                <option value="usa"></option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <app-button [type]="'next-step'" (click)="selectStepAndContinue(1)" ></app-button>
+            <table class="select-table">
+                <tr>
+                    <td></td>
+                    <td>Width</td>
+                    <td>Height</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="text-i">WALL A</td>
+                    <td class="b-l b-t b-r b-b td-size">150"</td>
+                    <td class="b-t b-r b-b td-size">98"</td>
+                    <td class="opt b-t b-r b-b">
+                        <select name="" id="">
+                            <option value="australia">Walk in Closet</option>
+                            <option value="canada">Wardrobe Closet</option>
+                            <option value="usa">Walk in + Wardrobe</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-i">WALL B</td>
+                    <td class="b-l b-r b-b">92"</td>
+                    <td class="b-r b-b">98"</td>
+                    <td class="opt b-r b-b"> 
+                        <select name="" id="">
+                            <option value="australia">Walk in Closet</option>
+                            <option value="canada">Wardrobe Closet</option>
+                            <option value="usa">Walk in + Wardrobe</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-i">WALL C</td>
+                    <td class="b-l b-r b-b">92"</td>
+                    <td class="b-r b-b">98"</td>
+                    <td class="opt b-r b-b"> 
+                        <select name="" id="">
+                            <option value="australia">Walk in Closet</option>
+                            <option value="canada">Wardrobe Closet</option>
+                            <option value="usa">Walk in + Wardrobe</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-i">ISLAND</td>
+                    <td class="opt-hor b-l b-r b-b"> 
+                        <select name="" id="">
+                            <option value="australia">34-1/4"</option>
+                            <option value="canada">46"</option>
+                            <option value="usa">67-3/8"</option>
+                            <option value="usa">79-1/4"</option>
+                        </select>
+                    </td>
+                    <td class="opt-hor b-r b-b"> 
+                        <select name="" id="">
+                            <option value="australia">33"</option>
+                            <option value="canada"></option>
+                        </select>
+                    </td>
+                    <td class="opt b-r b-b"> 
+                        <select name="" id="">
+                            <option value="australia">2 sides</option>
+                            <option value="canada"></option>
+                            <option value="usa"></option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <app-button [config]="configNextButton[1]" (click)="selectStepAndContinue(1)" ></app-button>
         </div>
     </div>
 
@@ -102,11 +97,11 @@
             <p class="description">Select Closet Type</p>
             <div class="" *ngIf="steps[2]">
                 <label for="fname">User 1:</label>
-                <input type="text" id="fname" name="fname"><br><br>
+                <input type="text" [(ngModel)]="users[0]" (keyup)="sendUser(users[0])"><br><br>
                 <label for="lname">User 2:</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <app-button [type]="'new-user'"></app-button>
-                <app-button [type]="'next-step'" (click)="selectStepAndContinue(2)" ></app-button>
+                <input type="text" [(ngModel)]="users[1]" (keyup)="sendUser(users[1])"><br><br>
+                <app-button [config]="configNewUserButton"></app-button>
+                <app-button [config]="configNextButton[2]" (click)="selectStepAndContinue(2)" ></app-button>
             </div>
         </div>
     </div>   
@@ -123,7 +118,7 @@
             <div>
                 <app-horizontal-gallery [config]="configFirstCorners" (sendImageUrl)="typeSelected($event)"></app-horizontal-gallery>
                 <p>Wall C - Wall A Corner</p>
-                <app-button [type]="'next-step'" (click)="selectStepAndContinue(3)"></app-button>
+                <app-button [config]="configNextButton[3]" (click)="selectStepAndContinue(3)"></app-button>
             </div>
         </div>
         

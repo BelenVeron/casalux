@@ -148,13 +148,13 @@
                        <p class="name">{{palette.name}}</p> 
                     </div>
                 </div>
-                <app-button [type]="'mobile-up'" (click)="goBack()"></app-button>
+                <app-button [config]="configUpButton" (click)="goBack()"></app-button>
             </div>
             <!-- Gallery page -->
             <div *ngIf="mobilePage === 'gallery'" class="animate__animated animate__fadeInDown">
                 <!-- Buttons and options, by palletes by category -->
                 <app-vertical-gallery *ngIf="finishCollection" type="scroll" [items]="finishCollection.collections"></app-vertical-gallery>
-                <app-button [type]="'mobile-up'" (click)="goBack()"></app-button>
+                <app-button [config]="configUpButton" (click)="goBack()"></app-button>
             </div>
         </article>
 

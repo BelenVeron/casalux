@@ -8,12 +8,12 @@
                 </div>
                 <div class="modal_body">
                     <p>The section that you are about to enter has the ability to be saved if you select the heart.</p>
-                    <app-button type="more" text="See More..." (click)="close()"></app-button>
+                    <app-button [config]="configMoreButton" (click)="close()"></app-button>
                 </div>
                 <div class="modal_footer">
-                    <app-button type="border" text="PROCEED TO SECTION" (click)="close()"></app-button>
+                    <app-button [config]="configProceedButton" (click)="close()"></app-button>
                     <app-checkbox [items]="['Don\'t show this next time']"></app-checkbox>
-                    <app-button type="login" text="Go to" link="Login" (click)="close()"></app-button>
+                    <app-button [config]="configLoginButton" (click)="close()"></app-button>
                 </div>
             </div>
         </div>
@@ -30,10 +30,10 @@
                     <h1>Start Ordering</h1>
                 </div>
                 <div class="footer">
-                    <app-button type="new-project" text="NEW PROJECT" (click)="close()"></app-button>
-                    <app-button type="existing-project" text="EXISTING PROJECT" (click)="close()"></app-button>
-                    <app-button type="login" text="or"></app-button>
-                <app-button type="continue" text="CONTINUE" (click)="close()"></app-button>
+                    <app-button [config]="configNewButton" (click)="close()"></app-button>
+                    <app-button [config]="configExistingButton" (click)="close()"></app-button>
+                    <app-button [config]="configLoginOrButton"></app-button>
+                    <app-button [config]="configContinueButton" (click)="close()"></app-button>
                 <P>WITHOUT SAVING THE PROJECT</P>
             </div>
         </div>
@@ -52,7 +52,9 @@
                 <div class="container_video">
                     <p>video con <br> instrucciones </p>
                 </div>
-                <app-button type="start-video" text="START" (click)="close()"></app-button>
+                <div class="container_button">
+                    <app-button [config]="configStartButton" (click)="close()"></app-button>
+                </div>
             </div>
         </div>
     </div>

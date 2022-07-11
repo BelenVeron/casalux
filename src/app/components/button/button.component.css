@@ -289,12 +289,10 @@
     border-radius: 15px;
     background-color: var(--green-op);
     color: white;
-    margin-left: 34rem;
     width: 100px;
     height: 30px;
     font-family: "Titillium Web", sans-serif;
     cursor: pointer;
-    margin-top: 1rem;
 }
 .start-video:hover {
     color: #fff;

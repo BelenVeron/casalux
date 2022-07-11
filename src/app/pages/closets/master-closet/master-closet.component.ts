@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ConfigButton } from 'src/app/models/config-button';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -22,6 +23,7 @@ export class MasterClosetComponent implements OnInit {
     title: 'SELECT FINISH',
     title2: true,
   }
+  configNextButton: ConfigButton = {type:'next-step', text:'NEXT'}
   
 
   constructor(public router: Router) { }

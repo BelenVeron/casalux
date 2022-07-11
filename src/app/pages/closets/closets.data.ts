@@ -42,7 +42,12 @@ export const ITEMS_NAV = {
     {title:'EXPERTS & PROJECTS', route:'/closets', selected:false},
   ],
   buttons: [
-    {title:'Download catalog', icon:'download', route:'/closets/start'},
+    {
+      config: {
+        type:"download",  
+        text:'Download catalog', 
+        icon:'fas fa-download'}, 
+      route:'/closets/start'},
   ],
   description: 'Boths Web page <br/> Countertops Web page <br/> Luxury kitchens Web page',
 }
@@ -123,32 +128,32 @@ export const BUTTONS_MASTER_CLOSET = [
   {
     id: '1',
     src: '/assets/img/closets/master-closet1.png',
-    text: 'COLLECTION W01'
+    config: {type:"collection", text:"COLLECTION W01"}
   },
   {
     id: '2',
     src: '/assets/img/closets/master-closet2.png',
-    text: 'COLLECTION W01A'
+    config: {type:"collection", text:"COLLECTION W01A"}
   },
   {
     id: '3',
     src: '/assets/img/closets/master-closet3.png',
-    text: 'COLLECTION W02'
+    config: {type:"collection", text:"COLLECTION W02"}
   },
   {
     id: '4',
     src: '/assets/img/closets/master-closet4.png',
-    text: 'COLLECTION W03'
+    config: {type:"collection", text:"COLLECTION W03"}
   },
   {
     id: '5',
     src: '/assets/img/closets/master-closet5.png',
-    text: 'COLLECTION W04'
+    config: {type:"collection", text:"COLLECTION W04"}
   },
   {
     id: '6',
     src: 'no-image',
-    text: 'COLLECTION WARDROBE'
+    config: {type:"collection", text:"COLLECTION WARDROBE"}
   },
 ]
 export const GALLERY_ACCESORIES = [

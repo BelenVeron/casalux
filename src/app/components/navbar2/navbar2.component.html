@@ -33,7 +33,7 @@
     <div class="extras">
         <!-- Buttons -->
         <div class="action">
-            <app-button *ngFor="let item of items.buttons" type="download" (click)="actionOrRedirect(item.route)" [icon]="item.icon" [text]="item.title"></app-button>
+            <app-button [config]="item.config" *ngFor="let item of items.buttons" (click)="actionOrRedirect(item.route)"></app-button>
         </div>
         <!-- Icons and phone -->
         <div class="social">

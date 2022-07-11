@@ -4,5 +4,5 @@
     <p>Selected form: Gallery</p>
 </div>
 <div class="buttons">
-    <app-button *ngFor="let button of buttons" type="collection" [text]="button.text" (click)="setImage(button.src)"></app-button> 
+    <app-button [config]="button.config" *ngFor="let button of buttons" (click)="setImage(button.src)"></app-button> 
 </div>

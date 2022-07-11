@@ -130,6 +130,14 @@ p {
     font-size: 35px;
     text-align: center;
 }
+.container_button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+    height: 20%;
+}
+
 .wrapper .modal_box .header_video h1 {
 }
 

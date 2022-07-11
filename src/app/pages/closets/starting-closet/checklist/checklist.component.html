@@ -5,12 +5,9 @@
     </div>
     
     <div class="container-checklist">
-        <div class="checklists">
             <div class="item" *ngFor="let item of form.items">
                 <label for="Belts">{{item.label}}</label>
-                <input type="text" [formControlName]="item.name!">
+                <input type="number" min="0" [formControlName]="item.name!">
             </div>
-        </div>
     </div>
 </form>
-

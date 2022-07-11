@@ -13,39 +13,49 @@
     flex-direction: column;
 }
 
-.select {
-    display: flex;
-}
-
-.select .opt{
-    padding: .2rem;
-}
-
-.table {
-    display: flex;
-}
-
-table, td, th {
-    border: 1px solid black;
-}
-
-table .opt{
-    margin-left: 5px;
-    display: grid;
-}
-table .opt-hor select{
-   width: 97%;
-}
-
-table, td {
+/* ////////////TABLE///////////// */
+.select-table {
+    margin-left: 15px;
+    border-collapse: collapse;
+    width: 70%;
     text-align: center;
 }
 
-table {
-    margin-left: 15px;
-    border-collapse: collapse;
-    width: 50%;
+.td-size {
+    width: 6rem;
 }
+
+.text-i {
+    text-align: initial;
+}
+
+.b-t {
+    border-top: 1px solid black;
+}
+.b-b {
+    border-bottom: 1px solid black;
+}
+.b-l {
+    border-left: 1px solid black;
+}
+.b-r {
+    border-right: 1px solid black;
+}
+
+.select-table select {
+    border: none;
+    width: 90%;
+    text-align: center;
+}
+
+select:focus { 
+    outline: none; 
+} 
+
+/* //////////END-TABLE//////////////// */
+
+
+
 /* -------FORM----------- */
 
 /* -------MEASURES----------- */

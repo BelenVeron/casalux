@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CLOSETS, SHAPES, CLOSET_TYPES, CLOSET_CORNERS} from '../../closets.data';
 import { Router } from '@angular/router';
 import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
+import { ConfigButton } from 'src/app/models/config-button';
 @Component({
   selector: 'app-steps-starting-closet',
   templateUrl: './steps-starting-closet.component.html',
@@ -18,7 +19,6 @@ export class StepsStartingClosetComponent implements OnInit {
   // event to send the image selected to the left container
   @Output() srcNoImage: EventEmitter<string> = new EventEmitter();
   steps: boolean[] = [true, false, false, false, false];
-  buttonsDisabled: boolean[] = [true, false, false, false, true];
   shapeSelected: string = '';
   configFirstCorners: ConfigSwiperHorizontal = {
     class: 'horizontal-mini',
@@ -34,12 +34,27 @@ export class StepsStartingClosetComponent implements OnInit {
     },
     items: CLOSET_CORNERS
   }
+  configNextButton: ConfigButton[] = [
+    {type:'next-step', text:"NEXT", disabled:true},
+    {type:'next-step', text:"NEXT", disabled:true},
+    {type:'next-step', text:"NEXT", disabled:true},
+    {type:'next-step', text:"NEXT", disabled:true},
+  ]
+  configNewUserButton: ConfigButton = {type:'new-user', text:"NEW USER", disabled:false}
+  users: string[] = ['', '']; 
+  @Output() sendUserEvent: EventEmitter<string> = new EventEmitter();
+
 
   constructor(
     public router: Router
     ) { }
 
   ngOnInit(): void {
+    
+  }
+
+  sendUser(user: string): void {
+    this.sendUserEvent.emit(user);
   }
 
   // click to send the image to left container
@@ -52,7 +67,7 @@ export class StepsStartingClosetComponent implements OnInit {
     Reset all the step and active the title clicked
   */
   showStep(step: number): void{
-    if (!this.buttonsDisabled[step]) {
+    if (!this.configNextButton[step].disabled) {
       for (let index = 0; index < this.steps.length; index++) {
         this.steps[index] = false;
       };
@@ -65,6 +80,7 @@ export class StepsStartingClosetComponent implements OnInit {
     If is the last step then redirect to the next page
   */
   selectStepAndContinue(step: number): void {
+    this.configNextButton[step + 1].disabled = false;
     if (step < 3) {
       this.steps[step] = false;
       this.steps[step + 1] = true;
@@ -80,6 +96,6 @@ export class StepsStartingClosetComponent implements OnInit {
   // Activate the disabled button
   activeButton(shape: string, button: number): void{
     this.shapeSelected = shape;
-    this.buttonsDisabled[button] = false;
+    this.configNextButton[button].disabled = false;
   }
 }

@@ -26,7 +26,7 @@
             </div>
 
             <!-- Steps: Form, ClosetsType, Measures -->
-            <app-steps-starting-closet *ngIf="!isModuleSelected" (srcNoImage)="typeSelected($event)"></app-steps-starting-closet>
+            <app-steps-starting-closet *ngIf="!isModuleSelected" (srcNoImage)="typeSelected($event)" (sendUserEvent)="setUser($event)"></app-steps-starting-closet>
             <!-- Select module -->
             <app-select-module *ngIf="isModuleSelected"></app-select-module>
         </div>

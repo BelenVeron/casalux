@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ConfigButton } from 'src/app/models/config-button';
 
 @Component({
   selector: 'app-button',
@@ -7,17 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  @Input() text: string = '';
-  @Input() type: string = '';
-  @Input() link: string = '';
-  @Input() icon: string = '';
-  @Input() like: boolean = false;
-  @Input() disabled: boolean = false;
-  
-  @Input()config: any;
-
-
-
+  @Input() config!: ConfigButton;
 
   constructor() { }
 
@@ -26,10 +17,3 @@ export class ButtonComponent implements OnInit {
 
 }
 
-export interface ConfigButton {
-  text: string;
-  type: string;
-  link: string;
-  icon: string;
-  disabled: boolean;
-}
