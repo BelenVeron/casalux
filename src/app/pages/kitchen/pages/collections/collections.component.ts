@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef, Input  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ConfigButton } from 'src/app/models/config-button';
-import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
+import { ConfigButton } from 'src/app/models/interfaces/config-button';
+import { ConfigSwiperHorizontal } from 'src/app/models/interfaces/config-swiper-horizontal';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';
 import { environment } from 'src/environments/environment';
 import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, Pagination }

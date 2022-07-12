@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConfigButton } from 'src/app/models/config-button';
-import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
+import { ConfigButton } from 'src/app/models/interfaces/config-button';
+import { ConfigSecondaryHeader } from 'src/app/models/interfaces/config-secondary-header';
+import { ConfigSwiperHorizontal } from 'src/app/models/interfaces/config-swiper-horizontal';
 import { CLOSET_TYPES, GALLERY_ACCESORIES, ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -40,7 +41,12 @@ export class AccesoriesComponent implements OnInit {
   configNext: ConfigButton = {type:'next-module', text:'NEXT MODULE'};
   configFinish: ConfigButton = {type:'finish', text:'FINISH'};
 
-
+  configHeader: ConfigSecondaryHeader = {
+    title: 'MASTER BED ROOM CLOSETS',
+    description: 'Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers. Champagne color Rails.',
+    srcRight: '/assets/img/closets/accesories.png',
+    headerClass: 'container-starting'
+  };
 
   constructor(private router: Router) { }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigButton } from 'src/app/models/config-button';
+import { ConfigButton } from 'src/app/models/interfaces/config-button';
 import { FinishCollection } from 'src/app/models/finishes/finish-collection';
 import { FinishData } from 'src/app/models/finishes/finish-data';
 import { KitchenProductsService } from 'src/app/services/kitchen-products.service';

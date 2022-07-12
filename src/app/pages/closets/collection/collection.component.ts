@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Closet } from 'src/app/models/closets/closet';
 import { Collection } from 'src/app/models/collections/collection';
-import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
+import { ConfigSwiperHorizontal } from 'src/app/models/interfaces/config-swiper-horizontal';
 import { ClosetsService } from 'src/app/services/closets.service';
 import { ITEMS_NAV } from '../closets.data';
 

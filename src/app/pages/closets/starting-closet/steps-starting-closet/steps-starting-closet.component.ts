@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CLOSETS, SHAPES, CLOSET_TYPES, CLOSET_CORNERS} from '../../closets.data';
 import { Router } from '@angular/router';
-import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
-import { ConfigButton } from 'src/app/models/config-button';
+import { ConfigSwiperHorizontal } from 'src/app/models/interfaces/config-swiper-horizontal';
+import { ConfigButton } from 'src/app/models/interfaces/config-button';
 @Component({
   selector: 'app-steps-starting-closet',
   templateUrl: './steps-starting-closet.component.html',
@@ -18,6 +18,7 @@ export class StepsStartingClosetComponent implements OnInit {
   closetCorners: any[] = CLOSET_CORNERS;
   // event to send the image selected to the left container
   @Output() srcNoImage: EventEmitter<string> = new EventEmitter();
+  @Output() sendSteps: EventEmitter<boolean[]> = new EventEmitter();
   steps: boolean[] = [true, false, false, false, false];
   shapeSelected: string = '';
   configFirstCorners: ConfigSwiperHorizontal = {
@@ -73,6 +74,10 @@ export class StepsStartingClosetComponent implements OnInit {
       };
       this.steps[step] = true;
     }
+    if (this.steps[0] || this.steps[1]) {
+      this.typeSelected('/assets/img/closets/form.png');
+    }
+    this.sendSteps.emit(this.steps);
   }
 
   /* 
@@ -80,10 +85,10 @@ export class StepsStartingClosetComponent implements OnInit {
     If is the last step then redirect to the next page
   */
   selectStepAndContinue(step: number): void {
-    this.configNextButton[step + 1].disabled = false;
     if (step < 3) {
       this.steps[step] = false;
       this.steps[step + 1] = true;
+      this.configNextButton[step + 1].disabled = false;
       // select a default image in the third step
       if (step === 2) {
         this.typeSelected(this.closetCorners[0].src)
@@ -91,6 +96,7 @@ export class StepsStartingClosetComponent implements OnInit {
     } else {
       this.router.navigate(['closets/master-closet/1']);
     }
+    this.sendSteps.emit(this.steps);
   }
 
   // Activate the disabled button

@@ -1,0 +1,10 @@
+<div [ngClass]="config.headerClass!">
+    <div class="left">
+        <h1>{{config.title}}</h1>
+        <img *ngIf="config.srcLeft" [src]="config.srcLeft" alt="">
+        <p [innerHtml]="config.description"></p>
+    </div>
+    <div class="right">
+        <img [src]="config.srcRight" alt="">
+    </div>  
+</div>

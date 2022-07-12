@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
+import { ConfigSwiperHorizontal } from 'src/app/models/interfaces/config-swiper-horizontal';
 import { environment } from 'src/environments/environment';
 import SwiperCore, { SwiperOptions, EffectCoverflow, Autoplay, Pagination, Navigation } from 'swiper';
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination, Navigation]);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConfigButton } from 'src/app/models/config-button';
+import { ConfigButton } from 'src/app/models/interfaces/config-button';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({

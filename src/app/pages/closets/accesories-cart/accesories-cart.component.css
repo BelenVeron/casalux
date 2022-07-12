@@ -1,41 +1,72 @@
-.container-starting {
-    height: 18vh;
-    width: 100vw;
-    display: flex;
-    margin-top: 1rem;
-    margin-left: 20px;
-}
-.container .container-starting 
 .accesories {
     display: flex;
-}
-.accesories {
-    display: flex;
+    justify-content: space-between;
 }
 .accesories .small-gallery{
     width: 20%;
 }
 .accesories .big-gallery{
     width: 40%;
-    margin-left: 25px;
 }
+
+
+/* ////////////////// */
 .accesories .description{
-    width: 25%;
-   /*  height: 10vh; */
-    margin-left: 147px;
+    width: 32%;
+    height: 20%;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background: var(--grey); */
-    
+    background: var(--grey);
+    color: var(--k-green-op); 
 }
+.accesories .description .text {
+    background-color: white;
+    width: 100%;
+}
+.accesories .description .buttons{
+    background-color: white;
+    width: 100%;
+}
+.accesories .description .buttons select{
+    display: block;
+    margin: 5px;
+}
+
 .accesories .description .titles{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     background: var(--grey);
+}
+.accesories .description .titles p {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    padding: .2rem;
+    font-size: .8em;
+}
+.accesories .description .titles p.not-selected {
+    font-weight: normal;
+    cursor: pointer;
+    background: var(--light);
+}
+.accesories .description .down h6 {
+    border: 1px solid var(--k-green-op);
+    padding: 2px;
+    margin-bottom: .3rem;
+    cursor: pointer;
+}
+.accesories .description .info {
+    margin-left: 0.1rem;
+    height: 8vh;
+    width: 80%;
+    padding-bottom: .2rem;
+    padding-top: .2rem;
+    font-size: .8em;
+    overflow: hidden;
 }
 .accesories .description .titles p{
     width: 50%;
@@ -45,4 +76,57 @@
     font-size: .8em;
     background: var(--grey);
     cursor: pointer;
+}
+
+
+/* Quantity button */
+.accesories .quantity{
+    margin-top: 10px;
+    width: calc(50% - 20px);
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+}
+.accesories .quantity h3{
+    font-size: 15px;
+    width: 50%;
+}
+.accesories .quantity input{
+    width: 20px;
+    border: none;
+    font-size: 20px;
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+.accesories .quantity input::-webkit-outer-spin-button,
+.accesories .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.accesories .quantity button {
+    background-color: white;
+    border: .5px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accesories .quantity select {
+    border: none;
+    cursor: pointer;
+    width: 95%;
+}
+
+.accesories .quantity select:focus {
+    outline: none;
 }

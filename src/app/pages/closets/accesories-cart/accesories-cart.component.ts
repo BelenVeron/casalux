@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConfigSwiperHorizontal } from 'src/app/models/config-swiper-horizontal';
+import { ConfigSecondaryHeader } from 'src/app/models/interfaces/config-secondary-header';
+import { ConfigSwiperHorizontal } from 'src/app/models/interfaces/config-swiper-horizontal';
 import { SwiperOptions } from 'swiper';
 import { GALLERY_ACCESORIES, ITEMS_NAV } from '../closets.data';
 
@@ -13,7 +14,6 @@ export class AccesoriesCartComponent implements OnInit {
   activeSidenav: boolean = false;
   itemsNav = ITEMS_NAV;
   navLeft: boolean = true;
-  srcSteps: string = '/assets/img/closets/accesories.png';
   srcForm: string = '/assets/img/closets/dimensions-left-small.png';
   configNav = {
     center: true,
@@ -36,18 +36,25 @@ export class AccesoriesCartComponent implements OnInit {
   info = {
     details: {
       show: true,
-      text: '',
+      text: 'Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua.',
     },
     technicalInfo: {
       show: false,
-      text: '',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     }
   }
+
+  configHeader: ConfigSecondaryHeader = {
+    title: 'MASTER BED ROOM CLOSETS',
+    description: 'Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers. Champagne color Rails.',
+    srcRight: '/assets/img/closets/accesories.png',
+    headerClass: 'container-starting'
+  };
 
   closets = GALLERY_ACCESORIES
   configGalleryAccesories: ConfigSwiperHorizontal = {
     items: GALLERY_ACCESORIES,
-    class: 'vertical',
+    class: 'vertical adapt-container',
     imageClass: 'small',
     typeFavorite: 'heart-icon-closet'
   };
@@ -57,6 +64,7 @@ export class AccesoriesCartComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   openMenu(): void {
     this.activeSidenav = true;
   }
@@ -64,9 +72,11 @@ export class AccesoriesCartComponent implements OnInit {
   setSideNav(event: boolean): void {
     this.activeSidenav = event;
   }
+
   typeSelected(data: any){
     this.srcForm = data
   }
+
   selectClosetAndContinue() : void {
     this.router.navigate(['closets/module/1']);
   }
@@ -74,6 +84,13 @@ export class AccesoriesCartComponent implements OnInit {
   sumAdditionalPrice(): string{
     let price = parseInt(this.additionalPrice)*this.quantity;
     return price.toString()+'.00';
+  }
 
+  minus(): void {
+    if(this.quantity > 0)this.quantity--
+  }
+
+  plus(): void {
+    this.quantity++
   }
 }

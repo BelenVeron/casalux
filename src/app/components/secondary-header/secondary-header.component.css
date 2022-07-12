@@ -1,0 +1,39 @@
+.container-starting {
+    height: 18vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem 1rem 0 1rem;
+}
+
+.container-starting .right {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-starting .right img {
+    width: 80%;
+}
+
+.container-starting .left{
+    width: 40%;
+    color: var(--k-green-op);
+}
+
+.container-starting .left h1{
+    font-size: 28px;
+}
+
+.container-starting .left img {
+    width: 55%;
+    margin-left: -1rem;
+}
+
+/* Starting-closet */
+.form-page .right {
+    justify-content: flex-start;
+    width: 65%;
+}

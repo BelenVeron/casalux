@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormChecklist } from 'src/app/models/form-checklist';
+import { FormChecklist } from 'src/app/models/interfaces/form-checklist';
 
 @Component({
   selector: 'app-checklist',

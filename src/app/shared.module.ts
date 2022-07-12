@@ -23,6 +23,7 @@ import { HorizontalGalleryComponent } from './components/horizontal-gallery/hori
 import { FavoriteComponent } from './components/favorite/favorite.component';
 import { VerticalDescriptionComponent } from './components/vertical-description/vertical-description.component';
 import { ShapeComponent } from './components/shape/shape.component';
+import { SecondaryHeaderComponent } from './components/secondary-header/secondary-header.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { ShapeComponent } from './components/shape/shape.component';
     FavoriteComponent,
     VerticalDescriptionComponent,
     ShapeComponent,
+    SecondaryHeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,7 @@ import { ShapeComponent } from './components/shape/shape.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    SwiperModule
+    SwiperModule,
   ],
   exports:[
     HeaderComponent, 
@@ -67,7 +69,8 @@ import { ShapeComponent } from './components/shape/shape.component';
     FavoriteComponent,
     SwiperModule,
     VerticalDescriptionComponent,
-    ShapeComponent
+    ShapeComponent,
+    SecondaryHeaderComponent
   ]
 })
 export class SharedModule { }

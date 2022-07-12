@@ -60,11 +60,11 @@ export class OptionsComponent implements OnInit {
   info = {
     details: {
       show: true,
-      text: '',
+      text: 'Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor ut labore.',
     },
     technicalInfo: {
       show: false,
-      text: '',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     }
   }
 
@@ -100,7 +100,7 @@ export class OptionsComponent implements OnInit {
       console.log('data option:', this.dataOptions);
 
       this.setSelected();
-      //this.setInfo();
+      
       this.setAdditionalTypes();
       this.setAdditionalSizes(this.additionalTypes[0].name); 
       this.additionalPrice = this.dataOptions.additionalPrice; 
@@ -129,12 +129,6 @@ export class OptionsComponent implements OnInit {
     this.selected.type = this.dataOptions.additionalTypeID.toString();
     this.selected.size = this.dataOptions.additionalSizeID.toString();
     this.selected.color = this.dataOptions.additionalColorID.toString();
-  }
-
-  /* Set info details and technical */
-  setInfo(): void {
-    this.info.details.text = this.additional.data.additionalSelected[0].details;
-    this.info.technicalInfo.text = this.additional.data.additionalSelected[0].technicalInfo;
   }
 
   /* Set additionalTypes, for now only the first element because there is

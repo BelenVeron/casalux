@@ -1,20 +1,9 @@
 <div class="container">
     <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
     <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
-    <div class="container-starting">
-        <div class="left">
-            <h1>MASTER BED ROOM CLOSETS</h1>
-            <h5>Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak</h5>
-            <h5>flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers.</h5>
-            <h5>Champagne color Rails.</h5>
-        </div>
+    
+    <app-secondary-header [config]="configHeader"></app-secondary-header>
 
-        <div class="right">
-            <div class="steps">
-                <img [src]="srcSteps" alt="">
-            </div>
-        </div>  
-    </div>
     <div class="gallery">
         <h2>Accesorios</h2>
         <p>Select accesories for your closet</p> 

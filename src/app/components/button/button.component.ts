@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ConfigButton } from 'src/app/models/config-button';
+import { ConfigButton } from 'src/app/models/interfaces/config-button';
 
 @Component({
   selector: 'app-button',
