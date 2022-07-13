@@ -128,32 +128,32 @@ export const BUTTONS_MASTER_CLOSET = [
   {
     id: '1',
     src: '/assets/img/closets/master-closet1.png',
-    config: {type:"collection", text:"COLLECTION W01"}
+    config: {type:"collection", text:"COLLECTION W01", selected: true}
   },
   {
     id: '2',
     src: '/assets/img/closets/master-closet2.png',
-    config: {type:"collection", text:"COLLECTION W01A"}
+    config: {type:"collection", text:"COLLECTION W01A", selected: false}
   },
   {
     id: '3',
     src: '/assets/img/closets/master-closet3.png',
-    config: {type:"collection", text:"COLLECTION W02"}
+    config: {type:"collection", text:"COLLECTION W02", selected: false}
   },
   {
     id: '4',
     src: '/assets/img/closets/master-closet4.png',
-    config: {type:"collection", text:"COLLECTION W03"}
+    config: {type:"collection", text:"COLLECTION W03", selected: false}
   },
   {
     id: '5',
     src: '/assets/img/closets/master-closet5.png',
-    config: {type:"collection", text:"COLLECTION W04"}
+    config: {type:"collection", text:"COLLECTION W04", selected: false}
   },
   {
     id: '6',
     src: 'no-image',
-    config: {type:"collection", text:"COLLECTION WARDROBE"}
+    config: {type:"collection", text:"COLLECTION WARDROBE", selected: false}
   },
 ]
 export const GALLERY_ACCESORIES = [

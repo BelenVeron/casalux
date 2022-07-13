@@ -1,4 +1,9 @@
 
+.starting-closet{
+    height: 100%;
+    width: 100%;
+}
+
 .container-starting {
     height: calc(100vh - 60px);
     width: 100vw;
@@ -9,44 +14,16 @@
     width: 40%;
     height: 70vh;
 }
-.container-starting .left .starting {
-    margin-left: 0rem;
-    width: 20vw;
-}
-.container-starting .left .image {
-    background-color: var(--k-white);
-    width: 37vw;
-    margin-left: 2rem;
-}
 
 
 .container-starting .left img {
     width: 82%;
     margin-left: 2rem;
-}
-
-.container-starting .left .image p {
-    margin-left: 5rem;
-    margin-top: 0.1rem;
-    padding: 1rem;
-}
-
-.container-starting .left p {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-bottom: .5rem;
+    margin-top: 4rem;
 }
 
 .container-starting .right {
     width: 65%;
 }
 
-.right {
-    display: flex;
-    flex-direction: column;
-}
-.starting-closet{
-    height: 100%;
-    width: 100%;
-}
 

@@ -196,7 +196,6 @@
     
      .next-step {
        margin-right: 1rem;
-       float: right;
        border-radius: 18px;
        color: var(--green);
        font-size: 1rem;
@@ -308,8 +307,9 @@
     margin-left: 1rem;
     background-color: white; 
     border: solid 1px var(--dark-brown);
+    cursor: pointer;
 }
-.collection:hover {
+.collection.selected {
     color: white;
     background-color: var(--green-op); 
 }

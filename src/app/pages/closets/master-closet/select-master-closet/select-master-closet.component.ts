@@ -16,8 +16,16 @@ export class SelectMasterClosetComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setImage(image: string): void {
+  setImage(image: string, i: number): void {
     if(image !== 'no-image')this.sendSetImage.emit(image);
+    this.activeButton(i);
   }
 
+  /* Active the button pressed */
+  activeButton(i: number) {
+    this.buttons.forEach((button: any) => {
+      button.config.selected = false;
+    });
+    this.buttons[i].config.selected = true
+  }
 }

@@ -66,8 +66,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15px;
+    margin: 5px;
     border: 2px solid var(--activeColor);
+    padding-top: 10px;
 }
 .shapes .checkbox {
     display: flex;

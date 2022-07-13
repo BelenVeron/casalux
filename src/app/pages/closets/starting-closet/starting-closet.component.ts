@@ -60,11 +60,12 @@ export class StartingClosetComponent implements OnInit {
     this.srcForm = data
   }
 
-  selectModuleAndContinue(): void {
+  continue(): void {
     if (this.isModuleSelected) {
       this.router.navigate(['closets/master-closet/1']);
     } else {
       this.isModuleSelected = true;
+      this.typeSelected('/assets/img/closets/form.png');
     }
   }
 
@@ -74,5 +75,8 @@ export class StartingClosetComponent implements OnInit {
 
   stepActived(steps: boolean[]) {
     this.steps = steps;
+    if (steps[4]) {
+      this.continue()
+    }
   }
 }

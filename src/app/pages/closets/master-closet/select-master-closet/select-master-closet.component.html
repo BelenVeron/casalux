@@ -1,8 +1,8 @@
 
 <div class="tittle">
-    <h2>. Collection</h2>
-    <p>Selected form: Gallery</p>
+    <h2 class="ml4">. Collection</h2>
+    <p class="ml8">Selected form: Gallery</p>
 </div>
 <div class="buttons">
-    <app-button [config]="button.config" *ngFor="let button of buttons" (click)="setImage(button.src)"></app-button> 
+    <app-button [config]="button.config" *ngFor="let button of buttons; index as i" (click)="setImage(button.src, i)"></app-button> 
 </div>

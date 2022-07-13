@@ -85,17 +85,19 @@ export class StepsStartingClosetComponent implements OnInit {
     If is the last step then redirect to the next page
   */
   selectStepAndContinue(step: number): void {
-    if (step < 3) {
+    if (step < 4) {
       this.steps[step] = false;
       this.steps[step + 1] = true;
-      this.configNextButton[step + 1].disabled = false;
+      if (step < 3) {
+        this.configNextButton[step + 1].disabled = false;
+      }
       // select a default image in the third step
       if (step === 2) {
         this.typeSelected(this.closetCorners[0].src)
       }
-    } else {
+    } /* else {
       this.router.navigate(['closets/master-closet/1']);
-    }
+    } */
     this.sendSteps.emit(this.steps);
   }
 

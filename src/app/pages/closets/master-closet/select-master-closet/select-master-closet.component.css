@@ -1,18 +1,8 @@
 .tittle h2{
    color:var(--green-op)
 }
+
 .buttons{
     display: flex;
-    width: 5;
-    margin-left: 1rem;
-    padding: 1rem;
-    margin-bottom: 13rem;
-   
 }
-.tittle{
-    margin-left: 1rem;
-    
-}
-.tittle p{
-    margin-left: 14px;
-}
+

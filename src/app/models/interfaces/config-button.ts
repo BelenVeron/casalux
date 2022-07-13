@@ -4,5 +4,6 @@ export interface ConfigButton {
     link?: string;
     icon?: string;
     disabled?: boolean;
+    selected?: boolean;
 }
   

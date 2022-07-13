@@ -1,5 +1,4 @@
 .container-your-closets {
-    margin-top: 2rem;
     color: var(--k-green-op);
 }
 .container-your-closets .container{
@@ -34,7 +33,7 @@
     background-color: white;
     color: var(--k-green-op);
     padding: 1px;
-    font-size: 40px;
+    font-size: 20px;
     border: none;
     margin-right: 6rem;
   }
@@ -86,5 +85,10 @@
 .container-your-closets .container .container-image .info {
     position: absolute;
     margin: 1rem;
+}
+
+.footer-button {
+    display: flex;
+    justify-content: end;
 }
 
