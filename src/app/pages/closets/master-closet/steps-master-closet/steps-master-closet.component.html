@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container h70">
     <div class="text">
-        <div class="panels" (click)="showStep(0)" >
-            <h2>.<strong>Back Panels</strong></h2>
+        <div class="panels">
+            <h2 (click)="showStep(0)">.<strong>Back Panels</strong></h2>
             <h4>Select finish of panels</h4>
-            <div *ngIf="steps[0]">
+            <div *ngIf="stepsFinish[0]">
                 <div class="secundary-text" >
                     <p>Uprights are shaped of extruded Aluminum tubes, with a section of 1" W x 2-1/4"D. The height can</p>
                     <p>be modified on-site or you can order a custom height. The Finish is done in Epoxy for a longer lifetime.</p>
@@ -13,78 +13,84 @@
                     <p>Matt Lacquered Paint finishes</p>
                     <img class="panels" src="assets/img/closets/back-panels-pallete.png" alt="">
                 </div>
+                <app-button class="button" [config]="configNextButton[0]" (click)="selectStepAndContinue(0)" ></app-button>
             </div>
         </div>
 
-        <div class="handle" (click)="showStep(1)"> 
-            <h2>.<strong>Handle & Rails</strong></h2>
+        <div class="handle"> 
+            <h2 (click)="showStep(1)">.<strong>Handle & Rails</strong></h2>
             <h4>Select finish of Aluminum finishes</h4>
-            <div *ngIf="steps[1]">
+            <div *ngIf="stepsFinish[1]">
                 <div class="secundary-text" >
                     <p>Made in tubular aluminium and perforated plate</p>
                     <p>with epoxy coating in the AFP finishes. Square</p>
                     <p>closure; capacity 30 kg (extraction 14").</p>
                 </div>
                 <img class="handle" src="assets/img/closets/handle&rails-pallete.png" alt="">
+                <app-button class="button" [config]="configNextButton[1]" (click)="selectStepAndContinue(1)" ></app-button>
             </div>
         </div>
         
-        <div class="uprights" (click)="showStep(2)"> 
-            <h2>.<strong>Uprights & Rails</strong></h2>
+        <div class="uprights"> 
+            <h2 (click)="showStep(2)">.<strong>Uprights & Rails</strong></h2>
             <h4>Select finish of Aluminum finishes</h4>
-            <div *ngIf="steps[2]">
+            <div *ngIf="stepsFinish[2]">
                 <div class="secundary-text" >
                     <p>Made in tubular aluminium and perforated plate</p>
                     <p>with epoxy coating in the AFP finishes. Square</p>
                     <p>closure; capacity 30 kg (extraction 14").</p>
                 </div>
                 <img class="uprights" src="assets/img/closets/handle&rails-pallete.png" alt="">
+                <app-button class="button" [config]="configNextButton[2]" (click)="selectStepAndContinue(2)" ></app-button>
             </div>
         </div>
         
-        <div class="shelves" (click)="showStep(3)"> 
-            <h2>.<strong>Shelves</strong></h2>
+        <div class="shelves"> 
+            <h2 (click)="showStep(3)">.<strong>Shelves</strong></h2>
             <h4>Select finish of Open Units</h4>
-            <div *ngIf="steps[3]">
+            <div *ngIf="stepsFinish[3]">
                 <div class="secundary-text" >
                     <p>Fibreboard panel, 1-1/2" thick faces with melamine paper on two sides in the finishes ESC/ESP</p>
                     <p>or lacquered FINISH LOP.ABS trim coloured to match the panel.</p>
                 </div>
                 <div class="text-img">
-                <p>Matt Lacquered Paint finishes</p>
-                <img class="shelves" src="assets/img/closets/shelves.png" alt="">
+                    <p>Matt Lacquered Paint finishes</p>
+                    <img class="shelves" src="assets/img/closets/shelves.png" alt="">
                 </div>
-                
+                <app-button class="button" [config]="configNextButton[3]" (click)="selectStepAndContinue(3)" ></app-button>
             </div>
         </div>
        
-        <div class="open-units" (click)="showStep(4)"> 
-            <h2>.<strong>Open Units</strong></h2>
+        <div class="open-units"> 
+            <h2 (click)="showStep(4)">.<strong>Open Units</strong></h2>
             <h4>Select finish of Open Units</h4>
-            <div *ngIf="steps[4]">
+            <div *ngIf="stepsFinish[4]">
                 <div class="secundary-text" >
                     <p>Fibreboard element, 1" thick for the external structure and 1/2"</p>
                     <p>inside. Faced with melamine paper on two sides in the finishes.</p>
                 </div>
                 <div class="text-img"> 
-                <p>Matt Lacquered Paint finishes</p>
-                <img class="open-units" src="assets/img/closets/open-units.png" alt="">
+                    <p>Matt Lacquered Paint finishes</p>
+                    <img class="open-units" src="assets/img/closets/open-units.png" alt="">
                 </div>
-                
+                <app-button class="button" [config]="configNextButton[4]" (click)="selectStepAndContinue(4)" ></app-button>
             </div>
         </div>
         
-        <div class="drawers" (click)="showStep(5)"> 
-            <h2>.<strong>Drawers</strong></h2>
+        <div class="drawers"> 
+            <h2 (click)="showStep(5)">.<strong>Drawers</strong></h2>
             <h4>Select finish of Drawers</h4>
-            <div *ngIf="steps[5]">
-                <div class="secundary-text" *ngIf="steps[5]">
+            <div *ngIf="stepsFinish[5]">
+                <div class="secundary-text" *ngIf="stepsFinish[5]">
                     <p>Made in fibreboard, 2-1/2" for sides, Faced with melamine paper on two sides. Square guides with part</p>
                     <p>pull-out and Blumation soft closure; capacity 30 kg (extraction 14"). Drawer units can be hung between</p>
                     <p>uprights, or on the floor, using the special base whith adjustable feet or recessed swivel castors.</p>
                 </div>
                 <img class="drawers" src="assets/img/closets/drawers.png" alt="">
+                <app-button class="button" [config]="configNextButton[5]" (click)="selectStepAndContinue(5)" ></app-button>
             </div>
         </div>
     </div>
 </div>
+<!-- <app-button class="button h6" [config]="configNextButton" (click)="continue()"></app-button> -->
+<div class="line-color h6"></div>

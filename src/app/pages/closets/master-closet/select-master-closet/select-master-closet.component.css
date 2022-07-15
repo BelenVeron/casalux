@@ -1,8 +1,16 @@
+
+
 .tittle h2{
    color:var(--green-op)
 }
 
 .buttons{
     display: flex;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 

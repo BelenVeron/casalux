@@ -35,7 +35,6 @@ export class StartingClosetComponent implements OnInit {
   }
   configHeader: ConfigSecondaryHeader = {
     srcLeft: '/assets/img/closets/master-closet.png',
-    srcRight: '/assets/img/closets/step1.png',
     headerClass: 'container-starting form-page'
   };
   

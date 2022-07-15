@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfigButton } from 'src/app/models/interfaces/config-button';
+import { ConfigSecondaryHeader } from 'src/app/models/interfaces/config-secondary-header';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -31,6 +32,11 @@ export class ModuleComponent implements OnInit {
   configNextButton: ConfigButton = {type:'next-step', text:'NEXT'}
   configUser1Button: ConfigButton = {type:"users", text:"USER 1"}
   configUser2Button: ConfigButton = {type:"users", text:"USER 2"}
+  configHeader: ConfigSecondaryHeader = {
+    title: 'MASTER BED ROOM CLOSETS',
+    description: 'Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers. Champagne color Rails. Standard dimensions 35° width.',
+    headerClass: 'container-starting '
+  };
   
 
   constructor(private router: Router) { }

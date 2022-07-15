@@ -1,14 +1,11 @@
 <div class="starting-closet">
     <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
     <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    <app-secondary-header [config]="configHeader"></app-secondary-header>
     
     <!-- left column whith text image and button -->
     <div class="container-starting">
         <div class="left">
-            <h1>MASTER BED ROOM CLOSETS</h1>
-            <h3>Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak</h3>
-            <h3>flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers.</h3>
-            <h3>Champagne color Rails. Standard dimensions 35° width.</h3>
             <div class="image">
                 <!-- left large img white and black (shelves/open units....) -->
                 <img class="one" [src]="srcForm" alt="">
@@ -19,9 +16,6 @@
         </div>
 
         <div class="right">
-            <div class="steps">
-                <img [src]="srcSteps" alt="">
-            </div>
             <h2>Dimensions</h2>
             <h4>Select module dimensions</h4>
             <p>Select the module measurements. The standard</p>

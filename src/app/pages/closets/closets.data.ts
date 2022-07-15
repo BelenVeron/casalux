@@ -12,7 +12,7 @@ export const CLOSET_CORNERS = [
 ];
 
 export const SHAPES = [
-  {value: "Single wall", color: 'fff'},
+  {value: "Single wall", color: '#7A9A01'},
   {value: "Gallery", color: 'fff'},
   {value: "L shaped", color: 'fff'},
   {value: "U shaped", color: 'fff'},

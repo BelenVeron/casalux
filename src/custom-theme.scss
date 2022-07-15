@@ -68,10 +68,17 @@ $sizes: 12;
 
 @mixin width-height-classes {
   @for $i from 1 through 100 {
-    $s: $i + 1%;
+    $s: $i * 1%;
     .w#{$i} {width: $s;}
     .h#{$i} {height: $s;}
   }
 }
 @include width-height-classes;
 
+@mixin font-size-classes {
+  @for $i from 1 through 100 {
+    $s: $i * 1px;
+    .f-z#{$i} {font-size: $s;}
+  }
+}
+@include font-size-classes;

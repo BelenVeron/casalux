@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfigButton } from 'src/app/models/interfaces/config-button';
+import { ConfigSecondaryHeader } from 'src/app/models/interfaces/config-secondary-header';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -30,6 +31,11 @@ export class DimensionsComponent implements OnInit {
   dimValue: string = '50';
   isMasterSelected: any;
   configNext: ConfigButton = {type:'next-step', text:'NEXT'}
+  configHeader: ConfigSecondaryHeader = {
+    title: 'MASTER BED ROOM CLOSETS',
+    description: 'Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers. Champagne color Rails. Standard dimensions 35° width.',
+    headerClass: 'container-starting '
+  };
 
 
   constructor(private router: Router) { }

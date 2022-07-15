@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfigButton } from 'src/app/models/interfaces/config-button';
+import { ConfigSecondaryHeader } from 'src/app/models/interfaces/config-secondary-header';
 import { ITEMS_NAV } from '../closets.data';
 
 @Component({
@@ -23,7 +24,11 @@ export class MasterClosetComponent implements OnInit {
     title: 'SELECT FINISH',
     title2: true,
   }
-  configNextButton: ConfigButton = {type:'next-step', text:'NEXT'}
+  configHeader: ConfigSecondaryHeader = {
+    title: 'MASTER CLOSET',
+    description: '<strong>COLOR SELECTION:</strong> Cream side panels.',
+    headerClass: 'container-starting '
+  };
   
 
   constructor(public router: Router) { }
@@ -38,7 +43,7 @@ export class MasterClosetComponent implements OnInit {
     if(image !== 'no-image')this.src = image;
   }
 
-  selectClosetAndContinue() : void {
+  continue() : void {
     /* this.isMasterSelected = true; */
     if (this.isMasterSelected) {
       this.router.navigate(['closets/dimensions/1']);

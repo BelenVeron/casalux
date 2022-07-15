@@ -1,32 +1,25 @@
 
 <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
 <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+<app-secondary-header [config]="configHeader"></app-secondary-header>
+
 <div class="container">
-    <div class="left">
-        <h1>MASTER CLOSET</h1>
-        <h3> <strong>COLOR SELECTION:</strong> Cream side panels.</h3>
-        <div class="image">
+    <div class="left w35">
+        <div class="image h80 w100">
             <!-- left large img white and black (shelves/open units....) -->
-            <img class="one" src="assets/img/closets/master-closet-left.png" alt="">
+            <img class="w30 ml2" src="assets/img/closets/master-closet-left.png" alt="">
             <!-- Left Big img the collection select with de botton  -->
-            <img class="two" [src]="src" alt="">
+            <img class="w70 ml4" [src]="src" alt="">
         </div>
-        <p class="title">FINISHES STEPS:1 - Panels 1.1 - Handles & Roils 2 - Shelves 3 - Open Units 4 - Drawer</p>
+        <p class="f-z10 ml4">FINISHES STEPS:1 - Panels 1.1 - Handles & Roils 2 - Shelves 3 - Open Units 4 - Drawer</p>
 
     </div>
 
-    <div class="right">
-        <div class="steps">
-            <img class="" src="assets/img/closets/master-closet-right.png" alt="">
-        </div>
-
+    <div class="right w60 h80">
         <!-- Steps: Form, ClosetsType, Measures -->
-        <app-select-master-closet *ngIf="!isMasterSelected" (sendSetImage)="setImage($event)"></app-select-master-closet>
+        <app-select-master-closet class="h100" (sendContinue)="continue()" *ngIf="!isMasterSelected" (sendSetImage)="setImage($event)"></app-select-master-closet>
         <!-- Select module -->
         <app-steps-master-closet *ngIf="isMasterSelected"></app-steps-master-closet>      
-
-        <app-button [config]="configNextButton" (click)="selectClosetAndContinue()" ></app-button>
-        <div class="line-color"></div>
     </div>
     
 </div>
