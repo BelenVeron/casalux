@@ -34,7 +34,7 @@ export class DimensionsComponent implements OnInit {
   configHeader: ConfigSecondaryHeader = {
     title: 'MASTER BED ROOM CLOSETS',
     description: 'Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers. Champagne color Rails. Standard dimensions 35° width.',
-    headerClass: 'container-starting '
+    headerClass: 'container-starting text-small'
   };
 
 

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { CLOSETS, SHAPES, CLOSET_TYPES, CLOSET_CORNERS} from '../../closets.data';
+import { CLOSETS, SHAPES, CLOSET_CORNERS, CONFIG_FIRST_CORNERS} from '../../closets.data';
 import { Router } from '@angular/router';
 import { ConfigSwiperHorizontal } from 'src/app/models/interfaces/config-swiper-horizontal';
 import { ConfigButton } from 'src/app/models/interfaces/config-button';
@@ -12,38 +12,36 @@ export class StepsStartingClosetComponent implements OnInit {
 
   // menu option
   closets: any[] = CLOSETS;
+
   // form's shapes
   shapes: any[] = SHAPES;
-  closetTypes: any[] = CLOSET_TYPES;
+
   closetCorners: any[] = CLOSET_CORNERS;
+
   // event to send the image selected to the left container
   @Output() srcNoImage: EventEmitter<string> = new EventEmitter();
+
+  // send the step to the starting-closet
   @Output() sendSteps: EventEmitter<boolean[]> = new EventEmitter();
+  
+  @Output() sendUserEvent: EventEmitter<string> = new EventEmitter();
+
   steps: boolean[] = [true, false, false, false, false];
+
   shapeSelected: string = '';
-  configFirstCorners: ConfigSwiperHorizontal = {
-    class: 'horizontal-mini',
-    swiper: {
-      loopedSlides: 1,
-      slidesPerView: 3,
-      initialSlide: 0,
-      spaceBetween: 10,
-      navigation: false,
-      centeredSlides:true,
-      allowTouchMove: false,
-      loop:true,
-    },
-    items: CLOSET_CORNERS
-  }
+
+  configFirstCorners: ConfigSwiperHorizontal = CONFIG_FIRST_CORNERS;
+
   configNextButton: ConfigButton[] = [
-    {type:'next-step', text:"NEXT", disabled:true},
+    {type:'next-step', text:"NEXT", disabled:false},
     {type:'next-step', text:"NEXT", disabled:true},
     {type:'next-step', text:"NEXT", disabled:true},
     {type:'next-step', text:"NEXT", disabled:true},
   ]
+
   configNewUserButton: ConfigButton = {type:'new-user', text:"NEW USER", disabled:false}
+  
   users: string[] = ['', '']; 
-  @Output() sendUserEvent: EventEmitter<string> = new EventEmitter();
 
 
   constructor(
@@ -95,9 +93,7 @@ export class StepsStartingClosetComponent implements OnInit {
       if (step === 2) {
         this.typeSelected(this.closetCorners[0].src)
       }
-    } /* else {
-      this.router.navigate(['closets/master-closet/1']);
-    } */
+    } 
     this.sendSteps.emit(this.steps);
   }
 

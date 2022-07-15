@@ -3,42 +3,6 @@
     height: calc(100vh - 60px);
     width: 100vw;
     display: flex;
-    margin-top: 1rem;
-}
-
-.container-starting .left {
-    width: 45%;
-    height: 70vh;
-}
-.container-starting .left .starting {
-    margin-left: 0rem;
-    width: 20vw;
-}
-.container-starting .left h2 {
-    color: var(--k-green-op);
-}
-.container-starting .left .image {
-    width: 37vw;
-    margin-left: 5px;
-    height: 62vh;
-}
-
-
-.container-starting .left img {
-    width: 82%;
-    margin-left: 2rem;
-}
-
-.container-starting .left .image p {
-    margin-left: 5rem;
-    margin-top: 0.1rem;
-    padding: 1rem;
-}
-
-.container-starting .left p {
-    margin-top: 5px;
-    margin-left: 50px;
-    margin-bottom: .5rem;
 }
 
 .container-starting .right {
@@ -131,6 +95,7 @@
     background: #04AA6D;
     cursor: pointer;
 }
+
 .container-starting .right .footer{
     color: var(--k-green-op);
     margin-top: 30px;
@@ -144,40 +109,17 @@
     margin-left: 88px;
     background-color:var(--k-green-op);
 }
+
+
 /* --------------left------------------ */
-.container-starting {
-    display: flex;
-    height: 90%;
-}
-.left .image {
-    display: flex;
-    height: 70vh;
+.left {
+    width: 40%;
 }
 
-.left h1 {
-    color: var(--k-green-op);
-    margin-left: 1rem;
-    margin-top: 1rem;
-    font-size: x-large;
-}
-.left h3 {
+.left .image {
     display: flex;
-    color: var(--dark-brown);
-    margin-left: 1rem;
-    font-size: smaller;
-    margin-bottom: 12px;
-    
 }
-.left .image .one {
-    width: 9vw;
-    height: 60vh;
-    margin: 0.5rem;
-}
-.left .image .two {
-    width: 31vw;
-    height: 60vh;
-    margin-top: .5rem;
-}
+
 .left p {
     font-size: x-small;
     margin-left: 1rem;

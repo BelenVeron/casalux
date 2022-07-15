@@ -81,3 +81,9 @@
     background-color: #606048;
 }
 
+.container-starting.text-small .left h1{
+    font-size: 22px;
+}
+.container-starting.text-small .left p{
+    font-size: 12px;
+}

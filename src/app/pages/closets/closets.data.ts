@@ -1,15 +1,33 @@
+import { ConfigSwiperHorizontal } from "src/app/models/interfaces/config-swiper-horizontal";
+
 export const CLOSET_TYPES = [
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'},
   {image: '../luxurykitchens/img/lk-collectionImg70.jpg'}
 ];
+
 export const CLOSET_CORNERS = [
   {src: '/assets/img/closets/esquina1.png'},
   {src: '/assets/img/closets/esquina2.png'},
   {src: '/assets/img/closets/esquina3.png'},
   
 ];
+
+export const CONFIG_FIRST_CORNERS: ConfigSwiperHorizontal = {
+  class: 'horizontal-mini',
+  swiper: {
+    loopedSlides: 1,
+    slidesPerView: 3,
+    initialSlide: 0,
+    spaceBetween: 10,
+    navigation: false,
+    centeredSlides:true,
+    allowTouchMove: false,
+    loop:true,
+  },
+  items: CLOSET_CORNERS
+}
 
 export const SHAPES = [
   {value: "Single wall", color: '#7A9A01'},

@@ -55,6 +55,7 @@ export class StartingClosetComponent implements OnInit {
   setSideNav(event: boolean): void {
     this.activeSidenav = event;
   }
+  
   typeSelected(data: any){
     this.srcForm = data
   }

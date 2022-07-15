@@ -1,46 +1,25 @@
 .container {
     display: flex;
+    flex-direction: column;
     height: 55vh;
-    padding: 1rem;
+    padding: 1rem 1rem 3.5rem 1rem;
     overflow: auto;
     font-size: small;
     cursor: pointer;
-}
-.container h2 {
-    margin-bottom: 1rem;
-}
-.container h4 {
-    margin-bottom: 1rem;
-}
-.container .text {
-   color: var(--green-op);
+    color: var(--green-op);
 }
 
-.container .secundary-text, h4{
-   color: var(--dark-grey);
-   font-size: 14px;
-}
-.container .text-img {
-    margin-top: 3rem;
+p, h4{
    color: var(--dark-grey);
 }
-.container .text .panels .text-img .panels{
-    width: 85%;
+
+p {
+    font-size: 14px;
 }
-.container .handle .handle{
-    width: 50%;
-}
-.container .uprights .uprights{
-    width: 50%;
-}
-.container .shelves .shelves{
-    width: 85%;
-}
-.container .open-units .open-units{
-    width: 85%;
-}
-.container .drawers .drawers{
-    width: 85%;
+
+h4 {
+    font-size: 16px;
+    margin-bottom: 1rem;
 }
 
 .line-color {
@@ -48,6 +27,7 @@
     width: 98%;
     margin-left: 1.2rem;
 }
+
 .button {
     display: flex;
     justify-content: flex-end;
