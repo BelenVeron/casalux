@@ -25,7 +25,6 @@ export class SecondaryHeaderComponent implements OnInit {
     Activate the button for the route
   */
   activeButtonRoute(): void {
-    console.log(this.router.url)
     this.activeButton(this.getPosition());
   }
 

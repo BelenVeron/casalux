@@ -1,38 +1,10 @@
-.container-starting {
-    height: 18vh;
-    width: 100vw;
-    display: flex;
-    margin-top: 1rem;
-    margin-left: 20px;
-}
-.container-starting .left h1,h5{
-    color: var(--k-green-op);
-}
-.left {
-    width: 45%;
-    height: 70vh;
-}
-.container-starting .right {
-    width: 65%;
-}
-
-.container .right {
-    display: flex;
-    flex-direction: column;
-}
-.container .right .steps{
-   width: 70%;
-   margin-left: 30px;
-}
-.container .gallery {
-    margin-left: 20px;
-   
-   
-}
-.container .gallery h2 {
-    color: var(--green-op);
-}
 .container .buttons {
     text-align: end;
     margin-right: 15px;
+}
+
+.cart {
+    position: absolute;
+    right: 0;
+    bottom: 1rem
 }

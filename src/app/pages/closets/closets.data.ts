@@ -292,3 +292,19 @@ export const CHECKS = [
     value: 10
   },
 ]
+
+export const CONFIG_ACCESORIES_GALLERY: ConfigSwiperHorizontal = {
+  class: 'horizontal-accesories',
+  swiper: {
+    loopedSlides: 1,
+    slidesPerView: 6,
+    initialSlide: 1,
+    spaceBetween: 10,
+    navigation: true,
+    centeredSlides:true,
+    allowTouchMove: false,
+    loop:true,
+  },
+  items: GALLERY_ACCESORIES,
+  description: 'Lorem ipsum dolor.'
+}

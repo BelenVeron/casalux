@@ -17,8 +17,9 @@ import { StepsMasterClosetComponent } from './master-closet/steps-master-closet/
 import { DimensionsComponent } from './dimensions/dimensions.component';
 import { ModuleComponent } from './module/module.component';
 import { AccesoriesComponent } from './accesories/accesories.component';
-import { AccesoriesCartComponent } from './accesories-cart/accesories-cart.component';
+import { AccesoriesCartComponent } from './accesories/accesories-cart/accesories-cart.component';
 import { ChecklistComponent } from './starting-closet/checklist/checklist.component';
+import { SelectAccesoriesComponent } from './accesories/select-accesories/select-accesories.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ChecklistComponent } from './starting-closet/checklist/checklist.compon
     ModuleComponent,
     AccesoriesComponent,
     AccesoriesCartComponent,
-    ChecklistComponent
+    ChecklistComponent,
+    SelectAccesoriesComponent
   ],
   imports: [
     CommonModule,

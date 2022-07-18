@@ -23,21 +23,7 @@ export class AccesoriesComponent implements OnInit {
   }
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;
-  configAccesoriesGallery: ConfigSwiperHorizontal = {
-    class: 'horizontal-accesories',
-    swiper: {
-      loopedSlides: 1,
-      slidesPerView: 6,
-      initialSlide: 0,
-      spaceBetween: 10,
-      navigation: true,
-      centeredSlides:true,
-      allowTouchMove: false,
-      loop:true,
-    },
-    items: GALLERY_ACCESORIES,
-    description: 'Lorem ipsum dolor.'
-  }
+  
   configNext: ConfigButton = {type:'next-module', text:'NEXT MODULE'};
   configFinish: ConfigButton = {type:'finish', text:'FINISH'};
 
@@ -45,8 +31,11 @@ export class AccesoriesComponent implements OnInit {
     title: 'MASTER BED ROOM CLOSETS',
     description: 'Champagne color Uprights, anchoring to Wall, 101-3/8°. Oak flamed color Shelves. Oak flarned color Open Units. Zinc color Drawers. Champagne color Rails.',
     srcRight: '/assets/img/closets/accesories.png',
-    headerClass: 'container-starting'
+    headerClass: 'container-starting text-small'
   };
+
+  // step select or cart accessory
+  step: string = 'select';
 
   constructor(private router: Router) { }
 
@@ -63,7 +52,10 @@ export class AccesoriesComponent implements OnInit {
     this.srcForm = data
   }
   selectClosetAndContinue() : void {
-    this.router.navigate(['closets/accesories-cart/1']);
+    /* this.router.navigate(['closets/accesories-cart/1']); */
+    if (this.step === 'select') {
+      this.step = 'cart'
+    }
   }
 
 }

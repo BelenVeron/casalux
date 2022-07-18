@@ -1,14 +1,8 @@
 .accesories {
     display: flex;
     justify-content: space-between;
+    margin-right: 1rem;
 }
-.accesories .small-gallery{
-    width: 20%;
-}
-.accesories .big-gallery{
-    width: 40%;
-}
-
 
 /* ////////////////// */
 .accesories .description{
@@ -25,14 +19,6 @@
     background-color: white;
     width: 100%;
 }
-.accesories .description .buttons{
-    background-color: white;
-    width: 100%;
-}
-.accesories .description .buttons select{
-    display: block;
-    margin: 5px;
-}
 
 .accesories .description .titles{
     display: flex;
@@ -40,25 +26,23 @@
     align-items: center;
     width: 100%;
     background: var(--grey);
-}
-.accesories .description .titles p {
-    width: 50%;
+    cursor: pointer;
     text-align: center;
     font-weight: bold;
-    padding: .2rem;
     font-size: .8em;
 }
+
+.accesories .description .titles p{
+    width: 50%;
+    padding: .2rem;
+}
+
 .accesories .description .titles p.not-selected {
     font-weight: normal;
     cursor: pointer;
     background: var(--light);
 }
-.accesories .description .down h6 {
-    border: 1px solid var(--k-green-op);
-    padding: 2px;
-    margin-bottom: .3rem;
-    cursor: pointer;
-}
+
 .accesories .description .info {
     margin-left: 0.1rem;
     height: 8vh;
@@ -68,24 +52,35 @@
     font-size: .8em;
     overflow: hidden;
 }
-.accesories .description .titles p{
-    width: 50%;
-    text-align: center;
-    font-weight: bold;
-    padding: .2rem;
-    font-size: .8em;
-    background: var(--grey);
+
+.accesories .description .down {
+    border: 1px solid var(--k-green-op);
+    padding: 2px;
+    margin-bottom: .3rem;
     cursor: pointer;
 }
 
 
-/* Quantity button */
+
+
+/* ----------Quantity button-------------- */
+
+.accesories .description .buttons{
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "select-area total-area"
+    "quantity-area add-area";
+}
+
 .accesories .quantity{
-    margin-top: 10px;
-    width: calc(50% - 20px);
+    width: calc(90% - 20px);
     height: 30px;
     border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -129,4 +124,14 @@
 
 .accesories .quantity select:focus {
     outline: none;
+}
+
+.buttons .total {
+    border-radius: 10px;
+    border: solid 1px black;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

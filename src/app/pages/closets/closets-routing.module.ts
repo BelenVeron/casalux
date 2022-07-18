@@ -8,7 +8,7 @@ import { MasterClosetComponent } from './master-closet/master-closet.component';
 import { DimensionsComponent } from './dimensions/dimensions.component';
 import { ModuleComponent } from './module/module.component';
 import { AccesoriesComponent } from './accesories/accesories.component';
-import { AccesoriesCartComponent } from './accesories-cart/accesories-cart.component';
+import { AccesoriesCartComponent } from './accesories/accesories-cart/accesories-cart.component';
 
 const routes: Routes = [
   {path:'', component:IndexClosetsComponent},
