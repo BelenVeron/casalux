@@ -1,56 +1,32 @@
-<div class="starting-closet">
+<div >
     <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
     <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
     <app-secondary-header [config]="configHeader"></app-secondary-header>
     
-    <div class="container">
+    <div class="container-module">
         <h2>Select type of module</h2>
         <div class="users">
             <h3>User</h3>
             <app-button [config]="configUser1Button"></app-button>
             <app-button [config]="configUser2Button"></app-button>
         </div>
-        <div class="check">
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Ties 00</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Belts 05</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Shoes 10</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Lingerie 20</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Sweaters 05</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Dress Shirts 00</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Long Dresses 07</label>
+        <div [style.--columns]="(checks.length/2).toFixed(0)" class="container-check">
+            <div class="check" *ngFor="let check of checks; index as i">
+                <input (click)="selectCheck(i)" type="checkbox">
+                <label class="ml1 mr1">{{check.text}}</label>
+                <label class="mr1">{{((check.value < 10)? '0': '') + check.value}}</label>
+                <div [ngClass]="{'line': true, 'active': check.value === 0}"></div>
+            </div>
         </div>
-        <div class="check-two">
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Suits 00</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Ponts 12</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> T-Shirts 18</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Jackets 09</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Underware 00</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Short Dresses 04</label>
-            <input type="checkbox" name="" value="standard">
-            <label for="stand"> Miscellaneous 10</label>
-        </div>
-        <div class="image">
-            <img [src]="srcImage" alt="">
-        </div>
+       
+        <img class="w70 mt6 mb6" [src]="srcImage" alt="">
         <div class="footer">
-            <app-button [config]="configNextButton" (click)="selectClosetAndContinue()" ></app-button>
+            <div class="button">
+                <h4>See all your selected modules ></h4>
+                <app-button [config]="configNextButton" (click)="selectClosetAndContinue()" ></app-button>
+            </div>
+            <div class="line-color"></div>
         </div>
-
-        <h4>See all your selected modules ></h4>
-        <div class="line-color"></div>
     </div>
     
 </div>

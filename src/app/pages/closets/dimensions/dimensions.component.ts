@@ -26,7 +26,7 @@ export class DimensionsComponent implements OnInit {
     center: true,
     username: true,
     search: false,
-    title: 'SELECT CLOSET TYPE'
+    title: 'DIMENSIONS'
   }
   dimValue: string = '50';
   isMasterSelected: any;

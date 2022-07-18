@@ -233,3 +233,62 @@ export const FORM_CHECKLIST = {
     {label: 'Underwear', name: 'underwear'},
   ]
 }
+
+export const CHECKS = [
+  {
+    text: 'Ties',
+    value: 0
+  },
+  {
+    text: 'Belts',
+    value: 5
+  },
+  {
+    text: 'Shoes',
+    value: 10
+  },
+  {
+    text: 'Lingerie',
+    value: 20
+  },
+  {
+    text: 'Sweaters',
+    value: 5
+  },
+  {
+    text: 'Dress Shirts',
+    value: 0
+  },
+  {
+    text: 'Long Dresses',
+    value: 5
+  },
+  {
+    text: 'Suits',
+    value: 0
+  },
+  {
+    text: 'Pants',
+    value: 12
+  },
+  {
+    text: 'T-Shirts',
+    value: 18
+  },
+  {
+    text: 'Jackets',
+    value: 9
+  },
+  {
+    text: 'Underware',
+    value: 0
+  },
+  {
+    text: 'Short Dresses',
+    value: 4
+  },
+  {
+    text: 'Miscellaneous',
+    value: 10
+  },
+]
