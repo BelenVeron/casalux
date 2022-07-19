@@ -1,7 +1,9 @@
-<div class="wrapper" *ngIf="type === 'luxury-kitchen'">
+<div class="wrapper">
     <div [ngClass]="'modal_box ' + active">
         <div class="modal_bg_shadow"></div>
-        <div class="modal_box_wrap">
+
+
+        <div class="wrapper-box luxury-kitchen" *ngIf="type === 'luxury-kitchen'" >
             <div class="container">
                 <div class="modal_header">
                     <h1>Be Aware</h1>
@@ -17,35 +19,22 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-
-
-<div class="wrapper-closets" *ngIf="type === 'closets'">
-    <div [ngClass]="'modal_box_closets ' + active">
-        <div class="modal_bg"></div>
-        <div class="modal_wrap">
-                <div class="header">
-                    <h1>Start Ordering</h1>
-                </div>
-                <div class="footer">
-                    <app-button [config]="configNewButton" (click)="close()"></app-button>
-                    <app-button [config]="configExistingButton" (click)="close()"></app-button>
-                    <app-button [config]="configLoginOrButton"></app-button>
-                    <app-button [config]="configContinueButton" (click)="close()"></app-button>
+        <div class="wrapper-box closets" *ngIf="type === 'closets'" >
+            <div class="modal_header white-title header-brown">
+                <h1>Start Ordering</h1>
+            </div>
+            <div class="modal_footer footer">
+                <app-button [config]="configNewButton" (click)="close()"></app-button>
+                <app-button [config]="configExistingButton" (click)="close()"></app-button>
+                <app-button [config]="configLoginOrButton"></app-button>
+                <app-button [config]="configContinueButton" (click)="close()"></app-button>
                 <P>WITHOUT SAVING THE PROJECT</P>
             </div>
         </div>
-    </div>
-</div>
 
-
-<div class="wrapper" *ngIf="type === 'closets-video'">
-    <div [ngClass]="'modal_box ' + active">
-        <div class="modal_bg_shadow"></div>
-        <div class="modal_video">
-            <div class="header_video">
+        <div class="wrapper-box modal_video" *ngIf="type === 'closets-video'" >
+            <div class="header_video white-title">
                 <h1>Complete the Steps</h1>
             </div>
             <div class="footer_video">
@@ -57,5 +46,23 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
+
+<!-- 
+<div class="wrapper-closets" >
+    <div [ngClass]="'modal_box ' + active">
+        <div class="modal_bg_shadow"></div>
+        
+    </div>
+</div> -->
+
+
+<!-- <div class="wrapper" >
+    <div [ngClass]="'modal_box ' + active">
+        <div class="modal_bg_shadow"></div>
+        
+    </div>
+</div> -->
