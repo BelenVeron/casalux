@@ -26,17 +26,14 @@
                 <label for="cust">Custom (+S)</label>
                 <input type="radio" name="" value="custom">
             </div>
-            <div class="slider-container">
-                <label for="fname">Width</label>
-                <div class="w80 ml5">
-                    <input type="range" min="35" max="54.5" [value]="dimValue" class="slider" #ranger (input)="setRange(ranger.value)">
-                    <p>Value: {{dimValue}}<span id="demo"></span></p>
-                </div>
+            <div class="container-slider">
+                <label>Width</label>
+                <app-slider></app-slider>
             </div>
             <div class="container-input">
-                <label for="fname">Depth</label>
-                <input class="mb4" type="text" id="fname" name="fname" value="19-1/2°">
-                <label for="lname">Height</label>
+                <label>Depth</label>
+                <input type="text" id="fname" name="fname" value="19-1/2°">
+                <label>Height</label>
                 <input type="text" id="lname" name="lname" value="101-3/16°">
                 <div></div>
                 <p>change the height</p>

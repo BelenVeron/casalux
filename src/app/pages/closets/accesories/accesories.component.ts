@@ -19,7 +19,7 @@ export class AccesoriesComponent implements OnInit {
     center: true,
     username: true,
     search: false,
-    title: 'SELECT CLOSET TYPE'
+    title: 'ACCESSORIES'
   }
   navLeft: boolean = true;
   itemsNav = ITEMS_NAV;

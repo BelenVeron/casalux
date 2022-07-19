@@ -24,6 +24,7 @@ import { FavoriteComponent } from './components/favorite/favorite.component';
 import { VerticalDescriptionComponent } from './components/vertical-description/vertical-description.component';
 import { ShapeComponent } from './components/shape/shape.component';
 import { SecondaryHeaderComponent } from './components/secondary-header/secondary-header.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { SecondaryHeaderComponent } from './components/secondary-header/secondar
     VerticalDescriptionComponent,
     ShapeComponent,
     SecondaryHeaderComponent,
+    SliderComponent,
   ],
   imports: [
     CommonModule,
@@ -70,7 +72,8 @@ import { SecondaryHeaderComponent } from './components/secondary-header/secondar
     SwiperModule,
     VerticalDescriptionComponent,
     ShapeComponent,
-    SecondaryHeaderComponent
+    SecondaryHeaderComponent,
+    SliderComponent
   ]
 })
 export class SharedModule { }

@@ -28,7 +28,7 @@ export class DimensionsComponent implements OnInit {
     search: false,
     title: 'DIMENSIONS'
   }
-  dimValue: string = '50';
+  
   isMasterSelected: any;
   configNext: ConfigButton = {type:'next-step', text:'NEXT'}
   configHeader: ConfigSecondaryHeader = {
@@ -51,10 +51,6 @@ export class DimensionsComponent implements OnInit {
   }
   typeSelected(data: any){
     this.srcForm = data
-  }
-
-  setRange(value: string): void {
-    this.dimValue = value;
   }
 
   selectClosetAndContinue() : void {

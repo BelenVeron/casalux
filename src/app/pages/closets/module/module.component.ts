@@ -19,7 +19,7 @@ export class ModuleComponent implements OnInit {
     center: true,
     username: true,
     search: false,
-    title: 'SELECT CLOSET TYPE'
+    title: 'SELECT MODULE'
   }
   configNextButton: ConfigButton = {type:'next-step', text:'NEXT'}
   configUser1Button: ConfigButton = {type:"users", text:"USER 1"}

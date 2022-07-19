@@ -113,9 +113,7 @@ p {
     align-items: center;
     background: rgb(247, 245, 245); 
 }
-.wrapper .modal_box.active {
-    display: block;
-}
+
 .container_video {
     background-color: var(--k-white);
     height: 70%;
@@ -136,9 +134,6 @@ p {
     align-items: center;
     width: 90%;
     height: 20%;
-}
-
-.wrapper .modal_box .header_video h1 {
 }
 
 /* END VIDEO */
