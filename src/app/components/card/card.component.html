@@ -1,8 +1,8 @@
 <div class="card-container">
     <img [src]="source" class="">
-    <div class="card-desc">
-        <h3>Collection</h3>
-        <h1>W01</h1>
-        <p>Lorem ipsum dolor sit amet, sit amet ligula.</p>
+    <div [ngClass]="'card-desc ' + card.classDesc" >
+        <h3>{{card.type}}</h3>
+        <h1><span>{{card.pretitle}}</span>{{card.title}}</h1>
+        <p>{{card.description}}</p>
     </div>
 </div>

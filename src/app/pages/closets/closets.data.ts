@@ -46,9 +46,9 @@ export const CLOSETS = [
 
 export const ITEMS_NAV = {
   primaryItems: [
-    {title:'WARDROVE CLOSETS', route:'/closets', selected:false},
+    {title:'WARDROVE CLOSETS', route:'/closets/wardrobe', selected:false},
     {title:'WALK-IN-CLOSETS', route:'/closets/walk-in', selected:false},
-    {title:'CENTER ISLAND', route:'/closets', selected:false},
+    {title:'CENTER ISLAND', route:'/closets/center-island', selected:false},
     {title:'ACCESORIES', route:'/closets', selected:false},
     {title:'FINISHES', route:'/closets', selected:false},
   ],
@@ -74,32 +74,108 @@ export const WALK_IN_IMAGES = [
   {
     id: "1",
     src: "/assets/img/closets/Preview1x.jpg",
-    class: "item-grid-1"
+    class: "item-grid-1",
+    card: {
+      type: 'Collection',
+      title: 'W2A',
+      description: 'Elegance sweeps on to stage in the bedroom with this walk in closet',
+    }
   },
   {
     id: "2",
     src: "/assets/img/closets/Preview2x.jpg",
-    class: "item-grid-2"
+    class: "item-grid-2",
+    card: {
+      type: 'Collection',
+      title: 'W01',
+      description: 'Elegance sweeps on to stage in the bedroom with this walk in closet',
+    }
   },
   {
     id: "3",
     src: "/assets/img/closets/Preview3x.jpg",
-    class: "item-grid-3"
+    class: "item-grid-3",
+    card: {
+      type: 'Collection',
+      title: 'W02',
+      description: 'It\'s composed of sides and modules with standard heights and widhts that enable you to pesonalize your closet',
+    }
   },
   {
     id: "4",
     src: "/assets/img/closets/Preview4x.jpg",
-    class: "item-grid-4"
+    class: "item-grid-4",
+    card: {
+      type: 'Collection',
+      title: 'W02',
+      description: 'It\'s composed of sides and modules with standard heights and widhts that enable you to pesonalize your closet',
+    }
   },
   {
     id: "6",
     src: "/assets/img/closets/Preview6x.jpg",
-    class: "item-grid-6"
+    class: "item-grid-6",
+    card: {
+      type: 'Collection',
+      title: 'W02',
+      description: 'It\'s composed of sides and modules with standard heights and widhts that enable you to pesonalize your closet',
+    }
   },
   {
     id: "5",
     src: "/assets/img/closets/Preview5x.jpg",
-    class: "item-grid-5"
+    class: "item-grid-5",
+    card: {
+      type: 'Collection',
+      title: 'W02',
+      description: 'It\'s composed of sides and modules with standard heights and widhts that enable you to pesonalize your closet',
+    }
+  },
+]
+
+export const WARDROBE_IMAGES = [
+  {
+    id: "1",
+    src: "/assets/img/closets/wardrobe/wardrobe_1.png",
+    card: {
+      type: 'Collection',
+      title: 'WD1',
+      description: 'It\'s composed of sides and modules with standard heights and widhts that enable you to pesonalize your closet',
+      classDesc: 'center-desc'
+    }
+  },
+  {
+    id: "2",
+    src: "/assets/img/closets/wardrobe/wardrobe_2.png",
+    card: {
+      type: 'Collection',
+      title: 'WD2',
+      description: 'It\'s composed of sides and modules with standard heights and widhts that enable you to pesonalize your closet',
+      classDesc: 'center-desc'
+    }
+  },
+]
+
+export const ISLAND_IMAGES = [
+  {
+    id: "1",
+    src: "/assets/img/closets/island/center-island_1.png",
+    card: {
+      pretitle: 'Closet',
+      title: 'Island',
+      description: 'They are free-standing storage units for walt-in closets, chosen based on the space available, completing the closet area with a touch of style and design. Single or dual faced, the can be accessorized with shelves, wooden or glass drowers and pullout trays.',
+      classDesc: 'center-desc top'
+    }
+  },
+  {
+    id: "2",
+    src: "/assets/img/closets/island/center-island_2.png",
+    card: {
+      pretitle: 'Closet',
+      title: 'Island',
+      description: 'They are free-standing storage units for walt-in closets, chosen based on the space available, completing the closet area with a touch of style and design. Single or dual faced, the can be accessorized with shelves, wooden or glass drowers and pullout trays.',
+      classDesc: 'center-desc top'
+    }
   },
 ]
 

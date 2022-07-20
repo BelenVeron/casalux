@@ -9,10 +9,13 @@ import { DimensionsComponent } from './dimensions/dimensions.component';
 import { ModuleComponent } from './module/module.component';
 import { AccesoriesComponent } from './accesories/accesories.component';
 import { AccesoriesCartComponent } from './accesories/accesories-cart/accesories-cart.component';
+import { IndexGalleryComponent } from './index-gallery/index-gallery.component';
 
 const routes: Routes = [
   {path:'', component:IndexClosetsComponent},
-  {path:'walk-in', component:WalkInComponent},
+  {path:'walk-in', component:IndexGalleryComponent},
+  {path:'wardrobe', component:IndexGalleryComponent},
+  {path:'center-island', component:IndexGalleryComponent},
   {path:'collection/:id', component:CollectionComponent},
   {path:'starting-closet/:id', component:StartingClosetComponent},
   {path:'master-closet/:id', component:MasterClosetComponent},

@@ -1,0 +1,21 @@
+<div class="index-container">
+    <app-nav-header type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    
+    <div class="container-grid-5" *ngIf="route === '/closets/walk-in'">
+        <app-card *ngFor="let item of walkInImages" [routerLink]="['/closets/collection',item.id]" [source]="item.src" [card]="item.card" [class]="item.class"></app-card>
+    </div>
+    <div class="container-grid-2" *ngIf="route === '/closets/wardrobe'">
+        <app-card *ngFor="let item of wardrobeImages" [routerLink]="['/closets/wardrobe',item.id]" [source]="item.src" [card]="item.card"></app-card>
+    </div>
+    <div class="container-grid-2" *ngIf="route === '/closets/center-island'">
+        <app-card *ngFor="let item of islandImages" [routerLink]="['/closets/collection',item.id]" [source]="item.src" [card]="item.card"></app-card>
+    </div>
+
+    <div class="footer" *ngIf="footer">
+        <div class="center">
+            <h1>CASALUX</h1>
+            <h2>Wardrobe Closets</h2>
+        </div>
+    </div>
+</div>

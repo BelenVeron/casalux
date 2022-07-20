@@ -1,5 +1,9 @@
 @import 'assets/animations.css';
 @import '~swiper/swiper-bundle';
+@import url('https://fonts.googleapis.com/css2?family=Cabin');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 :root {
     --black: #101820;
     --black-op: #2f2f2fdc;
@@ -7,6 +11,7 @@
     --brown: #5f6252;
     --dark-brown: #484d44;
     --green-brown: #bfc3ad;
+    --dark-green-brown: #a0a291;
     --green: #9ec400;
     --green-op: #7A9A01;
     --white: #eaece9;
@@ -18,6 +23,11 @@
     --k-green-op: rgba(96, 96, 72);
     --k-white: rgba(232, 234, 232);
     --k-black-op: #2f2f2faf;
+
+    /* Font */
+    --font-cabin: 'Cabin', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-quicksand: 'Quicksand', sans-serif;
 }
 
 * {

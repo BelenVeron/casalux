@@ -20,6 +20,7 @@ import { AccesoriesComponent } from './accesories/accesories.component';
 import { AccesoriesCartComponent } from './accesories/accesories-cart/accesories-cart.component';
 import { ChecklistComponent } from './starting-closet/checklist/checklist.component';
 import { SelectAccesoriesComponent } from './accesories/select-accesories/select-accesories.component';
+import { IndexGalleryComponent } from './index-gallery/index-gallery.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { SelectAccesoriesComponent } from './accesories/select-accesories/select
     AccesoriesComponent,
     AccesoriesCartComponent,
     ChecklistComponent,
-    SelectAccesoriesComponent
+    SelectAccesoriesComponent,
+    IndexGalleryComponent
   ],
   imports: [
     CommonModule,
