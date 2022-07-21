@@ -6,7 +6,6 @@ import { SharedModule } from '../../shared.module'
 
 import { ClosetsRoutingModule } from './closets-routing.module';
 import { IndexClosetsComponent } from './index-closets/index-closets.component';
-import { WalkInComponent } from './walk-in/walk-in.component';
 import { CollectionComponent } from './collection/collection.component';
 import { StartingClosetComponent } from './starting-closet/starting-closet.component';
 import { StepsStartingClosetComponent } from './starting-closet/steps-starting-closet/steps-starting-closet.component';
@@ -26,7 +25,6 @@ import { IndexGalleryComponent } from './index-gallery/index-gallery.component';
 @NgModule({
   declarations: [
     IndexClosetsComponent,
-    WalkInComponent,
     CollectionComponent,
     StartingClosetComponent,
     StepsStartingClosetComponent,

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexClosetsComponent } from './index-closets/index-closets.component';
-import { WalkInComponent } from './walk-in/walk-in.component';
 import { CollectionComponent } from './collection/collection.component';
 import { StartingClosetComponent } from './starting-closet/starting-closet.component';
 import { MasterClosetComponent } from './master-closet/master-closet.component';
