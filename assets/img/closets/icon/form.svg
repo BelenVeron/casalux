@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 40" width="37" height="40">
+	<title>step1</title>
+	<defs>
+		<image  width="34" height="34" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAMAAAANmfvwAAAAAXNSR0IB2cksfwAAAG9QTFRFuLi4uLi4t7e3t7e3t7e3tbW1tbW1t7e3uLi4t7e3t7e3t7e3tra2tra2t7e3t7e3uLi4t7e3t7e3t7e3t7e3t7e3t7e3uLi4AAAAt7e3t7e3t7e3t7e3uLi4t7e3uLi4t7e3t7e3t7e3t7e3tbW1RoShcQAAACV0Uk5TBa+mby8fAym6s4RNPwX/FvXTeFcHon8OACPXSMQ6wjkodQqHDocdpMkAAABgSURBVHicY2BghAImZhZWbICNgZ0DCji5uHmwAV4GPkKAf2QqEYCzBYWEsQERBlG4EjFxCayAQRKmQkoauwoJBhGYEhlZgkrk5EeV0EuJgiIMKOFSIoyUXka2EmUVHEoAJppSv97g440AAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Folder 1">
+		<use id="Layer 7" href="#img1" x="2" y="3"/>
+	</g>
+</svg>

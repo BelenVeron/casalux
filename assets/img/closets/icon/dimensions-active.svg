@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 40" width="37" height="40">
+	<title>step1</title>
+	<defs>
+		<image  width="30" height="37" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAlCAMAAABiU6n+AAAAAXNSR0IB2cksfwAAAihQTFRFAAAAi4t/c3NgampVf39vt7e3enppampUZWVOcXFefn5uh4d5eHhnYGBIZGRNcXFdgIBwiYl9h4d6d3dlbGxXZ2dScnJfhYV3cHBcY2NMgYFyiYl8h4d6fn5ua2tWdnZkiIh7fn5uY2NLZWVPiop+iop+hoZ5d3dlYmJLa2tVfn5ui4t+bGxYZmZPjIyAiop+hIR1bm5aZGRNb29bi4t/c3NhYWFJbW1YfHxri4t/i4t/eXloi4t/cXFeiop+jIyAcnJfg4N0aGhSg4N1i4t/cXFdg4N1a2tWaWlUgIBxfX1thYV3aGhTi4t/iYl8g4N0jIyAfHxsjY2BiYl9hIR2fn5ueHhmf39vZ2dQiop9h4d5gYFyiop+h4d6iIh7iop+e3trYmJKfHxsenppiop+b29bgoJzfn5vhYV4b29cbW1Zh4d6iop9eXloi4t/gIBxiIh7iYl9eXlohIR1goJ0g4N1aWlTeHhnh4d6gYFyjY2BhIR2d3dmiop9e3tqiop9hoZ5gYFygoJziop+g4N1jY2Be3trjIx/uLi4h4d6hoZ4goJ0i4t+dnZkhYV3enppjIyAh4d5i4t/hoZ4ampViYl8bW1YfHxshIR2e3tqd3dmhIR1dnZkfHxsiIh7jY2BjY2BZ2dRgoJzhoZ4iIh7dHRifX1thoZ5iIh7cHBcf39wiYl8gIBwiop+i4t/c3Nhi4t/ZmZQiop+hoZ4iIh7hIR2iYl8i4t/W+x9TQAAALh0Uk5TABfr+7IA0Pv+77pc2v/+8K0xXN/5/e508v+eOFe4+eFGvf/+Ehll4P/6uxb4/gQdiPb/9Q7r//jHEgzXBvAsG+2O/IoI8Yf6+6q9c/wQM48Iww4uh7zctP0jWp0hWksMyv/H0ib0mbVw8/dUMNQZqE8s1YSSi/zZT6ACgN0oziZfppsbjgbJCgBQa5Yf4nrTAl0EZ/o698WDzd6G48RDCgj9mHBI6L9qUvOxNa4oCuoW/RduTYY8Av5CCqsAAAI0SURBVHicdZP7X4tRHMePVfbEPpOs6WnZsjRDltlajFxihi7EXCI00Y2KWCSUcidCCrmN3O/3f8/3PNvrOXvW+v5yzvu8n3PO95zzfRjTxjRdWjqbMjKm66XMGTOn0gZQGGdlzU5pswFpjgnIMc9NpXMh51ny50mA1VYwyc63o3ABY0WOhYBz0eIlSboYWMpbV8kyN7Dc49XYUh/lVaZ0Xd4VtMPKROv30JKAvMq7mmM5sGZtgl0HeNZXGAHTBsKNAe3sTUFsLmH+LUG7tJWw0oqqamFrdMC27dSxGGp3MLaT1gq5hN5FqezOVnHPXpjrhN1n5tdp3l8fwwPlkA4Ke6gBKDaFgdoYH/ah8YjQlUfhbgo1y7Ap2NKKtmPCHm8HmjsYy+s8wfFkF5BeJPSpKuC0wEg3zlgEnqVDoU0tgnw6VM85oXvtPG3r+QvxyXZc7BO2PwfOXCoCp/4SR4ceaRFhqweAxo7By0F6DsIrIeDqNdVevwG03uS9LvkWYT8QcIjJt4fope6on9ffhbNB2OF7PK2ygbrY/d9/gPjVxMI7Ap+RqsDwUMHBUUhjCfoRwu7HT0woHOeUEUF4KMEyoIJE79Nnz5VEgO6IVo/y5sVLhcYgtzOtjr5S4TVNntDoNzTy9l0cMiH3aCx7T4Ugf/j4ifc/ywhqLRv+0kQPFDWP0+b0a7Sw5PhakBUFRgKdNju+TbIU3ydoB/ygy6lJpRn7+Uup1N+pLaXg/1Oq+/svefg/lA9sutR++GwAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Folder 1">
+		<use id="Layer 9 copy" href="#img1" x="5" y="2"/>
+	</g>
+	<g id="Folder 2">
+	</g>
+</svg>

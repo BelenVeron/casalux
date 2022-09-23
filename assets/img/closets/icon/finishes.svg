@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 40" width="37" height="40">
+	<title>step1</title>
+	<defs>
+		<image  width="33" height="37" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAlCAMAAAD7q3BLAAAAAXNSR0IB2cksfwAAAUpQTFRFAAAAuLi4uLi4tra2t7e3uLi4uLi4uLi4t7e3t7e3uLi4uLi4t7e3t7e3t7e3t7e3uLi4t7e3t7e3t7e3t7e3t7e3t7e3t7e3uLi4t7e3t7e3t7e3t7e3uLi4t7e3tra2t7e3t7e3tbW1t7e3tbW1t7e3uLi4tra2t7e3t7e3t7e3t7e3t7e3uLi4t7e3uLi4uLi4t7e3t7e3t7e3uLi4uLi4t7e3t7e3uLi4t7e3t7e3t7e3uLi4uLi4tra2tbW1t7e3tra2uLi4t7e3t7e3uLi4t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3tbW1t7e3t7e3uLi4t7e3t7e3t7e3u7u7tra2t7e3t7e3uLi4t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3uLi4t7e3t7e3t7e3t7e3tbW1uLi4t7e3t7e3hNuGBQAAAG50Uk5TAAMIKGF0WxQIAAVq9/8fGDfHWPLU3fuuKkfleNdWVxXo2QvcGI4RGuakl6vzPtMOe/lNSBU2X5inXjoCExYIAOEw7ckHhukU29oQE87veRac3iWD8IkFIvjWSPrrenPtfXB8SeJkweDjmxBwf2pHmJZJAAABF0lEQVR4nN3Tx1YCMRSA4YuNsVxgLFhQBBFRVOzYRRClSJFiBbGCqPj+WycTznFMTGbvv0y+xU1OAqBn6ejs6ubqsSq9dB/6+gfw72x2KhyqAGhRMYg4NKxyjTiNYnQMuMYnjMLFA4BJIixTbhMx7fHOyIULfbNE+Od4EPARMd8W3oUg1+ISEUjEckhyH7pYWV0T7K9vUAGbW+HtHb7dvX1oCwDl4JDvKAI/QhzicVQuYognirE4K07Z6c8SjIgnWZJKM+T815PIIGZz0rHy2pNQ5ZMHTcWFqSgghooyUNIOU768EoPrG3Le2zuxCFeIqN6LRY38EHx4/A/iiYpnsXjR7+O1LhbQeGs2C+8fEgGfrdZX3rjwDUE+PXVqpZjXAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<g id="Folder 1">
+		<use id="Layer 12" href="#img1" x="3" y="2"/>
+	</g>
+</svg>
