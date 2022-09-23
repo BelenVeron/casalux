@@ -1,0 +1,48 @@
+<div class="container">
+      
+    <!-- Parte central de la pantalla con galerias -->
+    <div  class="accesories">
+        <app-vertical-gallery class="w20y" [assets]="true" [closets]="true" class="item-2" type='scroll' [items]="closets"></app-vertical-gallery>  
+        <app-horizontal-gallery class="w40"  [config]="configGalleryAccesories" ></app-horizontal-gallery>
+       
+        <!--  -->
+        <div class="description">
+            <h3 class="text">Inside drawer partition</h3>
+            
+            <div class="titles">
+                <p (click)="info.details.show = true;info.technicalInfo.show = false" [ngClass]="{'not-selected':!info.details.show}">DETAILS</p>
+                <p (click)="info.technicalInfo.show = true;info.details.show = false" [ngClass]="{'not-selected':!info.technicalInfo.show}">TECHNICAL FILES</p>
+            </div>
+            <div class="info" *ngIf="info.details.show">{{info.details.text}}</div>
+            <div class="info" *ngIf="info.technicalInfo.show">{{info.technicalInfo.text}}</div>
+            <h6 class="down" *ngIf="info.technicalInfo.show">Download Documentation</h6>
+            
+            <div class="buttons pt1">
+                <div class="select">
+                    <div class="quantity mb1">
+                        <select  name="" id="">
+                            <option value="dimensions">Dimensions</option>
+                            <option value="canada">Wardrobe Closet</option>
+                            <option value="usa">Walk in + Wardrobe</option>
+                        </select>
+                    </div>
+                    <div class="quantity">
+                        <select name="" id="">
+                            <option value="finishes">Quantity</option>
+                        </select>
+                    </div>    
+                </div>
+                <input class="total" type="text" [value]="'$' + (price*quantity)">
+                <div class="quantity mt1">
+                    <h3>Quantity</h3>
+                    <button><i class="fas fa-minus" (click)="minus()"></i></button>
+                    <input placeholder="1" type="number" min="0" [value]="quantity">
+                    <button><i class="fas fa-plus" (click)="plus()"></i></button>
+                </div>
+                <app-button class="mt1" [config]="configAddButton" (click)="addCart()" ></app-button>        
+            </div>
+        </div>
+
+    </div>
+</div>
+

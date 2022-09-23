@@ -1,0 +1,10 @@
+.container .buttons {
+    text-align: end;
+    margin-right: 15px;
+}
+
+.cart {
+    position: absolute;
+    right: 0;
+    bottom: 1rem
+}

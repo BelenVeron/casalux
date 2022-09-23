@@ -1,0 +1,149 @@
+.phone {
+    display: none;
+}
+
+@media (max-width:450px) {
+    .phone {
+        display: flex;
+        position: fixed;
+        justify-content: space-around;
+        align-items: center;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 10vh;
+        background: #fff;
+        padding: .2rem;
+        z-index: 999;
+        color: var(--green);
+        font-size: 2rem;
+    }
+    .phone .img {
+        width: 70%;
+        margin-left: .2rem;
+    }
+    .phone i {
+        font-size: .6em;
+        padding: .4rem;
+    }
+    .phone .sms {
+        transform: rotateY(180deg);
+        margin-bottom: 0.5rem;
+    }
+    /* When the menu is active */
+    .phone.active {
+        background: var(--k-black);
+    }
+    .phone.active .bar i {
+        transform: rotate(270deg);
+    }
+}
+
+
+/* ----------WEB--------------- */
+
+.navbar-closets {
+    width: 100vw;
+    height: 60px;
+    font-size: 2rem;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 4px;
+}
+
+.navbar-closets .left {
+    display: flex;
+    width: 35%;
+    justify-content: flex-start;
+    font-size: 30px;
+    align-items: flex-end;
+}
+
+.navbar-closets .left i {
+    margin-left: 2rem;
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: var(--k-green-op);
+}
+
+.navbar-closets .left img {
+    margin-left: 2rem;
+    width: 18vw;
+}
+
+.navbar-closets .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    background-color: var(--k-green-op);
+}
+
+.navbar-closets .center h2{
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+.navbar-closets .no-center {
+    background-color: var(--light);
+}
+
+.navbar-closets .right {
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+}
+
+.navbar-closets .right i {
+    margin-right: 2rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: var(--k-green-op);
+}
+
+.navbar-closets .right .username {
+    align-self: center;
+    display: flex;
+    font-size: 1rem;
+    color: var(--k-green-op);
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+@media (max-width:1300px),
+(max-height:800px) {
+    .navbar-closets {
+    }
+    .navbar-closets .left img {
+        width: 23vw;
+    }
+    
+}
+@media (max-height:800px)
+ {
+    .navbar-closets .space-green p{
+        height: 8vh;
+    }
+    .navbar-closets .username {
+        
+    }
+    
+}
+
+@media (max-width:1000px) {
+    .navbar-closets .left img {
+        width: 30vw;
+    }
+}
+
+@media (max-width:750px) {
+    .navbar-closets .left img {
+        width: 45vw;
+    }
+}
+
+@media (max-width:450px) {}
+
+
+/* ----------END WEB--------------- */

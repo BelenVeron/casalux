@@ -1,0 +1,28 @@
+<form [formGroup]="login" (onSubmit)="log()" class="fadein">
+
+    <i class="fas fa-times close"
+    (click)="closeComponent()"></i>
+
+    <div class="form-group">
+        <label for="emailUser">E-mail</label>
+        <input type="emailUser" id="emailUser"
+        formControlName="emailUser">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password"
+        formControlName="password">
+        <small (click)="openForgotPasswordComponent()"
+        style="cursor: pointer;">Have you forgotten your password?</small>
+    </div>
+
+    <button class="btn {{error_text?'login':''}}" (click)="log()">LOGIN</button>
+    <div class="error-text fadein" *ngIf="error_text">{{error_text}}</div>
+    <hr style="width:80%;height:.1px" color="#9ec400">
+    <button class="btn" (click)="openRegisterComponent_()">REGISTER</button>
+    OR
+    <div class="f-img">
+        <img src="/assets/img/facebook.png" alt="">
+    </div>
+    Continue with facebook
+</form>

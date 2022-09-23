@@ -1,0 +1,79 @@
+
+
+<main class="fadein">
+    
+    <form [formGroup]="registerForm">
+
+        <i class="fas fa-times close"
+        (click)="closeComponent()"></i>
+        
+        <h2>REGISTRATION</h2>
+        <hr style="width:80%;height:.1px;margin:.4rem" color="#9ec400">
+        Please enter the required information or login.
+
+        <div class="divider"></div>
+
+        <div class="first-group">
+            <div class="form-group form-group-1">
+                <label for="name">Name</label>
+                <input type="text" formControlName="name" class="f-i">
+            </div>
+            <div class="form-group form-group-2">
+                <label for="lastName">Last name</label>
+                <input type="text" formControlName="lastName" class="s-i">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" formControlName="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" formControlName="address">
+        </div>
+
+        <div class="form-group address-group">
+            <input type="text" placeholder="*city" formControlName="city">
+            <input type="text" placeholder="*state" formControlName="state">
+            <input type="text" placeholder="*zip code" formControlName="zipCode">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" formControlName="email">
+        </div>
+
+        <div class="form-group company-group">
+            <div class="check">
+                <label for="company">Company</label>
+                <input type="checkbox" id="company" (change)="company = !company">
+            </div>
+            <div class="inputs fadein" *ngIf="company">
+                <input type="text" placeholder="Company code" formControlName="codeCompany"
+                (keyup)="searchCompany(code.value, name)" #code
+                [disabled]="name.value?true:false">
+                <input type="text" placeholder="Company name" formControlName="nameCompany" #name
+                [attr.disabled]="name.value?true:false">
+                <select formControlName="positionCompany">
+                    <option value="Owner">Owner</option>
+                    <option value="Employee">Employee</option>
+                    <option value="Other">Other</option>
+                </select>
+                <select formControlName="specialtyCompany">
+                    <option value="Arquitect">Arquitect</option>
+                    <option value="Interior designer">Interior designer</option>
+                    <option value="Contractor">Contractor</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="inputs" *ngIf="!company"></div>
+        </div>
+
+        <button type="submit" class="btn {{error_text?'error':''}}"
+        (click)="register()">FINISH</button>
+        <div class="{{errorClass}}-text fadein" *ngIf="error_text">{{error_text}}</div>
+    </form>
+</main>

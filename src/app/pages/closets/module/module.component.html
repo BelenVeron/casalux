@@ -1,0 +1,32 @@
+<div >
+    <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    <app-secondary-header [config]="configHeader"></app-secondary-header>
+    
+    <div class="container-module">
+        <h2>Select type of module</h2>
+        <div class="users">
+            <h3>User</h3>
+            <app-button [config]="configUser1Button"></app-button>
+            <app-button [config]="configUser2Button"></app-button>
+        </div>
+        <div [style.--columns]="(checks.length/2).toFixed(0)" class="container-check">
+            <div class="check" *ngFor="let check of checks; index as i">
+                <input (click)="selectCheck(i)" type="checkbox">
+                <label class="ml1 mr1">{{check.text}}</label>
+                <label class="mr1">{{((check.value < 10)? '0': '') + check.value}}</label>
+                <div [ngClass]="{'line': true, 'active': check.value === 0}"></div>
+            </div>
+        </div>
+       
+        <img class="w70 mt6 mb6" [src]="srcImage" alt="">
+        <div class="footer">
+            <div class="button">
+                <h4>See all your selected modules ></h4>
+                <app-button [config]="configNextButton" (click)="selectClosetAndContinue()" ></app-button>
+            </div>
+            <div class="line-color"></div>
+        </div>
+    </div>
+    
+</div>

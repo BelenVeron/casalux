@@ -1,0 +1,79 @@
+.card-container {
+    height: 100%;
+    position: relative;
+}
+
+.card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+}
+
+.card-container .card-desc {
+    display: block;
+    font-size: 1.2rem;
+    position: absolute;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    background-color: rgba(99, 84, 68, 0.747);
+    animation: all .2s;
+    /* transition: 0.8s ease; */
+}
+
+.card-container .card-desc h3 {
+    margin-top: 2rem;
+}
+
+.card-container:hover .card-desc {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    color: rgba(240, 239, 239, 0.925);
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-container:hover .center-desc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container:hover .center-desc h1 {
+    margin-top: -1rem;
+    font-size: 34px;
+}
+
+.card-container:hover .center-desc.top h1{
+    margin-top: .5rem;
+}
+
+.card-container:hover .center-desc h3 {
+    font-size: 32px;
+    font-family: var(--font-quicksand);
+    font-style: italic;
+    font-weight: 100;
+}
+
+.card-container:hover .center-desc span {
+    margin-right: 15px;
+    font-size: 40px;
+    font-family: var(--font-quicksand);
+    font-style: italic;
+    font-weight: 200;
+}
+
+.card-container:hover .center-desc p {
+    width: 45%;
+    margin-top: 1rem;
+    font-size: 16px;
+}
+
+.card-container:hover .center-desc.top p{
+    width: 40%;
+    font-size: 12px;
+}

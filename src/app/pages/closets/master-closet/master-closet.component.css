@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    height: 80%;
+}
+
+.left .image {
+    display: flex;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+
+@media (max-width:1920px) and (min-width: 1600px) {
+    .left .image .one {
+        width: 7.5vw;
+        margin: 0.3rem;
+        margin-left: 1rem;
+    }
+}

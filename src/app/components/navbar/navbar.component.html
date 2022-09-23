@@ -1,0 +1,70 @@
+<!-- sidebar de web -->
+<nav *ngIf="sidenav || mobileNav" [ngClass]="{'navUp': navUp, 'navLeft': !navUp, 'animate__animated': true, 'animate__fadeInLeft': sidenav, 'animate__fadeInDown': mobileNav}">
+
+    <a *ngIf="navUp; then logoWhite else logoGreen" class="web" routerLink="/luxurykitchen"></a>
+    <ng-template #logoWhite><img class="white" src="/assets/img/closets/logo-closets.png" alt=""></ng-template>
+    <ng-template #logoGreen><img src="/assets/img/kitchen/logogreen.png" alt=""></ng-template>
+
+    <div class="scroll">
+        <article class="options">
+            <div *ngFor="let item of items">
+                <a *ngIf="item.route" routerLink="{{item.route}}" class="title">
+                    {{item.title}}
+                </a>
+                <p *ngIf="!item.route" class="title" (click)="viewOptions(item)">
+                    {{item.title}}
+                </p>
+                <div class="child-container" *ngIf="item.selected">
+                    <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">
+                        {{children.title}}
+                    </a>
+                </div>
+            </div>
+        </article>
+        <hr *ngIf="secondItems.length > 0" class="solid">
+        <article class="second-options">
+            <div *ngFor="let item of secondItems">
+                <a *ngIf="item.route" routerLink="{{item.route}}" class="title">
+                    {{item.title}}
+                </a>
+                <p *ngIf="!item.route" class="title" (click)="viewOptions(item)">
+                    {{item.title}}
+                </p>
+                <div class="child-container" *ngIf="item.selected">
+                    <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">
+                        {{children.title}}
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <p class="text" *ngIf="navUp">Boths Web page <br/> Countertops Web page <br/> Luxury kitchens Web page</p>
+
+        <div class="extras">
+            <article class="actions">
+                <div class="action" *ngFor="let action of actions">
+                    <a *ngIf="action.route.slice(-3) !== 'php'" routerLink="{{action.route}}">
+                        <i class="fas fa-{{action.icon}}"></i> {{action.title}}
+                    </a>
+                    <a *ngIf="action.route.slice(-3) === 'php'" (click)="extRedirect(action.route)">
+                        <i class="fas fa-{{action.icon}}"></i> {{action.title}}
+                    </a>
+                </div>
+            </article>
+
+
+            <app-social *ngIf="navUp" [type]="'social-white'"></app-social>
+            <app-social *ngIf="!navUp" [type]="'social'"></app-social>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Sidebar black in web -->
+<section *ngIf="!hideSidebar" class="bars-web">
+    <i class="fas fa-bars" (click)="viewNav()"></i>
+</section>
+
+
+<!-- Header in the mobile -->
+<app-nav-header (sendViewNav)="viewMobileNav($event)" [viewNav]="mobileNav"></app-nav-header>

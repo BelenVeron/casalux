@@ -1,0 +1,47 @@
+<!-- sidebar de web -->
+<nav *ngIf="showNavbar" [ngClass]="{'container-nav': true, 'animate__animated': true, 'animate__fadeInLeft': left, 'animate__fadeInDown': down}">
+
+    <!-- Image header - close the navbar -->
+    <div class="image-navbar">
+        <img [src]="src" alt="" (click)="closeNav()">
+    </div>
+
+    <!-- First Items -->
+    <div class="options">
+        <div *ngFor="let item of items.primaryItems">
+            <a (click)="actionOrRedirect(item.route)" class="title">{{item.title}}</a>
+            <div class="child-container" *ngIf="item.selected">
+                <a *ngFor="let children of item.children" class="children" routerLink="{{children.route}}">{{children.title}}</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <hr *ngIf="items.secondaryItems.length > 0" class="solid">
+
+    <!-- Second Items -->
+    <div class="options">
+        <a *ngFor="let item of items.secondaryItems" (click)="actionOrRedirect(item.route)" class="title">{{item.title}}</a>
+    </div>
+
+    <!-- Text description -->
+    <div *ngIf="items.description" class="text">
+        <p [innerHtml]="items.description"></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="extras">
+        <!-- Buttons -->
+        <div class="action">
+            <app-button [config]="item.config" *ngFor="let item of items.buttons" (click)="actionOrRedirect(item.route)"></app-button>
+        </div>
+        <!-- Icons and phone -->
+        <div class="social">
+            <app-social [type]="'social-white'"></app-social>
+        </div>
+    </div>
+
+</nav>
+
+<!-- Header in the mobile -->
+<app-nav-header (sendViewNav)="viewMobileNav($event)" [viewNav]="showNavbar"></app-nav-header>

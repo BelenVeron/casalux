@@ -1,0 +1,14 @@
+<div class="container">
+    <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    <app-secondary-header [config]="configHeader"></app-secondary-header>
+
+    <app-select-accesories *ngIf="step === 'select'" ></app-select-accesories>
+    <app-accesories-cart *ngIf="step === 'cart'"></app-accesories-cart>
+    
+    <div [ngClass]="{'buttons': true, 'cart': step === 'cart'}">
+        <app-button [config]="configNext" (click)="selectClosetAndContinue()" ></app-button>
+        <app-button [config]="configFinish" (click)="selectClosetAndContinue()" ></app-button>
+    </div>
+  
+</div>

@@ -1,0 +1,13 @@
+<article class="closets-details">
+    <p class="title">Collection</p>
+    <p class="title-secondary">{{items.name}}</p>
+
+    <p class="text">{{items.description}}</p>
+
+    <hr>
+
+    <div class="buttons">
+        <app-button [config]="configStart" (click)="clickDesign()"></app-button>
+        <app-button [config]="configDownload" color="brown"></app-button>
+    </div>
+</article>

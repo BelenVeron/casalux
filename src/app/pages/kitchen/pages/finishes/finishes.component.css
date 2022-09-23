@@ -1,0 +1,396 @@
+main {
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding: 1rem 0 0;
+}
+
+.mobile {
+    display: none !important;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 98%;
+}
+
+section .header {
+    width: 92%;
+    transform: translateX(-1rem);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+section .logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section .logo-container a {
+    width: 22.5%;
+}
+
+.palettes .palette .name {
+    background-color: #b1a8a263;
+}
+
+section .header .title {
+    font-size: 2.4em;
+    color: var(--k-green-op);
+    border-top: 1px solid var(--k-green-op);
+    width: 60%;
+    text-align: right;
+    align-self: flex-end;
+    transform: translateY(-1rem);
+}
+
+article {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.body-palettes {
+    width: 90%;
+}
+
+.body-palettes .details {
+    height: 8vh;
+}
+
+.filters {
+    padding-bottom: .4rem;
+}
+
+.filter {
+    transition: all.2s;
+    width: 15vw;
+}
+
+.filter.selected {
+    background: var(--k-white);
+}
+
+.filter .title {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    background: var(--light);
+    margin-top: 0;
+    padding: .2rem;
+}
+
+.filter .title i {
+    cursor: pointer;
+    margin-left: .4rem;
+}
+
+.filter .title.selected {
+    font-weight: bold;
+    color: var(--k-green-op);
+    background: var(--k-white);
+    border: none;
+}
+
+.filter .options {
+    padding-left: .8rem;
+    color: var(--k-green-op);
+}
+
+.filter .option {
+    cursor: pointer;
+    padding: .2rem;
+    transition: all.2s;
+}
+
+.filter .option.selected {
+    color: var(--green-op);
+    font-weight: bold;
+}
+
+.details {
+    width: 100%;
+    background-color: var(--k-white);
+    position: relative;
+}
+
+.details .arrow-left,
+.details .arrow-right {
+    position: absolute;
+    top: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--k-black-op);
+}
+
+.details .arrow-left {
+    left: 2rem;
+}
+
+.details .arrow-right {
+    right: 2rem;
+}
+
+.details .sections {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 10vh;
+    margin: auto;
+}
+
+.details .sections .detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+}
+
+.details .sections .title {
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--green-op);
+}
+
+.details .sections .detail:nth-child(2) .title {
+    background: var(--light);
+    color: var(--black);
+}
+
+.details .sections .detail .palettes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.details .sections .detail .palettes .palette {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .2rem 0;
+    width: 100%;
+    height: 7vh;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.details .sections .detail .palettes .palette .img {
+    width: 100%;
+}
+
+.details .sections .detail .palettes .palette .name {
+    position: absolute;
+    left: .4rem;
+    top: .4rem;
+    color: var(--light);
+}
+
+.unique-detail {
+    height: 65vh;
+    width: 73vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem 1rem 1rem;
+    background: var(--light);
+}
+
+.unique-detail .close {
+    width: 90%;
+    text-align: right;
+    font-size: 1.5em;
+    color: var(--green-op);
+}
+
+.unique-detail .close i {
+    cursor: pointer;
+}
+
+.unique-detail .header {
+    background: #e2ccaa;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: .4rem 0;
+    margin-bottom: .4rem;
+}
+
+.palettes .palette .name p {
+    background-color: #b1a8a263;
+}
+
+.header .title-section {
+    margin: 0 4rem;
+}
+
+.header .unique-title {
+    font-size: 2em;
+}
+
+.header .fav {
+    margin-right: 2rem;
+    padding: 1rem;
+    color: var(--danger);
+    background: var(--light);
+    width: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    height: 2vw;
+}
+
+.unique-detail .collections {
+    width: 70%;
+}
+
+.unique-detail .collections p {
+    margin-bottom: 1rem;
+}
+
+
+::ng-deep .swiper-slide {
+    position: relative !important;
+}
+
+::ng-deep .swiper-slide .name-collection {
+    position: absolute;
+    bottom: .4rem;
+    left: 0;
+    background: var(--k-white);
+    color: var(--black);
+    padding: 0 .4rem;
+}
+
+.details .container-palletes {
+    overflow: auto;
+    max-height: 68vh;
+}
+
+.details .container-palletes::-webkit-scrollbar {
+    width: .5rem;
+    border-radius: 10px;
+}
+
+.details .container-palletes::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 10px;
+}
+
+.back-palettes {
+    height: 75vh;
+    background-color: var(--k-white);
+}
+
+@media (max-width:400px) {
+    .web {
+        display: none !important;
+    }
+    .mobile {
+        display: flex !important;
+        width: 100%;
+        margin-left: 0px;
+    }
+    /* Index */
+    .mobile .title {
+        width: 94%;
+    }
+    .mobile h1 {
+        padding-right: 13px;
+        margin-top: 4rem;
+        font-size: 2.4em;
+        color: var(--k-green-op);
+        border-top: 1px solid var(--k-green-op);
+        width: 100%;
+        text-align: right;
+        padding: 12px;
+    }
+    .mobile .finishes-image {
+        margin-top: 1px;
+        margin-bottom: 1rem;
+        width: 102%;
+    }
+    .mobile .filters-buttons {
+        background-color: var(--k-white);
+        width: 100%;
+        display: flex;
+        height: 7vh;
+    }
+    .mobile .filters-buttons .on {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        background-color: var(--k-white);
+        padding: 3px;
+    }
+    .mobile .filters-buttons .off {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        border: solid 1px var(--k-green-op);
+        margin: 3px;
+        background-color: white;
+        outline: 3px solid white;
+    }
+    /* end Index */
+
+    /* Palettes */
+    .options {
+        height: 100%;
+        width: 102%;
+        background-color: var(--k-white);
+        padding: .3rem;
+    }
+    .options .option {
+        width: 95%;
+        background-color: var(--light);
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-bottom: 2%;
+    }
+    .options .option p {
+        margin-left: 2rem;
+        color: var(--k-green-op);
+    }
+    .mobile .sections {
+        margin-top: 3rem;
+        width: 100%;
+    }
+    .mobile .animate__animated {
+        width: 100%;
+    }
+    .mobile .sections h2{
+        text-align: center;
+        color: var(--k-green-op);
+    }
+    .mobile .sections .container-palletes-mobile{
+        height: 15vh;
+        margin: .5rem;
+        overflow: scroll;
+    }
+    .mobile .sections .container-palletes-mobile .name{
+       padding: 1rem;
+       color: var(--k-green-op);
+    }
+    
+}

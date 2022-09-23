@@ -1,0 +1,113 @@
+<app-header></app-header>
+
+<main>
+    <section>
+
+        <header>
+            <p>My Account > Projects and Leads</p>
+        </header>
+
+
+        <article>
+            <div class="container">
+                <div class="title">
+                    <p [ngClass]="{'selected':selectedFilter=='projects'}"
+                    class="pointer"
+                    (click)="selFilter('projects')">PROJECTS</p>
+                    <p [ngClass]="{'selected':selectedFilter=='leads'}"
+                    class="pointer"
+                    (click)="selFilter('leads')">LEADS</p>
+                </div>
+
+                <div class="options">
+                    <div class="option pointer animate__animated animate__fadeInUp"
+                    *ngFor="let project of projects"
+                    (click)="selProject(project)"
+                    [ngClass]="{'selected':selectedProject.id == project.id}">
+                        <div class="circle" style="background:{{selectedProject.id == project.id ? selectedProject.color:''}}"
+                        [ngClass]="{'selected-circle animate__animated animate__fadeIn':selectedProject.id == project.id}"></div>
+                        <div class="text">
+                            <p>{{project.name}}</p>
+                            <small>{{project.date}}</small>
+                        </div>
+                        <div class="arrow" *ngIf="selectedProject.id == project.id">
+                            <i class="fas fa-chevron-right animate__animated animate__fadeInLeft"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="title">
+                    PROJECTS INFORMATION
+                </div>
+                <div class="breadcrumb">
+                    <div class="status">
+                        <p>STATUS</p>
+                    </div>
+                    <div class="other-status completed" style="background:{{selectedProject.color}}">
+                        <p style="background:{{selectedProject.color}};color:var(--light)">LEAD</p>
+                    </div>
+                    <div class="other-status completed" style="background:{{selectedProject.color}}">
+                        <p style="background:{{selectedProject.color}};color:var(--light)">DESIGN</p>
+                    </div>
+                    <div class="other-status completed" style="background:{{selectedProject.color}}">
+                        <p style="background:{{selectedProject.color}};color:var(--light)">ESTIMATE</p>
+                    </div>
+                    <div class="other-status" style="background:{{selectedProject.color}}">
+                        <p style="color:{{selectedProject.color}}">INVOICE</p>
+                    </div>
+                    <div class="other-status" style="background:{{selectedProject.color}}">
+                        <p style="color:{{selectedProject.color}}">FINISHED</p>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <div class="first">
+                        <div class="data">
+                            <p>{{selectedProject?.clientname}}</p>
+                            <p>{{selectedProject?.address}}</p>
+                            <p>{{selectedProject?.city}}</p>
+                            <p>Email: {{selectedProject?.email}}</p>
+                            <p>Phone: {{selectedProject?.phone}}</p>
+                        </div>
+                        <div class="strong">
+                            <div><strong>Budget total:</strong> <strong>{{selectedProject?.budget | currency}}</strong></div>
+                            <div><strong>Invoices total:</strong> <strong>{{selectedProject?.invoice | currency}}</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="second">
+                        <p *ngFor="let projectOption of projectOptions"
+                        (click)="selProjectOption(projectOption)"
+                        [ngClass]="{'selected':selectedProjectOption.id === projectOption.id}">
+                            <span>{{projectOption.name}}</span>
+                            <i *ngIf="selectedProjectOption.id === projectOption.id"
+                            class="fas fa-chevron-right animate__animated animate__fadeInLeft"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="container">
+                    <div class="title">
+                        {{selectedProjectOption?.name}}
+                    </div>
+                    <swiper
+                    class="mySwiper"
+                    [config]="config"
+                    >
+                    <ng-template swiperSlide *ngFor="let img of selectedProjectOption.images">
+                        <img [src]="img" alt="">
+                    </ng-template>
+                    </swiper>
+                </div>
+        </article>
+
+        <div class="timeline">
+            <a href="https://proxising.com/casalux/luxurykitchens/timeline.php"
+            class="timeline-button">GENERAL TIMELINE</a>
+        </div>
+    </section>
+</main>

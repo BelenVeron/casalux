@@ -1,0 +1,24 @@
+<div class="starting-closet">
+    <app-modal type="closets-video" (sendClose)="openProjectModal()"></app-modal>
+    <app-modal type="closets" *ngIf="projectModal"></app-modal>
+    <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    <app-secondary-header [config]="configHeader"></app-secondary-header>
+    
+    <!-- left column whith text and image  -->
+    <div class="container-starting">
+       <div class="left"> 
+            <img *ngIf="!steps[2]" [src]="srcForm" class="">
+            <!-- left column whith checklist in USERS  -->
+           <app-checklist *ngIf="steps[2]" [form]="form"></app-checklist>
+        </div>
+
+
+        <div class="right">
+            <!-- Steps: Form, ClosetsType, Measures -->
+            <app-steps-starting-closet (sendSteps)="stepActived($event)" *ngIf="!isModuleSelected" (srcNoImage)="typeSelected($event)" (sendUserEvent)="setUser($event)"></app-steps-starting-closet>
+            <!-- Select module -->
+            <app-select-module (sendContinue)="continue()" *ngIf="true"></app-select-module>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    color: var(--brown);
+}
+header div.main-div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding: .5rem 0 .5rem 0;
+}
+header a{
+    width: 50%;
+    font-size: 1.2em;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dark);
+}
+header i{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+header .header-name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2.5rem;
+}
+header .header-name a{
+    width: 100%;
+    margin-right: 1rem;
+}
+header button.name-circle{
+    background-color: var(--green-op);
+    border-radius: 100px;
+    color: var(--white);
+    margin: .2rem;
+}
+header nav{
+    background: var(--black-op);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 8vh;
+}
+header nav.between{
+    justify-content: space-between;
+}
+header nav .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+header nav .img{
+    width: 12%;
+    padding: .5rem 0;
+    display: flex;
+}
+header nav .img img{
+    z-index: 1;
+}
+header nav .logo p{
+    color: white;
+    font-weight: bold;
+    margin-left: 1rem;
+    font-size: 1.4em;
+}
+header nav .options{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: white;
+    cursor: pointer;
+}
+header nav .options div p{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* Drop Down Styles
+================================ */
+nav .drop-down {
+    z-index: 9;
+      list-style: none; 
+      overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
+      height: 172px; /* 172px = (38 (li) + 5 (li border)) * 4 (number of li) */
+      width: 30%;
+      text-align: center;
+      -webkit-transition: height 0.3s ease;
+              transition: height 0.3s ease;
+    }
+    
+    nav .drop-down.closed {
+      height: 8vh;
+    }
+    nav .drop-down li {
+        width: 100%;
+        background: var(--green-op);
+        display: flex;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        justify-content: center;
+      transition: all.4s ease;
+        align-items: center;
+    }
+    nav .drop-down li.nav-button{
+        height: 8vh;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+    }
+    nav .drop-down li a {
+      font-size: .9em;
+      width: 100%;
+      color: #ecf0f1;
+      text-decoration: none;
+    }
+    nav .drop-down li:hover{
+        background: var(--black);
+        color: var(--green);
+    }
+    nav .drop-down li:first-child a:after {
+      content: "\25BC";
+      float: right;
+      margin-left: -30px; /* Excessive -margin to bring link text back to center */
+      margin-right: 5px;
+    }
+    

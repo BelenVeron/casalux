@@ -1,0 +1,7 @@
+<div class="closets-index">
+    <app-nav-header type="web" [config]="configNav" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    <div class="img-container">
+        <img src="/assets/img/closets/main.jpg" alt="">
+    </div>
+</div>

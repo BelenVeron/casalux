@@ -1,0 +1,108 @@
+<main>
+    <app-header></app-header>
+    <app-background url="/assets/img/landing.jpg"></app-background>
+</main>
+
+<section class="fadein">
+    <a routerLink="/"><i class="fas fa-times close"></i></a>
+    <i class="fas fa-chevron-left back" (click)="step = step -1" *ngIf="step > 1"></i>
+    
+    <div class="img">
+        <img src="/assets/img/logo.png" alt="">
+    </div>
+    <p class="title">Set up all your appointments in one place</p>
+    <form *ngIf="step == 1" [formGroup]="appointment" class="fadein">
+        <div class="form-group">
+            <label>WHERE</label>
+            <select style="border-top: 4px solid var(--green);" formControlName="place">
+                <option *ngFor="let place of places;" [value]="place" [selected]="place == places[0]">
+                    {{place}}
+                </option>
+            </select>
+            <small class="error" style="visibility:{{setInvalid('place')?'visible':'hidden'}}">Requerido</small>
+        </div>
+        <div class="form-group">
+            <label>PURPOSE OF THE MEETING</label>
+            <select style="border-top: 4px solid var(--green);" formControlName="purpose">
+                <option *ngFor="let purpose of purposes" [value]="purpose"
+                style="max-width:40%" [selected]="purpose == purposes[0]">
+                    {{purpose}}
+                </option>
+            </select>
+            <small class="error" style="visibility:{{setInvalid('purpose')?'visible':'hidden'}}">Requerido</small>
+
+        </div>
+    </form>
+
+    <form *ngIf="step == 2" [formGroup]="appointment" class="fadein"
+    style="display:flex;flex-direction:column">
+        <div class="form-group otherInputs">
+            <label>Project's name</label>
+            <input type="text" formControlName="projectName">
+        </div>
+        <br>
+        <small class="error" style="visibility:{{setInvalid('projectName')?'visible':'hidden'}};">Requerido</small>
+    </form>
+
+    <!-- (change)="appointment.get('expertCategory')?.setValue(category)" -->
+    <form *ngIf="step == 3" [formGroup]="appointment" class="fadein">
+        <div class="form-group otherInputs">
+            <label>Do you need an expert to be present?</label>
+            <div class="options">
+                <p (click)="selOption('expert', true)" [ngClass]="{'selected':expertNeeded}">YES</p>
+                <p (click)="selOption('expert', false)" [ngClass]="{'selected':!expertNeeded}">NO</p>
+            </div>
+            <hr class="fadein" style="width:100%;height:2px;background:#9ec400;margin-top:1rem;margin-bottom:1rem"
+            *ngIf="expertNeeded">
+            <p class="sub-title fadein" *ngIf="expertNeeded">Category?</p>
+            <div class="sub-options expert fadein" *ngIf="expertNeeded">
+                <div class="option" *ngFor="let category of experts">
+                    <input id="{{category}}" type="radio" formControlName="expertCategory" value="{{category}}">
+                    <label attr.for="{{category}}">{{category}}</label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <form *ngIf="step == 4"  class="fadein">
+        <div class="form-group otherInputs">
+            <label>Other participants?</label>
+            <div class="options">
+                <p (click)="selOption('participant', true)" [ngClass]="{'selected':otherParticipants}">YES</p>
+                <p (click)="selOption('participant', false)" [ngClass]="{'selected':!otherParticipants}">NO</p>
+            </div>
+            <hr class="fadein" style="width:100%;height:2px;background:#9ec400;margin-top:1rem;margin-bottom:1rem" *ngIf="otherParticipants">
+            <!-- <p class="sub-title fadein" *ngIf="otherParticipants">Category?</p> -->
+            <div *ngIf="participantsValues.length>0" class="other-participants">
+                <div class="sub-options participants-options" *ngFor="let participant of participantsValues;let last = last">
+                    <select [value]="participant.type" class="participants fadein" [disabled]="true">
+                        <option [value]="participant.type" [selected]="true">{{participant.type}}</option>
+                    </select>
+                    <input type="text" [value]="participant.name" [disabled]="true">
+                    <input type="text" [value]="participant.lastName" [disabled]="true">
+                    <input type="email" [value]="participant.email" [disabled]="true">
+                    <button class="btn plus" style="visibility: hidden;"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div *ngIf="otherParticipants" class="other-participants">
+                <div class="sub-options participants-options">
+                    <select [(ngModel)]="participant.type" name=type class="participants fadein">
+                        <option [value]="participantOption"
+                        *ngFor="let participantOption of participants">
+                            {{participantOption}}
+                        </option>
+                    </select>
+                    <input type="text" [(ngModel)]="participant.name" placeholder="Name" name=Name>
+                    <input type="text" [(ngModel)]="participant.lastName" placeholder="Lastname" name=Lastname>
+                    <input type="email" [(ngModel)]="participant.email" placeholder="Email" name=Email>
+                    <button class="btn plus" (click)="createParticipant()"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            
+        </div>
+    </form>
+
+    <button type="button" class="btn"
+    (click)="continue()">BOOK MY APPOINTMENT</button>
+</section>

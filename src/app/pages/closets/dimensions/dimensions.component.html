@@ -1,0 +1,50 @@
+<div class="h100 w100">
+    <app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
+    <app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+    <app-secondary-header [config]="configHeader"></app-secondary-header>
+    
+    <!-- left column whith text image and button -->
+    <div class="container-dimensions">
+        <div class="left w40 h100">
+            <div class="image w95 h92">
+                <!-- left large img white and black (shelves/open units....) -->
+                <img class="ml2 w20 h100" [src]="srcForm" alt="">
+                <!-- Left Big img the collection select with de botton  -->
+                <img class="ml5 w70 h100" [src]="src" alt="">
+            </div>
+            <p class="mt2">FINISHES STEPS:1 - Panels 1.1 - Handles & Roils 2 - Shelves 3 - Open Units 4 - Drawer</p>
+        </div>
+
+        <div class="right w60 ml10">
+            <h2>Dimensions</h2>
+            <h4>Select module dimensions</h4>
+            <p>Select the module measurements. The standard option covers the present measurements, and the custom mode allows you to place a different meaasurement.</p>
+            <div class="radio-container">
+                <label for="stand">Standard</label>
+                <input type="radio" name="" value="standard">
+                <div class="w10"></div>
+                <label for="cust">Custom (+S)</label>
+                <input type="radio" name="" value="custom">
+            </div>
+            <div class="container-slider">
+                <label>Width</label>
+                <app-slider></app-slider>
+            </div>
+            <div class="container-input">
+                <label>Depth</label>
+                <input type="text" id="fname" name="fname" value="19-1/2°">
+                <label>Height</label>
+                <input type="text" id="lname" name="lname" value="101-3/16°">
+                <div></div>
+                <p>change the height</p>
+            </div>
+            
+            <div class="footer">
+                <h3>See all your selected modules ></h3>
+                <app-button [config]="configNext" (click)="selectClosetAndContinue()" ></app-button>
+            </div>
+        
+            <div class="line-color"></div>
+        </div>  
+    </div>
+</div>

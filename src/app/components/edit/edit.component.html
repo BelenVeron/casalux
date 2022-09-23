@@ -1,0 +1,74 @@
+<main class="fadein">
+    
+    <form [formGroup]="editForm">
+
+        <i class="fas fa-times close"
+        (click)="closeComponent()"></i>
+
+        <h2>EDIT PROFILE</h2>
+        <hr style="width:80%;height:.1px;margin:.4rem" color="#9ec400">
+        Edit your information.
+
+        <div class="divider"></div>
+
+        <div class="first-group">
+            <div class="form-group form-group-1">
+                <label for="name">Name</label>
+                <input type="text" formControlName="nameUser" class="f-i">
+            </div>
+            <div class="form-group form-group-2">
+                <label for="lastName">Last name</label>
+                <input type="text" formControlName="lastnameUser" class="s-i">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" formControlName="phoneUser">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" formControlName="addressUser">
+        </div>
+
+        <div class="form-group address-group">
+            <input type="text" placeholder="*city" formControlName="cityUser">
+            <input type="text" placeholder="*state" formControlName="stateUser">
+            <input type="text" placeholder="*zip code" formControlName="zipcodeUser">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" formControlName="emailUser">
+        </div>
+
+        <div class="form-group company-group">
+            <div class="check">
+                <label for="company">Company</label>
+                <!-- <input type="checkbox" id="company" (change)="company = !company"> -->
+            </div>
+            <div class="inputs fadein" *ngIf="user.companyCode">
+                <input type="text" placeholder="Company code" formControlName="companyCode">
+                <input type="text" placeholder="Company name" formControlName="nameCompany">
+                    <select formControlName="companyPosition">
+                    <option value="Owner" [selected]="user.companyPosition == 'Owner'">Owner</option>
+                    <option value="Employee" [selected]="user.companyPosition == 'Employee'">Employee</option>
+                    <option value="Other" [selected]="user.companyPosition == 'Other'">Other</option>
+                </select>
+                <select formControlName="specialty" [value]="user.specialty">
+                    <option value="Architect" [selected]="user.specialty =='Architect'">Arquitect</option>
+                    <option value="Interior designer" [selected]="user.specialty =='Interior designer'">Interior designer</option>
+                    <option value="Contractor" [selected]="user.specialty =='Contractor'">Contractor</option>
+                    <option value="Developer" [selected]="user.specialty =='Developer'">Developer</option>
+                    <option value="Other" [selected]="user.specialty =='Other'">Other</option>
+                </select>
+            </div>
+            <div class="inputs" *ngIf="!user.companyCode"></div>
+        </div>
+
+        <button type="submit" class="btn {{error_text?'error':''}}"
+        (click)="edit()">FINISH</button>
+        <div class="{{errorClass}}-text fadein" *ngIf="error_text">{{error_text}}</div>
+    </form>
+</main>

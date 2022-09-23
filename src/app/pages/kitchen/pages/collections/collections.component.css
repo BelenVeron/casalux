@@ -1,0 +1,393 @@
+main {
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0 0;
+    display: flex;
+}
+
+.container.mobile {
+    display: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+}
+
+section .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+section .logo-container .img {
+    padding-left: 2vw;
+    width: 20vw;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background: var(--white);
+    align-items: center;
+    height: 87vh;
+}
+
+.option-viewer {
+    width: 54%;
+    height: 82vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.option-viewer.web .img-banner {
+    position: absolute;
+    background: var(--black-op);
+    opacity: .6;
+    bottom: 13vh;
+    z-index: 2;
+    padding: .4rem;
+    width: 40vw;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-viewer.web .img-banner img {
+    width: 50%;
+}
+
+.option-viewer .swiper-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+::ng-deep .mySwiper {
+    width: 80%;
+    height: 17vh;
+    margin: 0;
+}
+
+::ng-deep .mySwiper .swiper-button-prev,
+ ::ng-deep .mySwiper .swiper-button-next {
+    color: var(--brown);
+    transform: scale(0.7);
+}
+
+::ng-deep .mySwiper .swiper-button-prev {
+    left: 0vw;
+}
+
+::ng-deep .mySwiper .swiper-button-next {
+    right: 0vw;
+}
+
+::ng-deep .mySwiper .swiper-slide {
+    transform: scale(.8, .7);
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+::ng-deep .mySwiper .swiper-slide.swiper-slide-next img {
+    margin-right: 28px;
+    max-width: 18vw;
+    max-height: 14vh;
+}
+
+::ng-deep .mySwiper .swiper-slide.swiper-slide-prev img {
+    margin-left: 28px;
+    max-width: 18vw;
+    max-height: 14vh;
+}
+
+::ng-deep .mySwiper .swiper-slide.swiper-slide-active {
+    height: 16vh;
+    transform: scale(1);
+}
+
+::ng-deep .mySwiper .swiper-slide.swiper-slide-active img {
+    height: 16vh;
+    border: 2px solid var(--green-op);
+}
+
+::ng-deep .swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+::ng-deep .mySwiper2 {
+    padding-top: 1rem;
+    width: 80%;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+::ng-deep .mySwiper2 .swiper-slide img {
+    height: 56.2vh;
+    object-fit: cover;
+}
+
+::ng-deep .swiper-pagination-bullet {
+    background: var(--light) !important;
+    opacity: 1;
+}
+
+::ng-deep .swiper-pagination-bullet-active {
+    background: var(--green) !important;
+}
+
+.image-container {
+    position: relative;
+}
+
+.option-viewer.web .heart {
+    position: absolute;
+    bottom: 2vh;
+    z-index: 999;
+    right: 1vw;
+}
+
+.option-details {
+    max-width: 15vw;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    background: var(--grey);
+    right: 5vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.option-details .details-title {
+    font-size: 78px;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+    min-width: 100%;
+    max-width: 130%;
+    color: var(--k-green-op);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.option-details .big-details-title {
+    font-size: 50px;
+}
+
+.option-details .text {
+    font-size: .8em;
+    margin-top: 1.5rem;
+    height: 43vh;
+    overflow-y: auto;
+}
+
+.option-details .text::-webkit-scrollbar {
+    width: .2rem;
+    border-radius: 10px;
+}
+
+.option-details .text::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 10px;
+}
+
+.option-details .section-text {
+    font-weight: bold;
+    text-align: center;
+    color: var(--k-green-op);
+    margin-top: 1rem;
+}
+
+.option-details .three-images {
+    width: 60%;
+    margin: auto;
+    margin-top: .5rem;
+    height: 30vh;
+}
+
+.option-details .three-images img {
+    height: 10vh;
+}
+
+.option-details .collection-img-seemore {
+    overflow-y: auto;
+    width: 100%;
+    padding: 0 .4rem;
+    margin-top: 2rem;
+    max-height: 50vh;
+}
+
+.option-details .collection-img-seemore .option {
+    position: relative;
+    margin-top: .4rem;
+}
+
+.option-details .collection-img-seemore .option img {
+    height: 20vh;
+}
+
+.option-details .collection-img-seemore .option .title {
+    background-color: var(--white);
+    font-size: .8em;
+    bottom: .4rem;
+    left: 0;
+    padding: 0 .4rem;
+    font-size: small;
+    position: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    white-space: pre-wrap;
+}
+
+.option-details .collection-img-seemore::-webkit-scrollbar {
+    width: .2rem;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.option-details .collection-img-seemore::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 10px;
+}
+
+.option-details .seemore {
+    height: auto;
+    position: absolute;
+    bottom: 13vh;
+    color: var(--green);
+    text-decoration: underline;
+    cursor: pointer;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    bottom: 7vh;
+    background: var(--grey);
+}
+
+@media (max-width:400px) {
+    * {
+        padding: 0px;
+        margin: 0;
+    }
+    .web {
+        display: none
+    }
+    section {
+        width: 100%;
+    }
+    .container.mobile {
+        margin-top: 1rem;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+    }
+    .container.mobile .container-title {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1rem 0;
+        width: 90%;
+    }
+    .img-options {
+        width: 90%;
+        height: auto;
+        padding: 0;
+    }
+    .img-options .option .title {
+        width: 100%;
+        font-size: 1em;
+        padding-left: 1rem;
+        text-align: left;
+    }
+    .option-details.mobile {
+        width: 100vw;
+        max-width: 100vw;
+        position: relative;
+        height: auto;
+        background: var(--grey);
+        right: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 85vh;
+        padding: 1rem 0;
+    }
+    .option-details .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.2em;
+    }
+    hr {
+        width: 90% !important;
+    }
+    .option-details .collections-title {
+        font-weight: bold;
+        margin-top: 0;
+        width: 90%;
+        text-align: left;
+    }
+    .scroll {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .option-details .text {
+        width: 90% !important;
+        margin: 1rem 0;
+    }
+    .option-details .seemore {
+        display: none;
+    }
+     ::ng-deep .mySwiper2.mobile {
+        margin: 1rem 0;
+    }
+     ::ng-deep .mySwiper2.mobile .swiper-slide {
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .container.mobile .horizontal-galleries {
+        display: block;
+    }
+    section .logo-container {
+        margin-bottom: 0;
+    }
+}

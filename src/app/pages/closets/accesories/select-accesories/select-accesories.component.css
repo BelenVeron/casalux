@@ -1,0 +1,7 @@
+.gallery {
+    margin-left: 20px; 
+}
+
+.gallery h2 {
+    color: var(--green-op);
+}

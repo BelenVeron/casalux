@@ -1,0 +1,21 @@
+<main>
+    <app-header></app-header>
+    <app-background url="/assets/img/landing.jpg"></app-background>
+</main>
+
+<app-login *ngIf="loginComponent && !registerComponent && !passwordComponent && !editComponent"
+(openPasswordComponent)="openComponent('forgot')"
+(closeLoginComponent)="closeComponent('login')"
+(openRegisterComponent)="openComponent('register')"></app-login>
+
+<app-register
+*ngIf="!passwordComponent && !loginComponent && !editComponent && registerComponent && !session.islogged"
+(closeRegister)="closeComponent('register')"></app-register>
+
+<app-forgot-password
+*ngIf="passwordComponent && !loginComponent && !editComponent && !registerComponent && !session.islogged"
+(closeLoginComponent)="closeComponent('forgot')"></app-forgot-password>
+
+<app-edit
+*ngIf="!passwordComponent && !loginComponent && !registerComponent && editComponent && session.islogged"
+(closeEdit)="closeComponent('edit')"></app-edit>

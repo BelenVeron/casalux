@@ -1,0 +1,22 @@
+<article *ngIf="type === 'scroll'" [ngClass]="{'scroll': true, 'closets-height': closets, 'collection-height': collections}">
+    <div class="option" *ngFor="let item of items, let index = index" [ngClass]="{'selected':itemSelected.name === item.name, 'no-selected':itemSelected.name !== item.name}" (click)="changeSelectedItem(index)">
+        <div class="img">
+            <!-- Internal image -->
+            <img *ngIf="assets; else external" [src]="item.src" alt="">
+            <!-- External image -->
+            <ng-template #external><img [src]="url+item.image" alt=""></ng-template>
+            <p class="title">{{item.name}}</p>
+        </div>
+    </div>
+</article>
+
+<article *ngIf="type === 'two-columns' && items && items.length > 0" [class]="type">
+    <p class="section-text">What you have in this collection</p>
+    <div class="images">
+        <div class="option" *ngFor="let item of items, let index = index">
+            <img [src]="url+item.image" alt="">
+            <p class="title">{{item.name}}</p>
+        </div>
+    </div>
+</article>
+

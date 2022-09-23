@@ -1,0 +1,132 @@
+.closets-height {
+    height: 68vh;
+}
+
+.collection-height {
+    height: 88vh;
+}
+
+.scroll {
+    overflow-y: auto;
+    direction: rtl;
+    padding: 0 .4rem;
+    width: 18vw;
+    background: var(--light);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scroll::-webkit-scrollbar {
+    width: .5rem;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 10px;
+}
+
+.scroll .option {
+    cursor: pointer;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.scroll .option.no-selected img {
+    height: 17.4vh;
+    width: 12.8vw;
+}
+
+.scroll .option:nth-child(1) {
+    padding-top: 0;
+}
+
+.scroll .option {
+    transition: all.2s;
+}
+
+.scroll .option.selected img {
+    opacity: .4;
+    height: 14vh;
+    width: 9.9vw;
+}
+
+.scroll .option .title {
+    position: absolute;
+    bottom: 0.4rem;
+    background: var(--grey);
+    font-size: .8em;
+    padding: .2rem;
+    left: 0;
+}
+
+.scroll .img {
+    position: relative;
+}
+
+.two-columns {
+    display: none;
+}
+
+@media (max-width:400px) {
+    .scroll {
+        height: auto;
+        width: 100vw;
+        background: none;
+        padding: 0;
+    }
+    .scroll .option.selected img {
+        opacity: 1;
+        height: 25vh;
+        width: 90vw;
+    }
+    .scroll .option.no-selected img {
+        opacity: 1;
+        height: 25vh;
+        width: 90vw;
+    }
+    .scroll .option .title {
+        position: inherit;
+    }
+    /* //////////// TWO COLUMN /////////////// */
+    .two-columns {
+        padding: 0 .4rem;
+        width: 100vw;
+        /* background: var(--light); */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .two-columns .section-text {
+        margin-top: revert;
+    }
+    .two-columns .images {
+        -moz-column-count: 2;
+        column-count: 2;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+        -moz-column-fill: balance;
+        column-fill: balance;
+        margin: 1rem;
+    }
+    .two-columns .option {
+        display: flex;
+        float: left;
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+    .two-columns .option img {
+        height: auto;
+        width: 36vw;
+    }
+    .two-columns .option .title {
+        bottom: 0.4rem;
+        background: var(--grey);
+        font-size: .7em;
+        padding-left: .4rem;
+        width: calc(36vw - .4rem);
+    }
+}

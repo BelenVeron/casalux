@@ -1,0 +1,12 @@
+<div class="container">
+  
+    <div class="range-slider">
+        <h4 [ngStyle]="{'left.px': position()}" id="rs-bullet" class="rs-label">{{textValue}}"<span *ngIf="half">1/2</span></h4>
+        <div class="slider">
+            <input type="radio" name="" id="">
+            <input id="rs-range-line" class="rs-range" type="range" (input)="setSliderValue($event)" value="0" [min]="min" [max]="max">
+            <div class="border-right"></div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,201 @@
+.bars-web {
+    width: 5vw;
+    height: 100%;
+    color: var(--green);
+    background: var(--k-black);
+    position: fixed;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.bars-web i {
+    cursor: pointer;
+}
+
+.navLeft {
+    background: var(--k-black);
+    position: fixed;
+    left: 5vw;
+    height: 100vh;
+    width: 21vw;
+    top: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.navLeft article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.scroll {
+    overflow-y: hidden;
+    height: 90vh;
+    width: 100%;
+}
+
+.navLeft article.options {
+    margin-top: 10vh;
+    width: 90%;
+}
+
+.navLeft article.second-options {
+    width: 90%;
+}
+
+.navLeft .options .title {
+    color: var(--k-green-op);
+    font-weight: bold;
+    font-size: 1.25em;
+    text-decoration: none;
+    transition: all .4s ease;
+    border: 1px solid var(--k-black);
+    padding: .2rem;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navLeft .options .title a {
+    text-decoration: none;
+    color: var(--k-green-op);
+}
+
+.navLeft article .title:hover {
+    color: var(--green);
+    border: 1px solid var(--k-green-op);
+}
+
+.navLeft .options .child-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--white);
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.navLeft .options .children {
+    color: var(--grey);
+    font-size: .9em;
+    margin-top: .4rem;
+    text-decoration: none;
+}
+
+.navLeft .options .children:nth-child(1) {
+    margin-top: -.2rem;
+}
+
+.navLeft .options .children:last-child {
+    margin-bottom: 1rem;
+}
+
+.navLeft .text {
+    margin-top: 5rem;
+}
+
+.navLeft .extras {
+    position: absolute;
+    bottom: 8vh;
+    width: 90%;
+}
+
+.navLeft .actions {
+    margin-top: 5vh;
+    width: 90%;
+}
+
+.navLeft .actions .action {
+    color: var(--k-green-op);
+    border: 1px solid var(--k-green-op);
+    border-radius: 10px;
+    padding: .4rem .6rem;
+    width: 100%;
+    margin-top: .4rem;
+    text-decoration: none;
+    transition: background .2s;
+}
+
+.navLeft .actions .action a {
+    color: var(--k-green-op);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navLeft .actions .action i {
+    color: var(--green);
+}
+
+.navLeft .actions .action:hover {
+    background: var(--green);
+    color: var(--k-black);
+}
+
+.navLeft .actions .action:hover i {
+    color: var(--k-black);
+}
+
+@media (max-width:1300px),
+(max-height:800px) {}
+
+@media (max-width:1100px) {
+    .navLeft .options .title {
+        font-size: 1em;
+    }
+    .navLeft .actions .action {
+        width: 90%;
+    }
+}
+
+@media (max-width:600px) {
+    .bars-web {
+        display: none;
+    }
+    .web {
+        display: none;
+    }
+    .navLeft {
+        height: 96vh;
+        width: 100%;
+        left: 0;
+    }
+    .navLeft img {
+        display: none;
+    }
+    .navLeft .web {
+        display: none;
+    }
+    .navLeft article.options {
+        margin-top: 18vh;
+    }
+    .navLeft .options .child-container {
+        margin-top: .5em;
+    }
+    .navLeft .extras {
+        position: absolute;
+        bottom: 4vh;
+        left: 0;
+        width: 90%;
+    }
+    .navLeft .actions {
+        margin-top: 0;
+        margin-left: .8em;
+        font-size: .8em;
+        width: 85vw;
+    }
+    .navLeft .actions .action {
+        font-size: 1em;
+    }
+}

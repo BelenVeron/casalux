@@ -1,0 +1,25 @@
+
+<app-nav-header [config]="configNav" type="web" (sendViewNav)="openMenu()"></app-nav-header>
+<app-navbar2 [items]="itemsNav" [left]="navLeft" [showNavbar]="activeSidenav" (sendShowNavbar)="setSideNav($event)"></app-navbar2>
+<app-secondary-header [config]="configHeader"></app-secondary-header>
+
+<div class="container">
+    <div class="left w35">
+        <div class="image h80 w100">
+            <!-- left large img white and black (shelves/open units....) -->
+            <img class="w30 ml2" src="assets/img/closets/master-closet-left.png" alt="">
+            <!-- Left Big img the collection select with de botton  -->
+            <img class="w70 ml4" [src]="src" alt="">
+        </div>
+        <p class="f-z10 ml4">FINISHES STEPS:1 - Panels 1.1 - Handles & Roils 2 - Shelves 3 - Open Units 4 - Drawer</p>
+
+    </div>
+
+    <div class="right w60 h80">
+        <!-- Steps: Form, ClosetsType, Measures -->
+        <app-select-master-closet class="h100" (sendContinue)="continue()" *ngIf="!isMasterSelected" (sendSetImage)="setImage($event)"></app-select-master-closet>
+        <!-- Select module -->
+        <app-steps-master-closet *ngIf="isMasterSelected"></app-steps-master-closet>      
+    </div>
+    
+</div>

@@ -1,0 +1,269 @@
+<app-header></app-header>
+
+
+<main>
+    <section class="container">
+        <header>
+            <div class="img">
+                <img src="/assets/img/kitchen/media/imggetstarted.png" alt="">
+            </div>
+            <div class="buttons">
+                <div class="info">
+                    <p>Arch. Jay Garrick</p>
+                    <p>jay@gmail.com</p>
+                    <p>084-338-3676</p>
+                    <p>Designer</p>
+                </div>
+                <a routerLink="/estimates" class="back"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href=""><i class="fa-solid fa-floppy-disk"></i></a>
+                <a routerLink="/estimates/preview/estimate">Preview</a>
+                <a  routerLink="/estimates/invoice">PrtSc</a>
+                <a>Generate Order</a>
+                <a>Receipt order</a>
+                <a>Send by email</a>
+            </div>
+            <div class="select">
+                <select name="">
+                    <option value="">Big bath</option>
+                </select>
+            </div>
+        </header>
+
+        <article>
+            <section>
+                <div class="name">
+                    Laurel Dina Lance
+                </div>
+                <div class="data">
+                    <div class="billing">
+                        <h4>Billing Address</h4>
+                        <p>2387 Walnut St</p>
+                        <p>Philadelphia, PA 19106</p>
+                        <p>Email: <span>dina69@gmail.com</span></p>
+                        <p>Phone: <span>(215) 450 2345</span></p>
+                    </div>
+                    <div class="shipping">
+                        <h4>Shipping Address</h4>
+                        <p>2387 Walnut St</p>
+                        <p>Philadelphia, PA 19106</p>
+                        <p>Email: <span>dina69@gmail.com</span></p>
+                        <p>Phone: <span>(215) 450 2345</span></p>
+                    </div>
+                    <div class="price">
+                        <h4>Budget price: <span>{{35000 | currency}}</span></h4>
+                        <h4>Estimate Total: <span>{{30000| currency}}</span></h4>
+                    </div>
+                </div>
+            </section>
+
+            <section class="estimate">
+                <div class="title"><p>ESTIMATE: <span>00005</span></p></div>
+                <div class="other">ESTIMATE DATE<span>11/23/2021</span></div>
+                <div class="other">
+                    <div>
+                        <select name="">
+                            <option value="50">50%</option>
+                            <option value="100">100%</option>
+                        </select>
+                        DEPOSIT REQUIRED
+                    </div>
+                    <span>{{21578 | currency}}</span>
+                </div>
+            </section>
+        </article>
+
+
+        <table>
+            <thead class="checkboxes">
+                <th class="th-black print"><i class="fas fa-print"></i></th>
+                <th class="th-black"><input type="checkbox"></th>
+                <th class="long"></th>
+                <th class="small"></th>
+                <th class="small"></th>
+                <th></th>
+                <th></th>
+                <th class=""></th>
+                <th class="th-black small"><input type="checkbox"></th>
+                <th class="th-black"><input type="checkbox"></th>
+                <th class="th-black"><input type="checkbox"></th>
+                <th class="th-black small"><input type="checkbox"></th>
+                <th class="th-black"><input type="checkbox"></th>
+                <th class="th-black"><input type="checkbox"></th>  
+                <th class="th-black long"><input type="checkbox"></th>  
+            </thead>
+            <thead class="border-thead">
+                <th>ITEM CATEGORY</th>
+                <th class="th-black">ITEM NUMBER</th>
+                <th class="long">ITEM DESCRIPTION</th>
+                <th class="small">QTY</th>
+                <th class="small">TYPE</th>
+                <th>UNIT PRICE</th>
+                <th>TOTAL PRICE</th>
+                <th class="small">TAXES</th>
+                <th class="th-black">INVOICE</th>
+                <th class="th-black small">ORDER</th>
+                <th class="th-black">VENDOR</th>
+                <th class="th-black small">MARK UP</th>
+                <th class="th-black">MY PRICE</th>
+                <th class="th-black">PROFIT</th>
+                <th class="th-black long">NOTES</th>
+            </thead>
+            <tbody>
+                <tr class="invoice-info">
+                    <td>
+                        <select name="category">
+                            <option value="COUNTERTOPS">COUNTERTOPS</option>
+                            <option value="KITCHEN">KITCHEN</option>
+                            <option value="BATHROOMS">BATHROOMS</option>
+                        </select>
+                        <span class="additional">a</span>
+                    </td>
+                    <td><input type="text" placeholder="Item number"><span class="additional">a</span></td>
+                    <td class="long">{{'Moka tall cabinet 185x60'}}</td>
+                    <td class="small"><input type="number" placeholder="Quantity"><span class="additional">a</span></td>
+                    <td class="small">
+                        <select name="category">
+                            <option value="COUNTERTOPS">COUNTERTOPS</option>
+                            <option value="KITCHEN">KITCHEN</option>
+                            <option value="BATHROOMS">BATHROOMS</option>
+                        </select>
+                        <span class="additional">a</span>
+                    </td>
+                    <td>{{1915.20 | currency}}</td>
+                    <td>{{1915.20*2 | currency}}</td>
+                    <td class="small"><input type="checkbox"><span class="additional">a</span></td>
+                    <td><input type="text" placeholder="Invoice"><span class="additional">a</span></td>
+                    <td class="small"><input type="checkbox"><span class="additional">a</span></td>
+                    <td>{{'Casalux'}}</td>
+                    <td class="small">{{'25%'}}</td>
+                    <td>{{3064.32 | currency}}</td>
+                    <td>{{312 | currency}}</td>
+                    <td class="long"><input type="text" placeholder="Add notes..."><span class="additional">a</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="long">SUBTOTAL</td>
+                    <td class="small"></td>
+                    <td class="small"></td>
+                    <td></td>
+                    <td>{{1930 * 2 | currency}}</td>
+                    <td class="small"></td>
+                    <td></td>
+                    <td class="small">{{1930 * 2 | currency}}</td>
+                    <td></td>
+                    <td class="small"></td>
+                    <td>{{3064.32 | currency}}</td>
+                    <td>{{312 | currency}}</td>
+                    <td class="long"></td>
+                </tr>
+
+                <tr class="invoice-info">
+                    <td>
+                        <select name="category">
+                            <option value="COUNTERTOPS">COUNTERTOPS</option>
+                            <option value="KITCHEN">KITCHEN</option>
+                            <option value="BATHROOMS">BATHROOMS</option>
+                        </select>
+                        <span class="additional">a</span>
+                    </td>
+                    <td><input type="text" placeholder="Item number"><span class="additional">a</span></td>
+                    <td class="long">{{'Moka tall cabinet 185x60'}}</td>
+                    <td class="small"><input type="number" placeholder="Quantity"><span class="additional">a</span></td>
+                    <td class="small">
+                        <select name="category">
+                            <option value="COUNTERTOPS">COUNTERTOPS</option>
+                            <option value="KITCHEN">KITCHEN</option>
+                            <option value="BATHROOMS">BATHROOMS</option>
+                        </select>
+                        <span class="additional">a</span>
+                    </td>
+                    <td>{{1915.20 | currency}}</td>
+                    <td>{{1915.20*2 | currency}}</td>
+                    <td class="small"><input type="checkbox"><span class="additional">a</span></td>
+                    <td><input type="text" placeholder="Invoice"><span class="additional">a</span></td>
+                    <td class="small"><input type="checkbox"><span class="additional">a</span></td>
+                    <td>{{'Casalux'}}</td>
+                    <td class="small">{{'25%'}}</td>
+                    <td>{{3064.32 | currency}}</td>
+                    <td>{{312 | currency}}</td>
+                    <td class="long"><input type="text" placeholder="Add notes..."><span class="additional">a</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <table class="services">
+            <thead>
+            </thead>
+            <thead class="border-thead">
+                <th class="long">SERVICES</th>
+                <th class="small">QTY</th>
+                <th class="small">TYPE</th>
+                <th>UNIT PRICE</th>
+                <th>TOTAL PRICE</th>
+                <th class="small">TAXES</th>
+                <th class="th-black small">ORDER</th>
+                <th class="th-black">PHONE</th>
+                <th class="th-black small">MARK UP</th>
+                <th class="th-black">PROFIT</th>
+                <th class="th-black long">NOTES</th>
+            </thead>
+            <tbody>
+                <tr class="invoice-info">
+                    <td class="long">{{'Moka tall cabinet 185x60'}}</td>
+                    <td class="small"><input type="number" placeholder="Quantity"><span class="additional">a</span></td>
+                    <td class="small">
+                        <select name="category">
+                            <option value="COUNTERTOPS">COUNTERTOPS</option>
+                            <option value="KITCHEN">KITCHEN</option>
+                            <option value="BATHROOMS">BATHROOMS</option>
+                        </select>
+                        <span class="additional">a</span>
+                    </td>
+                    <td>{{1915.20 | currency}}</td>
+                    <td>{{1915.20*2 | currency}}</td>
+                    <td class="small"><input type="checkbox"><span class="additional">a</span></td>
+                    <td class="small"><input type="checkbox"><span class="additional">a</span></td>
+                    <td>{{'1199664488'}}</td>
+                    <td class="small">{{'25%'}}</td>
+                    <td>{{312 | currency}}</td>
+                    <td class="long"><input type="text" placeholder="Add notes..."><span class="additional">a</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="disclaimers">
+            <div class="disclaimer">
+                <h3>IMPORTANT</h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem illum doloribus eum. Laborum, doloribus at iste ab, placeat praesentium quo, totam labore ullam error architecto? Tempore consectetur natus quis aut explicabo sed repellendus atque modi, in rem officia doloremque repellat esse, sint aperiam veniam cupiditate maiores facere ad tempora, soluta quam adipisci vitae. Maxime iste, sapiente modi dolorum assumenda suscipit quas laudantium. Eos corporis voluptatum reprehenderit doloremque excepturi expedita voluptatem quidem ea aspernatur. Blanditiis eaque mollitia neque laboriosam. Dolore eaque iste doloribus assumenda, aspernatur necessitatibus voluptas accusamus molestias, nam, blanditiis neque animi architecto nemo obcaecati dolores inventore et ullam. Sit?
+            </div>
+            <div class="totals">
+                <div class="item">
+                    <p>TOTAL AMOUNT FOR SERVICES</p>
+                    <p>{{450 | currency}}</p>
+                </div>
+                <div class="item">
+                    <p>TOTAL AMOUNT FOR PRODUCTS</p>
+                    <p>{{620 | currency}}</p>
+                </div>
+                <div class="item">
+                    <p>SUBTOTAL OF ALL PRODUCTS</p>
+                    <p>{{400 | currency}}</p>
+                </div>
+                <div class="item">
+                    <p>PHILADELPHIA TAXES 8%</p>
+                    <p>{{1600 | currency}}</p>
+                </div>
+                <div class="item">
+                    <p>DELIVERY FEE</p>
+                    <p>{{100 | currency}}</p>
+                </div>
+                <div class="item">
+                    <p>GRAND TOTAL </p>
+                    <p>{{8466 | currency}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,19 @@
+<div [ngClass]="config.headerClass!">
+    <div class="left">
+        <h1>{{config.title}}</h1>
+        <img *ngIf="config.srcLeft" [src]="config.srcLeft" alt="">
+        <p [innerHtml]="config.description"></p>
+    </div>
+    <div class="right">
+        <!-- Steps with buttons -->
+        <div class="shapes" *ngFor="let button of buttons; index as i">
+            <div *ngIf="button.left" [ngClass]="'line ' + button.activeClass"></div>
+            <div class="container">
+                <div [ngClass]="'circle ' + button.activeClass" (click)="activeButton(i)"><img class="w60" [src]="button.src" alt=""></div>
+                <p [ngClass]="'description '  + button.activeClass">{{button.text}}</p>
+            </div>
+            <div *ngIf="button.right" [ngClass]="'line ' + button.activeClass"></div>
+        </div>
+
+    </div>  
+</div>

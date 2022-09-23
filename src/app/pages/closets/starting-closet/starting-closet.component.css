@@ -1,0 +1,29 @@
+
+.starting-closet{
+    height: 100%;
+    width: 100%;
+}
+
+.container-starting {
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: flex;
+}
+
+.container-starting .left {
+    width: 40%;
+    height: 70vh;
+}
+
+
+.container-starting .left img {
+    width: 82%;
+    margin-left: 2rem;
+    margin-top: 4rem;
+}
+
+.container-starting .right {
+    width: 65%;
+}
+
+

@@ -1,0 +1,60 @@
+<app-header></app-header>
+
+
+<main>
+    <section>
+        <header>
+            <p class="title">Estimates & Invoices</p>
+            <div class="buttons">
+                <a routerLink="estimate">New Estimate</a>
+                <a routerLink="invoice">New Invoice</a>
+                <a>New Order</a>
+            </div>
+        </header>
+    
+    
+        <table>
+            <thead>
+                <th>CLIENT</th>
+                <th>ESTIMATE</th>
+                <th>DATE</th>
+                <th>ESTIMATE <br> TOTAL</th>
+                <th>PROJECT <br> NAME</th>
+                <th>INVOICE</th>
+                <th>INVOICE <br> TOTAL</th>
+                <th>INVOICE <br> DATE</th>
+                <th>PAY UP <br> TO DATE</th>
+                <th>PROFIT</th>
+                <th>ORDER</th>
+                <th>TOTAL <br> ORDER</th>
+                <th>PAYMENT <br> OF ORDER</th>
+                <th>DELIVERY</th>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let estimate of estimates">
+                    <td>
+                        <div class="client">
+                            {{estimate.client}}
+                        </div>
+                    </td>
+                    <td><a routerLink="/estimates/preview/estimate"><i class="fas fa-book"></i>{{estimate.estimate}}</a></td>
+                    <td>{{estimate.date}}</td>
+                    <td>{{estimate.estimateTotal | currency}}</td>
+                    <td>{{estimate.projectName}}</td>
+                    <td><i class="fas fa-book"></i> {{estimate.invoice}}</td>
+                    <td>{{estimate.invoiceTotal | currency}}</td>
+                    <td>{{estimate.invoiceDate}}</td>
+                    <td>{{estimate.payUp}}</td>
+                    <td>{{estimate.profit | currency}}</td>
+                    <td><i class="fas fa-book"></i> {{estimate.order}}</td>
+                    <td>{{estimate.orderTotal | currency}}</td>
+                    <td>{{estimate.paymentOfOrder}}</td>
+                    <td>{{estimate.delivery}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+</main>

@@ -1,0 +1,11 @@
+video {
+    width: 95vw;
+    height: 99vh;
+    object-fit: cover;
+}
+
+@media (max-width:400px) {
+    video {
+        width: 100vw;
+    }
+}

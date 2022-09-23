@@ -1,0 +1,135 @@
+main{
+    position: absolute;
+    background-color: #2f2f2fb4;
+    width: 100%;
+    top: 14vh;
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .close{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--white);
+    z-index: 99;
+}
+main form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    width: 40vw;
+    color: var(--white);
+    padding: 1rem;
+}
+main form .divider{
+    margin-top: 5vh;
+}
+main form .form-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: .4rem 0 .4rem 0;
+}
+main form .form-group label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 10%;
+}
+main form .form-group input{
+    outline: none;
+    border: none;
+    background-color: var(--green-op);
+    width: 80%;
+    color: var(--white);
+    margin: .2rem;
+    padding: 2px;
+}
+main form .form-group input::placeholder{
+    color: var(--grey);
+}
+main form .first-group{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+}
+main form .first-group .form-group-1{
+    width: 40%;
+    margin: .4rem 0 .4rem 0;
+    justify-content: space-between;
+}
+main form .first-group .form-group-2{
+    width: 60%;
+    margin: .4rem 0 .4rem 0;
+    justify-content: flex-end;
+}
+main form .first-group .form-group-2 label{
+    width: 50%;
+}
+main form .first-group .form-group .f-i{
+    width: 50%!important;
+}
+main form .first-group .form-group .s-i{
+    width: 100%!important;
+}
+main form .address-group{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+main form .address-group input{
+    width: 25%;
+}
+main form .company-group .check{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin: 1rem 0 1rem 0;
+    padding: 6px 0 6px 0;
+}
+main form .company-group .check label{
+    width: 80%;
+}
+main form .company-group .inputs{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 85%;
+}
+main form .company-group .inputs input{
+    width: 45%;
+}
+main form .company-group .inputs select{
+    outline: none;
+    border: none;
+    background-color: var(--green-op);
+    width: 46.2%;
+    color: var(--white);
+    margin: .2rem;
+    padding: 2px;
+}
+form .btn{
+    width: 40%;
+    margin-top: 5vh;
+    margin-bottom: 2rem;
+}
+form .btn.error{
+    margin-bottom: .5rem;
+}
+form .error-text{
+    color: var(--danger);
+    text-align: center;
+}
+form .success-text{
+    color: var(--green);
+    text-align: center;
+}

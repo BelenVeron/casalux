@@ -1,0 +1,253 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    background: var(--grey);
+    min-height: 85vh;
+}
+section{
+    width: 90vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+section header{
+    width: 100%;
+    display: flex;
+    background-color: var(--light);
+    border-left: 1rem solid var(--green);
+    justify-content: flex-start;
+}
+section header p{
+    padding: .8rem 0;
+    padding-left: 1rem;
+    width: 100%;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--black);
+}
+section article{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--light);
+    border-left: 1rem solid var(--green);
+    padding-top: 1rem;
+}
+section article .container{
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+section article .container:nth-child(1){
+    width: 25%;
+}
+section article .container:nth-child(2){
+    width: 40%;
+}
+section article .container .title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+}
+section article .container .title p:nth-child(2){
+    margin-left: .4rem;
+    padding-left: .4rem;
+    border-left: 1px solid var(--black);
+}
+section article .container .title p.selected{
+    font-weight: bold;
+}
+
+section article .options{
+    height: 45vh;
+    width: 100%;
+    overflow-y: auto;
+    background-color: var(--light);
+}
+section article .options::-webkit-scrollbar{
+    width: .4rem;
+    border-radius: 10px;
+}
+section article .options::-webkit-scrollbar-thumb{
+    background: var(--green);
+    border-radius: 10px;
+}
+section article .options .option{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--brown);
+    color: var(--light);
+    padding: .4rem;
+    margin: .4rem 0;
+    border-radius: 5px;
+    position: relative;
+    width: 95%;
+    margin: .4rem auto;
+}
+section article .options .option.selected{
+    background-color: var(--black-op);
+}
+section article .options .option:hover{
+    background-color: var(--black-op);
+}
+section article .options .option .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: var(--black);
+}
+section article .options .option .circle.selected-circle{
+    background-color: var(--green);
+}
+section article .options .option .text{
+    line-height: 1rem;
+    padding: .4rem 1rem;
+}
+section article .options .option .arrow{
+    position: absolute;
+    top: 30%;
+    right: 1rem;
+}
+
+section article .container .breadcrumb{
+    font-size: .6em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: .2rem;
+    width: 100%;
+}
+section article .container .breadcrumb div{
+    font-weight: bold;
+    padding: .2rem;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section article .container .breadcrumb .status{
+    background: var(--brown);
+    font-size: 1.2em;
+    width: 15%;
+}
+section article .container .breadcrumb .other-status{
+    color: var(--danger);
+    width: 18%;
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+    background-color: var(--danger);
+    margin-right: -.2rem;
+}
+section article .container .breadcrumb .other-status.completed{
+    background-color: var(--danger);
+}
+section article .container .breadcrumb .other-status.completed p{
+    color: var(--light);
+    background-color: var(--danger);
+}
+section article .container .breadcrumb .other-status p{
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+    width: 95%;
+    text-align: center;
+    background-color: var(--light);
+    transform: translateX(.05rem);
+}
+section article .container .breadcrumb .other-status:nth-child(2){
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+section article .container .info{
+    height: 40vh;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+section article .container .info .first{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+section article .container .info .data, .strong{
+    margin-top: .4rem;
+    width: 50%;
+}
+.strong{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.strong div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+section article .container .info .second{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section article .container .info .second p{
+    width: 50%;
+    transition: all.2s;
+}
+section article .container .info .second p:hover{
+    color: var(--green-op);
+    cursor: pointer;
+}
+section article .container .info .second p.selected{
+    color: var(--green-op);
+    font-weight: bold;
+}
+section article .container .info .second p.selected i{
+    margin-left: .4rem;
+}
+
+.container .mySwiper{
+    width: 95%;
+}
+::ng-deep .container .mySwiper .swiper-slide{
+    width: 95% !important;
+    height: 20vw !important;
+    object-fit: cover !important;
+}
+.container .img img{
+    width: 95%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.timeline{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 1rem;
+}
+.timeline-button{
+    float: right;
+    text-decoration: none;
+    background: var(--light);
+    padding: .2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: var(--black);
+    transition: all.2s;
+}
+.timeline-button:hover{
+    box-shadow: 1px 2px 8px black;
+}

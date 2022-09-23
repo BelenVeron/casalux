@@ -1,0 +1,11 @@
+<swiper *ngIf="config" [ngClass]="config.class!" [config]="config.swiper! || ''">
+    <ng-template swiperSlide *ngFor="let item of config.items">
+        <div class="image-container">
+            <!-- Difference between image in the database or in assets -->
+            <img [ngClass]="config.imageClass!" [src]="(item.src)? item.src : url+item.image" alt="" (click)="sendImage(item.src || url+item.image)">
+            <app-favorite [type]="config.typeFavorite!" class="heart"></app-favorite>
+        </div>
+        <h3>{{config.text}}</h3>
+        <p>{{config.description}}</p>
+    </ng-template>
+</swiper>

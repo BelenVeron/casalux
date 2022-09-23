@@ -1,0 +1,137 @@
+.accesories {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+/* ////////////////// */
+.accesories .description{
+    width: 32%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--grey);
+    color: var(--k-green-op); 
+}
+.accesories .description .text {
+    background-color: white;
+    width: 100%;
+}
+
+.accesories .description .titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--grey);
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: .8em;
+}
+
+.accesories .description .titles p{
+    width: 50%;
+    padding: .2rem;
+}
+
+.accesories .description .titles p.not-selected {
+    font-weight: normal;
+    cursor: pointer;
+    background: var(--light);
+}
+
+.accesories .description .info {
+    margin-left: 0.1rem;
+    height: 8vh;
+    width: 80%;
+    padding-bottom: .2rem;
+    padding-top: .2rem;
+    font-size: .8em;
+    overflow: hidden;
+}
+
+.accesories .description .down {
+    border: 1px solid var(--k-green-op);
+    padding: 2px;
+    margin-bottom: .3rem;
+    cursor: pointer;
+}
+
+
+
+
+/* ----------Quantity button-------------- */
+
+.accesories .description .buttons{
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "select-area total-area"
+    "quantity-area add-area";
+}
+
+.accesories .quantity{
+    width: calc(90% - 20px);
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+}
+.accesories .quantity h3{
+    font-size: 15px;
+    width: 50%;
+}
+.accesories .quantity input{
+    width: 20px;
+    border: none;
+    font-size: 20px;
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+.accesories .quantity input::-webkit-outer-spin-button,
+.accesories .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.accesories .quantity button {
+    background-color: white;
+    border: .5px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accesories .quantity select {
+    border: none;
+    cursor: pointer;
+    width: 95%;
+}
+
+.accesories .quantity select:focus {
+    outline: none;
+}
+
+.buttons .total {
+    border-radius: 10px;
+    border: solid 1px black;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

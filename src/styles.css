@@ -1,0 +1,87 @@
+@import 'assets/animations.css';
+@import '~swiper/swiper-bundle';
+@import url('https://fonts.googleapis.com/css2?family=Cabin');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+:root {
+    --black: #101820;
+    --black-op: #2f2f2fdc;
+    --dark-grey: #555e4e;
+    --brown: #5f6252;
+    --dark-brown: #484d44;
+    --green-brown: #bfc3ad;
+    --dark-green-brown: #a0a291;
+    --green: #9ec400;
+    --green-op: #7A9A01;
+    --white: #eaece9;
+    --light: #ffff;
+    --grey: #c9c9c6;
+    --danger: #fc5050;
+    /* kitchen */
+    --k-black: rgba(48, 47, 47);
+    --k-green-op: rgba(96, 96, 72);
+    --k-white: rgba(232, 234, 232);
+    --k-black-op: #2f2f2faf;
+
+    /* Font */
+    --font-cabin: 'Cabin', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-quicksand: 'Quicksand', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--green-op);
+    color: var(--white);
+    font-weight: bold;
+    padding: .4rem;
+    cursor: pointer;
+}
+
+html {
+    overflow: hidden;
+}
+
+@media (max-width: 500px) {
+    html {
+        overflow: auto;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.scroll::-webkit-scrollbar {
+    width: .5rem;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: var(--brown);
+    border-radius: 10px;
+}

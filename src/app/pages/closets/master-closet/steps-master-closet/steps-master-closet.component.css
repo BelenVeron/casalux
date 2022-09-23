@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 55vh;
+    padding: 1rem 1rem 3.5rem 1rem;
+    overflow: auto;
+    font-size: small;
+    cursor: pointer;
+    color: var(--green-op);
+}
+
+p, h4{
+   color: var(--dark-grey);
+}
+
+p {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.line-color {
+    background-color: var(--k-green-op);
+    width: 98%;
+    margin-left: 1.2rem;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

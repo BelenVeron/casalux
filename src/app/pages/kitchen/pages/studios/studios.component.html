@@ -1,0 +1,124 @@
+<main>
+    <app-navbar></app-navbar>
+
+    <section>
+
+        <div class="header">
+            <div class="logo-container web">
+                <a class="img" routerLink="/luxurykitchen">
+                    <img src="/assets/img/kitchen/logogreen.png" alt="">
+                </a>
+            </div>
+            <div class="title">
+                Studios
+            </div>
+        </div>
+
+
+        <article>
+
+            <div class="studios">
+                <div class="main-title web">
+                    Studios
+                </div>
+
+                <div class="search">
+                    <div class="input">
+                        <input type="text" (keyup)="search(value.value)" #value placeholder="Zip Code, City">
+                        <div class="icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="items">
+
+                        <div class="item" *ngFor="let studio of results, let index = index">
+                            <div class="title">
+                                <div>
+                                    <p class="name">{{index+1}}. {{studio.name}}</p>
+                                    <p class="quantity">4.1 Mil</p>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                {{studio.desc}}
+                            </div>
+                            <div class="img">
+                                <img [src]="url+studio.img" alt="">
+                            </div>
+                            <div class="options">
+                                <div class="option" (click)="viewDetails(studio)">
+                                    See this store
+                                </div>
+                                <div class="option">
+                                    Work with this store
+                                </div>
+                            </div>
+                        </div>
+
+                        <p *ngIf="results.length<1" style="margin:4rem 0 0 0 ">No studios found</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div [ngClass]="{'map':!details,'details-container':details}" class="animate__animated animate__fadeIn">
+                <agm-map *ngIf="!details" [latitude]="maps.lat" [zoom]="maps.zoom" [longitude]="maps.lng">
+                    <agm-marker [iconUrl]="'/assets/img/kitchen/media/mapicon.png'" [label]="{color: 'var(--black)',fontSize: '2.5em',
+                    fontWeight: 'bold',text: '1'}" [latitude]="maps.lat" [longitude]="maps.lng"></agm-marker>
+                </agm-map>
+
+                <div class="details animate__animated animate__fadeIn" *ngIf="details">
+
+                    <i class="fas fa-times close" (click)="details = null"></i>
+
+                    <div class="header">
+                        <div class="name">
+                            {{details.name}}
+                        </div>
+                        <div class="info">
+                            <p class="book">BOOK & APPOINTMENT</p>
+                            <p class="phone">Phone: (442) 227 2589</p>
+                        </div>
+                    </div>
+
+                    <div class="main">
+                        <div class="img">
+                            <img [src]="url+details.img" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>{{details.desc}}</p>
+                        </div>
+                    </div>
+
+                    <div class="slider-container">
+                        <div class="slider">
+                            <swiper [config]="config">
+                                <ng-template swiperSlide *ngFor="let img of details.imgs">
+                                    <img [src]="url+img" alt="">
+                                </ng-template>
+                            </swiper>
+                        </div>
+
+                        <div class="collections">
+                            <div class="title">
+                                <p>THIS COLLECTIONS ARE IN DISPLAY</p>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                            <div class="imgs">
+                                <div class="collection">P18</div>
+                                <div class="collection">P18</div>
+                                <div class="collection">P18</div>
+                                <div class="collection">P18</div>
+                                <div class="collection">P18</div>
+                                <div class="collection">P18</div>
+                                <div class="collection">P18</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+</main>

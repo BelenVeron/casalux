@@ -1,0 +1,94 @@
+.container-your-closets {
+    color: var(--k-green-op);
+}
+.container-your-closets .container{
+    display: flex;
+    font-size: small;
+}
+.container-your-closets h2{
+    margin-top: 1rem;
+    display: flex;
+    
+}
+.container-your-closets p{
+    font-weight: 100;
+    margin-left: 1rem;
+}
+.container-your-closets .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container-your-closets h1{
+    color: var(--k-green-op);
+}
+.container-your-closets i{
+    color: var(--k-green-op);
+    margin-right: 6rem; 
+}
+.container-your-closets p{
+    margin-bottom: 1rem; 
+}
+.container-your-closets .container .dropbtn {
+    background-color: white;
+    color: var(--k-green-op);
+    padding: 1px;
+    font-size: 20px;
+    border: none;
+    margin-right: 6rem;
+  }
+  
+.container-your-closets .container .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.container-your-closets .container .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.container-your-closets .container .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.container-your-closets .container .dropdown-content a:hover {background-color: #ddd;}
+  
+.container-your-closets .container .dropdown:hover .dropdown-content {display: block;}
+  
+.container-your-closets .container .dropdown:hover .dropbtn {background-color: #ffffff;padding: 0px;}
+
+.container-your-closets .container .image {
+    width: 50%;
+    height: 100%;
+    margin-left: 12rem;
+    margin-right: 3rem;
+   
+}
+.container-your-closets .container .container-image {
+    position: absolute;
+    width: 40vw;
+    height: 50vh;
+   background-color: var(--k-green-op);
+   align-content: center;
+   z-index: 11;
+   margin-right: 5rem;
+   color: white;
+}
+.container-your-closets .container .container-image .info {
+    position: absolute;
+    margin: 1rem;
+}
+
+.footer-button {
+    display: flex;
+    justify-content: end;
+}
+

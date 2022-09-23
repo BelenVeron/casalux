@@ -1,0 +1,185 @@
+.close, .back{
+    position: absolute;
+    top:1rem;
+    right:1rem;
+    color: var(--white);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.back{
+    left:1rem;
+}
+
+section{
+    width: 70%;
+    left: 15%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 20vh;
+    background: var(--black-op);
+}
+section .img{
+    width: 15%;
+}
+.title{
+    color: var(--light);
+    font-size: 2.2em;
+}
+form{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    color: var(--light);
+}
+select{
+    outline: none;
+    border: none;
+    background-color: var(--light);
+    width: 100%;
+    color: var(--dark-grey);
+    padding: 1rem;
+    font-size: 1em;
+}
+select option {
+    outline: none;
+    border: none;
+    background-color: var(--dark-grey);
+    color: var(--light);
+    font-size: .8em;
+}
+.btn{
+    width: 40%;
+    margin-top: 4rem;
+    font-size: 1em;
+}
+.otherInputs{
+    border-top: 4px solid var(--green);
+    background-color: var(--light);
+    width: 100%;
+    padding: 1rem;
+}
+.otherInputs label{
+    color: var(--green);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.otherInputs input{
+    border:none;outline: none;
+    border-bottom: 1px solid var(--dark-grey);
+    text-align: center;
+    font-size: 1.2em;
+}
+.otherInputs .options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+.otherInputs p{
+    color: var(--dark-grey);
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.otherInputs .selected{
+    color: var(--green);
+}
+.otherInputs .sub-title{
+    color: var(--green);
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+}
+.sub-options{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+small.error{
+    color: var(--danger);
+    transition: all.4s;
+}
+.sub-options.expert{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sub-options.expert .option{
+    margin: .4rem;
+}
+
+.sub-options .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-options label{
+    font-size: 1em;
+    font-weight: 10;
+    color: var(--dark-grey);
+}
+.sub-options input{
+    margin: .2rem;
+    font-size: 1em;
+}
+.sub-options input[type="radio"]:checked{
+    background-color: var(--green);
+}
+.sub-options select{
+    width: 25%;
+    border-bottom: 1px solid var(--dark-grey);
+    padding: .4rem;
+    padding-bottom: 0;
+}
+.sub-options select.error{
+    border: 1px solid var(--danger);
+}
+.other-participants{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.other-participants .participants-options{
+    justify-content: flex-start;
+    margin-top: 1rem;
+    align-items: center;
+}
+.participants-options .option{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.participants-options .option input{
+    margin-left: 0;
+    width: auto;
+}
+.participants-options input{
+    width: 20%;
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+.participants-options input[type="email"]{
+    width: 30% !important;
+}
+.participants-options .btn.plus{
+    width: 3rem;
+    height: 2.2rem;
+    margin: 0;
+    margin-left: 2rem;
+
+}

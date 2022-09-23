@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+.wrapper {
+    width: 100%;
+}
+
+.modal_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+
+.modal_box .modal_bg_shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.modal_box.active {
+    display: block;
+}
+
+.wrapper-box {
+    background: rgb(141, 140, 140);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    border-radius: 5px;
+    z-index: 3;
+}
+
+.container {
+    background-color: white;
+    height: 100%;
+}
+
+h1 {
+    font-size: 25px;
+    color: rgb(97, 97, 97);
+}
+
+p {
+    font-size: 20px;
+    color: rgb(78, 78, 78);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px 20px;
+    text-align: justify;
+}
+
+.modal_header {
+    padding: 20px 20px 0px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    height: 50px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-title h1{
+    font-size: 25px;
+    color: white;
+}
+
+.header-brown {
+    padding: 0;
+    height: 90px;
+    font-size: 26px;
+    background-color: var(--k-green-op);
+}
+
+.modal_body {
+    padding: 15px 20px;
+    line-height: 21px;
+    height: 140px;
+}
+
+.modal_footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* START LUXURY KITCKEN */
+.luxury-kitchen {
+    width: 350px;
+    height: 400px;
+    padding: 30px;
+}
+
+/* END LUXURY KITCKEN */
+
+
+
+
+/* START VIDEO */
+.modal_video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 55vw;
+    height: 45vh;
+    background-color: inherit;
+}
+
+ .header_video {
+    height: 15%;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--k-green-op);
+}
+
+.footer_video {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 245, 245); 
+}
+
+.container_video {
+    background-color: var(--k-white);
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_video p {
+    color: var(--green);
+    font-size: 35px;
+    text-align: center;
+}
+
+.container_button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+    height: 20%;
+}
+/* END VIDEO */
+
+
+
+/* START CLOSETS */
+.closets {
+    background-color: inherit;
+    transform: translate(-50%, 50vh);
+    top: -30vh;
+}
+
+.closets .footer {
+    height: 300px;
+    width: 40vw;
+    background: rgb(247, 245, 245);
+}
+
+.closets .footer P {
+    margin-top: 1rem;
+    font-size: small; 
+}
+/* END CLOSETS */

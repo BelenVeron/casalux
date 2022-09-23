@@ -1,0 +1,9 @@
+<div class="container-title">
+    <h3>{{itemList.title}}</h3>
+
+    <p *ngIf="itemList.name !== ''" [ngClass]="{'details-title':true, 'big-details-title':(itemList.name === 'Luxury Custom')}">
+        {{itemList.name}}
+    </p>
+
+    <P>{{itemList.text}}</P>
+</div>

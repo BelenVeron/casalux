@@ -1,0 +1,90 @@
+.social {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-top: 5vh;
+    color: var(--k-green-op);
+    justify-content: space-between;
+    font-size: 1.5em;
+    align-items: center;
+}
+
+.social p {
+    font-size: 1rem;
+}
+
+@media (max-width:1300px),
+(max-height:800px) {
+    .social {
+        font-size: .9rem;
+    }
+    .social p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:1100px) {
+    .social {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:400px) {
+    .social {
+        justify-content: space-around;
+        font-size: 1.4em;
+        margin-top: 4vh;
+        margin-left: 1rem;
+    }
+    .social p {
+        display: none;
+    }
+    .social .icons i {
+        margin-right: 38px;
+    }
+}
+
+
+/* ----------------------NAVUP---------------------- */
+
+.social-white {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5vh;
+    color: white;
+    align-items: center;
+    font-size: 1.8rem;
+    padding: .5rem 0rem;
+    justify-content: center;
+}
+
+.icons i {
+    margin-right: 5px;
+}
+
+.social-white p {
+    display: none;
+   /*  font-size: 1rem; */
+}
+
+@media (max-width:1300px),
+(max-height:800px) {
+    .social-white {
+        font-size: 1rem;
+    }
+    .social-white p {
+        display: none;
+       /*  font-size: 1rem; */
+    }
+}
+
+@media (max-width:1000px) {
+    .social-white {
+        flex-direction: column;
+    }
+    .social-white p {
+        display: none;
+       /*  font-size: 1rem; */
+    }
+}
